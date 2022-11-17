@@ -9,10 +9,19 @@ object TypeOfAccountPage extends BasePage {
 
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/arrangement/about-your-bank-account"
 
-  var businessRadio: WebElement = id("typeOfAccount").webElement
-  var personalRadio: WebElement = id("typeOfAccount-2").webElement
-  var accountHolderYes: WebElement = id("isSoleSignatory").webElement
-  var accountHolderNo: WebElement = id("isSoleSignatory-2").webElement
+  def businessRadio: WebElement = id("typeOfAccount").webElement
+
+  def personalRadio: WebElement = id("typeOfAccount-2").webElement
+
+  def accountHolderYes: WebElement = id("isSoleSignatory").webElement
+
+  def accountHolderNo: WebElement = id("isSoleSignatory-2").webElement
+
+  //  def noTypeSelectedSummary: String = cssSelector("#content > div > div > ul > li:nth-child(1) > a").webElement.getText
+  //  def noAccountHolderSelectedSummary: String = cssSelector("#content > div > div > ul > li:nth-child(2) > a").webElement.getText
+  def noTypeSelectedMessage: String = id("typeOfAccount-error").webElement.getText
+
+  def noAccountHolderSelectedMessage: String = id("isSoleSignatory-error").webElement.getText
 
   def expectedPageTitle = {
     if (langToggle == Language.welsh) "Ynglŷn â’ch cyfrif banc - Trefnu cynllun talu - GOV.UK"
@@ -38,18 +47,25 @@ object TypeOfAccountPage extends BasePage {
     accountType match {
       case "business" => businessRadio.click()
       case "personal" => personalRadio.click()
+      case "no bank account type" =>
     }
   }
 
   def clickAccountHolder(holder: String): Unit = {
     holder match {
-      case "are" => accountHolderYes.click()
-      case "aren't" => accountHolderNo.click()
+      case "is" => accountHolderYes.click()
+      case "isn't" => accountHolderNo.click()
+      case "no selection for" =>
     }
   }
 
-  //TODO - Error Assertions
-  def assertError(): Unit ={
+  def assertErrorMessage(field: String, error: String): Unit = {
+    field match {
+      case "no account type selected" => noTypeSelectedMessage should be("Error:\n"+error)
+      //                                          noTypeSelectedSummary should be(error)
+      case "no account holder selected" => noAccountHolderSelectedMessage should be("Error:\n"+error)
+      //                                          noAccountHolderSelectedSummary should be(error)
+    }
   }
 
 

@@ -9,9 +9,9 @@ object SetUpDirectDebitPage extends BasePage {
 
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/arrangement/direct-debit"
 
-  var accountName: WebElement = id("accountName").webElement
-  var sortCode: WebElement = id("sortCode").webElement
-  var accountNumber: WebElement = id("accountNumber").webElement
+  def accountName: WebElement = id("accountName").webElement
+  def sortCode: WebElement = id("sortCode").webElement
+  def accountNumber: WebElement = id("accountNumber").webElement
 
   def expectedPageTitle = {
     if (langToggle == Language.welsh) "Trefnu Debyd Uniongyrchol - Trefnu cynllun talu - GOV.UK"

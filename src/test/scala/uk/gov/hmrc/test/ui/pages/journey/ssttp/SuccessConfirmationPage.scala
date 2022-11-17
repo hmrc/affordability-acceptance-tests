@@ -22,7 +22,7 @@ import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 object SuccessConfirmationPage extends BasePage {
 
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/arrangement/summary"
-  var summaryBox = cssSelector("#content > div.govuk-panel.govuk-panel--confirmation.govuk-\\!-display-none-print").webElement.getText
+  def summaryBox = cssSelector("#content > div.govuk-panel.govuk-panel--confirmation.govuk-\\!-display-none-print").webElement.getText
 
   def expectedPageTitle = {
     if (langToggle == Language.welsh) "Cais yn llwyddiannus - Trefnu cynllun talu - GOV.UK"

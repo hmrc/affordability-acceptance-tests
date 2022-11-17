@@ -24,8 +24,8 @@ object UpfrontPaymentPage extends BasePage {
 
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/calculator/payment-today-question"
 
-  var yesButton: WebElement = id("paytoday-true").webElement
-  var noButton: WebElement = id("paytoday-false").webElement
+  def yesButton: WebElement = id("paytoday-true").webElement
+  def noButton: WebElement = id("paytoday-false").webElement
 
   def expectedPageTitle = {
     if (langToggle == Language.welsh) "A allwch wneud taliad ymlaen llaw? - Trefnu cynllun talu - GOV.UK"
