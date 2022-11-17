@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,21 +16,37 @@
 
 package uk.gov.hmrc.test.ui.pages
 
-import org.openqa.selenium.By
-import org.scalatest.matchers.should.Matchers
-import uk.gov.hmrc.test.ui.driver.BrowserDriver
+import org.scalatest.{Assertion, Matchers}
+import uk.gov.hmrc.test.ui.stepdefs.other.DriverActions
+import uk.gov.hmrc.test.ui.testdata.Language
 
-trait BasePage extends BrowserDriver with Matchers {
-  val continueButton = "continue-button"
 
-  def submitPage(): Unit =
-    driver.findElement(By.id(continueButton)).click()
+trait BasePage extends DriverActions with Matchers {
 
-  def onPage(pageTitle: String): Unit =
-    if (driver.getTitle != pageTitle)
-      throw PageNotFoundException(
-        s"Expected '$pageTitle' page, but found '${driver.getTitle}' page."
-      )
+  val url: String
+  def expectedPageTitle: String
+  def expectedPageTitleError: String
+  def expectedPageService: String = {
+    if (langToggle == Language.welsh) "Trefnu cynllun talu"
+    else "Set up a Self Assessment payment plan"
+  }
+  def expectedPageHeader: String
+
+  def currentPageTitle: String = pageTitle
+  def currentPageService: String = cssSelector("div.govuk-header__content > span").webElement.getText
+  def currentPageHeader: String = cssSelector("h1").webElement.getText
+
+  def assertCurrentUrl(): Assertion              = currentUrl should be(url)
+  def assertCurrentPageTitle(): Assertion        = currentPageTitle should be(expectedPageTitle)
+  def assertCurrentPageTitleError(): Assertion   = currentPageTitle should be(expectedPageTitleError)
+  def assertCurrentPageService(): Assertion      = currentPageService should be(expectedPageService)
+  def assertCurrentPageHeader(): Assertion       = currentPageHeader should be(expectedPageHeader)
+
+  def shouldBeLoaded(): Unit = {
+    assertCurrentUrl()
+    assertCurrentPageTitle()
+    assertCurrentPageService()
+    assertCurrentPageHeader()
+  }
+
 }
-
-case class PageNotFoundException(s: String) extends Exception(s)
