@@ -25,6 +25,14 @@ object HelperFunctions extends BasePage {
   def expectedPageTitle: String = ""
   def expectedPageTitleError: String = ""
 
+  def errorSummaryHeading(): String = id("error-summary-title").webElement.getText
+
+  def errorSummary(field: String): String = id(s"$field-error-summary").webElement.getText
+  //TODO to be confirmed
+
+  def errorMessage(field: String): String = id(s"error-message-$field-input").webElement.getText
+  //TODO to be confirmed
+
   def toggleLangOn(lang: String): Unit =
     if (lang == "cy")
       click on cssSelector("nav > ul > li:nth-child(2)")

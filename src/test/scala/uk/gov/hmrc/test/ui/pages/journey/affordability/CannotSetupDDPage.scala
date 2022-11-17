@@ -9,7 +9,7 @@ object CannotSetupDDPage extends BasePage {
 
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/eligibility/not-sole-signatory"
 
-  var phoneNumber: String = cssSelector("#content > p:nth-child(3) > strong > span").webElement.getText
+  def phoneNumber: String = cssSelector("#content > p:nth-child(3) > strong > span").webElement.getText
 
   def expectedPageTitle = {
     if (langToggle == Language.welsh) "Ni allwch drefnu Debyd Uniongyrchol ar-lein - Trefnu cynllun talu - GOV.UK"

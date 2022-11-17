@@ -23,7 +23,7 @@ import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 object StartPage extends BasePage {
 
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}"
-  var startButton: WebElement = id("start-now").webElement
+  def startButton: WebElement = id("start-now").webElement
 
   def expectedPageTitle = {
     if (langToggle == Language.welsh) "Sefydlu cynllun talu ar gyfer Hunanasesiad - Trefnu cynllun talu - GOV.UK"

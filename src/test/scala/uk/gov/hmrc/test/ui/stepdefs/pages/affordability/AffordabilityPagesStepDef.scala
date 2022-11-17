@@ -1,13 +1,16 @@
 package uk.gov.hmrc.test.ui.stepdefs.pages.affordability
 
+import org.openqa.selenium.By
+import org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated
+import uk.gov.hmrc.test.ui.pages.journey.affordability.TypeOfAccountPage._
 import uk.gov.hmrc.test.ui.pages.journey.affordability.{SetUpDirectDebitPage, TypeOfAccountPage}
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
-import uk.gov.hmrc.test.ui.testdata.{BankDetails, ScenarioContext}
+import uk.gov.hmrc.test.ui.testdata.{BankDetails, Language, ScenarioContext}
 
 class AffordabilityPagesStepDef extends Steps with DriverActions {
 
-  When("""^they select (business|personal) and (are|aren't) the account holder on the About account page$""") { (accountType: String, holder: String) =>
+  When("""^the user selects (business|personal|no bank account type) and (is|isn't|no selection for) the account holder on the About account page$""") { (accountType: String, holder: String) =>
     TypeOfAccountPage.clickRadio(accountType)
     TypeOfAccountPage.clickAccountHolder(holder)
   }
@@ -36,4 +39,40 @@ class AffordabilityPagesStepDef extends Steps with DriverActions {
 
     SetUpDirectDebitPage.enterBankDetails(bankDetails)
   }
+
+//  When("""^the user doesn't select an option for (.*) and continues, then the error message (.*) shows$""") { (option: String, error: String) =>
+//    option match {
+//      case "account type" =>
+//        clickAccountHolder("is")
+//        continue()
+//        assertErrorMessage("no account type selected", error)
+//      case "account holder" =>
+//        clickRadio("personal")
+//        continue()
+//        assertErrorMessage("no account holder selected", error)
+//    }
+//  }
+
+  Then("""^the (.*) field should display "(.*)"$""") { (elem: String, message: String) =>
+    val elemId = elem.replaceAll(" ", "-").toLowerCase
+
+    def prependError: String = if (langToggle == Language.welsh) "Gwall:" else "Error:"
+
+    waitFor(visibilityOfElementLocated(By.id("error-summary-title")))
+
+    if (langToggle == Language.welsh) HelperFunctions.errorSummaryHeading() should be("Mae problem wedi codi")
+    else HelperFunctions.errorSummaryHeading() should be("There is a problem")
+
+    elem match {
+      case "account type" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY"+elemId) should be(message)
+        HelperFunctions.id("typeOfAccount-error").webElement.getText should be(s"$prependError\n$message")
+
+      case "account holder" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.id("isSoleSignatory-error").webElement.getText should be(s"$prependError\n$message")
+      case _ =>
+    }
+  }
+
 }

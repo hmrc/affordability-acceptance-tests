@@ -13,7 +13,7 @@ Feature: Happy Path - English
     And the user enters 6 on the how many months page
     And the user clicks next
     And the user clicks continue
-    When they select personal and are the account holder on the About account page
+    When the user selects personal and is the account holder on the About account page
     And the user clicks continue
     When the user enters valid bank details
     And the user clicks continue
