@@ -16,18 +16,24 @@
 
 package uk.gov.hmrc.test.ui.stepdefs.other
 
-import org.openqa.selenium.{JavascriptExecutor, WebDriver}
+import org.openqa.selenium.support.ui.{ExpectedCondition, WebDriverWait}
+import org.openqa.selenium.support.ui.ExpectedConditions.{urlToBe, visibilityOfElementLocated}
+import org.openqa.selenium.{By, JavascriptExecutor, WebDriver, WebElement}
 import org.scalatest.selenium.WebBrowser
 import uk.gov.hmrc.test.ui.testdata.{Language, ScenarioContext}
 import uk.gov.hmrc.webdriver.SingletonDriver
+
+import java.util.concurrent.TimeUnit
 
 trait DriverActions extends WebBrowser {
 
   implicit def driver: WebDriver = SingletonDriver.getInstance()
 
-  def clickBack(): Unit = click on id("back")
+  def back(): Unit = click on linkText("Back")
 
   def continue(): Unit = click on id("continue")
+  def continueButton(): Unit = click on id("continue_button")
+  def next(): Unit = click on id("next")
 
   def langToggle: String = ScenarioContext.getOrElse[String]("langToggle", Language.english)
 
@@ -36,4 +42,17 @@ trait DriverActions extends WebBrowser {
     if (langToggle == "cy") click on linkText("Allgofnodi")
     else if (langToggle == "en") click on linkText("Sign out")
   }
+
+  def browserBack(): Unit = driver.navigate().back()
+
+  def waitFor[T](condition: ExpectedCondition[T]): T = {
+    val wait = new WebDriverWait(driver, 10)
+    wait.until(condition)
+  }
+
+  def waitForRedirect(url: String): Boolean = waitFor(urlToBe(url))
+
+  def waitForPageToLoad(): WebElement = waitFor(visibilityOfElementLocated(By.tagName("body")))
+
+  def waitForMillis(time: Int): Unit = TimeUnit.MILLISECONDS.sleep(time)
 }

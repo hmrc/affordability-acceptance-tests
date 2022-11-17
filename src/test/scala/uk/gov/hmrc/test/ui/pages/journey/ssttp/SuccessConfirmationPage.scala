@@ -15,25 +15,22 @@
  */
 package uk.gov.hmrc.test.ui.pages.journey.ssttp
 
-import org.openqa.selenium.WebElement
 import uk.gov.hmrc.test.ui.pages.BasePage
 import uk.gov.hmrc.test.ui.testdata.Language
 import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 
-object UpfrontPaymentPage extends BasePage {
+object SuccessConfirmationPage extends BasePage {
 
-  val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/calculator/payment-today-question"
-
-  var yesButton: WebElement = id("paytoday-true").webElement
-  var noButton: WebElement = id("paytoday-false").webElement
+  val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/arrangement/summary"
+  var summaryBox = cssSelector("#content > div.govuk-panel.govuk-panel--confirmation.govuk-\\!-display-none-print").webElement.getText
 
   def expectedPageTitle = {
-    if (langToggle == Language.welsh) "A allwch wneud taliad ymlaen llaw? - Trefnu cynllun talu - GOV.UK"
-    else "Can you make an upfront payment? - Set up a Self Assessment payment plan - GOV.UK"
+    if (langToggle == Language.welsh) "Cais yn llwyddiannus - Trefnu cynllun talu - GOV.UK"
+    else "Your payment plan is set up - Set up a Self Assessment payment plan - GOV.UK"
   }
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "A allwch wneud taliad ymlaen llaw?"
-    else "Can you make an upfront payment?"
+    if (langToggle == Language.welsh) "Cais yn llwyddiannus"
+    else "Your payment plan is set up"
   }
 
   def expectedPageTitleError: String = "Error: " + expectedPageTitle
@@ -45,12 +42,8 @@ object UpfrontPaymentPage extends BasePage {
 //    else pageContent should be(EnglishContent.accountOnFilePageText())
 //  }
 
-  def selectRadio(option: String): Unit ={
-    option match {
-      case "yes" => yesButton.click()
-      case "no" => noButton.click()
-    }
+  def summaryBoxDisplayed(): Unit ={
+    summaryBox should be("Your payment plan is set up\nYour Direct Debit mandate reference:\nABCDabcd1234")
   }
-
 
 }

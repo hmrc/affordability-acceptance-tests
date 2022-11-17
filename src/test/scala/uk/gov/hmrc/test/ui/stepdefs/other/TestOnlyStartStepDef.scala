@@ -16,10 +16,9 @@
 
 package uk.gov.hmrc.test.ui.stepdefs.other
 
-import uk.gov.hmrc.test.ui.pages.testonly.TestOnlyStartPage
-import uk.gov.hmrc.test.ui.testdata.{ScenarioContext, TestData}
 
 class TestOnlyStartStepDef extends Steps with DriverActions {
+
 
 
 }

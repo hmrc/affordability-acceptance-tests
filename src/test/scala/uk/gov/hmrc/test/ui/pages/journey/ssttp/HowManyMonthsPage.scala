@@ -15,42 +15,35 @@
  */
 package uk.gov.hmrc.test.ui.pages.journey.ssttp
 
-import org.openqa.selenium.WebElement
 import uk.gov.hmrc.test.ui.pages.BasePage
 import uk.gov.hmrc.test.ui.testdata.Language
 import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 
-object UpfrontPaymentPage extends BasePage {
+object HowManyMonthsPage extends BasePage {
 
-  val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/calculator/payment-today-question"
-
-  var yesButton: WebElement = id("paytoday-true").webElement
-  var noButton: WebElement = id("paytoday-false").webElement
+  val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/calculator/instalments"
 
   def expectedPageTitle = {
-    if (langToggle == Language.welsh) "A allwch wneud taliad ymlaen llaw? - Trefnu cynllun talu - GOV.UK"
-    else "Can you make an upfront payment? - Set up a Self Assessment payment plan - GOV.UK"
+    if (langToggle == Language.welsh) "Dros sawl mis yr hoffech dalu? - Trefnu cynllun talu - GOV.UK"
+    else "How many months do you want to pay over? - Set up a Self Assessment payment plan - GOV.UK"
   }
+
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "A allwch wneud taliad ymlaen llaw?"
-    else "Can you make an upfront payment?"
+    if (langToggle == Language.welsh) "Dros sawl mis yr hoffech dalu?"
+    else "How many months do you want to pay over?"
   }
 
   def expectedPageTitleError: String = "Error: " + expectedPageTitle
 
   def pageContent: String = id("main-content").webElement.getText
 
-//  def assertContent(): Assertion =  {
-//    if (langToggle == Language.welsh) pageContent should be(WelshContent.accountOnFilePageText())
-//    else pageContent should be(EnglishContent.accountOnFilePageText())
-//  }
+  //  def assertContent(): Assertion =  {
+  //    if (langToggle == Language.welsh) pageContent should be(WelshContent.accountOnFilePageText())
+  //    else pageContent should be(EnglishContent.accountOnFilePageText())
+  //  }
 
-  def selectRadio(option: String): Unit ={
-    option match {
-      case "yes" => yesButton.click()
-      case "no" => noButton.click()
+  def enterAmountOfMonths(amount: String) = {
+      id(amount).webElement.click()
     }
-  }
-
 
 }
