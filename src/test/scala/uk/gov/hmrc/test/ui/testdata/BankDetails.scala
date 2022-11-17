@@ -6,7 +6,7 @@ case class BankDetails(name: String, sortcode: String, accNumber: String)
 object BankDetails {
 
   lazy val validAccount: BankDetails = environment match {
-    case "local" | "development" => BankDetails("Melvin Loper", "20-71-06", "44311677")
+    case "local" | "development" => BankDetails("Melvin Loper", "207106", "44311677")
     case "qa"                  => BankDetails("TBC", "40-47-84", "70872490")
   }
 

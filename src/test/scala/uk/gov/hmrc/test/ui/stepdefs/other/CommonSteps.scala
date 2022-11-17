@@ -17,17 +17,23 @@
 package uk.gov.hmrc.test.ui.stepdefs.other
 
 import uk.gov.hmrc.test.ui.pages._
+import uk.gov.hmrc.test.ui.pages.journey.ssttp.StartPage
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
+import uk.gov.hmrc.test.ui.pages.testonly.TestOnlyStartPage
 import uk.gov.hmrc.test.ui.testdata.{Language, ScenarioContext}
 
 class CommonSteps extends Steps with DriverActions {
 
-  And("""^the user click continue$""") { () =>
-    continue()
-  }
-
-  And("""^the user click back""") { () =>
-    clickBack()
+  And("""^the user clicks (start|continue|next|continue_button|back|browser back)$""") { (action: String) =>
+    action match {
+      case "start" => StartPage.clickStartNow()
+      //TODO sort out a standard for continue button ids! grr multiple id's used in Frontend code.
+      case "continue" => continue()
+      case "next" => next()
+      case "continue_button" => continueButton()
+      case "back" => back()
+      case "browser back" => browserBack()
+    }
   }
 
   When("""^the User toggles on (Welsh|English) language$""") { option: String =>
@@ -40,5 +46,8 @@ class CommonSteps extends Steps with DriverActions {
     }
   }
 
+  Given("""^the user is created and logs in$""") { () =>
+    TestOnlyStartPage.createUserAndLogin()
+  }
 
 }

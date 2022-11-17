@@ -42,7 +42,7 @@ object WhatDayOfMonthPage extends BasePage {
   //    else pageContent should be(EnglishContent.accountOnFilePageText())
   //  }
 
-  def enterMonth(date: String) = {
+  def enterDayOfMonth(date: String) = {
     date match {
       case "28" => id("28th").webElement.click()
       case _ => id("other").webElement.click()

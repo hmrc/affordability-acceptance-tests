@@ -17,15 +17,29 @@
 package uk.gov.hmrc.test.ui.pages.testonly
 
 import uk.gov.hmrc.test.ui.pages.BasePage
+import uk.gov.hmrc.test.ui.pages.journey.ssttp.StartPage
 import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 
 object TestOnlyStartPage extends BasePage {
 
-  val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/test-only/start-journey"
+  val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/test-only/inspector"
 
   def expectedPageTitle = "TBC"
+
   def expectedPageHeader = "TBC"
+
   def expectedPageTitleError: String = "Error: " + expectedPageTitle
+
+  def createUserAndLogin(): Unit = {
+    go to TestOnlyStartPage.url
+    waitForPageToLoad()
+    linkText("clear play session").webElement.click()
+    linkText("create user and log in").webElement.click()
+    waitForPageToLoad()
+    cssSelector("#content > form > button").webElement.click()
+    //TODO for some reason doesnt like variable, so hardcoded for now
+    go to "http://localhost:9063/pay-what-you-owe-in-instalments"
+  }
 
 
 }

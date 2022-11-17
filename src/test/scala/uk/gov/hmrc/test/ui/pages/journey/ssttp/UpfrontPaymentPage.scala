@@ -15,6 +15,7 @@
  */
 package uk.gov.hmrc.test.ui.pages.journey.ssttp
 
+import org.openqa.selenium.WebElement
 import uk.gov.hmrc.test.ui.pages.BasePage
 import uk.gov.hmrc.test.ui.testdata.Language
 import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
@@ -22,6 +23,9 @@ import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 object UpfrontPaymentPage extends BasePage {
 
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/calculator/payment-today-question"
+
+  var yesButton: WebElement = id("paytoday-true").webElement
+  var noButton: WebElement = id("paytoday-false").webElement
 
   def expectedPageTitle = {
     if (langToggle == Language.welsh) "A allwch wneud taliad ymlaen llaw? - Trefnu cynllun talu - GOV.UK"
@@ -40,6 +44,13 @@ object UpfrontPaymentPage extends BasePage {
 //    if (langToggle == Language.welsh) pageContent should be(WelshContent.accountOnFilePageText())
 //    else pageContent should be(EnglishContent.accountOnFilePageText())
 //  }
+
+  def selectRadio(option: String): Unit ={
+    option match {
+      case "yes" => yesButton.click()
+      case "no" => noButton.click()
+    }
+  }
 
 
 }

@@ -15,6 +15,7 @@
  */
 package uk.gov.hmrc.test.ui.pages.journey.ssttp
 
+import org.openqa.selenium.WebElement
 import uk.gov.hmrc.test.ui.pages.BasePage
 import uk.gov.hmrc.test.ui.testdata.Language
 import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
@@ -22,6 +23,7 @@ import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 object StartPage extends BasePage {
 
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}"
+  var startButton: WebElement = id("start-now").webElement
 
   def expectedPageTitle = {
     if (langToggle == Language.welsh) "Sefydlu cynllun talu ar gyfer Hunanasesiad - Trefnu cynllun talu - GOV.UK"
@@ -40,6 +42,10 @@ object StartPage extends BasePage {
 //    if (langToggle == Language.welsh) pageContent should be(WelshContent.accountOnFilePageText())
 //    else pageContent should be(EnglishContent.accountOnFilePageText())
 //  }
+
+  def clickStartNow(): Unit ={
+    startButton.click()
+  }
 
 
 }
