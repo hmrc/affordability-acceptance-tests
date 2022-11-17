@@ -1,4 +1,4 @@
-@accessibility
+@a11y
 Feature: SUPP - SmokeTest
 
   Scenario: E2E - Smoke (For accessibility page captures)
