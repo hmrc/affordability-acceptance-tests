@@ -17,12 +17,27 @@
 package uk.gov.hmrc.test.ui.stepdefs.other
 
 import uk.gov.hmrc.test.ui.pages._
-import uk.gov.hmrc.test.ui.pages.journey.ssttp.StartPage
+import uk.gov.hmrc.test.ui.pages.journey.ssttp.{HowManyMonthsPage, HowMuchEachMonthPaymentPage, StartPage, UpfrontPaymentPage, WhatDayOfMonthPage}
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.pages.testonly.TestOnlyStartPage
 import uk.gov.hmrc.test.ui.testdata.{Language, ScenarioContext}
 
 class CommonSteps extends Steps with DriverActions {
+
+  Given("""^A user logs in and gets to the About your bank account page$""") { () =>
+    TestOnlyStartPage.createUserAndLogin()
+    StartPage.clickStartNow()
+    continue()
+    UpfrontPaymentPage.selectRadio("no")
+    next()
+    HowMuchEachMonthPaymentPage.enterAmount("500")
+    continue()
+    WhatDayOfMonthPage.enterDayOfMonth("28")
+    next()
+    HowManyMonthsPage.enterAmountOfMonths("6")
+    next()
+    continue()
+  }
 
   And("""^the user clicks (start|continue|next|continue_button|back|browser back)$""") { (action: String) =>
     action match {
