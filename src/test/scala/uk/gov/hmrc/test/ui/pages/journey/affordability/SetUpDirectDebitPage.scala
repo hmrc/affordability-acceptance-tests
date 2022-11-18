@@ -38,4 +38,8 @@ object SetUpDirectDebitPage extends BasePage {
     accountNumber.sendKeys(bankDetails.accNumber)
   }
 
+  def enterAccountName(input: String): Unit = accountName.sendKeys(input)
+  def enterSortcode(input: String): Unit = sortCode.sendKeys(input)
+  def enterAccountNumber(input: String): Unit = accountNumber.sendKeys(input)
+
 }

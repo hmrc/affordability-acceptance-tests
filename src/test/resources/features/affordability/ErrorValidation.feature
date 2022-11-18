@@ -1,17 +1,14 @@
 Feature: Error Validation on various pages created/updated by Affordability changes
 
+  #                                                                                                                 #
+  # "Given A user logs in and gets to the About your bank account page step" is used to get through the             #
+  #  SSTTP journey up until the point at which the Affordability tickets have made changes to the journey/content.  #
+  #                                                                                                                 #
+
+
+### About Bank Account Page
   Scenario Outline: Error Validation on About your Account Details page - only 1 selection
-    Given the user is created and logs in
-    And the user clicks start
-    And the user clicks continue
-    When the user clicks no on the upfront payment page
-    And the user clicks next
-    When the user enters 500 on the how much can you afford each month page
-    And the user clicks continue
-    And the user enters 28 on the what day of the month page
-    And the user clicks next
-    And the user enters 6 on the how many months page
-    And the user clicks next
+    Given A user logs in and gets to the About your bank account page
     And the user clicks continue
     When the user selects <accountType> and <accountHolder> the account holder on the About account page
     And the user clicks continue
@@ -23,20 +20,17 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | personal             | no selection for | account holder | Select yes if you are the account holder              |
 
   Scenario: Error Validation on About your Account Details page - no selection
-    Given the user is created and logs in
-    And the user clicks start
-    And the user clicks continue
-    When the user clicks no on the upfront payment page
-    And the user clicks next
-    When the user enters 500 on the how much can you afford each month page
-    And the user clicks continue
-    And the user enters 28 on the what day of the month page
-    And the user clicks next
-    And the user enters 6 on the how many months page
-    And the user clicks next
-    And the user clicks continue
+    Given A user logs in and gets to the About your bank account page
     And the user clicks continue
     Then the account type field should display "Select what type of account details you are providing"
     Then the account holder  field should display "Select yes if you are the account holder"
 
-
+### Set Up Direct Debit Page
+  Scenario: Error Validation on Set Up Direct Debit page - no selection
+    Given A user logs in and gets to the About your bank account page
+    When the user selects personal and is the account holder on the About account page
+    And the user clicks continue
+    And an empty form is submitted
+    Then the account name field should display "Enter an account name"
+    Then the sortcode field should display "Enter a sort code"
+    Then the account number field should display "Enter an account number"

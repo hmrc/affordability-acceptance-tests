@@ -40,6 +40,18 @@ class AffordabilityPagesStepDef extends Steps with DriverActions {
     SetUpDirectDebitPage.enterBankDetails(bankDetails)
   }
 
+  When("""^the User enters (.*) into the (.*) field$""") { (input: String, field: String) =>
+    field match {
+      case "Account Name" => SetUpDirectDebitPage.enterAccountName(input)
+      case "Sortcode" => SetUpDirectDebitPage.enterSortcode(input)
+      case "Account Number" => SetUpDirectDebitPage.enterAccountNumber(input)
+    }
+  }
+
+  When("""^an empty form is submitted$""") { () =>
+    continue()
+  }
+
 //  When("""^the user doesn't select an option for (.*) and continues, then the error message (.*) shows$""") { (option: String, error: String) =>
 //    option match {
 //      case "account type" =>
@@ -64,13 +76,22 @@ class AffordabilityPagesStepDef extends Steps with DriverActions {
     else HelperFunctions.errorSummaryHeading() should be("There is a problem")
 
     elem match {
+      //TODO Summary Error content validation, no id's implemented on Element and cant use css due to changing nature
       case "account type" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY"+elemId) should be(message)
         HelperFunctions.id("typeOfAccount-error").webElement.getText should be(s"$prependError\n$message")
-
       case "account holder" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
         HelperFunctions.id("isSoleSignatory-error").webElement.getText should be(s"$prependError\n$message")
+      case "account name" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.id("accountName-error").webElement.getText should be(s"$prependError\n$message")
+      case "sortcode" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.id("sortCode-error").webElement.getText should be(s"$prependError\n$message")
+      case "account number" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.id("accountNumber-error").webElement.getText should be(s"$prependError\n$message")
       case _ =>
     }
   }
