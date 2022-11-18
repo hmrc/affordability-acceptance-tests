@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.test.ui.stepdefs.pages.ssttp
 
-import uk.gov.hmrc.test.ui.pages.journey.ssttp.{HowManyMonthsPage, HowMuchEachMonthPaymentPage, SuccessConfirmationPage, UpfrontPaymentPage, WhatDayOfMonthPage}
+import uk.gov.hmrc.test.ui.pages.journey.ssttp.{HowManyMonthsPage, HowMuchEachMonthPaymentPage, HowMuchUpfrontPaymentPage, SuccessConfirmationPage, UpfrontPaymentPage, WhatDayOfMonthPage}
 import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
 
 
@@ -33,6 +33,8 @@ class OldSsttpStepDef extends Steps with DriverActions {
       case "how much can you afford each month" => HowMuchEachMonthPaymentPage.enterAmount(value)
       case "what day of the month" => WhatDayOfMonthPage.enterDayOfMonth(value)
       case "how many months" => HowManyMonthsPage.enterAmountOfMonths(value)
+      case "upfront payment amount" => HowMuchUpfrontPaymentPage.enterAmount(value)
+
     }
   }
 
