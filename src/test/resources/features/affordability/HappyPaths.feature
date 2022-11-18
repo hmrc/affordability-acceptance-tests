@@ -17,4 +17,3 @@ Feature: Happy Paths - Affordability
       | Test'.&/                                | Account Name |
       | 20 71 06                                | Sortcode     |
       | 20-71-06                                | Sortcode     |
-#      | "Test"      | Account Number |
