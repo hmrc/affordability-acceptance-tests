@@ -42,4 +42,14 @@ object SetUpDirectDebitPage extends BasePage {
   def enterSortcode(input: String): Unit = sortCode.sendKeys(input)
   def enterAccountNumber(input: String): Unit = accountNumber.sendKeys(input)
 
+  def clearAccountName(): Unit = accountName.clear()
+  def clearSortcode(): Unit = sortCode.clear()
+  def clearAccountNumber(): Unit = accountNumber.clear()
+
+  def clearBankDetails(): Unit = {
+    accountName.clear()
+    sortCode.clear()
+    accountNumber.clear()
+  }
+
 }
