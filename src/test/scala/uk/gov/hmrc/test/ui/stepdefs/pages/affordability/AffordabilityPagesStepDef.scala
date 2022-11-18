@@ -40,11 +40,27 @@ class AffordabilityPagesStepDef extends Steps with DriverActions {
     SetUpDirectDebitPage.enterBankDetails(bankDetails)
   }
 
-  When("""^the User enters (.*) into the (.*) field$""") { (input: String, field: String) =>
-    field match {
-      case "Account Name" => SetUpDirectDebitPage.enterAccountName(input)
-      case "Sortcode" => SetUpDirectDebitPage.enterSortcode(input)
-      case "Account Number" => SetUpDirectDebitPage.enterAccountNumber(input)
+  When("""^the user enters (.*) into the (.*) field$""") { (input: String, field: String) =>
+    def field1: String = field.toLowerCase
+
+    input match {
+      case "none" => field1 match {
+        case "account name" => SetUpDirectDebitPage.clearAccountName()
+        case "sortcode" => SetUpDirectDebitPage.clearSortcode()
+        case "account number" => SetUpDirectDebitPage.clearAccountNumber()
+      }
+      case _ =>
+        field1 match {
+          case "account name" =>
+            SetUpDirectDebitPage.clearAccountName()
+            SetUpDirectDebitPage.enterAccountName(input)
+          case "sortcode" =>
+            SetUpDirectDebitPage.clearSortcode()
+            SetUpDirectDebitPage.enterSortcode(input)
+          case "account number" =>
+            SetUpDirectDebitPage.clearAccountNumber()
+            SetUpDirectDebitPage.enterAccountNumber(input)
+        }
     }
   }
 
@@ -52,21 +68,22 @@ class AffordabilityPagesStepDef extends Steps with DriverActions {
     continue()
   }
 
-//  When("""^the user doesn't select an option for (.*) and continues, then the error message (.*) shows$""") { (option: String, error: String) =>
-//    option match {
-//      case "account type" =>
-//        clickAccountHolder("is")
-//        continue()
-//        assertErrorMessage("no account type selected", error)
-//      case "account holder" =>
-//        clickRadio("personal")
-//        continue()
-//        assertErrorMessage("no account holder selected", error)
-//    }
-//  }
+  //  When("""^the user doesn't select an option for (.*) and continues, then the error message (.*) shows$""") { (option: String, error: String) =>
+  //    option match {
+  //      case "account type" =>
+  //        clickAccountHolder("is")
+  //        continue()
+  //        assertErrorMessage("no account type selected", error)
+  //      case "account holder" =>
+  //        clickRadio("personal")
+  //        continue()
+  //        assertErrorMessage("no account holder selected", error)
+  //    }
+  //  }
 
   Then("""^the (.*) field should display "(.*)"$""") { (elem: String, message: String) =>
-    val elemId = elem.replaceAll(" ", "-").toLowerCase
+    waitForPageToLoad()
+    var elemLower = elem.toLowerCase
 
     def prependError: String = if (langToggle == Language.welsh) "Gwall:" else "Error:"
 
@@ -75,7 +92,7 @@ class AffordabilityPagesStepDef extends Steps with DriverActions {
     if (langToggle == Language.welsh) HelperFunctions.errorSummaryHeading() should be("Mae problem wedi codi")
     else HelperFunctions.errorSummaryHeading() should be("There is a problem")
 
-    elem match {
+    elemLower match {
       //TODO Summary Error content validation, no id's implemented on Element and cant use css due to changing nature
       case "account type" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY"+elemId) should be(message)
@@ -95,5 +112,4 @@ class AffordabilityPagesStepDef extends Steps with DriverActions {
       case _ =>
     }
   }
-
 }
