@@ -18,11 +18,45 @@ package uk.gov.hmrc.test.ui.pages.content
 
 object WelshContent {
 
+  def cannotSetupDDContent(): String = {
+    s"""Ni allwch drefnu Debyd Uniongyrchol ar-lein
+       |Mae angen rhywun sydd wedi’i enwi’n ddeiliad y cyfrif, neu rywun ag awdurdod, er mwyn trefnu Debyd Uniongyrchol.
+       |Os nad chi yw deiliad y cyfrif, neu os ydych yn dymuno trefnu Debyd Uniongyrchol gyda chyfrif aml-lofnod, rydym yn argymell eich bod yn siarad ag ymgynghorydd ar 0300 200 1900 yn y Gwasanaeth Cwsmeriaid Cymraeg. Rhaid i chi sicrhau bod holl ddeiliaid y cyfrif yn bresennol wrth ffonio.
+       |
+       |Ewch i’r cyfrif treth
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+  }
+
+  def aboutBankAccountContent(): String = {
+    s"""Ynglŷn â’ch cyfrif banc
+       |Pa fath o fanylion cyfrif yr ydych yn eu rhoi?
+       |Cyfrif banc busnes
+       |Cyfrif banc personol
+       |Ai chi yw deiliad y cyfrif?
+       |Mae’n rhaid mai chi yw’r talwr a’r unig berson sydd ei angen i awdurdodi Debyd Uniongyrchol o’r cyfrif hwn.
+       |Iawn
+       |Na
+       |Yn eich blaen
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+  }
+
+  def setupDirectDebitContent(): String = {
+    s"""Trefnu Debyd Uniongyrchol
+       |Enter your banking details
+       |Yr enw sydd ar y cyfrif
+       |Cod didoli
+       |Mae’n rhaid i hyn fod yn 6 digid o hyd
+       |Rhif y cyfrif
+       |Mae’n rhaid iddo fod rhwng 6 ac 8 digid o hyd
+       |Yn eich blaen
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+  }
+
+
   // template function
   def templateText(): String = {
     s"""
        |
        |""".stripMargin
   }
-
 }

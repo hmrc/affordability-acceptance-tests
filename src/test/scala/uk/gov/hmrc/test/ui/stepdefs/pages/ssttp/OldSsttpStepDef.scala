@@ -45,23 +45,17 @@ class OldSsttpStepDef extends Steps with DriverActions {
     SuccessConfirmationPage.summaryBoxDisplayed()
   }
 
-//  Then("""^the User should be on the page: (.*)$""") { page: String =>
-//    waitForPageToLoad()
-//    val pageObj: BasePage = HelperFunctions.expectedPage(page)
-//    pageObj.shouldBeLoaded()
-//  }
-
   And("""^the user is on the (.*)$""") { page: String =>
     page match {
       case "CannotSetupDDPage" =>
         CannotSetupDDPage.shouldBeLoaded()
-      //        CannotSetupDDPage.assertContent()
+        CannotSetupDDPage.assertContent()
       case "TypeOfAccountPage" =>
-        TypeOfAccountPage.shouldBeLoaded()
-      //        CannotSetupDDPage.assertContent()
+//        TypeOfAccountPage.shouldBeLoaded()
+        TypeOfAccountPage.assertContent()
       case "SetUpDirectDebitPage" =>
         SetUpDirectDebitPage.shouldBeLoaded()
-      //        CannotSetupDDPage.assertContent()
+        SetUpDirectDebitPage.assertContent()
     }
   }
 }
