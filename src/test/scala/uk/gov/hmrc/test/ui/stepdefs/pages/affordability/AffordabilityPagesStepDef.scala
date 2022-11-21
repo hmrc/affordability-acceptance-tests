@@ -2,7 +2,6 @@ package uk.gov.hmrc.test.ui.stepdefs.pages.affordability
 
 import org.openqa.selenium.By
 import org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated
-import uk.gov.hmrc.test.ui.pages.journey.affordability.TypeOfAccountPage._
 import uk.gov.hmrc.test.ui.pages.journey.affordability.{SetUpDirectDebitPage, TypeOfAccountPage}
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
@@ -68,24 +67,12 @@ class AffordabilityPagesStepDef extends Steps with DriverActions {
     continue()
   }
 
-  //  When("""^the user doesn't select an option for (.*) and continues, then the error message (.*) shows$""") { (option: String, error: String) =>
-  //    option match {
-  //      case "account type" =>
-  //        clickAccountHolder("is")
-  //        continue()
-  //        assertErrorMessage("no account type selected", error)
-  //      case "account holder" =>
-  //        clickRadio("personal")
-  //        continue()
-  //        assertErrorMessage("no account holder selected", error)
-  //    }
-  //  }
-
   Then("""^the (.*) field should display "(.*)"$""") { (elem: String, message: String) =>
     waitForPageToLoad()
     var elemLower = elem.toLowerCase
 
-    def prependError: String = if (langToggle == Language.welsh) "Gwall:" else "Error:"
+//TODO BUG! - Welsh hidden text needs to render as "Gwall:"
+    def prependError: String = if (langToggle == Language.welsh) "Error:" else "Error:"
 
     waitFor(visibilityOfElementLocated(By.id("error-summary-title")))
 
