@@ -29,7 +29,7 @@ trait DriverActions extends WebBrowser {
 
   implicit def driver: WebDriver = SingletonDriver.getInstance()
 
-  def back(): Unit = click on linkText("Back")
+  def back(): Unit = click on id("back-link")
 
   def continue(): Unit = click on id("continue")
   def continueButton(): Unit = click on id("continue_button")

@@ -17,6 +17,7 @@
 package uk.gov.hmrc.test.ui.pages.support
 
 import uk.gov.hmrc.test.ui.pages.BasePage
+import uk.gov.hmrc.test.ui.testdata.ScenarioContext
 
 object HelperFunctions extends BasePage {
 
@@ -39,4 +40,8 @@ object HelperFunctions extends BasePage {
     else if (lang == "en")
       click on cssSelector("nav > ul > li:nth-child(1)")
   //      click on id(s"$lang-switch")
+
+//  def expectedPage(pageStr: String): BasePage = {
+//    PageObjs.fromString(pageStr)
+//  }
 }

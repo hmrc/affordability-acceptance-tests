@@ -71,7 +71,7 @@ class AffordabilityPagesStepDef extends Steps with DriverActions {
     waitForPageToLoad()
     var elemLower = elem.toLowerCase
 
-//TODO BUG! - Welsh hidden text needs to render as "Gwall:"
+    //TODO BUG! - Welsh hidden text needs to render as "Gwall:"
     def prependError: String = if (langToggle == Language.welsh) "Error:" else "Error:"
 
     waitFor(visibilityOfElementLocated(By.id("error-summary-title")))

@@ -1,7 +1,9 @@
 package uk.gov.hmrc.test.ui.pages.journey.affordability
 
 import org.openqa.selenium.WebElement
+import org.scalatest.Assertion
 import uk.gov.hmrc.test.ui.pages.BasePage
+import uk.gov.hmrc.test.ui.pages.content.{EnglishContent, WelshContent}
 import uk.gov.hmrc.test.ui.testdata.Language
 import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 
@@ -25,10 +27,10 @@ object CannotSetupDDPage extends BasePage {
 
   def pageContent: String = id("main-content").webElement.getText
 
-  //  def assertContent(): Assertion =  {
-  //    if (langToggle == Language.welsh) pageContent should be(WelshContent.accountOnFilePageText())
-  //    else pageContent should be(EnglishContent.accountOnFilePageText())
-  //  }
+    def assertContent(): Assertion =  {
+      if (langToggle == Language.welsh) pageContent should be(WelshContent.cannotSetupDDContent())
+      else pageContent should be(EnglishContent.cannotSetupDDContent())
+    }
 
   def assertPhoneNumber(lang: String): Unit = {
     lang match {

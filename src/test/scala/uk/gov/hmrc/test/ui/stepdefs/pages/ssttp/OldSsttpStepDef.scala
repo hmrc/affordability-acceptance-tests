@@ -16,7 +16,10 @@
 
 package uk.gov.hmrc.test.ui.stepdefs.pages.ssttp
 
+import uk.gov.hmrc.test.ui.pages.BasePage
+import uk.gov.hmrc.test.ui.pages.journey.affordability.{CannotSetupDDPage, SetUpDirectDebitPage, TypeOfAccountPage}
 import uk.gov.hmrc.test.ui.pages.journey.ssttp.{HowManyMonthsPage, HowMuchEachMonthPaymentPage, HowMuchUpfrontPaymentPage, SuccessConfirmationPage, UpfrontPaymentPage, WhatDayOfMonthPage}
+import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
 
 
@@ -42,4 +45,17 @@ class OldSsttpStepDef extends Steps with DriverActions {
     SuccessConfirmationPage.summaryBoxDisplayed()
   }
 
+  And("""^the user is on the (.*)$""") { page: String =>
+    page match {
+      case "CannotSetupDDPage" =>
+        CannotSetupDDPage.shouldBeLoaded()
+        CannotSetupDDPage.assertContent()
+      case "TypeOfAccountPage" =>
+//        TypeOfAccountPage.shouldBeLoaded()
+        TypeOfAccountPage.assertContent()
+      case "SetUpDirectDebitPage" =>
+        SetUpDirectDebitPage.shouldBeLoaded()
+        SetUpDirectDebitPage.assertContent()
+    }
+  }
 }
