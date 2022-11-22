@@ -23,7 +23,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     Given A user logs in and gets to the About your bank account page
     And the user clicks continue
     Then the account type field should display "Select what type of account details you are providing"
-    Then the account holder  field should display "Select yes if you are the account holder"
+    Then the account holder field should display "Select yes if you are the account holder"
 
 ### Set Up Direct Debit Page
   Scenario: Error Validation on Set Up Direct Debit page - no selection
@@ -63,9 +63,3 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | English | 521733-1                                 | Account Number | Account number must be between 6 and 8 digits     |
       | English | 521730181                                | Account Number | Account number must be between 6 and 8 digits     |
       | English | 521738wo                                 | Account Number | Account number must be between 6 and 8 digits     |
-      | Welsh   | none                                     | Account Name   | Nodwch enw cyfrif                                 |
-      | Welsh   | "Test"                                   | Account Name   | Gwiriwch fod enw eich cyfrif yn gywir             |
-      | Welsh   | none                                     | Sortcode       | Nodwch god didoli                                 |
-      | Welsh   | 00.00.00                                 | Sortcode       | Rhaid i’r cod didoli fod yn rhif 6 digid          |
-      | Welsh   | none                                     | Account Number | Nodwch rif y cyfrif                               |
-      | Welsh   | 52173                                    | Account Number | Mae’n rhaid i rif y cyfrif fod rhwng 6 ac 8 digid |
