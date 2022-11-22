@@ -83,20 +83,21 @@ class AffordabilityPagesStepDef extends Steps with DriverActions {
       //TODO Summary Error content validation, no id's implemented on Element and cant use css due to changing nature
       case "account type" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY"+elemId) should be(message)
-        HelperFunctions.id("typeOfAccount-error").webElement.getText should be(s"$prependError\n$message")
+        id("typeOfAccount-error").webElement.getText should be(s"$prependError\n$message")
       case "account holder" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.id("isSoleSignatory-error").webElement.getText should be(s"$prependError\n$message")
+        id("isSoleSignatory-error").webElement.getText should be(s"$prependError\n$message")
       case "account name" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.id("accountName-error").webElement.getText should be(s"$prependError\n$message")
+        id("accountName-error").webElement.getText should be(s"$prependError\n$message")
       case "sortcode" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.id("sortCode-error").webElement.getText should be(s"$prependError\n$message")
+        id("sortCode-error").webElement.getText should be(s"$prependError\n$message")
       case "account number" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.id("accountNumber-error").webElement.getText should be(s"$prependError\n$message")
+        id("accountNumber-error").webElement.getText should be(s"$prependError\n$message")
       case _ =>
+        println("No field found - check field name passed to method (elem)")
     }
   }
 }
