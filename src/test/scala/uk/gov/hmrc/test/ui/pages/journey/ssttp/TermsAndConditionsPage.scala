@@ -15,7 +15,9 @@
  */
 package uk.gov.hmrc.test.ui.pages.journey.ssttp
 
+import org.scalatest.Assertion
 import uk.gov.hmrc.test.ui.pages.BasePage
+import uk.gov.hmrc.test.ui.pages.content.{EnglishContent, WelshContent}
 import uk.gov.hmrc.test.ui.testdata.Language
 import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 
@@ -36,9 +38,13 @@ object TermsAndConditionsPage extends BasePage {
 
   def pageContent: String = id("main-content").webElement.getText
 
-//  def assertContent(): Assertion =  {
-//    if (langToggle == Language.welsh) pageContent should be(WelshContent.accountOnFilePageText())
-//    else pageContent should be(EnglishContent.accountOnFilePageText())
-//  }
+  def warningMessage: String = cssSelector("#content > div.govuk-warning-text > strong").webElement.getText
+
+  def postalAddress: String = cssSelector("#content > div:nth-child(4) > pre").webElement.getText
+
+  def assertContent(): Assertion =  {
+    if (langToggle == Language.welsh) pageContent should be(WelshContent.termsAndConditionsContent())
+    else pageContent should be(EnglishContent.termsAndConditionsContent())
+  }
 
 }

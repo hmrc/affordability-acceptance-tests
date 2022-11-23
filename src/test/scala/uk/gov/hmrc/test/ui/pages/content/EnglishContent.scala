@@ -53,6 +53,31 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def termsAndConditionsContent(): String = {
+    s"""Terms and conditions
+       |We can cancel this agreement if you:
+       |pay late or miss a payment
+       |pay another tax bill late
+       |do not submit your future tax returns on time
+       |!
+       |Warning
+       |If we cancel this agreement, you will need to pay the total amount you owe straight away.
+       |We can use any refunds you might get to pay off your tax charges.
+       |This plan does not cover your future tax bills. You will still need to pay your future bills in full and on time.
+       |You need to contact HMRC if:
+       |anything changes that you think affects your payment plan
+       |you need to change your payment plan
+       |You can write to us about your Direct Debit:
+       |Debt Management
+       | Self Assessment
+       | HM Revenue and Customs
+       | BX9 1AS
+       | United Kingdom
+       |Declaration
+       |I agree to the terms and conditions of this payment plan. I confirm that this is the earliest I am able to settle this debt.
+       |Agree and continue
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
 
   // template function
   def templateText(): String = {
