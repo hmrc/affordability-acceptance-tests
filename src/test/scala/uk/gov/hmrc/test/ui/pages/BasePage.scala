@@ -43,7 +43,7 @@ trait BasePage extends DriverActions with Matchers {
   def assertCurrentPageHeader(): Assertion       = currentPageHeader should be(expectedPageHeader)
 
   def shouldBeLoaded(): Unit = {
-//    assertCurrentUrl()
+    assertCurrentUrl()
     assertCurrentPageTitle()
     assertCurrentPageService()
     assertCurrentPageHeader()

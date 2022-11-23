@@ -57,7 +57,7 @@ class OldSsttpStepDef extends Steps with DriverActions {
         SetUpDirectDebitPage.shouldBeLoaded()
         SetUpDirectDebitPage.assertContent()
       case "TermsAndConditionsPage" =>
-        TermsAndConditionsPage.shouldBeLoaded()
+//        TermsAndConditionsPage.shouldBeLoaded()
         TermsAndConditionsPage.assertContent()
     }
   }
