@@ -18,7 +18,7 @@ package uk.gov.hmrc.test.ui.stepdefs.pages.ssttp
 
 import uk.gov.hmrc.test.ui.pages.BasePage
 import uk.gov.hmrc.test.ui.pages.journey.affordability.{CannotSetupDDPage, SetUpDirectDebitPage, TypeOfAccountPage}
-import uk.gov.hmrc.test.ui.pages.journey.ssttp.{HowManyMonthsPage, HowMuchEachMonthPaymentPage, HowMuchUpfrontPaymentPage, SuccessConfirmationPage, TermsAndConditionsPage, UpfrontPaymentPage, WhatDayOfMonthPage}
+import uk.gov.hmrc.test.ui.pages.journey.ssttp.{ConfirmDirectDebitDetailsPage, HowManyMonthsPage, HowMuchEachMonthPaymentPage, HowMuchUpfrontPaymentPage, SuccessConfirmationPage, TermsAndConditionsPage, UpfrontPaymentPage, WhatDayOfMonthPage}
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
 
@@ -51,14 +51,17 @@ class OldSsttpStepDef extends Steps with DriverActions {
         CannotSetupDDPage.shouldBeLoaded()
         CannotSetupDDPage.assertContent()
       case "TypeOfAccountPage" =>
-//        TypeOfAccountPage.shouldBeLoaded()
+        //        TypeOfAccountPage.shouldBeLoaded()
         TypeOfAccountPage.assertContent()
       case "SetUpDirectDebitPage" =>
         SetUpDirectDebitPage.shouldBeLoaded()
         SetUpDirectDebitPage.assertContent()
       case "TermsAndConditionsPage" =>
-//        TermsAndConditionsPage.shouldBeLoaded()
+        //        TermsAndConditionsPage.shouldBeLoaded()
         TermsAndConditionsPage.assertContent()
+      case "ConfirmDirectDebitDetailsPage" =>
+        ConfirmDirectDebitDetailsPage.shouldBeLoaded()
+        ConfirmDirectDebitDetailsPage.assertContentSlim()
     }
   }
 }
