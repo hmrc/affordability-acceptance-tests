@@ -22,7 +22,7 @@ import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 object SuccessConfirmationPage extends BasePage {
 
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/arrangement/summary"
-  def summaryBox = cssSelector("#content > div.govuk-panel.govuk-panel--confirmation.govuk-\\!-display-none-print").webElement.getText
+  def summaryBox = cssSelector("#content > div.govuk-panel.govuk-panel--confirmation").webElement.getText
 
   def expectedPageTitle = {
     if (langToggle == Language.welsh) "Cais yn llwyddiannus - Trefnu cynllun talu - GOV.UK"
@@ -44,7 +44,7 @@ object SuccessConfirmationPage extends BasePage {
 
   def summaryBoxDisplayed(): Unit ={
     if (langToggle == Language.welsh) summaryBox should be("Cais yn llwyddiannus\nCyfeirnod mandad Debyd Uniongyrchol:\nABCDabcd1234")
-      else summaryBox should be("Your payment plan is set up\nYour Direct Debit mandate reference:\nABCDabcd1234")
+      else summaryBox should be("Your payment plan is set up\nYour payment reference is\nABCDabcd1234")
   }
 
 }
