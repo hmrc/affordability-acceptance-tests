@@ -43,7 +43,8 @@ object SuccessConfirmationPage extends BasePage {
 //  }
 
   def summaryBoxDisplayed(): Unit ={
-    summaryBox should be("Your payment plan is set up\nYour Direct Debit mandate reference:\nABCDabcd1234")
+    if (langToggle == Language.welsh) summaryBox should be("Cais yn llwyddiannus\nCyfeirnod mandad Debyd Uniongyrchol:\nABCDabcd1234")
+      else summaryBox should be("Your payment plan is set up\nYour Direct Debit mandate reference:\nABCDabcd1234")
   }
 
 }

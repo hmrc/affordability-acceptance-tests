@@ -14,7 +14,13 @@ Feature: Welsh Content
     When the user selects personal and is the account holder on the About account page
     And the user clicks continue
     Then the user is on the SetUpDirectDebitPage
+    And the user enters valid bank details
+    And the user clicks continue
+    And the user clicks continue_button
+    Then the user is on the TermsAndConditionsPage
     And the User toggles on English language
+    And the user clicks continue_button
+    Then the submission has been successful
 
 ### Error Validation
 

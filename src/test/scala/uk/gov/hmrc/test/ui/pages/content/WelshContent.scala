@@ -52,6 +52,32 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
   }
 
+  def termsAndConditionsContent(): String = {
+    s"""Telerau ac amodau
+       |Gallwn ganslo’r cytundeb hwn os:
+       |ydych yn talu’n hwyr neu’n methu taliad
+       |ydych yn talu bil treth arall yn hwyr
+       |nad ydych yn cyflwyno’ch Ffurflenni Treth yn y dyfodol mewn pryd
+       |!
+       |Warning
+       |Os byddwn yn canslo’r cytundeb hwn, bydd yn rhaid i chi dalu’r cyfanswm sydd arnoch ar unwaith.
+       |Gallwn ddefnyddio unrhyw ad-daliadau y gallech eu cael i dalu’ch taliadau treth.
+       |Nid yw’r cynllun hwn yn cwmpasu’ch biliau treth yn y dyfodol. Bydd dal angen i chi dalu eich biliau yn y dyfodol yn llawn ac mewn pryd.
+       |Bydd angen i chi gysylltu â CThEF os yw unrhyw un o’r canlynol yn berthnasol:
+       |mae unrhyw beth yn newid ac rydych o’r farn ei fod yn effeithio ar eich cynllun talu
+       |mae angen i chi newid eich cynllun talu
+       |Gallwch ysgrifennu atom ynglŷn â’ch Debyd Uniongyrchol:
+       |Rheolaeth Dyledion
+       | Hunanasesiad
+       | Gwasanaeth Cwsmeriaid Cymraeg CThEF
+       | HMRC
+       | BX9 1ST
+       |Datganiad
+       |Cytunaf â thelerau ac amodau’r cynllun talu hwn. Cadarnhaf mai dyma’r cynharaf y gallaf setlo’r ddyled hon.
+       |Cytuno ac yn eich blaen
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+  }
+
 
   // template function
   def templateText(): String = {
