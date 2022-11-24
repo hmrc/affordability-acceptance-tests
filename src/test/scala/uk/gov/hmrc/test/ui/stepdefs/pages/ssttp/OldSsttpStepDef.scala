@@ -62,6 +62,9 @@ class OldSsttpStepDef extends Steps with DriverActions {
       case "ConfirmDirectDebitDetailsPage" =>
         ConfirmDirectDebitDetailsPage.shouldBeLoaded()
         ConfirmDirectDebitDetailsPage.assertContentSlim()
+      case "SuccessConfirmationPage" =>
+        SuccessConfirmationPage.shouldBeLoaded()
+        SuccessConfirmationPage.assertContent()
     }
   }
 }

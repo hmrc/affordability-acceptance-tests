@@ -42,9 +42,4 @@ object HelperFunctions extends BasePage {
       click on cssSelector("nav > ul > li:nth-child(2)")
     else if (lang == "en")
       click on cssSelector("nav > ul > li:nth-child(1)")
-  //      click on id(s"$lang-switch")
-
-  //  def expectedPage(pageStr: String): BasePage = {
-  //    PageObjs.fromString(pageStr)
-  //  }
 }
