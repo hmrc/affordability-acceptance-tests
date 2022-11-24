@@ -86,6 +86,14 @@ object WelshContent {
        |Gallwch ganslo Debyd Uniongyrchol ar unrhyw adeg drwy gysylltu â’ch banc neu’ch cymdeithas adeiladu. Efallai y bydd angen cadarnhad ysgrifenedig. Rhowch wybod i ni hefyd.""".stripMargin
   }
 
+  def successConfirmationContent(): String = {
+    s"""TBC""".stripMargin
+  }
+
+  def successConfirmationUpfrontContent(): String = {
+    s"""TBC""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""

@@ -45,21 +45,22 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     Then the <Field> field should display "<Message>"
 
     Examples:
-      | lang    | Input Value                              | Field          | Message                                           |
-      | English | none                                     | Account Name   | Enter an account name                             |
-      | English | "Test"                                   | Account Name   | Check your account name is correct                |
-      | English | Test?                                    | Account Name   | Check your account name is correct                |
-      | English | _Test                                    | Account Name   | Check your account name is correct                |
-      | English | TestTestTestTestTestTestTestTestTestTest | Account Name   | Check your account name is correct                |
-      | English | none                                     | Sortcode       | Enter a sort code                                 |
-      | English | 00.00.00                                 | Sortcode       | Sort code must be a 6 digit number                |
-      | English | 00000                                    | Sortcode       | Sort code must be a 6 digit number                |
-      | English | 0000000                                  | Sortcode       | Sort code must be a 6 digit number                |
-      | English | 000000words                              | Sortcode       | Sort code must be a 6 digit number                |
-      | English | 000000?                                  | Sortcode       | Sort code must be a 6 digit number                |
-      | English | none                                     | Account Number | Enter an account number                           |
-      | English | 52173                                    | Account Number | Account number must be between 6 and 8 digits     |
-      | English | 521733 1                                 | Account Number | Account number must be between 6 and 8 digits     |
-      | English | 521733-1                                 | Account Number | Account number must be between 6 and 8 digits     |
-      | English | 521730181                                | Account Number | Account number must be between 6 and 8 digits     |
-      | English | 521738wo                                 | Account Number | Account number must be between 6 and 8 digits     |
+      | lang    | Input Value                              | Field          | Message                                       |
+      | English | none                                     | Account Name   | Enter an account name                         |
+      | English | a                                        | Account Name   | Check your account name is correct            |
+      | English | "Test"                                   | Account Name   | Check your account name is correct            |
+      | English | Test?                                    | Account Name   | Check your account name is correct            |
+      | English | _Test                                    | Account Name   | Check your account name is correct            |
+      | English | TestTestTestTestTestTestTestTestTestTest | Account Name   | Check your account name is correct            |
+      | English | none                                     | Sortcode       | Enter a sort code                             |
+      | English | 00.00.00                                 | Sortcode       | Sort code must be a 6 digit number            |
+      | English | 00000                                    | Sortcode       | Sort code must be a 6 digit number            |
+      | English | 0000000                                  | Sortcode       | Sort code must be a 6 digit number            |
+      | English | 000000words                              | Sortcode       | Sort code must be a 6 digit number            |
+      | English | 000000?                                  | Sortcode       | Sort code must be a 6 digit number            |
+      | English | none                                     | Account Number | Enter an account number                       |
+      | English | 52173                                    | Account Number | Account number must be between 6 and 8 digits |
+      | English | 521733 1                                 | Account Number | Account number must be between 6 and 8 digits |
+      | English | 521733-1                                 | Account Number | Account number must be between 6 and 8 digits |
+      | English | 521730181                                | Account Number | Account number must be between 6 and 8 digits |
+      | English | 521738wo                                 | Account Number | Account number must be between 6 and 8 digits |

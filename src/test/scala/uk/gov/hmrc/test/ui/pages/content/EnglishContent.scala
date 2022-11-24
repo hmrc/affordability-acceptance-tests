@@ -87,6 +87,25 @@ object EnglishContent {
        |You can cancel a Direct Debit at any time by simply contacting your bank or building society. Written confirmation may be required. Please also notify us.""".stripMargin
   }
 
+  def successConfirmationContent(): String = {
+    s"""Your payment plan is set up
+       |Your payment reference is
+       |ABCDabcd1234
+       |What happens next
+       |We will send a letter by post confirming the set up of your Direct Debit instruction within 10 working days.
+       |Your next payment will be taken on 28th February 2020 or the next working day.
+       |View your payment plan
+       |If you need to change your payment plan
+       |Call the HMRC Helpline on 0300 123 1813.
+       |Go to tax account
+       |What did you think of this service? (takes 30 seconds)
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
+  def successConfirmationUpfrontContent(): String = {
+    s"""Your upfront payment will be taken within 10 working days. Your next payment will be taken on 28th February 2020 or the next working day.""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""
