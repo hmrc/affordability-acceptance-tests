@@ -126,6 +126,25 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def callUsNotEnrolledContent(): String = {
+    s"""Please call us
+       |You may still be able to set up a payment plan over the phone, but you are not eligible for an online payment plan.
+       |We recommend you speak to an adviser on 0300 200 3835 at the Payment Support Service to talk about your payment options.
+       |If you cannot use speech recognition software
+       |Find out how to deal with HMRC if you need extra support.
+       |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
+       |If you are outside the UK: +44 2890 538 192
+       |Before you call, make sure you have:
+       |information on any savings or investments you have
+       |your bank details
+       |We’re likely to ask:
+       |what you’ve done to try to pay the bill
+       |if you can pay some of the bill now
+       |Our opening times are:
+       |Monday to Friday: 8am to 6pm
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""

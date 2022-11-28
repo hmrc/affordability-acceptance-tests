@@ -39,7 +39,7 @@ class CommonSteps extends Steps with DriverActions {
     continue()
   }
 
-  Given("""^A user logs in and clicks link to the (.*) page$""") { (page: String) =>
+  Given("""^A user logs in and clicks link to the (.*)$""") { (page: String) =>
     TestOnlyStartPage.createUserAndGoToPage(page)
   }
 
