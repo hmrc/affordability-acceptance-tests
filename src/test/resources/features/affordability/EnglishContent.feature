@@ -39,3 +39,7 @@ Feature: English Content
     And the user clicks continue_button
     Then the submission has been successful
     And the conditional sentence for Upfront payment is displayed
+
+  Scenario: Call Us - Not Eligible page content
+    Given A user logs in and clicks link to the call us not eligible page
+    Then the user is on the CallUsNotEligiblePage

@@ -94,6 +94,26 @@ object WelshContent {
     s"""TBC""".stripMargin
   }
 
+  def callUsNotEligibleContent(): String = {
+    s"""Ffoniwch ni
+       |Nid ydych yn gymwys i drefnu cynllun talu ar-lein.
+       |I gael cymorth pellach, gallwch gysylltu â Gwasanaeth Cwsmeriaid Cymraeg CThEF ar 0300 200 1900 i siarad ag ymgynghorydd.
+       |Os na allwch ddefnyddio meddalwedd adnabod lleferydd
+       |Cael gwybod sut i ddelio â CThEF os oes angen cymorth ychwanegol arnoch.
+       |Gallwch hefyd ddefnyddio Relay UK os na allwch glywed na siarad dros y ffôn: deialwch 18001 ac yna 0345 300 3900.
+       |Os ydych y tu allan i’r DU: +44 300 200 1900
+       |Cyn i chi ffonio, sicrhewch fod gennych y canlynol:
+       |gwybodaeth am unrhyw gynilion neu fuddsoddiadau sydd gennych
+       |eich manylion banc
+       |manylion eich incwm a’ch gwariant
+       |Rydym yn debygol o ofyn y canlynol:
+       |beth rydych wedi’i wneud i geisio talu’r bil
+       |a allwch dalu rhywfaint o’r bil nawr
+       |Ein horiau agor yw:
+       |Dydd Llun i ddydd Gwener: 08:30 i 17:00 (rydym ar gau ar benwythnosau a gwyliau banc)
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""

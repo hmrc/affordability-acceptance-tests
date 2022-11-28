@@ -41,5 +41,20 @@ object TestOnlyStartPage extends BasePage {
     go to "http://localhost:9063/pay-what-you-owe-in-instalments"
   }
 
+  def createUserAndGoToPage(page: String): Unit ={
+    go to TestOnlyStartPage.url
+    waitForPageToLoad()
+    linkText("clear play session").webElement.click()
+    linkText("create user and log in").webElement.click()
+    waitForPageToLoad()
+    cssSelector("#content > form > button").webElement.click()
+    page match {
+      case "you need to file" => cssSelector("#content > ul:nth-child(9) > li:nth-child(13) > a").webElement.click()
+      case "call us not eligible" => cssSelector("#content > ul:nth-child(9) > li:nth-child(14) > a").webElement.click()
+      case "not enrolled" => cssSelector("#content > ul:nth-child(9) > li:nth-child(15) > a").webElement.click()
+      case "debt too large" => cssSelector("#content > ul:nth-child(9) > li:nth-child(16) > a").webElement.click()
+    }
+  }
+
 
 }

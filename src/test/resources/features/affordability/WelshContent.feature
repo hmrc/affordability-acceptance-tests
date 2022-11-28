@@ -23,6 +23,14 @@ Feature: Welsh Content
     And the user clicks continue_button
     Then the submission has been successful
 
+  Scenario: Welsh - Call Us - Not Eligible page content
+    Given A user logs in and clicks link to the call us not eligible page
+    And the User toggles on Welsh language
+    Then the user is on the CallUsNotEligiblePage
+    And the User toggles on English language
+
+
+
 ### Error Validation
 
   Scenario: Welsh - Error Validation on About your Account Details page - no selection
@@ -51,4 +59,3 @@ Feature: Welsh Content
       | Welsh | 00.00.00    | Sortcode       | Rhaid i’r cod didoli fod yn rhif 6 digid          |
       | Welsh | none        | Account Number | Nodwch rif y cyfrif                               |
       | Welsh | 52173       | Account Number | Mae’n rhaid i rif y cyfrif fod rhwng 6 ac 8 digid |
-

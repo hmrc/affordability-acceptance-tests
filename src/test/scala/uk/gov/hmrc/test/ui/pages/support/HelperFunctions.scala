@@ -17,7 +17,8 @@
 package uk.gov.hmrc.test.ui.pages.support
 
 import uk.gov.hmrc.test.ui.pages.BasePage
-import uk.gov.hmrc.test.ui.testdata.ScenarioContext
+import uk.gov.hmrc.test.ui.pages.testonly.BackUrlPage.langToggle
+import uk.gov.hmrc.test.ui.testdata.{Language, ScenarioContext}
 
 object HelperFunctions extends BasePage {
 
@@ -42,4 +43,5 @@ object HelperFunctions extends BasePage {
       click on cssSelector("nav > ul > li:nth-child(2)")
     else if (lang == "en")
       click on cssSelector("nav > ul > li:nth-child(1)")
+
 }
