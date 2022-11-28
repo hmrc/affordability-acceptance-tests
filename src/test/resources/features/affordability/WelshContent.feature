@@ -23,12 +23,18 @@ Feature: Welsh Content
     And the user clicks continue_button
     Then the submission has been successful
 
-  Scenario: Welsh - Call Us - Not Eligible page content
-    Given A user logs in and clicks link to the call us not eligible page
+  Scenario Outline: Welsh - Call Us - Eligibility pages content
+    Given A user logs in and clicks link to the <page>
     And the User toggles on Welsh language
-    Then the user is on the CallUsNotEligiblePage
+    Then the user is on the <page>
     And the User toggles on English language
 
+    Examples:
+      | page                   |
+      | CallUsNotEligiblePage  |
+      | CallUsNotEnrolledPage  |
+#      | CallUsDebtTooLargePage |
+#      | NeedToFilePage         |
 
 
 ### Error Validation
