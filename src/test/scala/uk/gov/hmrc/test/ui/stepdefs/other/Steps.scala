@@ -19,10 +19,6 @@ package uk.gov.hmrc.test.ui.stepdefs.other
 import cucumber.api.scala.{EN, ScalaDsl}
 import org.scalatest.Matchers
 import uk.gov.hmrc.test.ui.mongo.MongoDriver
-import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
-import uk.gov.hmrc.test.ui.pages.support.HelperFunctions.toggleLanguageToEnglish
-import uk.gov.hmrc.test.ui.pages.testonly.BackUrlPage.langToggle
-import uk.gov.hmrc.test.ui.testdata.Language
 import uk.gov.hmrc.webdriver.SingletonDriver
 
 import scala.util.Try
