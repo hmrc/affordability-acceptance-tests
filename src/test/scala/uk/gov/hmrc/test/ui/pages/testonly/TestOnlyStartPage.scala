@@ -18,6 +18,8 @@ package uk.gov.hmrc.test.ui.pages.testonly
 
 import uk.gov.hmrc.test.ui.pages.BasePage
 import uk.gov.hmrc.test.ui.pages.journey.ssttp.StartPage
+import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
+import uk.gov.hmrc.test.ui.testdata.Language
 import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 
 object TestOnlyStartPage extends BasePage {
@@ -37,7 +39,6 @@ object TestOnlyStartPage extends BasePage {
     linkText("create user and log in").webElement.click()
     waitForPageToLoad()
     cssSelector("#content > form > button").webElement.click()
-    //TODO for some reason doesnt like variable, so hardcoded for now
     go to "http://localhost:9063/pay-what-you-owe-in-instalments"
   }
 
@@ -56,5 +57,9 @@ object TestOnlyStartPage extends BasePage {
     }
   }
 
+  def languageToEnglish(): Unit = {
+    go to TestOnlyStartPage.url
+    HelperFunctions.toggleLangOn(Language.english)
+  }
 
 }

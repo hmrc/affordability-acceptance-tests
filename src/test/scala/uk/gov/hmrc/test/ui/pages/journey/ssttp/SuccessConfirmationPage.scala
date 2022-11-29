@@ -28,12 +28,12 @@ object SuccessConfirmationPage extends BasePage {
   def summaryBox = cssSelector("#content > div.govuk-panel.govuk-panel--confirmation").webElement.getText
 
   def expectedPageTitle = {
-    if (langToggle == Language.welsh) "Cais yn llwyddiannus - Trefnu cynllun talu - GOV.UK"
+    if (langToggle == Language.welsh) "Mae’ch cynllun talu wedi’i sefydlu - Trefnu cynllun talu - GOV.UK"
     else "Your payment plan is set up - Set up a Self Assessment payment plan - GOV.UK"
   }
 
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "Cais yn llwyddiannus"
+    if (langToggle == Language.welsh) "Mae’ch cynllun talu wedi’i sefydlu"
     else "Your payment plan is set up"
   }
 
@@ -48,12 +48,11 @@ object SuccessConfirmationPage extends BasePage {
     }
 
   def summaryBoxDisplayed(): Unit = {
-    if (langToggle == Language.welsh) summaryBox should be("Cais yn llwyddiannus\nCyfeirnod mandad Debyd Uniongyrchol:\nABCDabcd1234")
+    if (langToggle == Language.welsh) summaryBox should be("Mae’ch cynllun talu wedi’i sefydlu\nEich cyfeirnod talu yw\nABCDabcd1234")
     else summaryBox should be("Your payment plan is set up\nYour payment reference is\nABCDabcd1234")
   }
 
   def assertUpfrontPaymentSentence(): Assertion = {
-    //TODO when welsh agreed
     if (langToggle == Language.welsh) upfrontPaymentContent should be(WelshContent.successConfirmationUpfrontContent())
     else upfrontPaymentContent should be(EnglishContent.successConfirmationUpfrontContent())
   }
