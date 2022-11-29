@@ -152,6 +152,20 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
   }
 
+  def needToFileContent(): String = {
+    s"""Cyflwynwch eich Ffurflen Dreth er mwyn defnyddio’r gwasanaeth hwn
+       |I fod yn gymwys i drefnu cynllun talu ar-lein, mae’n rhaid i chi fod wedi cyflwyno’ch Ffurflen Dreth Hunanasesiad. Pan fyddwch wedi gwneud hyn, gallwch ddychwelyd i’r gwasanaeth.
+       |Ewch i’ch cyfrif treth er mwyn cyflwyno’ch Ffurflen Dreth Hunanasesiad.
+       |I gael cymorth pellach, gallwch gysylltu â Gwasanaeth Cwsmeriaid Cymraeg CThEF ar 0300 200 1900 i siarad ag ymgynghorydd.
+       |Os na allwch ddefnyddio meddalwedd adnabod lleferydd
+       |Cael gwybod sut i ddelio â CThEF os oes angen cymorth ychwanegol arnoch.
+       |Gallwch hefyd ddefnyddio Relay UK os na allwch glywed na siarad dros y ffôn: deialwch 18001 ac yna 0345 300 3900.
+       |Os ydych y tu allan i’r DU: +44 300 200 1900
+       |Ein horiau agor yw:
+       |Dydd Llun i ddydd Gwener: 08:30 i 17:00 (rydym ar gau ar benwythnosau a gwyliau banc)
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""

@@ -49,4 +49,4 @@ Feature: English Content
       | CallUsNotEligiblePage  |
       | CallUsNotEnrolledPage  |
       | CallUsDebtTooLargePage |
-#      | NeedToFilePage         |
+      | NeedToFilePage         |
