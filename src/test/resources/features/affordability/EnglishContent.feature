@@ -48,5 +48,5 @@ Feature: English Content
       | page                   |
       | CallUsNotEligiblePage  |
       | CallUsNotEnrolledPage  |
-#      | CallUsDebtTooLargePage |
+      | CallUsDebtTooLargePage |
 #      | NeedToFilePage         |
