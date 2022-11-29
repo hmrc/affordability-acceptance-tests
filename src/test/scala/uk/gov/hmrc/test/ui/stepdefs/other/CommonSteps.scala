@@ -69,4 +69,8 @@ class CommonSteps extends Steps with DriverActions {
     TestOnlyStartPage.createUserAndLogin()
   }
 
+  Given("""^the language toggle is reset to English$""") { () =>
+    TestOnlyStartPage.languageToEnglish()
+  }
+
 }

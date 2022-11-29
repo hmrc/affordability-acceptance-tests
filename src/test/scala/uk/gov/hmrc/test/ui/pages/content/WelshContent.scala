@@ -87,11 +87,22 @@ object WelshContent {
   }
 
   def successConfirmationContent(): String = {
-    s"""TBC""".stripMargin
+    s"""Mae’ch cynllun talu wedi’i sefydlu
+       |Eich cyfeirnod talu yw
+       |ABCDabcd1234
+       |Yr hyn sy’n digwydd nesaf
+       |Byddwn yn anfon llythyr atoch drwy’r post i gadarnhau bod eich cyfarwyddyd Debyd Uniongyrchol wedi’i sefydlu cyn pen 10 diwrnod gwaith.
+       |Caiff eich taliad nesaf ei gymryd ar 28ain Chwefror 2020 neu ar y diwrnod gwaith nesaf.
+       |Bwrw golwg dros eich cynllun talu
+       |Os oes angen i chi newid eich cynllun talu
+       |Ffoniwch Wasanaeth Cwsmeriaid Cymraeg CThEF ar 0300 200 1900.
+       |Ewch i’r cyfrif treth
+       |Beth oedd eich barn am y gwasanaeth hwn? (mae’n cymryd 30 eiliad)
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
   }
 
   def successConfirmationUpfrontContent(): String = {
-    s"""TBC""".stripMargin
+    s"""Caiff eich taliad ymlaen llaw ei gymryd cyn pen 10 diwrnod gwaith. Caiff eich taliad nesaf ei gymryd ar 28ain Chwefror 2020 neu ar y diwrnod gwaith nesaf.""".stripMargin
   }
 
   def callUsNotEligibleContent(): String = {
