@@ -34,7 +34,7 @@ Feature: Welsh Content
       | CallUsNotEligiblePage  |
       | CallUsNotEnrolledPage  |
       | CallUsDebtTooLargePage |
-#      | NeedToFilePage         |
+      | NeedToFilePage         |
 
 
 ### Error Validation

@@ -17,7 +17,7 @@
 package uk.gov.hmrc.test.ui.stepdefs.pages.ssttp
 
 import uk.gov.hmrc.test.ui.pages.BasePage
-import uk.gov.hmrc.test.ui.pages.journey.affordability.{CallUsDebtTooLargePage, CallUsNotEligiblePage, CallUsNotEnrolledPage, CannotSetupDDPage, SetUpDirectDebitPage, TypeOfAccountPage}
+import uk.gov.hmrc.test.ui.pages.journey.affordability.{CallUsDebtTooLargePage, CallUsNotEligiblePage, CallUsNotEnrolledPage, CannotSetupDDPage, NeedToFilePage, SetUpDirectDebitPage, TypeOfAccountPage}
 import uk.gov.hmrc.test.ui.pages.journey.ssttp.{ConfirmDirectDebitDetailsPage, HowManyMonthsPage, HowMuchEachMonthPaymentPage, HowMuchUpfrontPaymentPage, SuccessConfirmationPage, TermsAndConditionsPage, UpfrontPaymentPage, WhatDayOfMonthPage}
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
@@ -74,6 +74,9 @@ class OldSsttpStepDef extends Steps with DriverActions {
       case "CallUsDebtTooLargePage" =>
         CallUsDebtTooLargePage.shouldBeLoaded()
         CallUsDebtTooLargePage.assertContent()
+      case "NeedToFilePage" =>
+        NeedToFilePage.shouldBeLoaded()
+        NeedToFilePage.assertContent()
     }
   }
 }
