@@ -15,7 +15,9 @@
  */
 package uk.gov.hmrc.test.ui.pages.journey.ssttp
 
+import org.scalatest.Assertion
 import uk.gov.hmrc.test.ui.pages.BasePage
+import uk.gov.hmrc.test.ui.pages.content.{EnglishContent, WelshContent}
 import uk.gov.hmrc.test.ui.testdata.Language
 import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 
@@ -24,22 +26,27 @@ object TaxLiabilitiesPage extends BasePage {
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/calculator/tax-liabilities"
 
   def expectedPageTitle = {
-    if (langToggle == Language.welsh) "Crynodeb o’ch cyfrif Hunanasesiad \n£3,012.55 - Trefnu cynllun talu - GOV.UK"
-    else "Your Self Assessment tax bill is \n£3,012.55 - Set up a Self Assessment payment plan - GOV.UK"
+    if (langToggle == Language.welsh) "Mae’ch bil treth Hunanasesiad yn dod i gyfanswm o £3,012.55 - Trefnu cynllun talu - GOV.UK"
+    else "Your Self Assessment tax bill is £3,012.55 - Set up a Self Assessment payment plan - GOV.UK"
   }
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "Crynodeb o’ch cyfrif Hunanasesiad \n£3,012.55"
-    else "Your Self Assessment tax bill is \n£3,012.55"
+    if (langToggle == Language.welsh) "Mae’ch bil treth Hunanasesiad yn dod i gyfanswm o £3,012.55"
+    else "Your Self Assessment tax bill is £3,012.55"
   }
 
   def expectedPageTitleError: String = "Error: " + expectedPageTitle
 
+  def expandLink(): Unit = {
+    cssSelector("#content > details > summary > span").webElement.click()
+  }
+
   def pageContent: String = id("main-content").webElement.getText
 
-//  def assertContent(): Assertion =  {
-//    if (langToggle == Language.welsh) pageContent should be(WelshContent.accountOnFilePageText())
-//    else pageContent should be(EnglishContent.accountOnFilePageText())
-//  }
+  def assertContent(): Assertion =  {
+    expandLink()
+    if (langToggle == Language.welsh) pageContent should be(WelshContent.taxLiabilitiesContent())
+    else pageContent should be(EnglishContent.taxLiabilitiesContent())
+  }
 
 
 }

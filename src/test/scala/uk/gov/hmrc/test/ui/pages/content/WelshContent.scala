@@ -177,6 +177,25 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
   }
 
+  def taxLiabilitiesContent(): String = {
+    s"""Mae’ch bil treth Hunanasesiad yn dod i gyfanswm o £3,012.55
+       |Datganiad Hunanasesiad
+       |Yn ddyledus erbyn 31ain Ionawr 2020
+       |Taliad mantoli ar gyfer blwyddyn dreth 2018 i 2019
+       |£1,012.55
+       |(yn cynnwys llog a ychwanegwyd hyd yn hyn)
+       |Yn ddyledus erbyn 31ain Ionawr 2020
+       |Taliad ar gyfrif cyntaf ar gyfer blwyddyn dreth 2019 i 2020
+       |£1,000.00
+       |(yn cynnwys llog a ychwanegwyd hyd yn hyn)
+       |Yn ddyledus erbyn 31ain Gorffennaf 2020
+       |Ail daliad ar gyfrif ar gyfer blwyddyn dreth 2019 i 2020
+       |£1,000.00
+       |(yn cynnwys llog a ychwanegwyd hyd yn hyn)
+       |Yn eich blaen
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""
