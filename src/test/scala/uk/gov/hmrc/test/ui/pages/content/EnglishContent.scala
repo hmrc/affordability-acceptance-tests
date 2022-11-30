@@ -178,6 +178,25 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def taxLiabilitiesContent(): String = {
+    s"""Your Self Assessment tax bill is £3,012.55
+       |Self Assessment statement
+       |Due 31st January 2020
+       |Balancing payment for tax year 2018 to 2019
+       |£1,012.55
+       |(includes interest added to date)
+       |Due 31st January 2020
+       |First payment on account for tax year 2019 to 2020
+       |£1,000.00
+       |(includes interest added to date)
+       |Due 31st July 2020
+       |Second payment on account for tax year 2019 to 2020
+       |£1,000.00
+       |(includes interest added to date)
+       |Continue
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""
