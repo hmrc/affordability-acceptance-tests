@@ -23,6 +23,7 @@ import org.scalatest.selenium.WebBrowser
 import uk.gov.hmrc.test.ui.testdata.{Language, ScenarioContext}
 import uk.gov.hmrc.webdriver.SingletonDriver
 
+import java.time.Duration
 import java.util.concurrent.TimeUnit
 
 trait DriverActions extends WebBrowser {
@@ -46,7 +47,7 @@ trait DriverActions extends WebBrowser {
   def browserBack(): Unit = driver.navigate().back()
 
   def waitFor[T](condition: ExpectedCondition[T]): T = {
-    val wait = new WebDriverWait(driver, 10)
+    val wait = new WebDriverWait(driver, Duration.ofSeconds(10))
     wait.until(condition)
   }
 
