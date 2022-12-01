@@ -9,10 +9,8 @@ Feature: Welsh Content
     And the user clicks start
     And the user is on the TaxLiabilitiesPage
     And the user clicks continue
-    When the user clicks yes on the upfront payment page
+    When the user clicks no on the upfront payment page
     And the user clicks next
-    When the user enters 200 on the upfront payment amount page
-    And the user clicks continue
     And the user clicks continue
     When the user enters 500 on the how much can you afford each month page
     And the user clicks continue
