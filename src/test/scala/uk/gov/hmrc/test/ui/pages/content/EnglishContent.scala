@@ -187,11 +187,11 @@ object EnglishContent {
        |(includes interest added to date)
        |Due 31st January 2020
        |First payment on account for tax year 2019 to 2020
-       |£1,000.00
+       |£1,000
        |(includes interest added to date)
        |Due 31st July 2020
        |Second payment on account for tax year 2019 to 2020
-       |£1,000.00
+       |£1,000
        |(includes interest added to date)
        |Continue
        |Is this page not working properly? (opens in new tab)""".stripMargin

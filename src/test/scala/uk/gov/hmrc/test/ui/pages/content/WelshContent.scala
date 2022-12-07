@@ -186,11 +186,11 @@ object WelshContent {
        |(yn cynnwys llog a ychwanegwyd hyd yn hyn)
        |Yn ddyledus erbyn 31ain Ionawr 2020
        |Taliad ar gyfrif cyntaf ar gyfer blwyddyn dreth 2019 i 2020
-       |£1,000.00
+       |£1,000
        |(yn cynnwys llog a ychwanegwyd hyd yn hyn)
        |Yn ddyledus erbyn 31ain Gorffennaf 2020
        |Ail daliad ar gyfrif ar gyfer blwyddyn dreth 2019 i 2020
-       |£1,000.00
+       |£1,000
        |(yn cynnwys llog a ychwanegwyd hyd yn hyn)
        |Yn eich blaen
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
