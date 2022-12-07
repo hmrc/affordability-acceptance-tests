@@ -94,6 +94,7 @@ object EnglishContent {
        |What happens next
        |We will send a letter by post confirming the set up of your Direct Debit instruction within 10 working days.
        |Your next payment will be taken on 28th February 2020 or the next working day.
+       |Your tax account will be updated with your payment plan within 24 hours.
        |View your payment plan
        |If you need to change your payment plan
        |Call the HMRC Helpline on 0300 123 1813.
