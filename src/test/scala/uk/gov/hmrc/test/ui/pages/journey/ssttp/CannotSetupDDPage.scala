@@ -1,6 +1,5 @@
-package uk.gov.hmrc.test.ui.pages.journey.affordability
+package uk.gov.hmrc.test.ui.pages.journey.ssttp
 
-import org.openqa.selenium.WebElement
 import org.scalatest.Assertion
 import uk.gov.hmrc.test.ui.pages.BasePage
 import uk.gov.hmrc.test.ui.pages.content.{EnglishContent, WelshContent}

@@ -16,7 +16,9 @@
 
 package uk.gov.hmrc.test.ui.stepdefs.other
 
-import uk.gov.hmrc.test.ui.pages._
+import org.openqa.selenium.By
+import org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated
+import uk.gov.hmrc.test.ui.pages.journey.ssttp.{CallUsDebtTooLargePage, CallUsNotEligiblePage, CallUsNotEnrolledPage, CannotSetupDDPage, ConfirmDirectDebitDetailsPage, HowManyMonthsPage, HowMuchEachMonthPaymentPage, HowMuchUpfrontPaymentPage, NeedToFilePage, SetUpDirectDebitPage, SuccessConfirmationPage, TaxLiabilitiesPage, TermsAndConditionsPage, TypeOfAccountPage, UpfrontPaymentPage, WhatDayOfMonthPage}
 import uk.gov.hmrc.test.ui.pages.journey.ssttp.{HowManyMonthsPage, HowMuchEachMonthPaymentPage, StartPage, UpfrontPaymentPage, WhatDayOfMonthPage}
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.pages.testonly.TestOnlyStartPage
@@ -71,6 +73,101 @@ class CommonSteps extends Steps with DriverActions {
 
   Given("""^the language toggle is reset to English$""") { () =>
     TestOnlyStartPage.languageToEnglish()
+  }
+
+  And("""^the user is on the (.*)$""") { page: String =>
+    page match {
+      case "TaxLiabilitiesPage" =>
+        TaxLiabilitiesPage.shouldBeLoaded()
+        TaxLiabilitiesPage.assertContent()
+      case "CannotSetupDDPage" =>
+        CannotSetupDDPage.shouldBeLoaded()
+        CannotSetupDDPage.assertContent()
+      case "TypeOfAccountPage" =>
+        //        TypeOfAccountPage.shouldBeLoaded()
+        TypeOfAccountPage.assertContent()
+      case "SetUpDirectDebitPage" =>
+        SetUpDirectDebitPage.shouldBeLoaded()
+        SetUpDirectDebitPage.assertContent()
+      case "TermsAndConditionsPage" =>
+        //        TermsAndConditionsPage.shouldBeLoaded()
+        TermsAndConditionsPage.assertContent()
+      case "ConfirmDirectDebitDetailsPage" =>
+        ConfirmDirectDebitDetailsPage.shouldBeLoaded()
+        ConfirmDirectDebitDetailsPage.assertContentSlim()
+      case "SuccessConfirmationPage" =>
+        SuccessConfirmationPage.shouldBeLoaded()
+        SuccessConfirmationPage.assertContent()
+      case "CallUsNotEligiblePage" =>
+        CallUsNotEligiblePage.shouldBeLoaded()
+        CallUsNotEligiblePage.assertContent()
+      case "CallUsNotEnrolledPage" =>
+        CallUsNotEnrolledPage.shouldBeLoaded()
+        CallUsNotEnrolledPage.assertContent()
+      case "CallUsDebtTooLargePage" =>
+        CallUsDebtTooLargePage.shouldBeLoaded()
+        CallUsDebtTooLargePage.assertContent()
+      case "NeedToFilePage" =>
+        NeedToFilePage.shouldBeLoaded()
+        NeedToFilePage.assertContent()
+    }
+  }
+
+  When("""^the user enters (.*) into the (.*) field$""") { (input: String, field: String) =>
+    def field1: String = field.toLowerCase
+
+    input match {
+      case "none" => field1 match {
+        case "account name" => SetUpDirectDebitPage.clearAccountName()
+        case "sortcode" => SetUpDirectDebitPage.clearSortcode()
+        case "account number" => SetUpDirectDebitPage.clearAccountNumber()
+      }
+      case _ =>
+        field1 match {
+          case "account name" =>
+            SetUpDirectDebitPage.clearAccountName()
+            SetUpDirectDebitPage.enterAccountName(input)
+          case "sortcode" =>
+            SetUpDirectDebitPage.clearSortcode()
+            SetUpDirectDebitPage.enterSortcode(input)
+          case "account number" =>
+            SetUpDirectDebitPage.clearAccountNumber()
+            SetUpDirectDebitPage.enterAccountNumber(input)
+        }
+    }
+  }
+
+  Then("""^the (.*) field should display "(.*)"$""") { (elem: String, message: String) =>
+    waitForPageToLoad()
+    var elemLower = elem.toLowerCase
+
+    def prependError: String = if (langToggle == Language.welsh) "Gwall:" else "Error:"
+
+    waitFor(visibilityOfElementLocated(By.id("error-summary-title")))
+
+    if (langToggle == Language.welsh) HelperFunctions.errorSummaryHeading() should be("Mae problem wedi codi")
+    else HelperFunctions.errorSummaryHeading() should be("There is a problem")
+
+    elemLower match {
+      //TODO Summary Error content validation, no id's implemented on Element and cant use css due to changing nature
+      case "account type" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY"+elemId) should be(message)
+        HelperFunctions.errorMessage("typeOfAccount") should be(s"$prependError\n$message")
+      case "account holder" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("isSoleSignatory") should be(s"$prependError\n$message")
+      case "account name" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("accountName") should be(s"$prependError\n$message")
+      case "sortcode" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("sortCode") should be(s"$prependError\n$message")
+      case "account number" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("accountNumber") should be(s"$prependError\n$message")
+      case _ =>
+        println("No field found - check field name passed to method (elem)")
+    }
   }
 
 }

@@ -1,4 +1,4 @@
-package uk.gov.hmrc.test.ui.pages.journey.affordability
+package uk.gov.hmrc.test.ui.pages.journey.ssttp
 
 import org.scalatest.Assertion
 import uk.gov.hmrc.test.ui.pages.BasePage
