@@ -14,6 +14,8 @@ Feature: English Content
     And the user clicks continue_button
     Then the submission has been successful
     Then the user is on the SuccessConfirmationPage
+    Then the user clicks View your payment plan
+    Then the user is on the ViewPaymentPlanPage
 
   Scenario: Conditional Sentence when upfront payment made - Success Confirmation Page
     Given the user is created and logs in

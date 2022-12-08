@@ -198,6 +198,26 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def viewPaymentPlanContent(): String = {
+    s"""Your payment plan
+       |Payment reference ABCDabcd1234
+       |Upfront payment amount £0
+       |Monthly payments
+       |Payments collected on 28th or next working day
+       |February 2020 £502.09
+       |March 2020 £502.09
+       |April 2020 £502.09
+       |May 2020 £502.09
+       |June 2020 £502.09
+       |July 2020 £515.12
+       |Estimated total interest
+       |included in monthly payments
+       |£13.03
+       |Total to pay £3,025.58
+       |Print a copy of your payment plan
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""

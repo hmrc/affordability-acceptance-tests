@@ -57,4 +57,5 @@ object SuccessConfirmationPage extends BasePage {
     else upfrontPaymentContent should be(EnglishContent.successConfirmationUpfrontContent())
   }
 
+  def viewPlanText = id("print").webElement
 }

@@ -16,9 +16,9 @@
 
 package uk.gov.hmrc.test.ui.stepdefs.pages.ssttp
 
-import uk.gov.hmrc.test.ui.pages.journey.ssttp.{CallUsDebtTooLargePage, CallUsNotEligiblePage, CallUsNotEnrolledPage, CannotSetupDDPage, ConfirmDirectDebitDetailsPage, HowManyMonthsPage, HowMuchEachMonthPaymentPage, HowMuchUpfrontPaymentPage, NeedToFilePage, SetUpDirectDebitPage, SuccessConfirmationPage, TaxLiabilitiesPage, TermsAndConditionsPage, TypeOfAccountPage, UpfrontPaymentPage, WhatDayOfMonthPage}
+import uk.gov.hmrc.test.ui.pages.journey.ssttp._
 import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
-import uk.gov.hmrc.test.ui.testdata.{BankDetails, Language, ScenarioContext}
+import uk.gov.hmrc.test.ui.testdata.{BankDetails, ScenarioContext}
 
 
 class OldSsttpStepDef extends Steps with DriverActions {
@@ -89,6 +89,11 @@ class OldSsttpStepDef extends Steps with DriverActions {
 
   When("""^the conditional sentence for Upfront payment is displayed$""") { () =>
     SuccessConfirmationPage.assertUpfrontPaymentSentence()
+  }
+
+
+  When("""^the user clicks View your payment plan$""") { () =>
+    SuccessConfirmationPage.viewPlanText.click()
   }
 
 }
