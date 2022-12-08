@@ -16,11 +16,9 @@
 
 package uk.gov.hmrc.test.ui.stepdefs.pages.ssttp
 
-import uk.gov.hmrc.test.ui.pages.BasePage
-import uk.gov.hmrc.test.ui.pages.journey.affordability.{CallUsDebtTooLargePage, CallUsNotEligiblePage, CallUsNotEnrolledPage, CannotSetupDDPage, NeedToFilePage, SetUpDirectDebitPage, TypeOfAccountPage}
-import uk.gov.hmrc.test.ui.pages.journey.ssttp.{ConfirmDirectDebitDetailsPage, HowManyMonthsPage, HowMuchEachMonthPaymentPage, HowMuchUpfrontPaymentPage, SuccessConfirmationPage, TaxLiabilitiesPage, TermsAndConditionsPage, UpfrontPaymentPage, WhatDayOfMonthPage}
-import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
+import uk.gov.hmrc.test.ui.pages.journey.ssttp.{CallUsDebtTooLargePage, CallUsNotEligiblePage, CallUsNotEnrolledPage, CannotSetupDDPage, ConfirmDirectDebitDetailsPage, HowManyMonthsPage, HowMuchEachMonthPaymentPage, HowMuchUpfrontPaymentPage, NeedToFilePage, SetUpDirectDebitPage, SuccessConfirmationPage, TaxLiabilitiesPage, TermsAndConditionsPage, TypeOfAccountPage, UpfrontPaymentPage, WhatDayOfMonthPage}
 import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
+import uk.gov.hmrc.test.ui.testdata.{BankDetails, Language, ScenarioContext}
 
 
 class OldSsttpStepDef extends Steps with DriverActions {
@@ -37,7 +35,6 @@ class OldSsttpStepDef extends Steps with DriverActions {
       case "what day of the month" => WhatDayOfMonthPage.enterDayOfMonth(value)
       case "how many months" => HowManyMonthsPage.enterAmountOfMonths(value)
       case "upfront payment amount" => HowMuchUpfrontPaymentPage.enterAmount(value)
-
     }
   }
 
@@ -45,41 +42,53 @@ class OldSsttpStepDef extends Steps with DriverActions {
     SuccessConfirmationPage.summaryBoxDisplayed()
   }
 
-  And("""^the user is on the (.*)$""") { page: String =>
+  When("""^the user selects (business|personal|no bank account type) and (is|isn't|no selection for) the account holder on the About account page$""") { (accountType: String, holder: String) =>
+    TypeOfAccountPage.clickRadio(accountType)
+    TypeOfAccountPage.clickAccountHolder(holder)
+  }
+
+  When("""^the user clicks on the change link on the (.*)$""") { page: String =>
     page match {
-      case "TaxLiabilitiesPage" =>
-        TaxLiabilitiesPage.shouldBeLoaded()
-        TaxLiabilitiesPage.assertContent()
-      case "CannotSetupDDPage" =>
-        CannotSetupDDPage.shouldBeLoaded()
-        CannotSetupDDPage.assertContent()
-      case "TypeOfAccountPage" =>
-        //        TypeOfAccountPage.shouldBeLoaded()
-        TypeOfAccountPage.assertContent()
-      case "SetUpDirectDebitPage" =>
-        SetUpDirectDebitPage.shouldBeLoaded()
-        SetUpDirectDebitPage.assertContent()
-      case "TermsAndConditionsPage" =>
-        //        TermsAndConditionsPage.shouldBeLoaded()
-        TermsAndConditionsPage.assertContent()
       case "ConfirmDirectDebitDetailsPage" =>
-        ConfirmDirectDebitDetailsPage.shouldBeLoaded()
-        ConfirmDirectDebitDetailsPage.assertContentSlim()
-      case "SuccessConfirmationPage" =>
-        SuccessConfirmationPage.shouldBeLoaded()
-        SuccessConfirmationPage.assertContent()
-      case "CallUsNotEligiblePage" =>
-        CallUsNotEligiblePage.shouldBeLoaded()
-        CallUsNotEligiblePage.assertContent()
-      case "CallUsNotEnrolledPage" =>
-        CallUsNotEnrolledPage.shouldBeLoaded()
-        CallUsNotEnrolledPage.assertContent()
-      case "CallUsDebtTooLargePage" =>
-        CallUsDebtTooLargePage.shouldBeLoaded()
-        CallUsDebtTooLargePage.assertContent()
-      case "NeedToFilePage" =>
-        NeedToFilePage.shouldBeLoaded()
-        NeedToFilePage.assertContent()
+        ConfirmDirectDebitDetailsPage.clickChangeLink("name")
+      case _ =>
+        println("Check page passed in step")
     }
   }
+
+  When("""^the user enters (.*) bank details$""") { state: String =>
+    ScenarioContext.set("bankDetails", state match {
+      case "amended" => BankDetails.amendedAccount
+      case "invalid" => BankDetails.invalidAccount
+      case "invalidName" => BankDetails.invalidNameAccount
+      case "indeterminate" => BankDetails.indeterminateAccount
+      case "validBusiness" => BankDetails.businessAccount
+      case "invalidBusiness" => BankDetails.invalidBusinessAccount
+      case "invalidNameBusiness" => BankDetails.invalidBusinessNameAccount
+      case "amendedBusiness" => BankDetails.amendedBusinessAccount
+      case "indeterminateBusiness" => BankDetails.indeterminateBusinessAccount
+      case "wellFormatted=No" => BankDetails.wellFormattedNoAccount
+      case "supportsDirectDebit=No" => BankDetails.supportsDirectDebitNoAccount
+      case "onEISCD=No" => BankDetails.onEISCDNoAccount
+      case "denyList" => BankDetails.denyListAccount
+      case "partialNameBusiness" => BankDetails.partialNameBusinessAccount
+      case "partialName" => BankDetails.partialNameAccount
+      case _ => BankDetails.validAccount
+    })
+
+    val bankDetails: BankDetails = ScenarioContext.get[BankDetails]("bankDetails")
+
+    SetUpDirectDebitPage.enterBankDetails(bankDetails)
+  }
+
+
+  When("""^an empty form is submitted$""") { () =>
+    continue()
+  }
+
+
+  When("""^the conditional sentence for Upfront payment is displayed$""") { () =>
+    SuccessConfirmationPage.assertUpfrontPaymentSentence()
+  }
+
 }
