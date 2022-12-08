@@ -35,6 +35,8 @@ Feature: Welsh Content
     And the user clicks continue_button
     Then the submission has been successful
     Then the user is on the SuccessConfirmationPage
+    Then the user clicks View your payment plan
+    Then the user is on the ViewPaymentPlanPage
     And the language toggle is reset to English
 
   Scenario: Welsh - Conditional Sentence when upfront payment made - Success Confirmation Page

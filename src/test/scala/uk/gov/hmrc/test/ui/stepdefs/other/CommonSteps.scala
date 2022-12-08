@@ -18,8 +18,7 @@ package uk.gov.hmrc.test.ui.stepdefs.other
 
 import org.openqa.selenium.By
 import org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated
-import uk.gov.hmrc.test.ui.pages.journey.ssttp.{CallUsDebtTooLargePage, CallUsNotEligiblePage, CallUsNotEnrolledPage, CannotSetupDDPage, ConfirmDirectDebitDetailsPage, HowManyMonthsPage, HowMuchEachMonthPaymentPage, HowMuchUpfrontPaymentPage, NeedToFilePage, SetUpDirectDebitPage, SuccessConfirmationPage, TaxLiabilitiesPage, TermsAndConditionsPage, TypeOfAccountPage, UpfrontPaymentPage, WhatDayOfMonthPage}
-import uk.gov.hmrc.test.ui.pages.journey.ssttp.{HowManyMonthsPage, HowMuchEachMonthPaymentPage, StartPage, UpfrontPaymentPage, WhatDayOfMonthPage}
+import uk.gov.hmrc.test.ui.pages.journey.ssttp._
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.pages.testonly.TestOnlyStartPage
 import uk.gov.hmrc.test.ui.testdata.{Language, ScenarioContext}
@@ -110,6 +109,9 @@ class CommonSteps extends Steps with DriverActions {
       case "NeedToFilePage" =>
         NeedToFilePage.shouldBeLoaded()
         NeedToFilePage.assertContent()
+      case "ViewPaymentPlanPage" =>
+        ViewPaymentPlanPage.shouldBeLoaded()
+        ViewPaymentPlanPage.assertContent()
     }
   }
 

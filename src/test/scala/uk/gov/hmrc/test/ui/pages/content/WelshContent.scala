@@ -197,6 +197,26 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
   }
 
+  def viewPaymentPlanContent(): String = {
+    s"""Eich cynllun talu
+       |Cyfeirnod y taliad ABCDabcd1234
+       |Swm y taliad ymlaen llaw £0
+       |Taliadau misol
+       |Mae taliadau’n cael eu casglu ar 28ain neu ar y diwrnod gwaith nesaf
+       |Chwefror 2020 £502.09
+       |Mawrth 2020 £502.09
+       |Ebrill 2020 £502.09
+       |Mai 2020 £502.09
+       |Mehefin 2020 £502.09
+       |Gorffennaf 2020 £515.12
+       |Amcangyfrif o gyfanswm y llog
+       |wedi’i gynnwys yn eich taliadau misol
+       |£13.03
+       |Y cyfanswm i’w dalu £3,025.58
+       |Argraffwch gopi o’ch cynllun talu
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""
