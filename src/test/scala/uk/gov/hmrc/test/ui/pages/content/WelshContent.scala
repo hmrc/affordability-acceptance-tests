@@ -93,7 +93,7 @@ object WelshContent {
        |Yr hyn sy’n digwydd nesaf
        |Byddwn yn anfon llythyr atoch drwy’r post i gadarnhau bod eich cyfarwyddyd Debyd Uniongyrchol wedi’i sefydlu cyn pen 10 diwrnod gwaith.
        |Caiff eich taliad nesaf ei gymryd ar 28ain Chwefror 2020 neu ar y diwrnod gwaith nesaf.
-       |Bydd eich cyfrif treth yn cael ei ddiweddaru gyda'ch cynllun talu cyn pen 24 awr.
+       |Bydd eich cyfrif treth yn cael ei ddiweddaru gyda’ch cynllun talu cyn pen 24 awr.
        |Bwrw golwg dros eich cynllun talu
        |Os oes angen i chi newid eich cynllun talu
        |Ffoniwch Wasanaeth Cwsmeriaid Cymraeg CThEF ar 0300 200 1900.
