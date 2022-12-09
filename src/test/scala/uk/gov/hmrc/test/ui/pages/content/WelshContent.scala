@@ -63,7 +63,7 @@ object WelshContent {
        |Os byddwn yn canslo’r cytundeb hwn, bydd yn rhaid i chi dalu’r cyfanswm sydd arnoch ar unwaith.
        |Gallwn ddefnyddio unrhyw ad-daliadau y gallech eu cael i dalu’ch taliadau treth.
        |Nid yw’r cynllun hwn yn cwmpasu’ch biliau treth yn y dyfodol. Bydd dal angen i chi dalu eich biliau yn y dyfodol yn llawn ac mewn pryd.
-       |Bydd angen i chi gysylltu â CThEF os yw unrhyw un o’r canlynol yn berthnasol:
+       |Cysylltwch â CThEF ar 0300 200 1900 os yw un o’r canlynol yn berthnasol:
        |mae unrhyw beth yn newid ac rydych o’r farn ei fod yn effeithio ar eich cynllun talu
        |mae angen i chi newid eich cynllun talu
        |Gallwch ysgrifennu atom ynglŷn â’ch Debyd Uniongyrchol:

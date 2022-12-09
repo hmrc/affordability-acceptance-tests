@@ -64,7 +64,7 @@ object EnglishContent {
        |If we cancel this agreement, you will need to pay the total amount you owe straight away.
        |We can use any refunds you might get to pay off your tax charges.
        |This plan does not cover your future tax bills. You will still need to pay your future bills in full and on time.
-       |You need to contact HMRC if:
+       |Contact HMRC on 0300 123 1813 if:
        |anything changes that you think affects your payment plan
        |you need to change your payment plan
        |You can write to us about your Direct Debit:
