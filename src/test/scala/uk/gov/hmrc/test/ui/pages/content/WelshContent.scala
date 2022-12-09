@@ -217,6 +217,10 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
   }
 
+  def upfrontPaymentContent(): String = {
+    s"""TBC""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""

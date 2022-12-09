@@ -112,6 +112,9 @@ class CommonSteps extends Steps with DriverActions {
       case "ViewPaymentPlanPage" =>
         ViewPaymentPlanPage.shouldBeLoaded()
         ViewPaymentPlanPage.assertContent()
+      case "UpfrontPaymentPage" =>
+//        UpfrontPaymentPage.shouldBeLoaded()
+        UpfrontPaymentPage.assertContent()
     }
   }
 
