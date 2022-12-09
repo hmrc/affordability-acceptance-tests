@@ -94,6 +94,8 @@ class OldSsttpStepDef extends Steps with DriverActions {
 
   When("""^the user clicks View your payment plan$""") { () =>
     SuccessConfirmationPage.viewPlanText.click()
+    waitForPageToLoad()
+    ViewPaymentPlanPage.assertCurrentPageHeader()
   }
 
 }
