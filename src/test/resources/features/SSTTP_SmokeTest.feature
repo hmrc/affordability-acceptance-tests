@@ -23,4 +23,5 @@ Feature: SUPP - SmokeTest
     And the user clicks continue
     And the user clicks continue_button
     And the user clicks continue_button
-    Then the submission has been successful
+    Then the user clicks View your payment plan
+    Then the user is on the ViewPaymentPlanPage
