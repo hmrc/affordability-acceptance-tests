@@ -9,7 +9,7 @@ Feature: Welsh Content
     And the user clicks start
     And the user is on the TaxLiabilitiesPage
     And the user clicks continue
-#    And the user is on the UpfrontPaymentPage
+    And the user is on the UpfrontPaymentPage
     When the user clicks no on the upfront payment page
     And the user clicks next
     And the user clicks continue
