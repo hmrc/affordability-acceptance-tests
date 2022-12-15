@@ -45,4 +45,6 @@ object HowMuchUpfrontPaymentPage extends BasePage {
     id("amount").webElement.sendKeys(amount)
   }
 
+  def clearAmount(): Unit = id("amount").webElement.clear()
+
 }

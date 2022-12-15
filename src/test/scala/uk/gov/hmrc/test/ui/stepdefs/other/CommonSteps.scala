@@ -25,6 +25,14 @@ import uk.gov.hmrc.test.ui.testdata.{Language, ScenarioContext}
 
 class CommonSteps extends Steps with DriverActions {
 
+  Given("""^A user logs in and gets to the How much can you pay upfront page$""") { () =>
+    TestOnlyStartPage.createUserAndLogin()
+    StartPage.clickStartNow()
+    continue()
+    UpfrontPaymentPage.selectRadio("yes")
+    next()
+  }
+
   Given("""^A user logs in and gets to the About your bank account page$""") { () =>
     TestOnlyStartPage.createUserAndLogin()
     StartPage.clickStartNow()
@@ -126,6 +134,7 @@ class CommonSteps extends Steps with DriverActions {
         case "account name" => SetUpDirectDebitPage.clearAccountName()
         case "sortcode" => SetUpDirectDebitPage.clearSortcode()
         case "account number" => SetUpDirectDebitPage.clearAccountNumber()
+        case "amount" => HowMuchUpfrontPaymentPage.clearAmount()
       }
       case _ =>
         field1 match {
@@ -138,6 +147,9 @@ class CommonSteps extends Steps with DriverActions {
           case "account number" =>
             SetUpDirectDebitPage.clearAccountNumber()
             SetUpDirectDebitPage.enterAccountNumber(input)
+          case "amount" =>
+            HowMuchUpfrontPaymentPage.clearAmount()
+            HowMuchUpfrontPaymentPage.enterAmount(input)
         }
     }
   }
@@ -170,6 +182,9 @@ class CommonSteps extends Steps with DriverActions {
       case "account number" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
         HelperFunctions.errorMessage("accountNumber") should be(s"$prependError\n$message")
+      case "amount" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("amount") should be(s"$prependError\n$message")
       case _ =>
         println("No field found - check field name passed to method (elem)")
     }
