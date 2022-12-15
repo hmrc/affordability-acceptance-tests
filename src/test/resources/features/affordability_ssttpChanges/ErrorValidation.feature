@@ -64,3 +64,20 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | English | 521733-1                                 | Account Number | Account number must be between 6 and 8 digits |
       | English | 521730181                                | Account Number | Account number must be between 6 and 8 digits |
       | English | 521738wo                                 | Account Number | Account number must be between 6 and 8 digits |
+
+  Scenario Outline: Error Validation on How much can you pay upfront?
+    Given A user logs in and gets to the How much can you pay upfront page
+    When the User toggles on <lang> language
+    When the user enters <Input Value> into the amount field
+    And the user clicks continue
+    Then the amount field should display "<Message>"
+
+    Examples:
+      | lang    | Input Value | Message                                                  |
+      | English | none        | Enter an amount of £1 or above                           |
+      | English | 0.50        | Enter an amount of £1 or above                           |
+      | English | -1          | Enter an amount of £1 or above                           |
+      | English | 40000       | You need to enter an amount less than the amount you owe |
+      | English | 2.345       | Amount must not contain more than 2 decimal places       |
+      | English | aa          | Enter an amount of £1 or above                           |
+      | English | £2          | Enter an amount of £1 or above                           |
