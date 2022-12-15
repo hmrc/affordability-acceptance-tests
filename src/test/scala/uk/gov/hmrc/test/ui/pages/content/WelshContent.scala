@@ -218,7 +218,14 @@ object WelshContent {
   }
 
   def upfrontPaymentContent(): String = {
-    s"""TBC""".stripMargin
+    s"""A allwch wneud taliad ymlaen llaw?
+       |Bydd eich taliadau misol yn is os gallwch wneud taliad ymlaen llaw. Caiff y taliad hwn ei gymryd o’ch cyfrif banc cyn pen 10 diwrnod gwaith.
+       |Os oes gennych gynilion, dylech ystyried eu defnyddio i wneud taliad nawr.
+       |Iawn
+       |Na
+       |
+       |Yn eich blaen
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
   }
 
   // template function
