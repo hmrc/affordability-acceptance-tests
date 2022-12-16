@@ -2,6 +2,7 @@ Feature: Happy Paths - Affordability
 
 ### About your Bank Account Page
 
+  @a11y @zap
   Scenario: Cannot set up Direct Debit page - Not Account holder
     Given A user logs in and gets to the About your bank account page
     When the user selects personal and isn't the account holder on the About account page

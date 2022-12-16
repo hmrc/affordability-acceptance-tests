@@ -65,6 +65,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | English | 521730181                                | Account Number | Account number must be between 6 and 8 digits |
       | English | 521738wo                                 | Account Number | Account number must be between 6 and 8 digits |
 
+### Upfront Payment page
   Scenario Outline: Error Validation on How much can you pay upfront?
     Given A user logs in and gets to the How much can you pay upfront page
     When the User toggles on <lang> language
