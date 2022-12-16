@@ -27,6 +27,7 @@ Feature: English Content
     And the user clicks next
     When the user enters 200 on the upfront payment amount page
     And the user clicks continue
+    And the user is on the PaymentSummaryPage
     And the user clicks continue
     When the user enters 500 on the how much can you afford each month page
     And the user clicks continue

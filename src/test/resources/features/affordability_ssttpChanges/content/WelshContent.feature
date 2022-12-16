@@ -44,10 +44,12 @@ Feature: Welsh Content
     Given the user is created and logs in
     And the user clicks start
     And the user clicks continue
+    And the User toggles on Welsh language
     When the user clicks yes on the upfront payment page
     And the user clicks next
     When the user enters 200 on the upfront payment amount page
     And the user clicks continue
+    And the user is on the PaymentSummaryPage
     And the user clicks continue
     When the user enters 500 on the how much can you afford each month page
     And the user clicks continue
@@ -61,7 +63,6 @@ Feature: Welsh Content
     When the user enters valid bank details
     And the user clicks continue
     And the user clicks continue_button
-    And the User toggles on Welsh language
     And the user clicks continue_button
     Then the submission has been successful
     And the conditional sentence for Upfront payment is displayed

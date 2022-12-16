@@ -228,6 +228,21 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
   }
 
+  def paymentSummaryContent(): String = {
+    s"""Crynodeb o’r taliadau
+       |A allwch wneud taliad ymlaen llaw? Iawn Newid
+       |A allwch wneud taliad ymlaen llaw?
+       |Taliad ymlaen llaw
+       |I’w gymryd cyn pen 10 diwrnod gwaith
+       |£200 Newid
+       |Taliad ymlaen llaw
+       |Swm sy’n weddill i’w dalu £2,812.55
+       |Bydd llog yn cael ei ychwanegu at y swm hwn
+       |Sut rydym yn cyfrifo llog
+       |Yn eich blaen
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""
