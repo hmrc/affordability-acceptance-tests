@@ -15,7 +15,9 @@
  */
 package uk.gov.hmrc.test.ui.pages.journey.ssttp
 
+import org.scalatest.Assertion
 import uk.gov.hmrc.test.ui.pages.BasePage
+import uk.gov.hmrc.test.ui.pages.content.{EnglishContent, WelshContent}
 import uk.gov.hmrc.test.ui.testdata.Language
 import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 
@@ -28,7 +30,7 @@ object UpfrontSummaryPage extends BasePage {
     else "Payment summary - Set up a Self Assessment payment plan - GOV.UK"
   }
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "Crynodeb o’r taliadau?"
+    if (langToggle == Language.welsh) "Crynodeb o’r taliadau"
     else "Payment summary"
   }
 
@@ -36,10 +38,10 @@ object UpfrontSummaryPage extends BasePage {
 
   def pageContent: String = id("main-content").webElement.getText
 
-//  def assertContent(): Assertion =  {
-//    if (langToggle == Language.welsh) pageContent should be(WelshContent.accountOnFilePageText())
-//    else pageContent should be(EnglishContent.accountOnFilePageText())
-//  }
+  def assertContent(): Assertion =  {
+    if (langToggle == Language.welsh) pageContent should be(WelshContent.paymentSummaryContent())
+    else pageContent should be(EnglishContent.paymentSummaryContent())
+  }
 
   def clickChangeLink() = {
     cssSelector("#payment-summary-list > div:nth-child(1) > dd.govuk-summary-list__actions > a").webElement.click()
