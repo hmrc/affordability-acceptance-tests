@@ -44,6 +44,7 @@ Feature: English Content
     Then the submission has been successful
     And the conditional sentence for Upfront payment is displayed
 
+  @a11y @zap
   Scenario Outline: Call Us - Eligibility pages content
     Given A user logs in and clicks link to the <page>
     Then the user is on the <page>
