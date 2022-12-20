@@ -25,6 +25,7 @@ Feature: English Content
     And the user is on the UpfrontPaymentPage
     When the user clicks yes on the upfront payment page
     And the user clicks next
+    And the user is on the UpfrontPaymentAmountPage
     When the user enters 200 on the upfront payment amount page
     And the user clicks continue
     And the user is on the PaymentSummaryPage
