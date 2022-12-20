@@ -243,6 +243,14 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
   }
 
+  def upfrontPaymentAmountContent(): String = {
+    s"""Faint y gallwch ei dalu ymlaen llaw?
+       |Nodwch swm sydd rhwng £1 a £3,012.55
+       |£
+       |Yn eich blaen
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""

@@ -45,8 +45,10 @@ Feature: Welsh Content
     And the user clicks start
     And the user clicks continue
     And the User toggles on Welsh language
+    And the user is on the UpfrontPaymentPage
     When the user clicks yes on the upfront payment page
     And the user clicks next
+    And the user is on the UpfrontPaymentAmountPage
     When the user enters 200 on the upfront payment amount page
     And the user clicks continue
     And the user is on the PaymentSummaryPage
@@ -110,3 +112,20 @@ Feature: Welsh Content
       | Welsh | 00.00.00    | Sortcode       | Rhaid i’r cod didoli fod yn rhif 6 digid          |
       | Welsh | none        | Account Number | Nodwch rif y cyfrif                               |
       | Welsh | 52173       | Account Number | Mae’n rhaid i rif y cyfrif fod rhwng 6 ac 8 digid |
+
+  Scenario Outline: Welsh - Error Validation on How much can you pay upfront?
+    Given A user logs in and gets to the How much can you pay upfront page
+    When the User toggles on <lang> language
+    When the user enters <Input Value> into the amount field
+    And the user clicks continue
+    Then the amount field should display "<Message>"
+
+    Examples:
+      | lang  | Input Value | Message                                                   |
+      | Welsh | none        | Nodwch swm o £1 neu fwy                                   |
+      | Welsh | 0.50        | Nodwch swm o £1 neu fwy                                   |
+      | Welsh | -1          | Nodwch swm o £1 neu fwy                                   |
+      | Welsh | 40000       | Mae’n rhaid i chi nodi swm sy’n llai na’r swm sydd arnoch |
+      | Welsh | 2.345       | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol         |
+      | Welsh | aa          | Rhowch rifau yn unig                                      |
+      | Welsh | £2          | Rhowch rifau yn unig                                      |

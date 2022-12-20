@@ -1,6 +1,6 @@
 Feature: Happy Paths - Affordability
 
-### About your Bank Account Page
+### Cannot set up Direct Debit Page
 
   @a11y @zap
   Scenario: Cannot set up Direct Debit page - Not Account holder
