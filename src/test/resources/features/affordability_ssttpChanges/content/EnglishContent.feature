@@ -19,6 +19,7 @@ Feature: English Content
 
   Scenario: Conditional Sentence when upfront payment made - Success Confirmation Page
     Given the user is created and logs in
+    And the user is on the StartPage
     And the user clicks start
     And the user is on the TaxLiabilitiesPage
     And the user clicks continue

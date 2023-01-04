@@ -6,6 +6,7 @@ Feature: Welsh Content
   Scenario: Welsh - Happy Path - Full Journey - Welsh Content
     Given the user is created and logs in
     And the User toggles on Welsh language
+    And the user is on the StartPage
     And the user clicks start
     And the user is on the TaxLiabilitiesPage
     And the user clicks continue

@@ -84,6 +84,9 @@ class CommonSteps extends Steps with DriverActions {
 
   And("""^the user is on the (.*)$""") { page: String =>
     page match {
+      case "StartPage" =>
+        StartPage.shouldBeLoaded()
+        StartPage.assertContent()
       case "TaxLiabilitiesPage" =>
         TaxLiabilitiesPage.shouldBeLoaded()
         TaxLiabilitiesPage.assertContent()
