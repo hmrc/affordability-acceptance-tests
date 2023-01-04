@@ -16,7 +16,9 @@
 package uk.gov.hmrc.test.ui.pages.journey.ssttp
 
 import org.openqa.selenium.WebElement
+import org.scalatest.Assertion
 import uk.gov.hmrc.test.ui.pages.BasePage
+import uk.gov.hmrc.test.ui.pages.content.{EnglishContent, WelshContent}
 import uk.gov.hmrc.test.ui.testdata.Language
 import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 
@@ -30,7 +32,7 @@ object StartPage extends BasePage {
     else "Set up a Self Assessment payment plan - Set up a Self Assessment payment plan - GOV.UK"
   }
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "Trefnu cynllun talu"
+    if (langToggle == Language.welsh) "Sefydlu cynllun talu ar gyfer Hunanasesiad"
     else "Set up a Self Assessment payment plan"
   }
 
@@ -38,10 +40,10 @@ object StartPage extends BasePage {
 
   def pageContent: String = id("main-content").webElement.getText
 
-//  def assertContent(): Assertion =  {
-//    if (langToggle == Language.welsh) pageContent should be(WelshContent.accountOnFilePageText())
-//    else pageContent should be(EnglishContent.accountOnFilePageText())
-//  }
+  def assertContent(): Assertion =  {
+    if (langToggle == Language.welsh) pageContent should be(WelshContent.startPageContent())
+    else pageContent should be(EnglishContent.startPageContent())
+  }
 
   def clickStartNow(): Unit ={
     startButton.click()

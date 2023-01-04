@@ -18,6 +18,23 @@ package uk.gov.hmrc.test.ui.pages.content
 
 object WelshContent {
 
+  def startPageContent(): String = {
+    s"""Sefydlu cynllun talu ar gyfer Hunanasesiad
+       |Mae cynllun talu yn eich galluogi i dalu’ch taliadau treth fesul rhandaliad dros gyfnod o amser.
+       |Mae eich cynllun yn cwmpasu’r dreth sydd arnoch ac, os yw’n berthnasol, y ddau daliad ymlaen llaw tuag at eich bil treth. Mae’r cynllun hefyd yn cwmpasu unrhyw gosbau neu daliadau yn erbyn eich cyfrif. Bydd yn rhaid i chi dalu llog ar y swm a dalwch yn hwyr.
+       |I fod yn gymwys i sefydlu cynllun talu ar-lein, mae’n rhaid i’r canlynol fod yn wir amdanoch:
+       |mae’n rhaid i chi sicrhau bod eich Ffurflenni Treth yn gyfredol
+       |mae arnoch £30,000 neu lai
+       |nid oes gennych unrhyw ddyledion treth eraill
+       |nid ydych wedi sefydlu cynlluniau talu eraill gyda CThEF
+       |Gallwch ddefnyddio’r gwasanaeth hwn cyn pen 60 diwrnod i’r dyddiad cau ar gyfer talu.
+       |Cyn i chi ddechrau
+       |Bwriad CThEF yw y bydd hwn yn gynllun talu un-tro er mwyn rhoi cymorth ychwanegol i chi. Mae’n rhaid i chi sicrhau eich bod yn gwneud eich taliadau mewn pryd. Os na fyddwch, mae’n bosibl y bydd CThEF yn gofyn i chi dalu’r swm cyfan sy’n weddill.
+       |Er mwyn sefydlu’r cynllun talu, bydd angen i chi wybod beth yw’ch incwm a’ch gwariant misol, ac unrhyw gynilion neu fuddsoddiadau.
+       |Dechrau nawr
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+  }
+
   def cannotSetupDDContent(): String = {
     s"""Ni allwch drefnu Debyd Uniongyrchol ar-lein
        |Mae angen rhywun sydd wedi’i enwi’n ddeiliad y cyfrif, neu rywun ag awdurdod, er mwyn trefnu Debyd Uniongyrchol.

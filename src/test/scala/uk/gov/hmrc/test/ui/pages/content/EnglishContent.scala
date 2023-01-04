@@ -19,6 +19,23 @@ package uk.gov.hmrc.test.ui.pages.content
 
 object EnglishContent {
 
+  def startPageContent(): String = {
+    s"""Set up a Self Assessment payment plan
+       |A payment plan allows you to pay your tax charges in instalments over a period of time.
+       |Your plan covers the tax you owe and, if applicable, the 2 advance payments towards your tax bill. It also covers any penalties or charges against your account. You’ll have to pay interest on the amount you pay late.
+       |To be eligible to set up an online payment plan you need to:
+       |ensure your tax returns are up to date
+       |owe £30,000 or less
+       |have no other tax debts
+       |have no other HMRC payment plans set up
+       |You can use this service within 60 days of the payment deadline.
+       |Before you start
+       |HMRC intend this as a one-off payment plan to give you extra support. You must keep up to date with your payments. If you do not, HMRC may ask you to pay the entire outstanding amount.
+       |To set up the payment plan, you’ll need to know your monthly income and spending, and any savings or investments.
+       |Start now
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
   def cannotSetupDDContent(): String = {
     s"""You cannot set up a Direct Debit online
        |You need a named account holder or someone with authorisation to set up a Direct Debit.
