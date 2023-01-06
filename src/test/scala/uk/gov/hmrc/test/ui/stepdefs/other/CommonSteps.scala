@@ -130,6 +130,9 @@ class CommonSteps extends Steps with DriverActions {
       case "UpfrontPaymentAmountPage" =>
         HowMuchUpfrontPaymentPage.shouldBeLoaded()
         HowMuchUpfrontPaymentPage.assertContent()
+      case "WhatDayOfMonthPage" =>
+//        WhatDayOfMonthPage.shouldBeLoaded()
+        WhatDayOfMonthPage.assertContent()
     }
   }
 

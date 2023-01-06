@@ -13,6 +13,7 @@ Feature: Welsh Content
     And the user is on the UpfrontPaymentPage
     When the user clicks no on the upfront payment page
     And the user clicks next
+    And the user is on the WhatDayOfMonthPage
     And the user enters 28 on the what day of the month page
     And the user clicks next
     And the user enters 2 on the how many months page

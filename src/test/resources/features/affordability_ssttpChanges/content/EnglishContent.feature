@@ -31,6 +31,7 @@ Feature: English Content
     And the user clicks continue
     And the user is on the PaymentSummaryPage
     And the user clicks continue
+    And the user is on the WhatDayOfMonthPage
     And the user enters 28 on the what day of the month page
     And the user clicks next
     And the user enters 2 on the how many months page

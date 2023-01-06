@@ -265,6 +265,15 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def whatDayOfMonthContent(): String = {
+    s"""Which day do you want to pay each month?
+       |28th or next working day
+       |A different day
+       |
+       |Continue
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""
