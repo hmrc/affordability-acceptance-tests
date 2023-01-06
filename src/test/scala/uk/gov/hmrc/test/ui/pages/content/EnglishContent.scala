@@ -221,16 +221,12 @@ object EnglishContent {
        |Upfront payment amount £0
        |Monthly payments
        |Payments collected on 28th or next working day
-       |February 2020 £502.09
-       |March 2020 £502.09
-       |April 2020 £502.09
-       |May 2020 £502.09
-       |June 2020 £502.09
-       |July 2020 £515.12
+       |February 2020 £1,506.28
+       |March 2020 £1,512.59
        |Estimated total interest
        |included in monthly payments
-       |£13.03
-       |Total to pay £3,025.58
+       |£6.31
+       |Total to pay £3,018.86
        |Print a copy of your payment plan
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
