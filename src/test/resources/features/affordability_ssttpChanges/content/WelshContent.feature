@@ -13,12 +13,9 @@ Feature: Welsh Content
     And the user is on the UpfrontPaymentPage
     When the user clicks no on the upfront payment page
     And the user clicks next
-    And the user clicks continue
-    When the user enters 500 on the how much can you afford each month page
-    And the user clicks continue
     And the user enters 28 on the what day of the month page
     And the user clicks next
-    And the user enters 6 on the how many months page
+    And the user enters 2 on the how many months page
     And the user clicks next
     And the user clicks continue
     Then the user is on the TypeOfAccountPage
@@ -54,11 +51,9 @@ Feature: Welsh Content
     And the user clicks continue
     And the user is on the PaymentSummaryPage
     And the user clicks continue
-    When the user enters 500 on the how much can you afford each month page
-    And the user clicks continue
     And the user enters 28 on the what day of the month page
     And the user clicks next
-    And the user enters 6 on the how many months page
+    And the user enters 2 on the how many months page
     And the user clicks next
     And the user clicks continue
     When the user selects personal and is the account holder on the About account page

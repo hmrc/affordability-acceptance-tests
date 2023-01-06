@@ -39,11 +39,9 @@ class CommonSteps extends Steps with DriverActions {
     continue()
     UpfrontPaymentPage.selectRadio("no")
     next()
-    HowMuchEachMonthPaymentPage.enterAmount("500")
-    continue()
     WhatDayOfMonthPage.enterDayOfMonth("28")
     next()
-    HowManyMonthsPage.enterAmountOfMonths("6")
+    HowManyMonthsPage.enterAmountOfMonths("2")
     next()
     continue()
   }
