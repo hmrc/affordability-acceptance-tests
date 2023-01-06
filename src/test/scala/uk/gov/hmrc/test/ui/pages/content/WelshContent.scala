@@ -264,6 +264,15 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
   }
 
+  def whatDayOfMonthContent(): String = {
+    s"""Ar ba ddiwrnod a ydych eisiau talu bob mis?
+       |yr 28ain neu’r diwrnod gwaith nesaf
+       |Diwrnod gwahanol
+       |
+       |Yn eich blaen
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""
