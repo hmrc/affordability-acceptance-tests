@@ -13,26 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package uk.gov.hmrc.test.ui.pages.journey.ssttp
+package uk.gov.hmrc.test.ui.pages.journey.affordability
 
+import org.openqa.selenium.WebElement
 import org.scalatest.Assertion
 import uk.gov.hmrc.test.ui.pages.BasePage
 import uk.gov.hmrc.test.ui.pages.content.{EnglishContent, WelshContent}
 import uk.gov.hmrc.test.ui.testdata.Language
 import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 
-object WhatDayOfMonthPage extends BasePage {
+object CheckYouCanAffordPage extends BasePage {
 
-  val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/arrangement/instalment-summary/select-date"
+  val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/start-affordability"
+
+  def expandableLink: WebElement = cssSelector("#content > details > summary > span").webElement
 
   def expectedPageTitle = {
-    if (langToggle == Language.welsh) "Ar ba ddiwrnod a ydych eisiau talu bob mis? - Trefnu cynllun talu - GOV.UK"
-    else "Which day do you want to pay each month? - Set up a Self Assessment payment plan - GOV.UK"
+    if (langToggle == Language.welsh) "Mae angen i ni wirio eich bod yn gallu fforddio’r cynllun talu - Trefnu cynllun talu - GOV.UK"
+    else "We need to check you can afford the payment plan - Set up a Self Assessment payment plan - GOV.UK"
   }
 
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "Ar ba ddiwrnod a ydych eisiau talu bob mis?"
-    else "Which day do you want to pay each month?"
+    if (langToggle == Language.welsh) "Mae angen i ni wirio eich bod yn gallu fforddio’r cynllun talu"
+    else "We need to check you can afford the payment plan"
   }
 
   def expectedPageTitleError: String = "Error: " + expectedPageTitle
@@ -40,19 +43,11 @@ object WhatDayOfMonthPage extends BasePage {
   def pageContent: String = id("main-content").webElement.getText
 
   def assertContent(): Assertion = {
-    if (langToggle == Language.welsh) pageContent should be(WelshContent.whatDayOfMonthContent())
-    else pageContent should be(EnglishContent.whatDayOfMonthContent())
+    if (langToggle == Language.welsh) pageContent should be(WelshContent.checkYouCanAffordContent())
+    else pageContent should be(EnglishContent.checkYouCanAffordContent())
   }
 
-  def enterDayOfMonth(date: String) = {
-    date match {
-      case "28" => id("28th").webElement.click()
-      case _ => id("other").webElement.click()
-        id("dayOfMonth").webElement.sendKeys(date)
-    }
-  }
-
-  def clickAffordability(): Unit = {
-    click on id("temp")
+  def clickExpandLink(): Unit = {
+    click on expandableLink
   }
 }

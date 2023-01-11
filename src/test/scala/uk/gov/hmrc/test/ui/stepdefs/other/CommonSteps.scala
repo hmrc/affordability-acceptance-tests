@@ -18,6 +18,7 @@ package uk.gov.hmrc.test.ui.stepdefs.other
 
 import org.openqa.selenium.By
 import org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated
+import uk.gov.hmrc.test.ui.pages.journey.affordability.CheckYouCanAffordPage
 import uk.gov.hmrc.test.ui.pages.journey.ssttp._
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.pages.testonly.TestOnlyStartPage
@@ -44,6 +45,16 @@ class CommonSteps extends Steps with DriverActions {
     HowManyMonthsPage.enterAmountOfMonths("2")
     next()
     continue()
+  }
+
+  Given("""^A user logs in and gets to the affordability pages$""") { () =>
+    TestOnlyStartPage.createUserAndLogin()
+    StartPage.clickStartNow()
+    continue()
+    UpfrontPaymentPage.selectRadio("no")
+    next()
+    WhatDayOfMonthPage.enterDayOfMonth("28")
+    WhatDayOfMonthPage.clickAffordability()
   }
 
   Given("""^A user logs in and clicks link to the (.*)$""") { (page: String) =>
@@ -131,8 +142,12 @@ class CommonSteps extends Steps with DriverActions {
         HowMuchUpfrontPaymentPage.shouldBeLoaded()
         HowMuchUpfrontPaymentPage.assertContent()
       case "WhatDayOfMonthPage" =>
-//        WhatDayOfMonthPage.shouldBeLoaded()
+        //        WhatDayOfMonthPage.shouldBeLoaded()
         WhatDayOfMonthPage.assertContent()
+      case "CheckYouCanAffordPage" =>
+        CheckYouCanAffordPage.clickExpandLink()
+        CheckYouCanAffordPage.shouldBeLoaded()
+        CheckYouCanAffordPage.assertContent()
     }
   }
 

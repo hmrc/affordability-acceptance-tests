@@ -271,6 +271,21 @@ object EnglishContent {
        |A different day
        |
        |Continue
+       |Continue to Affordabiluty
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
+  def checkYouCanAffordContent(): String = {
+    s"""We need to check you can afford the payment plan
+       |To make sure you can afford your payment plan for the remaining £3,012.55, we need to ask about your income and spending. We will use this information to check how much income you have left over after your essential monthly spending.
+       |You may need to look at bank statements or utility bills before you continue. HMRC may ask for proof of your income and spending.
+       |If you decide to call us, we will still ask you about your income and spending.
+       |How we work out your plan
+       |We expect you to pay around half of your left over income towards the tax you owe. This is to help you:
+       |afford your monthly payments
+       |manage any unexpected changes in spending
+       |You can choose to pay more than half of your left over income. This will reduce the interest you pay.
+       |Continue
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 

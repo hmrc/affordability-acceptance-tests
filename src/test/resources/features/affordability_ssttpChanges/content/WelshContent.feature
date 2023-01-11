@@ -116,6 +116,7 @@ Feature: Welsh Content
     When the user enters <Input Value> into the amount field
     And the user clicks continue
     Then the amount field should display "<Message>"
+    Then the User toggles on English language
 
     Examples:
       | lang  | Input Value | Message                                                   |
@@ -126,3 +127,11 @@ Feature: Welsh Content
       | Welsh | 2.345       | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol         |
       | Welsh | aa          | Rhowch rifau yn unig                                      |
       | Welsh | £2          | Rhowch rifau yn unig                                      |
+
+
+  Scenario: Welsh - Affordability Screens Content - Branch off TEMPORARY, tests will need to be merged to main tests when journey complete
+    Given A user logs in and gets to the affordability pages
+    When the User toggles on Welsh language
+    And the user is on the CheckYouCanAffordPage
+#    Enter more steps here
+    Then the User toggles on English language

@@ -57,3 +57,8 @@ Feature: English Content
       | CallUsNotEnrolledPage  |
       | CallUsDebtTooLargePage |
       | NeedToFilePage         |
+
+
+  Scenario: Affordability Screens Content - Branch off TEMPORARY, tests will need to be merged to main tests when journey complete
+    Given A user logs in and gets to the affordability pages
+    And the user is on the CheckYouCanAffordPage
