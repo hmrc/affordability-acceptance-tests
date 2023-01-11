@@ -6,11 +6,4 @@ import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
 
 class AffordabilityPagesStepDef extends Steps with DriverActions {
 
-  //TEMPORARY WHILE AFFORDABILITY PAGES ARE BEING BUILT
-  When("""^the user expands on Check you can afford page$""") { () =>
-    CheckYouCanAffordPage.clickExpandLink()
-  }
-
-
-
 }

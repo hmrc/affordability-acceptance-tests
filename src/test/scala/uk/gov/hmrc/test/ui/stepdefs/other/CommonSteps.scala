@@ -145,6 +145,7 @@ class CommonSteps extends Steps with DriverActions {
         //        WhatDayOfMonthPage.shouldBeLoaded()
         WhatDayOfMonthPage.assertContent()
       case "CheckYouCanAffordPage" =>
+        CheckYouCanAffordPage.clickExpandLink()
         CheckYouCanAffordPage.shouldBeLoaded()
         CheckYouCanAffordPage.assertContent()
     }

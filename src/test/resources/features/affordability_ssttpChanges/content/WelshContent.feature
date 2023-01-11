@@ -132,7 +132,6 @@ Feature: Welsh Content
   Scenario: Welsh - Affordability Screens Content - Branch off TEMPORARY, tests will need to be merged to main tests when journey complete
     Given A user logs in and gets to the affordability pages
     When the User toggles on Welsh language
-    And the user expands on Check you can afford page
     And the user is on the CheckYouCanAffordPage
 #    Enter more steps here
     Then the User toggles on English language
