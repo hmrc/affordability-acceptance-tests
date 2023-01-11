@@ -270,6 +270,21 @@ object WelshContent {
        |Diwrnod gwahanol
        |
        |Yn eich blaen
+       |Continue to Affordabiluty
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+  }
+
+  def checkYouCanAffordContent(): String = {
+    s"""Mae angen i ni wirio eich bod yn gallu fforddio’r cynllun talu
+       |I wneud yn siŵr eich bod yn gallu fforddio’r cynllun talu ar gyfer y £3,012.55 sy’n weddill, mae angen i ni ofyn i chi am eich incwm a’ch gwariant. Byddwn yn defnyddio’r wybodaeth hon i wirio faint o incwm sy’n weddill gennych yn dilyn eich gwariant misol hanfodol.
+       |Mae’n bosibl y bydd angen i chi edrych ar gyfriflenni banc neu filiau cyfleustodau cyn i chi fynd yn eich blaen. Mae’n bosibl y bydd CThEF yn gofyn am dystiolaeth o’ch incwm a’ch gwariant.
+       |Os byddwch yn penderfynu ein ffonio, byddwn yn dal i ofyn i chi am eich incwm a’ch gwariant.
+       |Sut yr ydym yn cyfrifo’ch cynllun
+       |Rydym yn disgwyl i chi ddefnyddio tua hanner yr incwm sy’n weddill gennych i dalu’r dreth sydd arnoch. Mae hyn i’ch helpu i:
+       |fforddio’ch taliadau misol
+       |rheoli unrhyw newidiadau annisgwyl mewn gwariant
+       |Gallwch ddewis talu mwy na hanner eich incwm sy’n weddill. Bydd hyn yn gostwng y llog y byddwch yn ei dalu.
+       |Yn eich blaen
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
   }
 
