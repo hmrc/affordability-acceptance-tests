@@ -43,6 +43,7 @@ object CheckYouCanAffordPage extends BasePage {
   def pageContent: String = id("main-content").webElement.getText
 
   def assertContent(): Assertion = {
+    clickExpandLink()
     if (langToggle == Language.welsh) pageContent should be(WelshContent.checkYouCanAffordContent())
     else pageContent should be(EnglishContent.checkYouCanAffordContent())
   }
