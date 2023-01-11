@@ -28,8 +28,6 @@ object CheckYouCanAffordPage extends BasePage {
 
   def expandableLink: WebElement = cssSelector("#content > details > summary > span").webElement
 
-  def startButton: WebElement = id("start-now").webElement
-
   def expectedPageTitle = {
     if (langToggle == Language.welsh) "Mae angen i ni wirio eich bod yn gallu fforddio’r cynllun talu - Trefnu cynllun talu - GOV.UK"
     else "We need to check you can afford the payment plan - Set up a Self Assessment payment plan - GOV.UK"
