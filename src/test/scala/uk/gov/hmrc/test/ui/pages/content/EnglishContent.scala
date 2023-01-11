@@ -271,7 +271,7 @@ object EnglishContent {
        |A different day
        |
        |Continue
-       |Continue to Affordabiluty
+       |Continue to Affordability
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
