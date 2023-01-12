@@ -133,5 +133,7 @@ Feature: Welsh Content
     Given A user logs in and gets to the affordability pages
     When the User toggles on Welsh language
     And the user is on the CheckYouCanAffordPage
+    And the user clicks continue
+    And the user is on the AddIncomeAndSpendingPageBlank
 #    Enter more steps here
     Then the User toggles on English language

@@ -289,6 +289,17 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def addIncomeAndSpendingContentBlank(): String = {
+    s"""Add your income and spending
+       |Add income
+       |details
+       |1. Income
+       |Add spending
+       |details
+       |2. Spending
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""
