@@ -28,8 +28,8 @@ object StartPage extends BasePage {
   def startButton: WebElement = id("start-now").webElement
 
   def expectedPageTitle = {
-    if (langToggle == Language.welsh) "Sefydlu cynllun talu ar gyfer Hunanasesiad - Trefnu cynllun talu - GOV.UK"
-    else "Set up a Self Assessment payment plan - Set up a Self Assessment payment plan - GOV.UK"
+    if (langToggle == Language.welsh) "Trefnu cynllun talu - GOV.UK"
+    else "Set up a Self Assessment payment plan - GOV.UK"
   }
   def expectedPageHeader = {
     if (langToggle == Language.welsh) "Sefydlu cynllun talu ar gyfer Hunanasesiad"
