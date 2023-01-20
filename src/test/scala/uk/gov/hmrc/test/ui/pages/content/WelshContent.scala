@@ -32,7 +32,7 @@ object WelshContent {
        |Bwriad CThEF yw y bydd hwn yn gynllun talu un-tro er mwyn rhoi cymorth ychwanegol i chi. Mae’n rhaid i chi sicrhau eich bod yn gwneud eich taliadau mewn pryd. Os na fyddwch, mae’n bosibl y bydd CThEF yn gofyn i chi dalu’r swm cyfan sy’n weddill.
        |Er mwyn sefydlu’r cynllun talu, bydd angen i chi wybod beth yw’ch incwm a’ch gwariant misol, ac unrhyw gynilion neu fuddsoddiadau.
        |Dechrau nawr
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def cannotSetupDDContent(): String = {
@@ -41,7 +41,7 @@ object WelshContent {
        |Os nad chi yw deiliad y cyfrif, neu os ydych yn dymuno trefnu Debyd Uniongyrchol gyda chyfrif aml-lofnod, rydym yn argymell eich bod yn siarad ag ymgynghorydd ar 0300 200 1900 yn y Gwasanaeth Cwsmeriaid Cymraeg. Rhaid i chi sicrhau bod holl ddeiliaid y cyfrif yn bresennol wrth ffonio.
        |
        |Ewch i’r cyfrif treth
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def aboutBankAccountContent(): String = {
@@ -54,7 +54,7 @@ object WelshContent {
        |Iawn
        |Na
        |Yn eich blaen
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def setupDirectDebitContent(): String = {
@@ -66,7 +66,7 @@ object WelshContent {
        |Rhif y cyfrif
        |Mae’n rhaid iddo fod rhwng 6 ac 8 digid o hyd
        |Yn eich blaen
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def termsAndConditionsContent(): String = {
@@ -92,7 +92,7 @@ object WelshContent {
        |Datganiad
        |Cytunaf â thelerau ac amodau’r cynllun talu hwn. Cadarnhaf mai dyma’r cynharaf y gallaf setlo’r ddyled hon.
        |Cytuno ac yn eich blaen
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def ddGuaranteeContent(): String = {
@@ -116,7 +116,7 @@ object WelshContent {
        |Ffoniwch Wasanaeth Cwsmeriaid Cymraeg CThEF ar 0300 200 1900.
        |Ewch i’r cyfrif treth
        |Beth oedd eich barn am y gwasanaeth hwn? (mae’n cymryd 30 eiliad)
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def successConfirmationUpfrontContent(): String = {
@@ -140,7 +140,7 @@ object WelshContent {
        |a allwch dalu rhywfaint o’r bil nawr
        |Ein horiau agor yw:
        |Dydd Llun i ddydd Gwener: 08:30 i 17:00 (rydym ar gau ar benwythnosau a gwyliau banc)
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def callUsNotEnrolledContent(): String = {
@@ -159,7 +159,7 @@ object WelshContent {
        |a allwch dalu rhywfaint o’r bil nawr
        |Ein horiau agor yw:
        |Dydd Llun i ddydd Gwener: 08:30 i 17:00 (rydym ar gau ar benwythnosau a gwyliau banc)
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def callUsNotDebtTooLargeContent(): String = {
@@ -178,7 +178,7 @@ object WelshContent {
        |a allwch dalu rhywfaint o’r bil nawr
        |Ein horiau agor yw:
        |Dydd Llun i ddydd Gwener: 08:30 i 17:00 (rydym ar gau ar benwythnosau a gwyliau banc)
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def needToFileContent(): String = {
@@ -192,7 +192,7 @@ object WelshContent {
        |Os ydych y tu allan i’r DU: +44 300 200 1900
        |Ein horiau agor yw:
        |Dydd Llun i ddydd Gwener: 08:30 i 17:00 (rydym ar gau ar benwythnosau a gwyliau banc)
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def taxLiabilitiesContent(): String = {
@@ -211,7 +211,7 @@ object WelshContent {
        |£1,000
        |(yn cynnwys llog a ychwanegwyd hyd yn hyn)
        |Yn eich blaen
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def viewPaymentPlanContent(): String = {
@@ -227,7 +227,7 @@ object WelshContent {
        |£6.31
        |Y cyfanswm i’w dalu £3,018.86
        |Argraffwch gopi o’ch cynllun talu
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def upfrontPaymentContent(): String = {
@@ -238,7 +238,7 @@ object WelshContent {
        |Na
        |
        |Yn eich blaen
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def paymentSummaryContent(): String = {
@@ -253,7 +253,7 @@ object WelshContent {
        |Bydd llog yn cael ei ychwanegu at y swm hwn
        |Sut rydym yn cyfrifo llog
        |Yn eich blaen
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def upfrontPaymentAmountContent(): String = {
@@ -261,7 +261,7 @@ object WelshContent {
        |Nodwch swm sydd rhwng £1 a £3,012.55
        |£
        |Yn eich blaen
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def whatDayOfMonthContent(): String = {
@@ -271,7 +271,7 @@ object WelshContent {
        |
        |Yn eich blaen
        |Continue to Affordability
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def checkYouCanAffordContent(): String = {
@@ -285,7 +285,7 @@ object WelshContent {
        |rheoli unrhyw newidiadau annisgwyl mewn gwariant
        |Gallwch ddewis talu mwy na hanner eich incwm sy’n weddill. Bydd hyn yn gostwng y llog y byddwch yn ei dalu.
        |Yn eich blaen
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def addIncomeAndSpendingContentBlank(): String = {
@@ -296,7 +296,7 @@ object WelshContent {
        |Ychwanegu gwariant
        |manylion
        |2. Gwariant
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor mewn tab newydd)""".stripMargin
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   // template function
