@@ -30,7 +30,7 @@ object HelperFunctions extends BasePage {
 
   def expectedPageTitleError: String = ""
 
-  def errorSummaryHeading(): String = id("error-summary-title").webElement.getText
+  def errorSummaryHeading(): String = cssSelector("h2.govuk-error-summary__title").webElement.getText
 
   def errorSummary(field: String): String = id(s"$field-error-summary").webElement.getText
   //TODO to be confirmed
