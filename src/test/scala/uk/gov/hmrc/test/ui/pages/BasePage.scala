@@ -33,7 +33,7 @@ trait BasePage extends DriverActions with Matchers {
   def expectedPageHeader: String
 
   def currentPageTitle: String = pageTitle
-  def currentPageService: String = cssSelector("div.govuk-header__content > a").webElement.getText
+  def currentPageService: String = cssSelector("span.hmrc-header__service-name").webElement.getText
   def currentPageHeader: String = cssSelector("h1").webElement.getText
 
   def assertCurrentUrl(): Assertion              = currentUrl should be(url)
