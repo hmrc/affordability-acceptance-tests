@@ -166,7 +166,7 @@ class CommonSteps extends Steps with DriverActions {
 
     def prependError: String = if (langToggle == Language.welsh) "Gwall:" else "Error:"
 
-    waitFor(visibilityOfElementLocated(By.id("error-summary-title")))
+    waitFor(visibilityOfElementLocated(By.cssSelector("h2.govuk-error-summary__title")))
 
     if (langToggle == Language.welsh) HelperFunctions.errorSummaryHeading() should be("Mae problem wedi codi")
     else HelperFunctions.errorSummaryHeading() should be("There is a problem")
