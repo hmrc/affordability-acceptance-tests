@@ -314,6 +314,41 @@ object WelshContent {
        |Yn eich blaen
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
+
+  def addSpendingContent(): String = {
+    s"""Eich gwariant misol
+       |Ychwanegwch wybodaeth amdanoch chi’ch hun yn unig. Os ydych yn byw gyda phobl eraill, nodwch eich cyfran chi o’r gwariant. Gallwch adael blwch yn wag os nad yw’n berthnasol i chi.
+       |Tai
+       |Er enghraifft, morgais, rhent, atgyweiriadau
+       |£
+       |Cyfraniadau pensiwn
+       |£
+       |Treth Gyngor
+       |£
+       |Cyfleustodau
+       |Er enghraifft, ynni, dŵr, ffôn, band eang
+       |£
+       |Ad-daliadau dyledion
+       |Er enghraifft, cerdyn credyd, benthyciad, taliadau Gorchymyn Llys
+       |£
+       |Teithio
+       |Er enghraifft, cerbydau, tanwydd, tocynnau tymor
+       |£
+       |Costau gofal plant
+       |Er enghraifft, addysg, taliadau cynhaliaeth
+       |£
+       |Yswiriant
+       |Er enghraifft, iechyd, car, cartref
+       |£
+       |Nwyddau Groser
+       |£
+       |Iechyd
+       |Er enghraifft, presgripsiynau, gofal iechyd preifat
+       |£
+       |Yn eich blaen
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""
