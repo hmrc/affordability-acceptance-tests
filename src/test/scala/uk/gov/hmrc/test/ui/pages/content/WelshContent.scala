@@ -299,6 +299,21 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
+  def addIncomeContent(): String = {
+    s"""Eich incwm misol
+       |Ychwanegwch wybodaeth amdanoch chi’ch hun yn unig.
+       |Incwm misol ar ôl treth
+       |Os nad oes gennych incwm misol rheolaidd, nodwch amcangyfrif.
+       |£
+       |Budd-daliadau
+       |Er enghraifft, Credyd Cynhwysol, credydau treth
+       |£
+       |Incwm misol arall
+       |Er enghraifft, incwm rhent, difidendau
+       |£
+       |Yn eich blaen
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
+  }
   // template function
   def templateText(): String = {
     s"""
