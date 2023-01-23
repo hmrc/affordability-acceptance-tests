@@ -21,3 +21,4 @@ As an example, to run tests locally using chrome, the following can be run from 
 driver_path=/usr/local/bin/chromedriver
 sbt -Denvironment=local -Dbrowser=chrome -Dwebdriver.chrome.driver=${driver_path} 'testOnly affordability-acceptance-tests.runner.Runner'
 ```
+
