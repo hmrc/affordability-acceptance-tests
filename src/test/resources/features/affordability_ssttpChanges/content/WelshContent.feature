@@ -141,6 +141,11 @@ Feature: Welsh Content
     And the user is on the AddIncomeAndSpendingPageBlank
     And the user clicks on the add income link
     And the user is on the AddIncomePage
+    And the user adds monthly income of 100, benefits of 100 and other income of 300
+    And the user clicks continue
+#    And the user is on the AddIncomeAndSpendingPageIncomeFilled
+    And the user clicks on the add spending link
+    And the user is on the AddSpendingPage
 #    Enter more steps here
     Then the User toggles on English language
 
@@ -162,6 +167,9 @@ Feature: Welsh Content
       | Welsh | £1            | 0        | 0           | monthly amount | Rhowch rifau yn unig                                                                                           |
       | Welsh | 0             | AB       | 0           | benefit        | Rhowch rifau yn unig                                                                                           |
       | Welsh | 0             | 0        | !@          | other income   | Rhowch rifau yn unig                                                                                           |
+      | Welsh | 10.000        | 0        | 0           | monthly amount | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol                                                              |
+      | Welsh | 0             | 12.345   | 0           | benefit        | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol                                                              |
+      | Welsh | 0             | 0        | 19.999      | other income   | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol                                                              |
 #      | Welsh | -1          | 0             | 0             | monthly amount | TBC     |
 #      | Welsh | 0           | -1            | 0             | monthly amount | TBC     |
 #      | Welsh | 0           | 0             | -1            | monthly amount | TBC     |

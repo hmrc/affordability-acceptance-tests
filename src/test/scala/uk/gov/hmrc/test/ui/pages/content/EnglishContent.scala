@@ -316,6 +316,40 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def addSpendingContent(): String = {
+    s"""Your monthly spending
+       |Add information about yourself only. If you live with other people, input your share of the spending. You can leave a box empty if it does not apply to you.
+       |Housing
+       |For example, mortgage, rent, repairs
+       |£
+       |Pension contributions
+       |£
+       |Council tax
+       |£
+       |Utilities
+       |For example, energy, water, phone, broadband
+       |£
+       |Debt repayments
+       |For example, credit card, loan, court order payments
+       |£
+       |Travel
+       |For example, vehicles, fuel, season ticket
+       |£
+       |Childcare costs
+       |For example, education, maintenance payments
+       |£
+       |Insurance
+       |For example, health, car, home
+       |£
+       |Groceries
+       |£
+       |Health
+       |For example, prescriptions, private healthcare
+       |£
+       |Continue
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""
