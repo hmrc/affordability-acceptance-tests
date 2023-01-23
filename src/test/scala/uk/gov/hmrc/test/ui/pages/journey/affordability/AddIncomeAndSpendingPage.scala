@@ -26,6 +26,9 @@ object AddIncomeAndSpendingPage extends BasePage {
 
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/add-income-spending"
 
+  def addIncomeLink: WebElement = id("monthly-income").webElement
+  def addSpendingLink: WebElement = cssSelector("li:nth-child(2) > span > a").webElement
+
   def expectedPageTitle = {
     if (langToggle == Language.welsh) "Ychwanegu eich incwm a’ch gwariant - Trefnu cynllun talu - GOV.UK"
     else "Add your income and spending - Set up a Self Assessment payment plan - GOV.UK"
@@ -43,6 +46,13 @@ object AddIncomeAndSpendingPage extends BasePage {
   def assertContentBlank(): Assertion = {
     if (langToggle == Language.welsh) pageContent should be(WelshContent.addIncomeAndSpendingContentBlank())
     else pageContent should be(EnglishContent.addIncomeAndSpendingContentBlank())
+  }
+
+  def clicksLink(link: String): Unit = {
+    link.toLowerCase() match {
+      case "income" => click on addIncomeLink
+      case "spending" => click on addSpendingLink
+    }
   }
 
 }

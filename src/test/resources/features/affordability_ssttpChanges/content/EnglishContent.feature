@@ -64,3 +64,7 @@ Feature: English Content
     And the user is on the CheckYouCanAffordPage
     And the user clicks continue
     And the user is on the AddIncomeAndSpendingPageBlank
+    And the user clicks on the add income link
+    And the user is on the AddIncomePage
+
+

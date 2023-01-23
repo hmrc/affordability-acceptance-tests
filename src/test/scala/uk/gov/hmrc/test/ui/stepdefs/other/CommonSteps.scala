@@ -18,7 +18,7 @@ package uk.gov.hmrc.test.ui.stepdefs.other
 
 import org.openqa.selenium.By
 import org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated
-import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, CheckYouCanAffordPage}
+import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, CheckYouCanAffordPage}
 import uk.gov.hmrc.test.ui.pages.journey.ssttp._
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.pages.testonly.TestOnlyStartPage
@@ -150,6 +150,9 @@ class CommonSteps extends Steps with DriverActions {
       case "AddIncomeAndSpendingPageBlank" =>
 //        AddIncomeAndSpendingPage.shouldBeLoaded()
         AddIncomeAndSpendingPage.assertContentBlank()
+      case "AddIncomePage" =>
+        AddIncomePage.shouldBeLoaded()
+        AddIncomePage.assertContent()
     }
   }
 
@@ -162,6 +165,9 @@ class CommonSteps extends Steps with DriverActions {
         case "sortcode" => SetUpDirectDebitPage.clearSortcode()
         case "account number" => SetUpDirectDebitPage.clearAccountNumber()
         case "amount" => HowMuchUpfrontPaymentPage.clearAmount()
+        case "monthly income" => AddIncomePage.clearMonthlyIncome()
+        case "benefits" => AddIncomePage.clearBenefits()
+        case "other income" => AddIncomePage.clearOtherIncome()
       }
       case _ =>
         field1 match {
@@ -177,6 +183,15 @@ class CommonSteps extends Steps with DriverActions {
           case "amount" =>
             HowMuchUpfrontPaymentPage.clearAmount()
             HowMuchUpfrontPaymentPage.enterAmount(input)
+          case "monthly income" =>
+            AddIncomePage.clearMonthlyIncome()
+            AddIncomePage.enterMonthlyIncome(input)
+          case "benefits" =>
+            AddIncomePage.clearBenefits()
+            AddIncomePage.enterBenefits(input)
+          case "other income" =>
+            AddIncomePage.clearOtherIncome()
+            AddIncomePage.enterOtherIncome(input)
         }
     }
   }
@@ -212,6 +227,15 @@ class CommonSteps extends Steps with DriverActions {
       case "amount" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
         HelperFunctions.errorMessage("amount") should be(s"$prependError\n$message")
+      case "monthly income" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("monthlyIncome") should be(s"$prependError\n$message")
+      case "benefit" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("benefits") should be(s"$prependError\n$message")
+      case "other Income" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("otherIncome") should be(s"$prependError\n$message")
       case _ =>
         println("No field found - check field name passed to method (elem)")
     }

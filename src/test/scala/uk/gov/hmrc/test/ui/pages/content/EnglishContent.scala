@@ -300,6 +300,22 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def addIncomeContent(): String = {
+    s"""Your monthly income
+       |Add information about yourself only.
+       |Monthly income after tax
+       |If you do not have a regular monthly income, add an estimate.
+       |£
+       |Benefits
+       |For example, Universal Credit, tax credits
+       |£
+       |Other monthly income
+       |For example, rental income, dividends
+       |£
+       |Continue
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""

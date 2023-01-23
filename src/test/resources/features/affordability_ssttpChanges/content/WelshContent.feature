@@ -129,11 +129,39 @@ Feature: Welsh Content
       | Welsh | £2          | Rhowch rifau yn unig                                      |
 
 
+
+###### AFFORDABILITY SCREENS
+
+
   Scenario: Welsh - Affordability Screens Content - Branch off TEMPORARY, tests will need to be merged to main tests when journey complete
     Given A user logs in and gets to the affordability pages
     When the User toggles on Welsh language
     And the user is on the CheckYouCanAffordPage
     And the user clicks continue
     And the user is on the AddIncomeAndSpendingPageBlank
+    And the user clicks on the add income link
+    And the user is on the AddIncomePage
 #    Enter more steps here
     Then the User toggles on English language
+
+  Scenario Outline: Welsh - Error Validation on Add Income Page?
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add income link
+    When the User toggles on <lang> language
+    When the user enters <monthlyIncome> into the monthly income field
+    When the user enters <benefits> into the benefits field
+    When the user enters <otherAmount> into the other income field
+    And the user clicks continue
+    Then the <Field> field should display "<Message>"
+    Then the User toggles on English language
+
+    Examples:
+      | lang  | monthlyIncome | benefits | otherAmount | Field          | Message                                                                                                        |
+      | Welsh | 0             | 0        | 0           | monthly amount | Mae’n rhaid i chi nodi ffigur ar gyfer yr incwm. Os nad oes gennych unrhyw incwm, ffoniwch ni ar 0300 200 1900 |
+      | Welsh | £1            | 0        | 0           | monthly amount | Rhowch rifau yn unig                                                                                           |
+      | Welsh | 0             | AB       | 0           | benefit        | Rhowch rifau yn unig                                                                                           |
+      | Welsh | 0             | 0        | !@          | other income   | Rhowch rifau yn unig                                                                                           |
+#      | Welsh | -1          | 0             | 0             | monthly amount | TBC     |
+#      | Welsh | 0           | -1            | 0             | monthly amount | TBC     |
+#      | Welsh | 0           | 0             | -1            | monthly amount | TBC     |

@@ -44,3 +44,26 @@ Feature: Happy Paths - Affordability
     And the user is on the ConfirmDirectDebitDetailsPage
     When the user clicks on the change link on the ConfirmDirectDebitDetailsPage
     Then the user is on the TypeOfAccountPage
+
+
+
+### Affordability - Add Income page
+
+  Scenario Outline: Validation on Add Income Page
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add income link
+    When the user enters <monthlyIncome> into the monthly income field
+    When the user enters <benefits> into the benefits field
+    When the user enters <otherAmount> into the other income field
+    And the user clicks continue
+    And the user is on the AddIncomeAndSpendingPageBlank
+
+    Examples:
+      | monthlyIncome | benefits | otherAmount |
+      | none          | 1        | 0           |
+      | 0             | none     | 1           |
+      | 1             | 0        | none        |
+
+
+

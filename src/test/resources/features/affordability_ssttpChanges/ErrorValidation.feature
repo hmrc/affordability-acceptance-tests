@@ -82,3 +82,26 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | English | 2.345       | Amount must not contain more than 2 decimal places       |
       | English | aa          | Enter numbers only                                       |
       | English | £2          | Enter numbers only                                       |
+
+### Affordability - Add Income page
+  Scenario Outline: Welsh - Error Validation on Add Income Page?
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add income link
+    When the User toggles on <lang> language
+    When the user enters <monthlyIncome> into the monthly income field
+    When the user enters <benefits> into the benefits field
+    When the user enters <otherAmount> into the other income field
+    And the user clicks continue
+    Then the <Field> field should display "<Message>"
+    Then the User toggles on English language
+
+    Examples:
+      | lang    | monthlyIncome | benefits | otherAmount | Field          | Message                                                                                 |
+      | English | 0             | 0        | 0           | monthly amount | You must enter an income figure. If you do not have any income call us on 0300 200 3835 |
+      | English | £1            | 0        | 0           | monthly amount | Enter numbers only                                                                      |
+      | English | 0             | AB       | 0           | benefit        | Enter numbers only                                                                      |
+      | English | 0             | 0        | !@          | other income   | Enter numbers only                                                                      |
+#      | Welsh | -1          | 0             | 0             | monthly amount | TBC     |
+#      | Welsh | 0           | -1            | 0             | monthly amount | TBC     |
+#      | Welsh | 0           | 0             | -1            | monthly amount | TBC     |
