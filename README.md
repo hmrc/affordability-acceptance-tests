@@ -13,7 +13,7 @@ environment = local / dev / qa / staging
 
 To test the service locally, use the following service manager profile to run the required services
 ```
-sm --start SSTTP -r
+sm --restart SSTTP -r
 ```
 
 As an example, to run tests locally using chrome, the following can be run from a shell script
@@ -21,3 +21,4 @@ As an example, to run tests locally using chrome, the following can be run from 
 driver_path=/usr/local/bin/chromedriver
 sbt -Denvironment=local -Dbrowser=chrome -Dwebdriver.chrome.driver=${driver_path} 'testOnly affordability-acceptance-tests.runner.Runner'
 ```
+
