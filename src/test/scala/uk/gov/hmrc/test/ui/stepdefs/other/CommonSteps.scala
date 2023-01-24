@@ -148,7 +148,7 @@ class CommonSteps extends Steps with DriverActions {
         CheckYouCanAffordPage.shouldBeLoaded()
         CheckYouCanAffordPage.assertContent()
       case "AddIncomeAndSpendingPageBlank" =>
-//        AddIncomeAndSpendingPage.shouldBeLoaded()
+        //        AddIncomeAndSpendingPage.shouldBeLoaded()
         AddIncomeAndSpendingPage.assertContentBlank()
       case "AddIncomePage" =>
         AddIncomePage.shouldBeLoaded()
@@ -161,19 +161,33 @@ class CommonSteps extends Steps with DriverActions {
 
   When("""^the user enters (.*) into the (.*) field$""") { (input: String, field: String) =>
     def field1: String = field.toLowerCase
-
     input match {
       case "none" => field1 match {
+//Set Up Direct Debit Page
         case "account name" => SetUpDirectDebitPage.clearAccountName()
         case "sortcode" => SetUpDirectDebitPage.clearSortcode()
         case "account number" => SetUpDirectDebitPage.clearAccountNumber()
+//Upfront Payment Page
         case "amount" => HowMuchUpfrontPaymentPage.clearAmount()
+//Add Income Page
         case "monthly income" => AddIncomePage.clearMonthlyIncome()
         case "benefits" => AddIncomePage.clearBenefits()
         case "other income" => AddIncomePage.clearOtherIncome()
+//Add Spending Page
+        case "housing" => AddSpendingPage.clearHousing()
+        case "pension" => AddSpendingPage.clearPension()
+        case "council tax" => AddSpendingPage.clearCouncilTax()
+        case "utilities" => AddSpendingPage.clearUtilities()
+        case "debt repayments" => AddSpendingPage.clearDebtRepayments()
+        case "travel" => AddSpendingPage.clearTravel()
+        case "childcare" => AddSpendingPage.clearChildcare()
+        case "insurance" => AddSpendingPage.clearInsurance()
+        case "groceries" => AddSpendingPage.clearGroceries()
+        case "health" => AddSpendingPage.clearHealth()
       }
       case _ =>
         field1 match {
+//Set Up Direct Debit Page
           case "account name" =>
             SetUpDirectDebitPage.clearAccountName()
             SetUpDirectDebitPage.enterAccountName(input)
@@ -183,9 +197,11 @@ class CommonSteps extends Steps with DriverActions {
           case "account number" =>
             SetUpDirectDebitPage.clearAccountNumber()
             SetUpDirectDebitPage.enterAccountNumber(input)
+//Upfront Payment Page
           case "amount" =>
             HowMuchUpfrontPaymentPage.clearAmount()
             HowMuchUpfrontPaymentPage.enterAmount(input)
+//Add Income Page
           case "monthly income" =>
             AddIncomePage.clearMonthlyIncome()
             AddIncomePage.enterMonthlyIncome(input)
@@ -195,6 +211,37 @@ class CommonSteps extends Steps with DriverActions {
           case "other income" =>
             AddIncomePage.clearOtherIncome()
             AddIncomePage.enterOtherIncome(input)
+//Add Spending Page
+          case "housing" =>
+            AddSpendingPage.clearHousing()
+            AddSpendingPage.enterHousing(input)
+          case "pension" =>
+            AddSpendingPage.clearPension()
+            AddSpendingPage.enterPension(input)
+          case "council tax" =>
+            AddSpendingPage.clearCouncilTax()
+            AddSpendingPage.enterCouncilTax(input)
+          case "utilities" =>
+            AddSpendingPage.clearUtilities()
+            AddSpendingPage.enterUtilities(input)
+          case "debt repayments" =>
+            AddSpendingPage.clearDebtRepayments()
+            AddSpendingPage.enterDebtRepayments(input)
+          case "travel" =>
+            AddSpendingPage.clearTravel()
+            AddSpendingPage.enterTravel(input)
+          case "childcare" =>
+            AddSpendingPage.clearChildcare()
+            AddSpendingPage.enterChildcare(input)
+          case "insurance" =>
+            AddSpendingPage.clearInsurance()
+            AddSpendingPage.enterInsurance(input)
+          case "groceries" =>
+            AddSpendingPage.clearGroceries()
+            AddSpendingPage.enterGroceries(input)
+          case "health" =>
+            AddSpendingPage.clearHealth()
+            AddSpendingPage.enterHealth(input)
         }
     }
   }
@@ -202,22 +249,21 @@ class CommonSteps extends Steps with DriverActions {
   Then("""^the (.*) field should display "(.*)"$""") { (elem: String, message: String) =>
     waitForPageToLoad()
     var elemLower = elem.toLowerCase
-
     def prependError: String = if (langToggle == Language.welsh) "Gwall:" else "Error:"
-
     waitFor(visibilityOfElementLocated(By.cssSelector("h2.govuk-error-summary__title")))
-
     if (langToggle == Language.welsh) HelperFunctions.errorSummaryHeading() should be("Mae problem wedi codi")
     else HelperFunctions.errorSummaryHeading() should be("There is a problem")
 
     elemLower match {
       //TODO Summary Error content validation, no id's implemented on Element and cant use css due to changing nature
+//Account Type Page
       case "account type" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY"+elemId) should be(message)
         HelperFunctions.errorMessage("typeOfAccount") should be(s"$prependError\n$message")
       case "account holder" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
         HelperFunctions.errorMessage("isSoleSignatory") should be(s"$prependError\n$message")
+//Set Up Direct Debit Page
       case "account name" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
         HelperFunctions.errorMessage("accountName") should be(s"$prependError\n$message")
@@ -227,18 +273,51 @@ class CommonSteps extends Steps with DriverActions {
       case "account number" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
         HelperFunctions.errorMessage("accountNumber") should be(s"$prependError\n$message")
+//Upfront Payment Page
       case "amount" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
         HelperFunctions.errorMessage("amount") should be(s"$prependError\n$message")
+//Add Income Page
       case "monthly income" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
         HelperFunctions.errorMessage("monthlyIncome") should be(s"$prependError\n$message")
       case "benefit" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
         HelperFunctions.errorMessage("benefits") should be(s"$prependError\n$message")
-      case "other Income" =>
+      case "other income" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
         HelperFunctions.errorMessage("otherIncome") should be(s"$prependError\n$message")
+//Add Spending Page
+      case "housing" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("housing") should be(s"$prependError\n$message")
+      case "pension" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("pension-contributions") should be(s"$prependError\n$message")
+      case "council tax" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("council-tax") should be(s"$prependError\n$message")
+      case "utilities" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("utilities") should be(s"$prependError\n$message")
+      case "debt repayments" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("debt-repayments") should be(s"$prependError\n$message")
+      case "travel" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("travel") should be(s"$prependError\n$message")
+      case "childcare" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("childcare") should be(s"$prependError\n$message")
+      case "insurance" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("insurance") should be(s"$prependError\n$message")
+      case "groceries" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("groceries") should be(s"$prependError\n$message")
+      case "health" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("health") should be(s"$prependError\n$message")
       case _ =>
         println("No field found - check field name passed to method (elem)")
     }

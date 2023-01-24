@@ -76,4 +76,17 @@ object AddSpendingPage extends BasePage {
     clearHealth()
   }
 
+  def enterAllSpendingDetails(value: String): Unit = {
+    enterHousing(value)
+    enterPension(value)
+    enterCouncilTax(value)
+    enterUtilities(value)
+    enterDebtRepayments(value)
+    enterTravel(value)
+    enterChildcare(value)
+    enterInsurance(value)
+    enterGroceries(value)
+    enterHealth(value)
+  }
+
 }

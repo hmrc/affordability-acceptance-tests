@@ -114,16 +114,9 @@ Feature: Error Validation on various pages created/updated by Affordability chan
 #    And the user clicks continue
 #    And the user clicks on the add income link
 #    When the User toggles on English language
-#    When the user enters £1 into the monthly income field
-#    When the user enters !@ into the benefits field
-#    When the user enters abc into the other income field
-#    When the user enters ABC into the other income field
-#    When the user enters )(* into the other income field
-#    When the user enters :? into the other income field
-#    When the user enters 12.000 into the other income field
+#
 #    When the user enters <otherAmount> into the other income field
-#    When the user enters <otherAmount> into the other income field
-#    When the user enters <otherAmount> into the other income field
+
 #    And the user clicks continue
 #    Then the <Field> field should display "<Message>"
 #    Then the <Field> field should display "<Message>"
