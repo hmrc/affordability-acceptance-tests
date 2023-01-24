@@ -302,6 +302,7 @@ object WelshContent {
   def addIncomeContent(): String = {
     s"""Eich incwm misol
        |Ychwanegwch wybodaeth amdanoch chi’ch hun yn unig.
+       |Incwm
        |Incwm misol ar ôl treth
        |Os nad oes gennych incwm misol rheolaidd, nodwch amcangyfrif.
        |£

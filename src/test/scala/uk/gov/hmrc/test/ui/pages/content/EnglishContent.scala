@@ -303,6 +303,7 @@ object EnglishContent {
   def addIncomeContent(): String = {
     s"""Your monthly income
        |Add information about yourself only.
+       |Income
        |Monthly income after tax
        |If you do not have a regular monthly income, add an estimate.
        |£
