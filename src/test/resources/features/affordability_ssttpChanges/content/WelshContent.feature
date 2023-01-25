@@ -173,3 +173,56 @@ Feature: Welsh Content
 #      | Welsh | -1          | 0             | 0             | monthly amount | TBC     |
 #      | Welsh | 0           | -1            | 0             | monthly amount | TBC     |
 #      | Welsh | 0           | 0             | -1            | monthly amount | TBC     |
+
+#  Scenario Outline: Welsh - Error Validation on Add Spending Page
+#    Given A user logs in and gets to the affordability pages
+#    And the user clicks continue
+#    And the user clicks on the add spending link
+#    When the User toggles on <lang> language
+#    When the user enters <Housing> into the housing field
+#    When the user enters <Pension> into the pension field
+#    When the user enters <Council Tax> into the council tax field
+#    When the user enters <Utilities> into the utilities field
+#    When the user enters <Debt> into the debt repayments field
+#    When the user enters <Travel> into the travel field
+#    When the user enters <Childcare> into the childcare field
+#    When the user enters <Insurance> into the insurance field
+#    When the user enters <Groceries> into the groceries field
+#    When the user enters <Health> into the health field
+#    And the user clicks continue
+#    Then the <Field> field should display "<Message>"
+#    Then the User toggles on English language
+#
+#    Examples:
+#      | lang    | Housing | Pension | Council Tax | Utilities | Debt | Travel | Childcare | Insurance | Groceries | Health | Field           | Message            |
+#      | Welsh   | AB      | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | housing         | TBC                |
+#      | Welsh   | 0       | £1      | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | pension         | TBC                |
+#      | Welsh   | 0       | 0       | !@          | 0         | 0    | 0      | 0         | 0         | 0         | 0      | council tax     | TBC                |
+#      | Welsh   | 0       | 0       | 0           | AB        | 0    | 0      | 0         | 0         | 0         | 0      | utilities       | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | £1   | 0      | 0         | 0         | 0         | 0      | debt repayments | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | !@     | 0         | 0         | 0         | 0      | travel          | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | 0      | AB        | 0         | 0         | 0      | childcare       | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | 0      | 0         | £1        | 0         | 0      | insurance       | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | !@        | 0      | groceries       | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | AB     | health          | TBC                |
+#      | Welsh   | -1      | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | housing         | TBC                |
+#      | Welsh   | 0       | -1      | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | pension         | TBC                |
+#      | Welsh   | 0       | 0       | -1          | 0         | 0    | 0      | 0         | 0         | 0         | 0      | council tax     | TBC                |
+#      | Welsh   | 0       | 0       | 0           | -1        | 0    | 0      | 0         | 0         | 0         | 0      | utilities       | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | -1   | 0      | 0         | 0         | 0         | 0      | debt repayments | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | -1     | 0         | 0         | 0         | 0      | travel          | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | 0      | -1        | 0         | 0         | 0      | childcare       | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | 0      | 0         | -1        | 0         | 0      | insurance       | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | -1        | 0      | groceries       | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | -1     | health          | TBC                |
+#      | Welsh   | 1.000   | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | housing         | TBC                |
+#      | Welsh   | 0       | 1.000   | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | pension         | TBC                |
+#      | Welsh   | 0       | 0       | 1.000       | 0         | 0    | 0      | 0         | 0         | 0         | 0      | council tax     | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 1.000     | 0    | 0      | 0         | 0         | 0         | 0      | utilities       | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 1.000| 0      | 0         | 0         | 0         | 0      | debt repayments | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | 1.000  | 0         | 0         | 0         | 0      | travel          | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | 0      | 1.000     | 0         | 0         | 0      | childcare       | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 1.000     | 0         | 0      | insurance       | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 1.000     | 0      | groceries       | TBC                |
+#      | Welsh   | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 1.000  | health          | TBC                |
+

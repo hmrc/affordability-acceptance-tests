@@ -65,5 +65,33 @@ Feature: Happy Paths - Affordability
       | 0             | none     | 1           |
       | 1             | 0        | none        |
 
+### Affordability - Add Spending page
+
+  Scenario Outline: Validation on Add Spending Page
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add spending link
+    When the user enters <Housing> into the housing field
+    When the user enters <Pension> into the pension field
+    When the user enters <Council Tax> into the council tax field
+    When the user enters <Utilities> into the utilities field
+    When the user enters <Debt> into the debt repayments field
+    When the user enters <Travel> into the travel field
+    When the user enters <Childcare> into the childcare field
+    When the user enters <Insurance> into the insurance field
+    When the user enters <Groceries> into the groceries field
+    When the user enters <Health> into the health field
+    And the user clicks continue
+    And the user is on the AddIncomeAndSpendingPageBlank
+
+    Examples:
+      | Housing | Pension | Council Tax | Utilities | Debt | Travel | Childcare | Insurance | Groceries | Health |
+      | none    | 1       | 0           | none      | 0    | 1      | none      | 0         | 1         | none   |
+      | 1       | 0       | none        | 1         | none | 0      | 1         | none      | 0         | 1      |
+      | 0       | none    | 1           | 0         | 1    | none   | 0         | 1         | none      | 0      |
+      | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      |
+      | none    | none    | none        | none      | none | none   | none      | none      | none      | none      |
+
+
 
 

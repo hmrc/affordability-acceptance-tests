@@ -14,7 +14,7 @@ object AddSpendingPage extends BasePage {
   def housing: WebElement = id("housing").webElement
   def pension: WebElement = id("pension-contributions").webElement
   def councilTax: WebElement = id("council-tax").webElement
-  def utilities: WebElement = id("council-tax").webElement
+  def utilities: WebElement = id("utilities").webElement
   def debtRepayments: WebElement = id("debt-repayments").webElement
   def travel: WebElement = id("travel").webElement
   def childcare: WebElement = id("childcare").webElement
