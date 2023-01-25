@@ -109,23 +109,55 @@ Feature: Error Validation on various pages created/updated by Affordability chan
 #      | English | 0           | -1            | 0             | monthly amount | TBC     |
 #      | English | 0           | 0             | -1            | monthly amount | TBC     |
 
-#  Scenario: Error Validation on Add Spending Page
-#    Given A user logs in and gets to the affordability pages
-#    And the user clicks continue
-#    And the user clicks on the add income link
-#    When the User toggles on English language
-#
-#    When the user enters <otherAmount> into the other income field
+  Scenario Outline: Error Validation on Add Spending Page
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add spending link
+    When the User toggles on <lang> language
+    When the user enters <Housing> into the housing field
+    When the user enters <Pension> into the pension field
+    When the user enters <Council Tax> into the council tax field
+    When the user enters <Utilities> into the utilities field
+    When the user enters <Debt> into the debt repayments field
+    When the user enters <Travel> into the travel field
+    When the user enters <Childcare> into the childcare field
+    When the user enters <Insurance> into the insurance field
+    When the user enters <Groceries> into the groceries field
+    When the user enters <Health> into the health field
+    And the user clicks continue
+    Then the <Field> field should display "<Message>"
+    Then the User toggles on English language
 
-#    And the user clicks continue
-#    Then the <Field> field should display "<Message>"
-#    Then the <Field> field should display "<Message>"
-#    Then the <Field> field should display "<Message>"
-#    Then the <Field> field should display "<Message>"
-#    Then the <Field> field should display "<Message>"
-#    Then the <Field> field should display "<Message>"
-#    Then the <Field> field should display "<Message>"
-#    Then the <Field> field should display "<Message>"
-#    Then the <Field> field should display "<Message>"
-#    Then the <Field> field should display "<Message>"
-#    Then the User toggles on English language
+    Examples:
+      | lang    | Housing | Pension | Council Tax | Utilities | Debt | Travel | Childcare | Insurance | Groceries | Health | Field           | Message            |
+      | English | AB      | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | housing         | Enter numbers only |
+      | English | 0       | £1      | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | pension         | Enter numbers only |
+      | English | 0       | 0       | !@          | 0         | 0    | 0      | 0         | 0         | 0         | 0      | council tax     | Enter numbers only |
+      | English | 0       | 0       | 0           | AB        | 0    | 0      | 0         | 0         | 0         | 0      | utilities       | Enter numbers only |
+      | English | 0       | 0       | 0           | 0         | £1   | 0      | 0         | 0         | 0         | 0      | debt repayments | Enter numbers only |
+      | English | 0       | 0       | 0           | 0         | 0    | !@     | 0         | 0         | 0         | 0      | travel          | Enter numbers only |
+      | English | 0       | 0       | 0           | 0         | 0    | 0      | AB        | 0         | 0         | 0      | childcare       | Enter numbers only |
+      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | £1        | 0         | 0      | insurance       | Enter numbers only |
+      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | !@        | 0      | groceries       | Enter numbers only |
+      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | AB     | health          | Enter numbers only |
+#      | English | -1      | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | housing         | TBC                |
+#      | English | 0       | -1      | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | pension         | TBC                |
+#      | English | 0       | 0       | -1          | 0         | 0    | 0      | 0         | 0         | 0         | 0      | council tax     | TBC                |
+#      | English | 0       | 0       | 0           | -1        | 0    | 0      | 0         | 0         | 0         | 0      | utilities       | TBC                |
+#      | English | 0       | 0       | 0           | 0         | -1   | 0      | 0         | 0         | 0         | 0      | debt repayments | TBC                |
+#      | English | 0       | 0       | 0           | 0         | 0    | -1     | 0         | 0         | 0         | 0      | travel          | TBC                |
+#      | English | 0       | 0       | 0           | 0         | 0    | 0      | -1        | 0         | 0         | 0      | childcare       | TBC                |
+#      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | -1        | 0         | 0      | insurance       | TBC                |
+#      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | -1        | 0      | groceries       | TBC                |
+#      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | -1     | health          | TBC                |
+#      | English | 1.000   | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | housing         | TBC                |
+#      | English | 0       | 1.000   | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | pension         | TBC                |
+#      | English | 0       | 0       | 1.000       | 0         | 0    | 0      | 0         | 0         | 0         | 0      | council tax     | TBC                |
+#      | English | 0       | 0       | 0           | 1.000     | 0    | 0      | 0         | 0         | 0         | 0      | utilities       | TBC                |
+#      | English | 0       | 0       | 0           | 0         | 1.000| 0      | 0         | 0         | 0         | 0      | debt repayments | TBC                |
+#      | English | 0       | 0       | 0           | 0         | 0    | 1.000  | 0         | 0         | 0         | 0      | travel          | TBC                |
+#      | English | 0       | 0       | 0           | 0         | 0    | 0      | 1.000     | 0         | 0         | 0      | childcare       | TBC                |
+#      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 1.000     | 0         | 0      | insurance       | TBC                |
+#      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 1.000     | 0      | groceries       | TBC                |
+#      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 1.000  | health          | TBC                |
+#
