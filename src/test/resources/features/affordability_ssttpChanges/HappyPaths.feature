@@ -67,7 +67,7 @@ Feature: Happy Paths - Affordability
 
 ### Affordability - Add Spending page
 
-  Scenario Outline: Validation on Add Income Page
+  Scenario Outline: Validation on Add Spending Page
     Given A user logs in and gets to the affordability pages
     And the user clicks continue
     And the user clicks on the add spending link
