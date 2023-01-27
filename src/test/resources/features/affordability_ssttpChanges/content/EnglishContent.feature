@@ -66,9 +66,9 @@ Feature: English Content
     And the user is on the AddIncomeAndSpendingPageBlank
     And the user clicks on the add income link
     And the user is on the AddIncomePage
-    And the user adds monthly income of 100, benefits of 100 and other income of 300
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
     And the user clicks continue
-#    And the user is on the AddIncomeAndSpendingPageIncomeFilled
+    And the user is on the AddIncomeAndSpendingPageFull
     And the user clicks on the add spending link
     And the user is on the AddSpendingPage
 

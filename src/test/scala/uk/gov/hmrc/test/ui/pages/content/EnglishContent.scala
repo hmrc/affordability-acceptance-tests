@@ -300,6 +300,21 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def addIncomeAndSpendingContentFull(): String = {
+    s"""Add your income and spending
+       |Change income
+       |details
+       |1. Income
+       |Monthly income after tax £100
+       |Benefits £200
+       |Other monthly income £300
+       |Total income £600
+       |Add spending
+       |details
+       |2. Spending
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
   def addIncomeContent(): String = {
     s"""Your monthly income
        |Add information about yourself only.

@@ -48,6 +48,11 @@ object AddIncomeAndSpendingPage extends BasePage {
     else pageContent should be(EnglishContent.addIncomeAndSpendingContentBlank())
   }
 
+  def assertContentFull(): Assertion = {
+    if (langToggle == Language.welsh) pageContent should be(WelshContent.addIncomeAndSpendingContentFull())
+    else pageContent should be(EnglishContent.addIncomeAndSpendingContentFull())
+  }
+
   def clicksLink(link: String): Unit = {
     link.toLowerCase() match {
       case "income" => click on addIncomeLink
