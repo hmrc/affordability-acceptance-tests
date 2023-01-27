@@ -299,6 +299,21 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
+  def addIncomeAndSpendingContentFull(): String = {
+    s"""Ychwanegu eich incwm a’ch gwariant
+       |Newid incwm
+       |manylion
+       |1. Incwm
+       |Incwm misol ar ôl treth £100
+       |Budd-daliadau £200
+       |Incwm misol arall £300
+       |Cyfanswm eich incwm £600
+       |Ychwanegu gwariant
+       |manylion
+       |2. Gwariant
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
+  }
+
   def addIncomeContent(): String = {
     s"""Eich incwm misol
        |Ychwanegwch wybodaeth amdanoch chi’ch hun yn unig.
