@@ -57,7 +57,6 @@ Feature: Happy Paths - Affordability
     When the user enters <benefits> into the benefits field
     When the user enters <otherAmount> into the other income field
     And the user clicks continue
-    And the user is on the AddIncomeAndSpendingPageBlank
 
     Examples:
       | monthlyIncome | benefits | otherAmount |
@@ -82,7 +81,6 @@ Feature: Happy Paths - Affordability
     When the user enters <Groceries> into the groceries field
     When the user enters <Health> into the health field
     And the user clicks continue
-    And the user is on the AddIncomeAndSpendingPageBlank
 
     Examples:
       | Housing | Pension | Council Tax | Utilities | Debt | Travel | Childcare | Insurance | Groceries | Health |
