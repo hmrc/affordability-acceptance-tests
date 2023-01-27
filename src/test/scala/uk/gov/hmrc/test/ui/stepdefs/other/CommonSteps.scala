@@ -148,10 +148,10 @@ class CommonSteps extends Steps with DriverActions {
         CheckYouCanAffordPage.shouldBeLoaded()
         CheckYouCanAffordPage.assertContent()
       case "AddIncomeAndSpendingPageBlank" =>
-        //        AddIncomeAndSpendingPage.shouldBeLoaded()
+//                AddIncomeAndSpendingPage.shouldBeLoaded()
         AddIncomeAndSpendingPage.assertContentBlank()
       case "AddIncomeAndSpendingPageFull" =>
-                AddIncomeAndSpendingPage.shouldBeLoaded()
+        AddIncomeAndSpendingPage.shouldBeLoaded()
         AddIncomeAndSpendingPage.assertContentFull()
       case "AddIncomePage" =>
         AddIncomePage.shouldBeLoaded()
