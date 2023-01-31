@@ -1,6 +1,6 @@
 package uk.gov.hmrc.test.ui.stepdefs.pages.affordability
 
-import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage}
+import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, AddSpendingPage}
 import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
 
 class AffordabilityPagesStepDef extends Steps with DriverActions {
@@ -13,4 +13,7 @@ class AffordabilityPagesStepDef extends Steps with DriverActions {
     AddIncomePage.enterIncomeDetails(monthly,benefit,other)
   }
 
+  And("""^the user adds monthly spending of (.*) to all fields$""") { (amount: String) =>
+    AddSpendingPage.enterAllSpendingDetails(amount)
+  }
 }

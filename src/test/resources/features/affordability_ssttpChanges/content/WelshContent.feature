@@ -143,11 +143,24 @@ Feature: Welsh Content
     And the user is on the AddIncomePage
     And the user adds monthly income of 100, benefits of 200 and other income of 300
     And the user clicks continue
-    And the user is on the AddIncomeAndSpendingPageFull
+    And the user is on the AddIncomeAndSpendingPageIncomeFull
     And the user clicks on the add spending link
     And the user is on the AddSpendingPage
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
 #    Enter more steps here
     Then the User toggles on English language
+
+  Scenario: Welsh - Affordability Screens Content - Spending filled in first
+    Given A user logs in and gets to the affordability pages
+    And the user is on the CheckYouCanAffordPage
+    And the user clicks continue
+    And the user is on the AddIncomeAndSpendingPageBlank
+    And the user clicks on the add spending link
+    And the user is on the AddSpendingPage
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user is on the AddIncomeAndSpendingPageSpendingFull
 
   Scenario Outline: Welsh - Error Validation on Add Income Page?
     Given A user logs in and gets to the affordability pages

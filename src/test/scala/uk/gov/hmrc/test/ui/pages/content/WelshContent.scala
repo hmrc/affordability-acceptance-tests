@@ -299,7 +299,7 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
-  def addIncomeAndSpendingContentFull(): String = {
+  def addIncomeAndSpendingContentIncomeFull(): String = {
     s"""Ychwanegu eich incwm a’ch gwariant
        |Newid incwm
        |manylion
@@ -311,6 +311,28 @@ object WelshContent {
        |Ychwanegu gwariant
        |manylion
        |2. Gwariant
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
+  }
+
+  def addIncomeAndSpendingContentSpendingFull(): String = {
+    s"""Ychwanegu eich incwm a’ch gwariant
+       |Ychwanegu incwm
+       |manylion
+       |1. Incwm
+       |Newid gwariant
+       |manylion
+       |2. Gwariant
+       |Tai £10
+       |Cyfraniadau pensiwn £10
+       |Treth Gyngor £10
+       |Cyfleustodau £10
+       |Ad-daliadau dyledion £10
+       |Teithio £10
+       |Costau gofal plant £10
+       |Yswiriant £10
+       |Nwyddau Groser £10
+       |Iechyd £10
+       |Cyfanswm y gwariant £100
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
