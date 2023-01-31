@@ -74,7 +74,7 @@ Feature: English Content
     And the user adds monthly spending of 10 to all fields
     And the user clicks continue
 
-  Scenario: Affordability Screens Content - Spending filled in first - Branch off TEMPORARY, tests will need to be merged to main tests when journey complete
+  Scenario: Affordability Screens Content - Spending filled in first
     Given A user logs in and gets to the affordability pages
     And the user is on the CheckYouCanAffordPage
     And the user clicks continue
