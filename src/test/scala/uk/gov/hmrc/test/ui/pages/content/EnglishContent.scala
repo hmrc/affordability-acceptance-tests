@@ -247,8 +247,7 @@ object EnglishContent {
        |Can you make an upfront payment? Yes Change
        |whether you can make an upfront payment
        |Upfront payment
-       |Taken within 10 working days
-       |£200 Change
+       |Taken within 10 working days £200 Change
        |upfront payment amount
        |Remaining amount to pay £2,812.55
        |Interest will be added to this amount
