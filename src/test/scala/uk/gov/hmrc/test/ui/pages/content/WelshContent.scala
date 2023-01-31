@@ -246,8 +246,7 @@ object WelshContent {
        |A allwch wneud taliad ymlaen llaw? Iawn Newid
        |p’un a allwch wneud taliad ymlaen llaw
        |Taliad ymlaen llaw
-       |I’w gymryd cyn pen 10 diwrnod gwaith
-       |£200 Newid
+       |I’w gymryd cyn pen 10 diwrnod gwaith £200 Newid
        |swm y taliad ymlaen llaw
        |Swm sy’n weddill i’w dalu £2,812.55
        |Bydd llog yn cael ei ychwanegu at y swm hwn
