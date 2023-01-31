@@ -300,7 +300,7 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
-  def addIncomeAndSpendingContentFull(): String = {
+  def addIncomeAndSpendingContentIncomeFull(): String = {
     s"""Add your income and spending
        |Change income
        |details
@@ -312,6 +312,28 @@ object EnglishContent {
        |Add spending
        |details
        |2. Spending
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
+  def addIncomeAndSpendingContentSpendingFull(): String = {
+    s"""Add your income and spending
+       |Add income
+       |details
+       |1. Income
+       |Change spending
+       |details
+       |2. Spending
+       |Housing £10
+       |Pension contributions £10
+       |Council tax £10
+       |Utilities £10
+       |Debt repayments £10
+       |Travel £10
+       |Childcare costs £10
+       |Insurance £10
+       |Groceries £10
+       |Health £10
+       |Total spending £100
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 

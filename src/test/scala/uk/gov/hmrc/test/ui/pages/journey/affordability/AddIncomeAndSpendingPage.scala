@@ -48,9 +48,14 @@ object AddIncomeAndSpendingPage extends BasePage {
     else pageContent should be(EnglishContent.addIncomeAndSpendingContentBlank())
   }
 
-  def assertContentFull(): Assertion = {
-    if (langToggle == Language.welsh) pageContent should be(WelshContent.addIncomeAndSpendingContentFull())
-    else pageContent should be(EnglishContent.addIncomeAndSpendingContentFull())
+  def assertContentIncomeFull(): Assertion = {
+    if (langToggle == Language.welsh) pageContent should be(WelshContent.addIncomeAndSpendingContentIncomeFull())
+    else pageContent should be(EnglishContent.addIncomeAndSpendingContentIncomeFull())
+  }
+
+  def assertContentSpendingFull(): Assertion = {
+    if (langToggle == Language.welsh) pageContent should be(WelshContent.addIncomeAndSpendingContentSpendingFull())
+    else pageContent should be(EnglishContent.addIncomeAndSpendingContentSpendingFull())
   }
 
   def clicksLink(link: String): Unit = {

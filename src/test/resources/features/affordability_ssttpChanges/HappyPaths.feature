@@ -88,7 +88,7 @@ Feature: Happy Paths - Affordability
       | 1       | 0       | none        | 1         | none | 0      | 1         | none      | 0         | 1      |
       | 0       | none    | 1           | 0         | 1    | none   | 0         | 1         | none      | 0      |
       | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      |
-      | none    | none    | none        | none      | none | none   | none      | none      | none      | none      |
+      | none    | none    | none        | none      | none | none   | none      | none      | none      | none   |
 
 
 
