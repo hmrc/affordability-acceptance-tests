@@ -387,6 +387,47 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def howMuchYouCouldAffordFullHappy(): String = {
+    s"""How much you could afford
+       |Change income
+       |details
+       |1. Income
+       |Monthly income after tax £100
+       |Benefits £200
+       |Other monthly income £300
+       |Total income £600
+       |Change spending
+       |details
+       |2. Spending
+       |Housing £10
+       |Pension contributions £10
+       |Council tax £10
+       |Utilities £10
+       |Debt repayments £10
+       |Travel £10
+       |Childcare costs £10
+       |Insurance £10
+       |Groceries £10
+       |Health £10
+       |Total spending £100
+       |3. Left over income
+       |Total left over income £500
+       |Half of left over income £250
+       |Continue
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
+  def spendingMoreThanIncomeText(): String = {
+    s"""Your spending is higher than your income
+       |As your spending is higher than your income, call the Payment Support Service on 0300 200 3835 to discuss your debt. You may also want to seek independent debt advice.""".stripMargin
+  }
+
+  def spendingSameAsIncomeText(): String = {
+    s"""Your spending is the same as your income
+       |As your spending is the same as your income, call the Payment Support Service on 0300 200 3835 to discuss your debt. You may also want to seek independent debt advice.""".stripMargin
+  }
+
+
   // template function
   def templateText(): String = {
     s"""

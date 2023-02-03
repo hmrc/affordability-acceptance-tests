@@ -18,7 +18,7 @@ package uk.gov.hmrc.test.ui.stepdefs.other
 
 import org.openqa.selenium.By
 import org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated
-import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, AddSpendingPage, CheckYouCanAffordPage}
+import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, AddSpendingPage, CheckYouCanAffordPage, HowMuchYouCanAffordPage}
 import uk.gov.hmrc.test.ui.pages.journey.ssttp._
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.pages.testonly.TestOnlyStartPage
@@ -162,6 +162,15 @@ class CommonSteps extends Steps with DriverActions {
       case "AddSpendingPage" =>
         AddSpendingPage.shouldBeLoaded()
         AddSpendingPage.assertContent()
+      case "HowMuchYouCanAffordPageHappy" =>
+        HowMuchYouCanAffordPage.shouldBeLoaded()
+        HowMuchYouCanAffordPage.assertContentHappy()
+      case "HowMuchYouCanAffordPageSpendingMore" =>
+        HowMuchYouCanAffordPage.shouldBeLoaded()
+        HowMuchYouCanAffordPage.assertContentSpendingMoreThanIncome()
+      case "HowMuchYouCanAffordPageSpendingSame" =>
+        HowMuchYouCanAffordPage.shouldBeLoaded()
+        HowMuchYouCanAffordPage.assertContentSpendingSameAsIncome()
     }
   }
 

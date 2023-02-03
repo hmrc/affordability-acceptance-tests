@@ -148,19 +148,29 @@ Feature: Welsh Content
     And the user is on the AddSpendingPage
     And the user adds monthly spending of 10 to all fields
     And the user clicks continue
+    And the user is on the HowMuchYouCanAffordPageHappy
 #    Enter more steps here
     Then the User toggles on English language
 
-  Scenario: Welsh - Affordability Screens Content - Spending filled in first
+  Scenario Outline: Welsh - Affordability Screens Content - Conditional Sentences
     Given A user logs in and gets to the affordability pages
-    And the user is on the CheckYouCanAffordPage
+    When the User toggles on Welsh language
     And the user clicks continue
-    And the user is on the AddIncomeAndSpendingPageBlank
     And the user clicks on the add spending link
-    And the user is on the AddSpendingPage
-    And the user adds monthly spending of 10 to all fields
+    And the user adds monthly spending of <spending> to all fields
     And the user clicks continue
-    And the user is on the AddIncomeAndSpendingPageSpendingFull
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user is on the <expectedPage>
+    Then the User toggles on English language
+
+    Examples:
+      | spending | expectedPage                        |
+      | 10       | HowMuchYouCanAffordPageHappy        |
+      | 60       | HowMuchYouCanAffordPageSpendingSame |
+      | 100      | HowMuchYouCanAffordPageSpendingMore |
+
 
   Scenario Outline: Welsh - Error Validation on Add Income Page?
     Given A user logs in and gets to the affordability pages
