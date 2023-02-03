@@ -386,6 +386,46 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
+  def howMuchYouCouldAffordFullHappy(): String = {
+    s"""Faint y gallech ei fforddio
+       |Newid incwm
+       |manylion
+       |1. Incwm
+       |Incwm misol ar ôl treth £100
+       |Budd-daliadau £200
+       |Incwm misol arall £300
+       |Cyfanswm eich incwm £600
+       |Newid gwariant
+       |manylion
+       |2. Gwariant
+       |Tai £10
+       |Cyfraniadau pensiwn £10
+       |Treth Gyngor £10
+       |Cyfleustodau £10
+       |Ad-daliadau dyledion £10
+       |Teithio £10
+       |Costau gofal plant £10
+       |Yswiriant £10
+       |Nwyddau Groser £10
+       |Iechyd £10
+       |Cyfanswm y gwariant £100
+       |3. Incwm sydd dros ben
+       |Cyfanswm yr incwm sydd dros ben £500
+       |Hanner yr incwm sydd dros ben £250
+       |Yn eich blaen
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
+  }
+
+  def spendingMoreThanIncomeText(): String = {
+    s"""Mae’ch gwariant yn fwy na’ch incwm
+       |Gan fod eich gwariant yn fwy na’ch incwm, cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEF drwy ffonio 0300 200 1900 i drafod eich dyled. Mae’n bosibl yr hoffech geisio cyngor annibynnol ar ddyledion.""".stripMargin
+  }
+
+  def spendingSameAsIncomeText(): String = {
+    s"""Mae’ch gwariant yr un faint a’ch incwm
+       |Gan fod eich gwariant yr un faint a’ch incwm, cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEF drwy ffonio 0300 200 1900 i drafod eich dyled. Mae’n bosibl yr hoffech geisio cyngor annibynnol ar ddyledion.""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""
