@@ -152,7 +152,7 @@ Feature: Welsh Content
 #    Enter more steps here
     Then the User toggles on English language
 
-  Scenario Outline: Affordability Screens Content - Conditional Sentences
+  Scenario Outline: Welsh - Affordability Screens Content - Conditional Sentences
     Given A user logs in and gets to the affordability pages
     When the User toggles on Welsh language
     And the user clicks continue
