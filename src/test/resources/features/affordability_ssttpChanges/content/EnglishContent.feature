@@ -59,7 +59,6 @@ Feature: English Content
       | NeedToFilePage         |
 
 
-
   Scenario: Affordability Screens Content - Branch off TEMPORARY, tests will need to be merged to main tests when journey complete
     Given A user logs in and gets to the affordability pages
     And the user is on the CheckYouCanAffordPage
@@ -76,7 +75,7 @@ Feature: English Content
     And the user clicks continue
     And the user is on the HowMuchYouCanAffordPageHappy
 
-  Scenario Outline: Affordability Screens Content - Conditional Sentences
+  Scenario Outline: Affordability Screens Content - Conditional Sentences, Correct routing - Spending First
     Given A user logs in and gets to the affordability pages
     And the user clicks continue
     And the user clicks on the add spending link
@@ -86,9 +85,14 @@ Feature: English Content
     And the user adds monthly income of 100, benefits of 200 and other income of 300
     And the user clicks continue
     And the user is on the <expectedPage>
+    And the user clicks continue
+    And the user is on the <expectedPage2>
 
     Examples:
-      | spending | expectedPage                        |
-      | 10       | HowMuchYouCanAffordPageHappy        |
-      | 60       | HowMuchYouCanAffordPageSpendingSame |
-      | 100      | HowMuchYouCanAffordPageSpendingMore |
+      | spending | expectedPage                        | expectedPage2       |
+      | 10       | HowMuchYouCanAffordPageHappy        | TBC                 |
+      | 60       | HowMuchYouCanAffordPageSpendingSame | CannotAgreePlanPage |
+    @a11y @zap
+    Examples:
+      | spending | expectedPage                        | expectedPage2       |
+      | 100      | HowMuchYouCanAffordPageSpendingMore | CannotAgreePlanPage |
