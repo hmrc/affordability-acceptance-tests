@@ -427,6 +427,20 @@ object EnglishContent {
        |As your spending is the same as your income, call the Payment Support Service on 0300 200 3835 to discuss your debt. You may also want to seek independent debt advice.""".stripMargin
   }
 
+  def cannotAgreePlanContent(): String = {
+    s"""We cannot agree your payment plan online
+       |The amounts you have entered for your income and spending mean you cannot set up a payment plan online.
+       |Have you entered the information correctly? You can change your income and spending.
+       |You may be able to set up a payment plan over the phone. Call us on 0300 123 1813 to discuss your options.
+       |Our opening times are Monday to Friday, 8am to 6pm. We are closed on weekends and bank holidays.
+       |If you need extra support
+       |Find out the different ways to deal with HMRC if you need some help.
+       |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
+       |If you are outside the UK: +44 2890 538 192
+       |Go to tax account
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
 
   // template function
   def templateText(): String = {

@@ -60,8 +60,8 @@ object AddIncomeAndSpendingPage extends BasePage {
 
   def clicksLink(link: String): Unit = {
     link.toLowerCase() match {
-      case "income" => click on addIncomeLink
-      case "spending" => click on addSpendingLink
+      case "add income" => click on addIncomeLink
+      case "add spending" => click on addSpendingLink
     }
   }
 

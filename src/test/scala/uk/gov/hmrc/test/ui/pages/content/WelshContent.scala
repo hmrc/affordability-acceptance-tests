@@ -426,6 +426,10 @@ object WelshContent {
        |Gan fod eich gwariant yr un faint a’ch incwm, cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEF drwy ffonio 0300 200 1900 i drafod eich dyled. Mae’n bosibl yr hoffech geisio cyngor annibynnol ar ddyledion.""".stripMargin
   }
 
+  def cannotAgreePlanContent(): String = {
+    s"""TBC""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""
