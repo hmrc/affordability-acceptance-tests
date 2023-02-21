@@ -46,6 +46,7 @@ object WhatDayOfMonthPage extends BasePage {
 
   def enterDayOfMonth(date: String) = {
     date match {
+      case "none" => id("other").webElement.click()
       case "28" => id("28th").webElement.click()
       case _ => id("other").webElement.click()
         id("dayOfMonth").webElement.sendKeys(date)
