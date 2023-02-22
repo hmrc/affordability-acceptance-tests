@@ -121,7 +121,7 @@ object EnglishContent {
   }
 
   def successConfirmationUpfrontContent(): String = {
-    s"""Your upfront payment will be taken within 10 working days. Your next payment will be taken on 28th March 2020 or the next working day.""".stripMargin
+    s"""Your upfront payment will be taken within 11 working days. Your next payment will be taken on 28th March 2020 or the next working day.""".stripMargin
   }
 
   def callUsNotEligibleContent(): String = {
