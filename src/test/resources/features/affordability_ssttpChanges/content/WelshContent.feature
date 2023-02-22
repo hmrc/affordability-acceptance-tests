@@ -16,7 +16,7 @@ Feature: Welsh Content
     And the user is on the WhatDayOfMonthPage
     And the user enters 28 on the what day of the month page
     And the user clicks next
-    And the user enters 2 on the how many months page
+    And the user enters 50 percent on the how many months page
     And the user clicks next
     And the user clicks continue
     Then the user is on the TypeOfAccountPage
@@ -54,7 +54,7 @@ Feature: Welsh Content
     And the user clicks continue
     And the user enters 28 on the what day of the month page
     And the user clicks next
-    And the user enters 2 on the how many months page
+    And the user enters 50 percent on the how many months page
     And the user clicks next
     And the user clicks continue
     When the user selects personal and is the account holder on the About account page
@@ -128,7 +128,28 @@ Feature: Welsh Content
       | Welsh | aa          | Rhowch rifau yn unig                                      |
       | Welsh | £2          | Rhowch rifau yn unig                                      |
 
+### Select Day of Month Page
+  Scenario Outline: Error Validation on What Day of Month page - No selection
+    Given the user is created and logs in
+    And the user is on the StartPage
+    And the user clicks start
+    And the user clicks continue
+    When the User toggles on Welsh language
+    When the user clicks no on the upfront payment page
+    And the user clicks next
+    And the user is on the WhatDayOfMonthPage
+    When the user enters <Input Value> into the <Field> field
+    And the user clicks next
+    Then the <Field> field should display "<Message>"
+    Then the User toggles on English language
 
+    Examples:
+      | Input Value | Field        | Message                                        |
+      | none        | radio button | Dewiswch ar ba ddiwrnod rydych am dalu bob mis |
+      | none        | other        | Nodwch rif rhwng 1 a 28                        |
+      | 0           | other        | Nodwch rif rhwng 1 a 28                        |
+      | abc         | other        | Nodwch rif rhwng 1 a 28                        |
+      | 29          | other        | Nodwch rif rhwng 1 a 28                        |
 
 ###### AFFORDABILITY SCREENS
 

@@ -10,7 +10,6 @@ Feature: Happy Paths - Affordability
     Then the user is on the CannotSetupDDPage
 
 
-
 ### Set Up Direct Debit Page
 
   Scenario Outline: Boundary Validation on Set Up Direct Debit page

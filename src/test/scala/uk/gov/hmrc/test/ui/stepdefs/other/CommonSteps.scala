@@ -42,7 +42,7 @@ class CommonSteps extends Steps with DriverActions {
     next()
     WhatDayOfMonthPage.enterDayOfMonth("28")
     next()
-    HowManyMonthsPage.enterAmountOfMonths("2")
+    HowManyMonthsPage.enterAmountOfMonths("50 percent")
     next()
     continue()
   }
@@ -188,6 +188,9 @@ class CommonSteps extends Steps with DriverActions {
         case "account number" => SetUpDirectDebitPage.clearAccountNumber()
 //Upfront Payment Page
         case "amount" => HowMuchUpfrontPaymentPage.clearAmount()
+//Day of Month Page
+        case "radio button" => ""
+        case "other" => ""
 //Add Income Page
         case "monthly income" => AddIncomePage.clearMonthlyIncome()
         case "benefits" => AddIncomePage.clearBenefits()
@@ -220,6 +223,9 @@ class CommonSteps extends Steps with DriverActions {
           case "amount" =>
             HowMuchUpfrontPaymentPage.clearAmount()
             HowMuchUpfrontPaymentPage.enterAmount(input)
+//Day of Month Page
+          case "radio button" => ""
+          case "other" => WhatDayOfMonthPage.enterDayOfMonth(input)
 //Add Income Page
           case "monthly income" =>
             AddIncomePage.clearMonthlyIncome()
@@ -337,6 +343,12 @@ class CommonSteps extends Steps with DriverActions {
       case "health" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
         HelperFunctions.errorMessage("health") should be(s"$prependError\n$message")
+      case "radio button" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("other") should be(s"$prependError\n$message")
+      case "a different day" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("other") should be(s"$prependError\n$message")
       case _ =>
         println("No field found - check field name passed to method (elem)")
     }

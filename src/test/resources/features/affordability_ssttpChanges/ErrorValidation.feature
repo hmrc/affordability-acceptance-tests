@@ -5,6 +5,26 @@ Feature: Error Validation on various pages created/updated by Affordability chan
   #  SSTTP journey up until the point at which the Affordability tickets have made changes to the journey/content.  #
   #                                                                                                                 #
 
+### Select Day of Month Page
+  Scenario Outline: Error Validation on What Day of Month page - No selection
+    Given the user is created and logs in
+    And the user is on the StartPage
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks no on the upfront payment page
+    And the user clicks next
+    And the user is on the WhatDayOfMonthPage
+    When the user enters <Input Value> into the <Field> field
+    And the user clicks next
+    Then the <Field> field should display "<Message>"
+
+    Examples:
+      | Input Value | Field        | Message                                     |
+      | none        | radio button | Select which day you want to pay each month |
+      | none        | other        | Enter a number between 1 and 28             |
+      | 0           | other        | Enter a number between 1 and 28             |
+      | abc         | other        | Enter a number between 1 and 28             |
+      | 29          | other        | Enter a number between 1 and 28             |
 
 ### About Bank Account Page
   Scenario Outline: Error Validation on About your Account Details page - only 1 selection
@@ -109,6 +129,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
 #      | English | 0           | -1            | 0             | monthly amount | TBC     |
 #      | English | 0           | 0             | -1            | monthly amount | TBC     |
 
+### Affordability - Add Spending page
   Scenario Outline: Error Validation on Add Spending Page
     Given A user logs in and gets to the affordability pages
     And the user clicks continue
