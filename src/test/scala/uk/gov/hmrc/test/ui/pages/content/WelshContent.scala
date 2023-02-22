@@ -120,7 +120,7 @@ object WelshContent {
   }
 
   def successConfirmationUpfrontContent(): String = {
-    s"""Caiff eich taliad ymlaen llaw ei gymryd cyn pen 10 diwrnod gwaith. Caiff eich taliad nesaf ei gymryd ar 28ain Chwefror 2020 neu ar y diwrnod gwaith nesaf.""".stripMargin
+    s"""Caiff eich taliad ymlaen llaw ei gymryd cyn pen 10 diwrnod gwaith. Caiff eich taliad nesaf ei gymryd ar 28ain Mawrth 2020 neu ar y diwrnod gwaith nesaf.""".stripMargin
   }
 
   def callUsNotEligibleContent(): String = {
