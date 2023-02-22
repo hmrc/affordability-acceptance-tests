@@ -42,7 +42,7 @@ class CommonSteps extends Steps with DriverActions {
     next()
     WhatDayOfMonthPage.enterDayOfMonth("28")
     next()
-    HowManyMonthsPage.enterAmountOfMonths("12")
+    HowManyMonthsPage.enterAmountOfMonths("50 percent")
     next()
     continue()
   }

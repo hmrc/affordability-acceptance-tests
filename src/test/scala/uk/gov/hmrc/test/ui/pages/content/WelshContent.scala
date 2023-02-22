@@ -220,12 +220,23 @@ object WelshContent {
        |Swm y taliad ymlaen llaw £0
        |Taliadau misol
        |Mae taliadau’n cael eu casglu ar 28ain neu ar y diwrnod gwaith nesaf
-       |Chwefror 2020 £1,506.28
-       |Mawrth 2020 £1,512.59
+       |Chwefror 2020 £250
+       |Mawrth 2020 £250
+       |Ebrill 2020 £250
+       |Mai 2020 £250
+       |Mehefin 2020 £250
+       |Gorffennaf 2020 £250
+       |Awst 2020 £250
+       |Medi 2020 £250
+       |Hydref 2020 £250
+       |Tachwedd 2020 £250
+       |Rhagfyr 2020 £250
+       |Ionawr 2021 £250
+       |Chwefror 2021 £46.31
        |Amcangyfrif o gyfanswm y llog
        |wedi’i gynnwys yn eich taliadau misol
-       |£6.31
-       |Y cyfanswm i’w dalu £3,018.86
+       |£33.76
+       |Y cyfanswm i’w dalu £3,046.31
        |Argraffwch gopi o’ch cynllun talu
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
