@@ -43,11 +43,13 @@ object HowManyMonthsPage extends BasePage {
   //  }
 
   def enterAmountOfMonths(amount: String) = {
-    //TODO Ask devs to change id's to percentages rather than calculated values as the change all the time
     amount match {
       case "50 percent" => id("50").webElement.click()
       case "60 percent" => id("60").webElement.click()
       case "80 percent" => id("80").webElement.click()
+      case "custom amount" => id("customAmountOption").webElement.click()
+                              id("custom-amount-input").webElement.sendKeys("300")
+      case "user specified" => id("0").webElement.click()
     }
   }
 

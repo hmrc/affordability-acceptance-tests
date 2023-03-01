@@ -170,7 +170,35 @@ Feature: Welsh Content
     And the user adds monthly spending of 10 to all fields
     And the user clicks continue
     And the user is on the HowMuchYouCanAffordPageHappy
+    And the user clicks continue
+    And the user enters 50 percent on the how many months page
+    And the user clicks next
+    And the user is on the AffordabilityCheckPaymentPlanPageNoUpfront
 #    Enter more steps here
+    Then the User toggles on English language
+
+  Scenario: Affordability Screens Content - User Specified amount selected, warning message shown
+    Given A user logs in and gets to the affordability pages
+    When the User toggles on Welsh language
+    And the user is on the CheckYouCanAffordPage
+    And the user clicks continue
+    And the user is on the AddIncomeAndSpendingPageBlank
+    And the user clicks on the add income link
+    And the user is on the AddIncomePage
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user is on the AddIncomeAndSpendingPageIncomeFull
+    And the user clicks on the add spending link
+    And the user is on the AddSpendingPage
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user is on the HowMuchYouCanAffordPageHappy
+    And the user clicks continue
+    And the user enters custom amount on the how many months page
+    And the user clicks next
+    And the user enters user specified on the how many months page
+    And the user clicks next
+    Then the choosing more than 50 percent warning message shows
     Then the User toggles on English language
 
   Scenario Outline: Welsh - Affordability Screens Content - Conditional Sentences - Spending first
