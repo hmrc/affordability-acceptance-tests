@@ -109,28 +109,30 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     And the user clicks continue
     And the user clicks on the add income link
     When the User toggles on <lang> language
-    When the user enters <monthlyIncome> into the monthly income field
-    When the user enters <benefits> into the benefits field
-    When the user enters <otherAmount> into the other income field
+    When the user enters <value> into the monthly income field
+    When the user enters <value> into the benefits field
+    When the user enters <value> into the other income field
     And the user clicks continue
-    Then the <Field> field should display "<Message>"
+    Then the monthly income field should display "<Message> monthly income after tax"
+    Then the benefits field should display "<Message> benefits"
+    Then the other income field should display "<Message> other monthly income"
     Then the User toggles on English language
 
     Examples:
-      | lang    | monthlyIncome | benefits | otherAmount | Field          | Message                                                                           |
-      | English | 0             | 0        | 0           | income invalid | You must enter your income If you do not have any income call us on 0300 123 1813 |
-      | English | £1            | 0        | 0           | monthly income | Enter numbers only for monthly income after tax                                   |
-      | English | 0             | AB       | 0           | benefit        | Enter numbers only for benefits                                                   |
-      | English | 0             | 0        | !@          | other income   | Enter numbers only for other monthly income                                       |
-      | English | 10.000        | 0        | 0           | monthly income | Amount must not contain more than 2 decimal places for monthly income after tax   |
-      | English | 0             | 12.345   | 0           | benefit        | Amount must not contain more than 2 decimal places for benefits                   |
-      | English | 0             | 0        | 19.999      | other income   | Amount must not contain more than 2 decimal places for other monthly income       |
-      | English | -1            | 0        | 0           | monthly income | Enter a positive number only for monthly income after tax                         |
-      | English | 0             | -1       | 0           | benefit        | Enter a positive number only for benefits                                         |
-      | English | 0             | 0        | -1          | other income   | Enter a positive number only for other monthly income                             |
+      | lang    | value | Message                                                                           |
+      | English | !@    | Enter numbers only for                                                            |
+      | English | -1    | Enter a positive number only for                                                  |
+      | English | 1.000 | Amount must not contain more than 2 decimal places for                            |
+
+  Scenario: Error Validation on Add Income Page - Nothing entered
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user clicks continue
+    Then the income invalid field should display "You must enter your income If you do not have any income, call us on 0300 123 1813"
 
 ### Affordability - Add Spending page
-  Scenario Outline: Welsh - Error Validation on Add Spending Page
+  Scenario Outline: Error Validation on Add Spending Page
     Given A user logs in and gets to the affordability pages
     And the user clicks continue
     And the user clicks on the add spending link

@@ -221,30 +221,33 @@ Feature: Welsh Content
       | 100      | HowMuchYouCanAffordPageSpendingMore |
 
 
-  Scenario Outline: Welsh - Error Validation on Add Income Page?
+  Scenario Outline: Welsh - Error Validation on Add Income Page
     Given A user logs in and gets to the affordability pages
     And the user clicks continue
     And the user clicks on the add income link
     When the User toggles on <lang> language
-    When the user enters <monthlyIncome> into the monthly income field
-    When the user enters <benefits> into the benefits field
-    When the user enters <otherAmount> into the other income field
+    When the user enters <value> into the monthly income field
+    When the user enters <value> into the benefits field
+    When the user enters <value> into the other income field
     And the user clicks continue
-    Then the <Field> field should display "<Message>"
+    Then the monthly income field should display "<Message> incwm misol ar ôl treth"
+    Then the benefits field should display "<Message> budd-daliadau"
+    Then the other income field should display "<Message> incwm misol arall"
     Then the User toggles on English language
 
     Examples:
-      | lang  | monthlyIncome | benefits | otherAmount | Field          | Message                                                                                       |
-      | Welsh | 0             | 0        | 0           | income invalid | Mae’n rhaid i chi nodi’ch incwm Os nad oes gennych unrhyw incwm, ffoniwch ni ar 0300 200 1900 |
-      | Welsh | £1            | 0        | 0           | monthly income | Nodwch rifau yn unig ar gyfer incwm misol ar ôl treth                                         |
-      | Welsh | 0             | AB       | 0           | benefit        | Nodwch rifau yn unig ar gyfer budd-daliadau                                                   |
-      | Welsh | 0             | 0        | !@          | other income   | Nodwch rifau yn unig ar gyfer incwm misol arall                                               |
-      | Welsh | 10.000        | 0        | 0           | monthly income | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer incwm misol ar ôl treth            |
-      | Welsh | 0             | 12.345   | 0           | benefit        | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer budd-daliadau                      |
-      | Welsh | 0             | 0        | 19.999      | other income   | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer incwm misol arall                  |
-      | Welsh | -1            | 0        | 0           | monthly income | Nodwch rif positif yn unig ar gyfer incwm misol ar ôl treth                                   |
-      | Welsh | 0             | -1       | 0           | benefit        | Nodwch rif positif yn unig ar gyfer budd-daliadau                                             |
-      | Welsh | 0             | 0        | -1          | other income   | Nodwch rif positif yn unig ar gyfer incwm misol arall                                         |
+      | lang  | value | Message                                                    |
+      | Welsh | !@    | Nodwch rifau yn unig ar gyfer                              |
+      | Welsh | 1.000 | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer |
+      | Welsh | -1    | Nodwch rif positif yn unig ar gyfer                        |
+
+  Scenario: Welsh - Error Validation on Add Income Page - Nothing entered
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user clicks continue
+    Then the income invalid field should display "Mae’n rhaid i chi nodi’ch incwm Os nad oes gennych unrhyw incwm, ffoniwch ni ar 0300 200 1900"
+
 
   Scenario Outline: Welsh - Error Validation on Add Spending Page
     Given A user logs in and gets to the affordability pages
