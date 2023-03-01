@@ -21,3 +21,36 @@ Feature: Navigation tests
     And the user is on the CannotAgreePlanPage
     And the user clicks on the change income and spending link
     Then the user is on the HowMuchYouCanAffordPageSpendingSame
+
+
+### Check your payment plan Page
+  Scenario Outline: Affordability Screens - Check your payment plan change links
+    Given the user is created and logs in
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks yes on the upfront payment page
+    And the user clicks next
+    When the user enters 200 on the upfront payment amount page
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters 28 on the what day of the month page
+    And user enters affordability pages
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters 50 percent on the how many months page
+    And the user clicks next
+    When the user clicks on the change <element> link on the <page>
+    And the user is on the <expectedPage>
+
+    Examples:
+      | element                | page                              | expectedPage       |
+      | Upfront Payment Yes No | AffordabilityCheckPaymentPlanPage | UpfrontPaymentPage |
+      | Upfront Payment Amount | AffordabilityCheckPaymentPlanPage | UpfrontPaymentPage |
+      | Collected On           | AffordabilityCheckPaymentPlanPage | WhatDayOfMonthPage |
+      | Monthly Payment        | AffordabilityCheckPaymentPlanPage | HowManyMonthsPage  |

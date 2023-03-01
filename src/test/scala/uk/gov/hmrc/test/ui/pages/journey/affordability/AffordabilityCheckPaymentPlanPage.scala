@@ -53,10 +53,10 @@ object AffordabilityCheckPaymentPlanPage extends BasePage {
 
   def clickChangeLink(link: String) = {
     link match {
-      case "Upfront Payment Yes No" => cssSelector("#main-content > div > div > form > dl.govuk-summary-list.govuk-\\!-margin-bottom-9 > div:nth-child(1) > dd.govuk-summary-list__actions > a").webElement.click()
-      case "Upfront Payment Amount" => cssSelector("#main-content > div > div > form > dl.govuk-summary-list.govuk-\\!-margin-bottom-9 > div:nth-child(2) > dd.govuk-summary-list__actions > a").webElement.click()
-      case "Collected On" => id("select-date").webElement.click()
-      case "Monthly Payment" => id("instalment-summary").webElement.click()
+      case "Upfront Payment Yes No" => id("upfront-payment").webElement.click()
+      case "Upfront Payment Amount" => id("upfront-payment-amount").webElement.click()
+      case "Collected On" => id("collection-day").webElement.click()
+      case "Monthly Payment" => id("monthly-payment").webElement.click()
     }
   }
 

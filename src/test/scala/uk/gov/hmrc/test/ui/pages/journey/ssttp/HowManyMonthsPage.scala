@@ -24,13 +24,13 @@ object HowManyMonthsPage extends BasePage {
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/calculator/instalments"
 
   def expectedPageTitle = {
-    if (langToggle == Language.welsh) "Dros sawl mis yr hoffech dalu? - Trefnu cynllun talu - GOV.UK"
-    else "How many months do you want to pay over? - Set up a Self Assessment payment plan - GOV.UK"
+    if (langToggle == Language.welsh) "Faint y gallwch ei dalu bob mis? - Trefnu cynllun talu - GOV.UK"
+    else "How much can you pay each month? - Set up a Self Assessment payment plan - GOV.UK"
   }
 
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "Dros sawl mis yr hoffech dalu?"
-    else "How many months do you want to pay over?"
+    if (langToggle == Language.welsh) "Faint y gallwch ei dalu bob mis?"
+    else "How much can you pay each month?"
   }
 
   def expectedPageTitleError: String = "Error: " + expectedPageTitle
