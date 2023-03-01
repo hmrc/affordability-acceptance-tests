@@ -18,7 +18,7 @@ package uk.gov.hmrc.test.ui.stepdefs.other
 
 import org.openqa.selenium.By
 import org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated
-import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, AddSpendingPage, CannotAgreePlanPage, CheckYouCanAffordPage, HowMuchYouCanAffordPage}
+import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, AddSpendingPage, AffordabilityCheckPaymentPlanPage, CannotAgreePlanPage, CheckYouCanAffordPage, HowMuchYouCanAffordPage}
 import uk.gov.hmrc.test.ui.pages.journey.ssttp._
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.pages.testonly.TestOnlyStartPage
@@ -171,6 +171,12 @@ class CommonSteps extends Steps with DriverActions {
       case "HowMuchYouCanAffordPageSpendingSame" =>
         HowMuchYouCanAffordPage.shouldBeLoaded()
         HowMuchYouCanAffordPage.assertContentSpendingSameAsIncome()
+      case "AffordabilityCheckPaymentPlanPageNoUpfront" =>
+        AffordabilityCheckPaymentPlanPage.shouldBeLoaded()
+        AffordabilityCheckPaymentPlanPage.assertContentNoUpfront()
+      case "AffordabilityCheckPaymentPlanPageWithUpfront" =>
+        AffordabilityCheckPaymentPlanPage.shouldBeLoaded()
+        AffordabilityCheckPaymentPlanPage.assertContentWithUpfront()
       case "CannotAgreePlanPage" =>
 //        CannotAgreePlanPage.shouldBeLoaded()
         CannotAgreePlanPage.assertContent()
@@ -312,6 +318,9 @@ class CommonSteps extends Steps with DriverActions {
       case "other income" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
         HelperFunctions.errorMessage("otherIncome") should be(s"$prependError\n$message")
+      case "income invalid" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("income-invalid").replaceAll("\n"," ") should be(s"$prependError $message")
 //Add Spending Page
       case "housing" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)

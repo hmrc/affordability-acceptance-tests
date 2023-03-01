@@ -452,6 +452,41 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def checkYouPaymentPlanContentNoUpfront(): String = {
+    s"""Check your payment plan
+       |Can you make an upfront payment? No Change
+       |whether you can make an upfront payment
+       |Upfront payment
+       |Taken within 10 working days
+       |£0 Change
+       |upfront payment amount
+       |Monthly payments
+       |Payments collected on 28th or next working day Change
+       |the day of the month that payments will be collected on
+       |13 monthly payments of £250 Change
+       |the day of the month that payments will be collected on
+       |Payment schedule
+       |February 2020 £250
+       |March 2020 £250
+       |April 2020 £250
+       |May 2020 £250
+       |June 2020 £250
+       |July 2020 £250
+       |August 2020 £250
+       |September 2020 £250
+       |October 2020 £250
+       |November 2020 £250
+       |December 2020 £250
+       |January 2021 £250
+       |February 2021 £46.31
+       |Estimated total interest
+       |included in monthly payments
+       |£33.76
+       |Total to pay £3,046.31
+       |Agree and continue
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
 
   // template function
   def templateText(): String = {

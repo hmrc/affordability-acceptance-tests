@@ -441,6 +441,41 @@ object WelshContent {
     s"""TBC""".stripMargin
   }
 
+  def checkYouPaymentPlanContentNoUpfront(): String = {
+    s"""Gwirio’ch cynllun talu
+       |A allwch wneud taliad ymlaen llaw? Na Newid
+       |p’un a allwch wneud taliad ymlaen llaw
+       |Taliad ymlaen llaw
+       |I’w gymryd cyn pen 10 diwrnod gwaith
+       |£0 Newid
+       |swm y taliad ymlaen llaw
+       |Taliadau misol
+       |Mae taliadau’n cael eu casglu ar yr 28ain neu’r diwrnod gwaith nesaf Newid
+       |ar ba ddiwrnod o’r mis y caiff taliadau eu casglu
+       |13 taliad misol o £250 Newid
+       |ar ba ddiwrnod o’r mis y caiff taliadau eu casglu
+       |Amserlen ar gyfer talu
+       |Chwefror 2020 £250
+       |Mawrth 2020 £250
+       |Ebrill 2020 £250
+       |Mai 2020 £250
+       |Mehefin 2020 £250
+       |Gorffennaf 2020 £250
+       |Awst 2020 £250
+       |Medi 2020 £250
+       |Hydref 2020 £250
+       |Tachwedd 2020 £250
+       |Rhagfyr 2020 £250
+       |Ionawr 2021 £250
+       |Chwefror 2021 £46.31
+       |Amcangyfrif o gyfanswm y llog
+       |wedi’i gynnwys yn y taliadau misol
+       |£33.76
+       |Y cyfanswm i’w dalu £3,046.31
+       |Cytuno ac yn eich blaen
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""
