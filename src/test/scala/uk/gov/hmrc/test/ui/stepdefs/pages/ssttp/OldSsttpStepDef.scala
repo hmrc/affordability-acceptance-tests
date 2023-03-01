@@ -16,6 +16,7 @@
 
 package uk.gov.hmrc.test.ui.stepdefs.pages.ssttp
 
+import uk.gov.hmrc.test.ui.pages.journey.affordability.AffordabilityCheckPaymentPlanPage
 import uk.gov.hmrc.test.ui.pages.journey.ssttp._
 import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
 import uk.gov.hmrc.test.ui.testdata.{BankDetails, ScenarioContext}
@@ -47,10 +48,12 @@ class OldSsttpStepDef extends Steps with DriverActions {
     TypeOfAccountPage.clickAccountHolder(holder)
   }
 
-  When("""^the user clicks on the change link on the (.*)$""") { page: String =>
+  When("""^the user clicks on the change (.*) link on the (.*)$""") { (element: String, page: String) =>
     page match {
       case "ConfirmDirectDebitDetailsPage" =>
-        ConfirmDirectDebitDetailsPage.clickChangeLink("name")
+        ConfirmDirectDebitDetailsPage.clickChangeLink(element)
+      case "AffordabilityCheckPaymentPlanPage" =>
+        AffordabilityCheckPaymentPlanPage.clickChangeLink(element)
       case _ =>
         println("Check page passed in step")
     }

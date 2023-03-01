@@ -41,7 +41,7 @@ Feature: Happy Paths - Affordability
     And the user enters valid bank details
     And the user clicks continue
     And the user is on the ConfirmDirectDebitDetailsPage
-    When the user clicks on the change link on the ConfirmDirectDebitDetailsPage
+    When the user clicks on the change name link on the ConfirmDirectDebitDetailsPage
     Then the user is on the TypeOfAccountPage
 
 
