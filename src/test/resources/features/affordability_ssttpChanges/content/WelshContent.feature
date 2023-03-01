@@ -221,80 +221,66 @@ Feature: Welsh Content
       | 100      | HowMuchYouCanAffordPageSpendingMore |
 
 
-  Scenario Outline: Welsh - Error Validation on Add Income Page?
+  Scenario Outline: Welsh - Error Validation on Add Income Page
     Given A user logs in and gets to the affordability pages
     And the user clicks continue
     And the user clicks on the add income link
     When the User toggles on <lang> language
-    When the user enters <monthlyIncome> into the monthly income field
-    When the user enters <benefits> into the benefits field
-    When the user enters <otherAmount> into the other income field
+    When the user enters <value> into the monthly income field
+    When the user enters <value> into the benefits field
+    When the user enters <value> into the other income field
     And the user clicks continue
-    Then the <Field> field should display "<Message>"
+    Then the monthly income field should display "<Message> incwm misol ar ôl treth"
+    Then the benefits field should display "<Message> budd-daliadau"
+    Then the other income field should display "<Message> incwm misol arall"
     Then the User toggles on English language
 
     Examples:
-      | lang  | monthlyIncome | benefits | otherAmount | Field          | Message                                                                                       |
-      | Welsh | 0             | 0        | 0           | income invalid | Mae’n rhaid i chi nodi’ch incwm Os nad oes gennych unrhyw incwm, ffoniwch ni ar 0300 200 1900 |
-      | Welsh | £1            | 0        | 0           | monthly income | Nodwch rifau yn unig ar gyfer incwm misol ar ôl treth                                         |
-      | Welsh | 0             | AB       | 0           | benefit        | Nodwch rifau yn unig ar gyfer budd-daliadau                                                   |
-      | Welsh | 0             | 0        | !@          | other income   | Nodwch rifau yn unig ar gyfer incwm misol arall                                               |
-      | Welsh | 10.000        | 0        | 0           | monthly income | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer incwm misol ar ôl treth            |
-      | Welsh | 0             | 12.345   | 0           | benefit        | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer budd-daliadau                      |
-      | Welsh | 0             | 0        | 19.999      | other income   | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer incwm misol arall                  |
-      | Welsh | -1            | 0        | 0           | monthly income | Nodwch rif positif yn unig ar gyfer incwm misol ar ôl treth                                   |
-      | Welsh | 0             | -1       | 0           | benefit        | Nodwch rif positif yn unig ar gyfer budd-daliadau                                             |
-      | Welsh | 0             | 0        | -1          | other income   | Nodwch rif positif yn unig ar gyfer incwm misol arall                                         |
+      | lang  | value | Message                                                    |
+      | Welsh | !@    | Nodwch rifau yn unig ar gyfer                              |
+      | Welsh | 1.000 | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer |
+      | Welsh | -1    | Nodwch rif positif yn unig ar gyfer                        |
+
+  Scenario: Welsh - Error Validation on Add Income Page - Nothing entered
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user clicks continue
+    Then the income invalid field should display "Mae’n rhaid i chi nodi’ch incwm Os nad oes gennych unrhyw incwm, ffoniwch ni ar 0300 200 1900"
+
 
   Scenario Outline: Welsh - Error Validation on Add Spending Page
     Given A user logs in and gets to the affordability pages
     And the user clicks continue
     And the user clicks on the add spending link
     When the User toggles on <lang> language
-    When the user enters <Housing> into the housing field
-    When the user enters <Pension> into the pension field
-    When the user enters <Council Tax> into the council tax field
-    When the user enters <Utilities> into the utilities field
-    When the user enters <Debt> into the debt repayments field
-    When the user enters <Travel> into the travel field
-    When the user enters <Childcare> into the childcare field
-    When the user enters <Insurance> into the insurance field
-    When the user enters <Groceries> into the groceries field
-    When the user enters <Health> into the health field
+    When the user enters <value> into the housing field
+    When the user enters <value> into the pension field
+    When the user enters <value> into the council tax field
+    When the user enters <value> into the utilities field
+    When the user enters <value> into the debt repayments field
+    When the user enters <value> into the travel field
+    When the user enters <value> into the childcare field
+    When the user enters <value> into the insurance field
+    When the user enters <value> into the groceries field
+    When the user enters <value> into the health field
     And the user clicks continue
-    Then the <Field> field should display "<Message>"
+    Then the housing field should display "<Message> tai"
+    Then the pension field should display "<Message> cyfraniadau pensiwn"
+    Then the council tax field should display "<Message> Treth Gyngor"
+    Then the utilities field should display "<Message> cyfleustodau"
+    Then the debt repayments field should display "<Message> ad-daliadau dyledion"
+    Then the travel field should display "<Message> teithio"
+    Then the childcare field should display "<Message> costau gofal plant"
+    Then the insurance field should display "<Message> yswiriant"
+    Then the groceries field should display "<Message> nwyddau groser"
+    Then the health field should display "<Message> iechyd"
     Then the User toggles on English language
 
     Examples:
-      | lang  | Housing | Pension | Council Tax | Utilities | Debt  | Travel | Childcare | Insurance | Groceries | Health | Field           | Message                                                                         |
-      | Welsh | AB      | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | housing         | Nodwch rifau yn unig ar gyfer tai                                               |
-      | Welsh | 0       | £1      | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | pension         | Nodwch rifau yn unig ar gyfer cyfraniadau pensiwn                               |
-      | Welsh | 0       | 0       | !@          | 0         | 0     | 0      | 0         | 0         | 0         | 0      | council tax     | Nodwch rifau yn unig ar gyfer Treth Gyngor                                      |
-      | Welsh | 0       | 0       | 0           | AB        | 0     | 0      | 0         | 0         | 0         | 0      | utilities       | Nodwch rifau yn unig ar gyfer cyfleustodau                                      |
-      | Welsh | 0       | 0       | 0           | 0         | £1    | 0      | 0         | 0         | 0         | 0      | debt repayments | Nodwch rifau yn unig ar gyfer ad-daliadau dyledion                              |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | !@     | 0         | 0         | 0         | 0      | travel          | Nodwch rifau yn unig ar gyfer teithio                                           |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | 0      | AB        | 0         | 0         | 0      | childcare       | Nodwch rifau yn unig ar gyfer costau gofal plant                                |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | 0      | 0         | £1        | 0         | 0      | insurance       | Nodwch rifau yn unig ar gyfer yswiriant                                         |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | !@        | 0      | groceries       | Nodwch rifau yn unig ar gyfer nwyddau groser                                    |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | AB     | health          | Nodwch rifau yn unig ar gyfer iechyd                                            |
-      | Welsh | -1      | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | housing         | Nodwch rif positif yn unig ar gyfer tai                                         |
-      | Welsh | 0       | -1      | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | pension         | Nodwch rif positif yn unig ar gyfer cyfraniadau pensiwn                         |
-      | Welsh | 0       | 0       | -1          | 0         | 0     | 0      | 0         | 0         | 0         | 0      | council tax     | Nodwch rif positif yn unig ar gyfer Treth Gyngor                                |
-      | Welsh | 0       | 0       | 0           | -1        | 0     | 0      | 0         | 0         | 0         | 0      | utilities       | Nodwch rif positif yn unig ar gyfer cyfleustodau                                |
-      | Welsh | 0       | 0       | 0           | 0         | -1    | 0      | 0         | 0         | 0         | 0      | debt repayments | Nodwch rif positif yn unig ar gyfer ad-daliadau dyledion                        |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | -1     | 0         | 0         | 0         | 0      | travel          | Nodwch rif positif yn unig ar gyfer teithio                                     |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | 0      | -1        | 0         | 0         | 0      | childcare       | Nodwch rif positif yn unig ar gyfer costau gofal plant                          |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | 0      | 0         | -1        | 0         | 0      | insurance       | Nodwch rif positif yn unig ar gyfer yswiriant                                   |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | -1        | 0      | groceries       | Nodwch rif positif yn unig ar gyfer nwyddau groser                              |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | -1     | health          | Nodwch rif positif yn unig ar gyfer iechyd                                      |
-      | Welsh | 1.000   | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | housing         | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer tai                  |
-      | Welsh | 0       | 1.000   | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | pension         | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer cyfraniadau pensiwn  |
-      | Welsh | 0       | 0       | 1.000       | 0         | 0     | 0      | 0         | 0         | 0         | 0      | council tax     | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer Treth Gyngor         |
-      | Welsh | 0       | 0       | 0           | 1.000     | 0     | 0      | 0         | 0         | 0         | 0      | utilities       | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer cyfleustodau         |
-      | Welsh | 0       | 0       | 0           | 0         | 1.000 | 0      | 0         | 0         | 0         | 0      | debt repayments | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer ad-daliadau dyledion |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | 1.000  | 0         | 0         | 0         | 0      | travel          | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer teithio              |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | 0      | 1.000     | 0         | 0         | 0      | childcare       | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer costau gofal plant   |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 1.000     | 0         | 0      | insurance       | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer yswiriant            |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 1.000     | 0      | groceries       | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer nwyddau groser       |
-      | Welsh | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 1.000  | health          | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer iechyd               |
+      | lang  | value | Message                                                    |
+      | Welsh | !@    | Nodwch rifau yn unig ar gyfer                              |
+      | Welsh | -1    | Nodwch rif positif yn unig ar gyfer                        |
+      | Welsh | 1.000 | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer |
+
 

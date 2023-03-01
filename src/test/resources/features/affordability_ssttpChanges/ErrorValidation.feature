@@ -109,25 +109,27 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     And the user clicks continue
     And the user clicks on the add income link
     When the User toggles on <lang> language
-    When the user enters <monthlyIncome> into the monthly income field
-    When the user enters <benefits> into the benefits field
-    When the user enters <otherAmount> into the other income field
+    When the user enters <value> into the monthly income field
+    When the user enters <value> into the benefits field
+    When the user enters <value> into the other income field
     And the user clicks continue
-    Then the <Field> field should display "<Message>"
+    Then the monthly income field should display "<Message> monthly income after tax"
+    Then the benefits field should display "<Message> benefits"
+    Then the other income field should display "<Message> other monthly income"
     Then the User toggles on English language
 
     Examples:
-      | lang    | monthlyIncome | benefits | otherAmount | Field          | Message                                                                           |
-      | English | 0             | 0        | 0           | income invalid | You must enter your income If you do not have any income call us on 0300 123 1813 |
-      | English | £1            | 0        | 0           | monthly income | Enter numbers only for monthly income after tax                                   |
-      | English | 0             | AB       | 0           | benefit        | Enter numbers only for benefits                                                   |
-      | English | 0             | 0        | !@          | other income   | Enter numbers only for other monthly income                                       |
-      | English | 10.000        | 0        | 0           | monthly income | Amount must not contain more than 2 decimal places for monthly income after tax   |
-      | English | 0             | 12.345   | 0           | benefit        | Amount must not contain more than 2 decimal places for benefits                   |
-      | English | 0             | 0        | 19.999      | other income   | Amount must not contain more than 2 decimal places for other monthly income       |
-      | English | -1            | 0        | 0           | monthly income | Enter a positive number only for monthly income after tax                         |
-      | English | 0             | -1       | 0           | benefit        | Enter a positive number only for benefits                                         |
-      | English | 0             | 0        | -1          | other income   | Enter a positive number only for other monthly income                             |
+      | lang    | value | Message                                                                           |
+      | English | !@    | Enter numbers only for                                                            |
+      | English | -1    | Enter a positive number only for                                                  |
+      | English | 1.000 | Amount must not contain more than 2 decimal places for                            |
+
+  Scenario: Error Validation on Add Income Page - Nothing entered
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user clicks continue
+    Then the income invalid field should display "You must enter your income If you do not have any income, call us on 0300 123 1813"
 
 ### Affordability - Add Spending page
   Scenario Outline: Error Validation on Add Spending Page
@@ -135,50 +137,31 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     And the user clicks continue
     And the user clicks on the add spending link
     When the User toggles on <lang> language
-    When the user enters <Housing> into the housing field
-    When the user enters <Pension> into the pension field
-    When the user enters <Council Tax> into the council tax field
-    When the user enters <Utilities> into the utilities field
-    When the user enters <Debt> into the debt repayments field
-    When the user enters <Travel> into the travel field
-    When the user enters <Childcare> into the childcare field
-    When the user enters <Insurance> into the insurance field
-    When the user enters <Groceries> into the groceries field
-    When the user enters <Health> into the health field
+    When the user enters <value> into the housing field
+    When the user enters <value> into the pension field
+    When the user enters <value> into the council tax field
+    When the user enters <value> into the utilities field
+    When the user enters <value> into the debt repayments field
+    When the user enters <value> into the travel field
+    When the user enters <value> into the childcare field
+    When the user enters <value> into the insurance field
+    When the user enters <value> into the groceries field
+    When the user enters <value> into the health field
     And the user clicks continue
-    Then the <Field> field should display "<Message>"
+    Then the housing field should display "<Message> housing"
+    Then the pension field should display "<Message> pension contributions"
+    Then the council tax field should display "<Message> council tax"
+    Then the utilities field should display "<Message> utilities"
+    Then the debt repayments field should display "<Message> debt repayments"
+    Then the travel field should display "<Message> travel"
+    Then the childcare field should display "<Message> childcare costs"
+    Then the insurance field should display "<Message> insurance"
+    Then the groceries field should display "<Message> groceries"
+    Then the health field should display "<Message> health"
     Then the User toggles on English language
 
     Examples:
-      | lang    | Housing | Pension | Council Tax | Utilities | Debt  | Travel | Childcare | Insurance | Groceries | Health | Field           | Message                                                                      |
-      | English | AB      | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | housing         | Enter numbers only for housing                                               |
-      | English | 0       | £1      | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | pension         | Enter numbers only for pension contributions                                 |
-      | English | 0       | 0       | !@          | 0         | 0     | 0      | 0         | 0         | 0         | 0      | council tax     | Enter numbers only for council tax                                           |
-      | English | 0       | 0       | 0           | AB        | 0     | 0      | 0         | 0         | 0         | 0      | utilities       | Enter numbers only for utilities                                             |
-      | English | 0       | 0       | 0           | 0         | £1    | 0      | 0         | 0         | 0         | 0      | debt repayments | Enter numbers only for debt repayments                                       |
-      | English | 0       | 0       | 0           | 0         | 0     | !@     | 0         | 0         | 0         | 0      | travel          | Enter numbers only for travel                                                |
-      | English | 0       | 0       | 0           | 0         | 0     | 0      | AB        | 0         | 0         | 0      | childcare       | Enter numbers only for childcare costs                                       |
-      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | £1        | 0         | 0      | insurance       | Enter numbers only for insurance                                             |
-      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | !@        | 0      | groceries       | Enter numbers only for groceries                                             |
-      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | AB     | health          | Enter numbers only for health                                                |
-      | English | -1      | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | housing         | Enter a positive number only for housing                                     |
-      | English | 0       | -1      | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | pension         | Enter a positive number only for pension contributions                       |
-      | English | 0       | 0       | -1          | 0         | 0     | 0      | 0         | 0         | 0         | 0      | council tax     | Enter a positive number only for council tax                                 |
-      | English | 0       | 0       | 0           | -1        | 0     | 0      | 0         | 0         | 0         | 0      | utilities       | Enter a positive number only for utilities                                   |
-      | English | 0       | 0       | 0           | 0         | -1    | 0      | 0         | 0         | 0         | 0      | debt repayments | Enter a positive number only for debt repayments                             |
-      | English | 0       | 0       | 0           | 0         | 0     | -1     | 0         | 0         | 0         | 0      | travel          | Enter a positive number only for travel                                      |
-      | English | 0       | 0       | 0           | 0         | 0     | 0      | -1        | 0         | 0         | 0      | childcare       | Enter a positive number only for childcare costs                             |
-      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | -1        | 0         | 0      | insurance       | Enter a positive number only for insurance                                   |
-      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | -1        | 0      | groceries       | Enter a positive number only for groceries                                   |
-      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | -1     | health          | Enter a positive number only for health                                      |
-      | English | 1.000   | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | housing         | Amount must not contain more than 2 decimal places for housing               |
-      | English | 0       | 1.000   | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | pension         | Amount must not contain more than 2 decimal places for pension contributions |
-      | English | 0       | 0       | 1.000       | 0         | 0     | 0      | 0         | 0         | 0         | 0      | council tax     | Amount must not contain more than 2 decimal places for council tax           |
-      | English | 0       | 0       | 0           | 1.000     | 0     | 0      | 0         | 0         | 0         | 0      | utilities       | Amount must not contain more than 2 decimal places for utilities             |
-      | English | 0       | 0       | 0           | 0         | 1.000 | 0      | 0         | 0         | 0         | 0      | debt repayments | Amount must not contain more than 2 decimal places for debt repayments       |
-      | English | 0       | 0       | 0           | 0         | 0     | 1.000  | 0         | 0         | 0         | 0      | travel          | Amount must not contain more than 2 decimal places for travel                |
-      | English | 0       | 0       | 0           | 0         | 0     | 0      | 1.000     | 0         | 0         | 0      | childcare       | Amount must not contain more than 2 decimal places for childcare costs       |
-      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 1.000     | 0         | 0      | insurance       | Amount must not contain more than 2 decimal places for insurance             |
-      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 1.000     | 0      | groceries       | Amount must not contain more than 2 decimal places for groceries             |
-      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 1.000  | health          | Amount must not contain more than 2 decimal places for health                |
-
+      | lang    | value | Message                                                |
+      | English | !@    | Enter numbers only for                                 |
+      | English | -1    | Enter a positive number only for                       |
+      | English | 1.000 | Amount must not contain more than 2 decimal places for |
