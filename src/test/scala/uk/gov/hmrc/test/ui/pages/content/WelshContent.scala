@@ -234,7 +234,7 @@ object WelshContent {
        |Ionawr 2021 £250
        |Chwefror 2021 £46.31
        |Amcangyfrif o gyfanswm y llog
-       |wedi’i gynnwys yn eich taliadau misol
+       |wedi’i gynnwys yn y taliadau misol
        |£33.76
        |Y cyfanswm i’w dalu £3,046.31
        |Argraffwch gopi o’ch cynllun talu
