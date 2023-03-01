@@ -206,17 +206,17 @@ Feature: Welsh Content
     Then the User toggles on English language
 
     Examples:
-      | lang  | monthlyIncome | benefits | otherAmount | Field          | Message                                                                                                        |
-      | Welsh | 0             | 0        | 0           | monthly amount | Mae’n rhaid i chi nodi ffigur ar gyfer yr incwm. Os nad oes gennych unrhyw incwm, ffoniwch ni ar 0300 200 1900 |
-      | Welsh | £1            | 0        | 0           | monthly amount | Rhowch rifau yn unig                                                                                           |
-      | Welsh | 0             | AB       | 0           | benefit        | Rhowch rifau yn unig                                                                                           |
-      | Welsh | 0             | 0        | !@          | other income   | Rhowch rifau yn unig                                                                                           |
-      | Welsh | 10.000        | 0        | 0           | monthly amount | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol                                                              |
-      | Welsh | 0             | 12.345   | 0           | benefit        | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol                                                              |
-      | Welsh | 0             | 0        | 19.999      | other income   | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol                                                              |
-#      | Welsh | -1          | 0             | 0             | monthly amount | TBC     |
-#      | Welsh | 0           | -1            | 0             | monthly amount | TBC     |
-#      | Welsh | 0           | 0             | -1            | monthly amount | TBC     |
+      | lang  | monthlyIncome | benefits | otherAmount | Field          | Message                                                                                       |
+      | Welsh | 0             | 0        | 0           | income invalid | Mae’n rhaid i chi nodi’ch incwm Os nad oes gennych unrhyw incwm, ffoniwch ni ar 0300 200 1900 |
+      | Welsh | £1            | 0        | 0           | monthly income | Nodwch rifau yn unig ar gyfer incwm misol ar ôl treth                                         |
+      | Welsh | 0             | AB       | 0           | benefit        | Nodwch rifau yn unig ar gyfer budd-daliadau                                                   |
+      | Welsh | 0             | 0        | !@          | other income   | Nodwch rifau yn unig ar gyfer incwm misol arall                                               |
+      | Welsh | 10.000        | 0        | 0           | monthly income | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer incwm misol ar ôl treth            |
+      | Welsh | 0             | 12.345   | 0           | benefit        | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer budd-daliadau                      |
+      | Welsh | 0             | 0        | 19.999      | other income   | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer incwm misol arall                  |
+      | Welsh | -1            | 0        | 0           | monthly income | Nodwch rif positif yn unig ar gyfer incwm misol ar ôl treth                                   |
+      | Welsh | 0             | -1       | 0           | benefit        | Nodwch rif positif yn unig ar gyfer budd-daliadau                                             |
+      | Welsh | 0             | 0        | -1          | other income   | Nodwch rif positif yn unig ar gyfer incwm misol arall                                         |
 
 #  Scenario Outline: Welsh - Error Validation on Add Spending Page
 #    Given A user logs in and gets to the affordability pages

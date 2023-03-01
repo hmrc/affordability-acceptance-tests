@@ -312,6 +312,9 @@ class CommonSteps extends Steps with DriverActions {
       case "other income" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
         HelperFunctions.errorMessage("otherIncome") should be(s"$prependError\n$message")
+      case "income invalid" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("income-invalid").replaceAll("\n"," ") should be(s"$prependError $message")
 //Add Spending Page
       case "housing" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)

@@ -117,17 +117,17 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     Then the User toggles on English language
 
     Examples:
-      | lang    | monthlyIncome | benefits | otherAmount | Field          | Message                                                                                 |
-      | English | 0             | 0        | 0           | monthly amount | You must enter an income figure. If you do not have any income call us on 0300 200 3835 |
-      | English | £1            | 0        | 0           | monthly amount | Enter numbers only                                                                      |
-      | English | 0             | AB       | 0           | benefit        | Enter numbers only                                                                      |
-      | English | 0             | 0        | !@          | other income   | Enter numbers only                                                                      |
-      | English | 10.000        | 0        | 0           | monthly amount | Amount must not contain more than 2 decimal places                                      |
-      | English | 0             | 12.345   | 0           | benefit        | Amount must not contain more than 2 decimal places                                      |
-      | English | 0             | 0        | 19.999      | other income   | Amount must not contain more than 2 decimal places                                      |
-#      | English | -1          | 0             | 0             | monthly amount | TBC     |
-#      | English | 0           | -1            | 0             | monthly amount | TBC     |
-#      | English | 0           | 0             | -1            | monthly amount | TBC     |
+      | lang    | monthlyIncome | benefits | otherAmount | Field          | Message                                                                           |
+      | English | 0             | 0        | 0           | income invalid | You must enter your income If you do not have any income call us on 0300 123 1813 |
+      | English | £1            | 0        | 0           | monthly income | Enter numbers only for monthly income after tax                                   |
+      | English | 0             | AB       | 0           | benefit        | Enter numbers only for benefits                                                   |
+      | English | 0             | 0        | !@          | other income   | Enter numbers only for other monthly income                                       |
+      | English | 10.000        | 0        | 0           | monthly income | Amount must not contain more than 2 decimal places for monthly income after tax   |
+      | English | 0             | 12.345   | 0           | benefit        | Amount must not contain more than 2 decimal places for benefits                   |
+      | English | 0             | 0        | 19.999      | other income   | Amount must not contain more than 2 decimal places for other monthly income       |
+      | English | -1            | 0        | 0           | monthly income | Enter a positive number only for monthly income after tax                         |
+      | English | 0             | -1       | 0           | benefit        | Enter a positive number only for benefits                                         |
+      | English | 0             | 0        | -1          | other income   | Enter a positive number only for other monthly income                             |
 
 ### Affordability - Add Spending page
   Scenario Outline: Error Validation on Add Spending Page
@@ -150,17 +150,17 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     Then the User toggles on English language
 
     Examples:
-      | lang    | Housing | Pension | Council Tax | Utilities | Debt | Travel | Childcare | Insurance | Groceries | Health | Field           | Message            |
-      | English | AB      | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | housing         | Enter numbers only |
-      | English | 0       | £1      | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | pension         | Enter numbers only |
-      | English | 0       | 0       | !@          | 0         | 0    | 0      | 0         | 0         | 0         | 0      | council tax     | Enter numbers only |
-      | English | 0       | 0       | 0           | AB        | 0    | 0      | 0         | 0         | 0         | 0      | utilities       | Enter numbers only |
-      | English | 0       | 0       | 0           | 0         | £1   | 0      | 0         | 0         | 0         | 0      | debt repayments | Enter numbers only |
-      | English | 0       | 0       | 0           | 0         | 0    | !@     | 0         | 0         | 0         | 0      | travel          | Enter numbers only |
-      | English | 0       | 0       | 0           | 0         | 0    | 0      | AB        | 0         | 0         | 0      | childcare       | Enter numbers only |
-      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | £1        | 0         | 0      | insurance       | Enter numbers only |
-      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | !@        | 0      | groceries       | Enter numbers only |
-      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | AB     | health          | Enter numbers only |
+      | lang    | Housing | Pension | Council Tax | Utilities | Debt | Travel | Childcare | Insurance | Groceries | Health | Field           | Message                |
+      | English | AB      | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | housing         | Enter numbers only for |
+      | English | 0       | £1      | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | pension         | Enter numbers only for |
+      | English | 0       | 0       | !@          | 0         | 0    | 0      | 0         | 0         | 0         | 0      | council tax     | Enter numbers only for |
+      | English | 0       | 0       | 0           | AB        | 0    | 0      | 0         | 0         | 0         | 0      | utilities       | Enter numbers only for |
+      | English | 0       | 0       | 0           | 0         | £1   | 0      | 0         | 0         | 0         | 0      | debt repayments | Enter numbers only for |
+      | English | 0       | 0       | 0           | 0         | 0    | !@     | 0         | 0         | 0         | 0      | travel          | Enter numbers only for |
+      | English | 0       | 0       | 0           | 0         | 0    | 0      | AB        | 0         | 0         | 0      | childcare       | Enter numbers only for |
+      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | £1        | 0         | 0      | insurance       | Enter numbers only for |
+      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | !@        | 0      | groceries       | Enter numbers only for |
+      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | AB     | health          | Enter numbers only for |
 #      | English | -1      | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | housing         | TBC                |
 #      | English | 0       | -1      | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | pension         | TBC                |
 #      | English | 0       | 0       | -1          | 0         | 0    | 0      | 0         | 0         | 0         | 0      | council tax     | TBC                |
