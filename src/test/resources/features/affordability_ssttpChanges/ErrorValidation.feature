@@ -150,35 +150,35 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     Then the User toggles on English language
 
     Examples:
-      | lang    | Housing | Pension | Council Tax | Utilities | Debt | Travel | Childcare | Insurance | Groceries | Health | Field           | Message                |
-      | English | AB      | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | housing         | Enter numbers only for |
-      | English | 0       | £1      | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | pension         | Enter numbers only for |
-      | English | 0       | 0       | !@          | 0         | 0    | 0      | 0         | 0         | 0         | 0      | council tax     | Enter numbers only for |
-      | English | 0       | 0       | 0           | AB        | 0    | 0      | 0         | 0         | 0         | 0      | utilities       | Enter numbers only for |
-      | English | 0       | 0       | 0           | 0         | £1   | 0      | 0         | 0         | 0         | 0      | debt repayments | Enter numbers only for |
-      | English | 0       | 0       | 0           | 0         | 0    | !@     | 0         | 0         | 0         | 0      | travel          | Enter numbers only for |
-      | English | 0       | 0       | 0           | 0         | 0    | 0      | AB        | 0         | 0         | 0      | childcare       | Enter numbers only for |
-      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | £1        | 0         | 0      | insurance       | Enter numbers only for |
-      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | !@        | 0      | groceries       | Enter numbers only for |
-      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | AB     | health          | Enter numbers only for |
-#      | English | -1      | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | housing         | TBC                |
-#      | English | 0       | -1      | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | pension         | TBC                |
-#      | English | 0       | 0       | -1          | 0         | 0    | 0      | 0         | 0         | 0         | 0      | council tax     | TBC                |
-#      | English | 0       | 0       | 0           | -1        | 0    | 0      | 0         | 0         | 0         | 0      | utilities       | TBC                |
-#      | English | 0       | 0       | 0           | 0         | -1   | 0      | 0         | 0         | 0         | 0      | debt repayments | TBC                |
-#      | English | 0       | 0       | 0           | 0         | 0    | -1     | 0         | 0         | 0         | 0      | travel          | TBC                |
-#      | English | 0       | 0       | 0           | 0         | 0    | 0      | -1        | 0         | 0         | 0      | childcare       | TBC                |
-#      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | -1        | 0         | 0      | insurance       | TBC                |
-#      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | -1        | 0      | groceries       | TBC                |
-#      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | -1     | health          | TBC                |
-#      | English | 1.000   | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | housing         | TBC                |
-#      | English | 0       | 1.000   | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      | pension         | TBC                |
-#      | English | 0       | 0       | 1.000       | 0         | 0    | 0      | 0         | 0         | 0         | 0      | council tax     | TBC                |
-#      | English | 0       | 0       | 0           | 1.000     | 0    | 0      | 0         | 0         | 0         | 0      | utilities       | TBC                |
-#      | English | 0       | 0       | 0           | 0         | 1.000| 0      | 0         | 0         | 0         | 0      | debt repayments | TBC                |
-#      | English | 0       | 0       | 0           | 0         | 0    | 1.000  | 0         | 0         | 0         | 0      | travel          | TBC                |
-#      | English | 0       | 0       | 0           | 0         | 0    | 0      | 1.000     | 0         | 0         | 0      | childcare       | TBC                |
-#      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 1.000     | 0         | 0      | insurance       | TBC                |
-#      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 1.000     | 0      | groceries       | TBC                |
-#      | English | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 1.000  | health          | TBC                |
-#
+      | lang    | Housing | Pension | Council Tax | Utilities | Debt  | Travel | Childcare | Insurance | Groceries | Health | Field           | Message                                                                      |
+      | English | AB      | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | housing         | Enter numbers only for housing                                               |
+      | English | 0       | £1      | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | pension         | Enter numbers only for pension contributions                                 |
+      | English | 0       | 0       | !@          | 0         | 0     | 0      | 0         | 0         | 0         | 0      | council tax     | Enter numbers only for council tax                                           |
+      | English | 0       | 0       | 0           | AB        | 0     | 0      | 0         | 0         | 0         | 0      | utilities       | Enter numbers only for utilities                                             |
+      | English | 0       | 0       | 0           | 0         | £1    | 0      | 0         | 0         | 0         | 0      | debt repayments | Enter numbers only for debt repayments                                       |
+      | English | 0       | 0       | 0           | 0         | 0     | !@     | 0         | 0         | 0         | 0      | travel          | Enter numbers only for travel                                                |
+      | English | 0       | 0       | 0           | 0         | 0     | 0      | AB        | 0         | 0         | 0      | childcare       | Enter numbers only for childcare costs                                       |
+      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | £1        | 0         | 0      | insurance       | Enter numbers only for insurance                                             |
+      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | !@        | 0      | groceries       | Enter numbers only for groceries                                             |
+      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | AB     | health          | Enter numbers only for health                                                |
+      | English | -1      | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | housing         | Enter a positive number only for housing                                     |
+      | English | 0       | -1      | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | pension         | Enter a positive number only for pension contributions                       |
+      | English | 0       | 0       | -1          | 0         | 0     | 0      | 0         | 0         | 0         | 0      | council tax     | Enter a positive number only for council tax                                 |
+      | English | 0       | 0       | 0           | -1        | 0     | 0      | 0         | 0         | 0         | 0      | utilities       | Enter a positive number only for utilities                                   |
+      | English | 0       | 0       | 0           | 0         | -1    | 0      | 0         | 0         | 0         | 0      | debt repayments | Enter a positive number only for debt repayments                             |
+      | English | 0       | 0       | 0           | 0         | 0     | -1     | 0         | 0         | 0         | 0      | travel          | Enter a positive number only for travel                                      |
+      | English | 0       | 0       | 0           | 0         | 0     | 0      | -1        | 0         | 0         | 0      | childcare       | Enter a positive number only for childcare costs                             |
+      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | -1        | 0         | 0      | insurance       | Enter a positive number only for insurance                                   |
+      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | -1        | 0      | groceries       | Enter a positive number only for groceries                                   |
+      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | -1     | health          | Enter a positive number only for health                                      |
+      | English | 1.000   | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | housing         | Amount must not contain more than 2 decimal places for housing               |
+      | English | 0       | 1.000   | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 0      | pension         | Amount must not contain more than 2 decimal places for pension contributions |
+      | English | 0       | 0       | 1.000       | 0         | 0     | 0      | 0         | 0         | 0         | 0      | council tax     | Amount must not contain more than 2 decimal places for council tax           |
+      | English | 0       | 0       | 0           | 1.000     | 0     | 0      | 0         | 0         | 0         | 0      | utilities       | Amount must not contain more than 2 decimal places for utilities             |
+      | English | 0       | 0       | 0           | 0         | 1.000 | 0      | 0         | 0         | 0         | 0      | debt repayments | Amount must not contain more than 2 decimal places for debt repayments       |
+      | English | 0       | 0       | 0           | 0         | 0     | 1.000  | 0         | 0         | 0         | 0      | travel          | Amount must not contain more than 2 decimal places for travel                |
+      | English | 0       | 0       | 0           | 0         | 0     | 0      | 1.000     | 0         | 0         | 0      | childcare       | Amount must not contain more than 2 decimal places for childcare costs       |
+      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 1.000     | 0         | 0      | insurance       | Amount must not contain more than 2 decimal places for insurance             |
+      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 1.000     | 0      | groceries       | Amount must not contain more than 2 decimal places for groceries             |
+      | English | 0       | 0       | 0           | 0         | 0     | 0      | 0         | 0         | 0         | 1.000  | health          | Amount must not contain more than 2 decimal places for health                |
+
