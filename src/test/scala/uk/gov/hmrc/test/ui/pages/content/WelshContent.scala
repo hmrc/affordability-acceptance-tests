@@ -437,7 +437,17 @@ object WelshContent {
   }
 
   def cannotAgreePlanContent(): String = {
-    s"""TBC""".stripMargin
+    s"""Ni allwn gytuno ar eich cynllun talu ar-lein
+       |Mae’r symiau rydych wedi’u nodi ar gyfer eich incwm a’ch gwariant yn golygu na allwch sefydlu cynllun talu ar-lein.
+       |A ydych wedi nodi’r wybodaeth yn gywir? Gallwch newid eich incwm a’ch gwariant.
+       |Mae’n bosibl y byddwch yn gallu sefydlu cynllun talu dros y ffôn. Ffoniwch y Gwasanaeth Cwsmeriaid Cymraeg CThEF ar 0300 200 1900 i drafod eich opsiynau.
+       |Ein horiau agor yw Dydd Llun i Ddydd Gwener, 08:30 i 17:00. Rydym ar gau ar benwythnosau a gwyliau banc.
+       |Os oes angen cymorth ychwanegol arnoch chi
+       |Dysgwch am y ffyrdd gwahanol o ddelio â CThEF os oes angen help arnoch chi.
+       |Gallwch hefyd ddefnyddio Relay UK os na allwch glywed na siarad dros y ffôn: deialwch 18001 ac yna 0345 300 3900.
+       |Os ydych y tu allan i’r DU: +44 300 200 1900.
+       |Ewch i’r cyfrif treth
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def checkYouPaymentPlanContentNoUpfront(): String = {
