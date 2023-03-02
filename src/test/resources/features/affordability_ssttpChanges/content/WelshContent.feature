@@ -341,4 +341,22 @@ Feature: Welsh Content
       | Welsh | -1    | Nodwch rif positif yn unig ar gyfer                        |
       | Welsh | 1.000 | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer |
 
+    ### Cannot Agree Plan Page
+  Scenario: Welsh - Affordability Screens - Cannot Agree Plan Page - Change Income and Spending link
+    Given A user logs in and gets to the affordability pages
+    When the User toggles on Welsh language
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 60 to all fields
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user is on the HowMuchYouCanAffordPageSpendingSame
+    And the user clicks continue
+    And the user is on the CannotAgreePlanPage
+    And the user clicks on the change income and spending link
+    Then the user is on the HowMuchYouCanAffordPageSpendingSame
+    Then the User toggles on English language
+
 
