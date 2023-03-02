@@ -33,7 +33,7 @@ object CannotSetupDDPage extends BasePage {
 
   def assertPhoneNumber(lang: String): Unit = {
     lang match {
-      case "english" => phoneNumber should be("0300 200 3835")
+      case "english" => phoneNumber should be("0300 123 1813")
       case "welsh" => phoneNumber should be("0300 200 1900")
     }
   }

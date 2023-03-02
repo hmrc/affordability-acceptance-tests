@@ -54,7 +54,7 @@ class CommonSteps extends Steps with DriverActions {
     UpfrontPaymentPage.selectRadio("no")
     next()
     WhatDayOfMonthPage.enterDayOfMonth("28")
-    WhatDayOfMonthPage.clickAffordability()
+    next()
   }
 
   And("""^user enters affordability pages$""") { () =>
