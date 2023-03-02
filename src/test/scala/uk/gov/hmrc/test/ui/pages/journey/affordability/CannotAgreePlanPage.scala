@@ -24,15 +24,15 @@ import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 
 object CannotAgreePlanPage extends BasePage {
 
-  val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/start-affordability"
+  val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/we-cannot-agree-your-payment-plan"
 
   def expectedPageTitle = {
-    if (langToggle == Language.welsh) "TBC - Trefnu cynllun talu - GOV.UK"
+    if (langToggle == Language.welsh) "Ni allwn gytuno ar eich cynllun talu ar-lein - Trefnu cynllun talu - GOV.UK"
     else "We cannot agree your payment plan online - Set up a Self Assessment payment plan - GOV.UK"
   }
 
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "TBC"
+    if (langToggle == Language.welsh) "Ni allwn gytuno ar eich cynllun talu ar-lein"
     else "We cannot agree your payment plan online"
   }
 
