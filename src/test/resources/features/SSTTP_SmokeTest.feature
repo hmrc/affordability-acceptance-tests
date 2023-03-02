@@ -12,6 +12,14 @@ Feature: SUPP - SmokeTest
     And the user clicks continue
     And the user enters 28 on the what day of the month page
     And the user clicks next
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
     And the user enters 50 percent on the how many months page
     And the user clicks next
     And the user clicks continue

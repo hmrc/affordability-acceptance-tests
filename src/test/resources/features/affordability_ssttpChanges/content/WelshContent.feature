@@ -16,6 +16,14 @@ Feature: Welsh Content
     And the user is on the WhatDayOfMonthPage
     And the user enters 28 on the what day of the month page
     And the user clicks next
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
     And the user enters 50 percent on the how many months page
     And the user clicks next
     And the user clicks continue
@@ -54,6 +62,14 @@ Feature: Welsh Content
     And the user clicks continue
     And the user enters 28 on the what day of the month page
     And the user clicks next
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
     And the user enters 50 percent on the how many months page
     And the user clicks next
     And the user clicks continue
@@ -84,7 +100,24 @@ Feature: Welsh Content
 ### Error Validation
 
   Scenario: Welsh - Error Validation on About your Account Details page - no selection
-    Given A user logs in and gets to the About your bank account page
+    Given the user is created and logs in
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks no on the upfront payment page
+    And the user clicks next
+    And the user enters 28 on the what day of the month page
+    And the user clicks next
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters 50 percent on the how many months page
+    And the user clicks next
+    And the user clicks continue
     And the User toggles on Welsh language
     And the user clicks continue
     Then the account type field should display "Dewiswch pa fath o gyfrif yr ydych yn ei ddarparu"
@@ -92,7 +125,24 @@ Feature: Welsh Content
     And the User toggles on English language
 
   Scenario Outline: Welsh - Error Validation on Set Up Direct Debit page - Field Validation
-    Given A user logs in and gets to the About your bank account page
+    Given the user is created and logs in
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks no on the upfront payment page
+    And the user clicks next
+    And the user enters 28 on the what day of the month page
+    And the user clicks next
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters 50 percent on the how many months page
+    And the user clicks next
+    And the user clicks continue
     When the user selects personal and is the account holder on the About account page
     And the user clicks continue
     When the User toggles on <lang> language
@@ -111,7 +161,11 @@ Feature: Welsh Content
       | Welsh | 52173       | Account Number | Mae’n rhaid i rif y cyfrif fod rhwng 6 ac 8 digid |
 
   Scenario Outline: Welsh - Error Validation on How much can you pay upfront?
-    Given A user logs in and gets to the How much can you pay upfront page
+    Given the user is created and logs in
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks yes on the upfront payment page
+    And the user clicks next
     When the User toggles on <lang> language
     When the user enters <Input Value> into the amount field
     And the user clicks continue
@@ -156,7 +210,7 @@ Feature: Welsh Content
 
 ###### AFFORDABILITY SCREENS
 
-  Scenario: Welsh - Affordability Screens Content - Branch off TEMPORARY, tests will need to be merged to main tests when journey complete
+  Scenario: Welsh - Affordability Screens Content
     Given A user logs in and gets to the affordability pages
     When the User toggles on Welsh language
     And the user is on the CheckYouCanAffordPage

@@ -28,7 +28,23 @@ Feature: Error Validation on various pages created/updated by Affordability chan
 
 ### About Bank Account Page
   Scenario Outline: Error Validation on About your Account Details page - only 1 selection
-    Given A user logs in and gets to the About your bank account page
+    Given the user is created and logs in
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks no on the upfront payment page
+    And the user clicks next
+    And the user enters 28 on the what day of the month page
+    And the user clicks next
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters 50 percent on the how many months page
+    And the user clicks next
     And the user clicks continue
     When the user selects <accountType> and <accountHolder> the account holder on the About account page
     And the user clicks continue
@@ -40,14 +56,48 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | personal             | no selection for | account holder | Select yes if you are the account holder              |
 
   Scenario: Error Validation on About your Account Details page - no selection
-    Given A user logs in and gets to the About your bank account page
+    Given the user is created and logs in
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks no on the upfront payment page
+    And the user clicks next
+    And the user enters 28 on the what day of the month page
+    And the user clicks next
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters 50 percent on the how many months page
+    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     Then the account type field should display "Select what type of account details you are providing"
     Then the account holder field should display "Select yes if you are the account holder"
 
 ### Set Up Direct Debit Page
   Scenario: Error Validation on Set Up Direct Debit page - no selection
-    Given A user logs in and gets to the About your bank account page
+    Given the user is created and logs in
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks no on the upfront payment page
+    And the user clicks next
+    And the user enters 28 on the what day of the month page
+    And the user clicks next
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters 50 percent on the how many months page
+    And the user clicks next
+    And the user clicks continue
     When the user selects personal and is the account holder on the About account page
     And the user clicks continue
     And an empty form is submitted
@@ -56,7 +106,24 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     Then the account number field should display "Enter an account number"
 
   Scenario Outline: Error Validation on Set Up Direct Debit page - Field Validation
-    Given A user logs in and gets to the About your bank account page
+    Given the user is created and logs in
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks no on the upfront payment page
+    And the user clicks next
+    And the user enters 28 on the what day of the month page
+    And the user clicks next
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters 50 percent on the how many months page
+    And the user clicks next
+    And the user clicks continue
     When the user selects personal and is the account holder on the About account page
     And the user clicks continue
     When the User toggles on <lang> language
@@ -87,7 +154,11 @@ Feature: Error Validation on various pages created/updated by Affordability chan
 
 ### Upfront Payment page
   Scenario Outline: Error Validation on How much can you pay upfront?
-    Given A user logs in and gets to the How much can you pay upfront page
+    Given the user is created and logs in
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks yes on the upfront payment page
+    And the user clicks next
     When the User toggles on <lang> language
     When the user enters <Input Value> into the amount field
     And the user clicks continue

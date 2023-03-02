@@ -280,7 +280,6 @@ object WelshContent {
        |Diwrnod gwahanol
        |
        |Yn eich blaen
-       |Continue to Affordability
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
