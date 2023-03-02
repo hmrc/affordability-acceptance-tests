@@ -4,7 +4,24 @@ Feature: Happy Paths - Affordability
 
   @a11y @zap
   Scenario: Cannot set up Direct Debit page - Not Account holder
-    Given A user logs in and gets to the About your bank account page
+    Given the user is created and logs in
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks no on the upfront payment page
+    And the user clicks next
+    And the user enters 28 on the what day of the month page
+    And the user clicks next
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters 50 percent on the how many months page
+    And the user clicks next
+    And the user clicks continue
     When the user selects personal and isn't the account holder on the About account page
     And the user clicks continue
     Then the user is on the CannotSetupDDPage
@@ -13,7 +30,24 @@ Feature: Happy Paths - Affordability
 ### Set Up Direct Debit Page
 
   Scenario Outline: Boundary Validation on Set Up Direct Debit page
-    Given A user logs in and gets to the About your bank account page
+    Given the user is created and logs in
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks no on the upfront payment page
+    And the user clicks next
+    And the user enters 28 on the what day of the month page
+    And the user clicks next
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters 50 percent on the how many months page
+    And the user clicks next
+    And the user clicks continue
     When the user selects personal and is the account holder on the About account page
     And the user clicks continue
     And the user enters valid bank details
@@ -35,7 +69,24 @@ Feature: Happy Paths - Affordability
 ### Confirm your Direct Debit Details Page
 
   Scenario: Change Link on Confirm Direct Debit Details page takes back to Type Of Account Page
-    Given A user logs in and gets to the About your bank account page
+    Given the user is created and logs in
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks no on the upfront payment page
+    And the user clicks next
+    And the user enters 28 on the what day of the month page
+    And the user clicks next
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters 50 percent on the how many months page
+    And the user clicks next
+    And the user clicks continue
     When the user selects personal and is the account holder on the About account page
     And the user clicks continue
     And the user enters valid bank details
