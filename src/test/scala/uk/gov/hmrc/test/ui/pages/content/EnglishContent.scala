@@ -39,7 +39,7 @@ object EnglishContent {
   def cannotSetupDDContent(): String = {
     s"""You cannot set up a Direct Debit online
        |You need a named account holder or someone with authorisation to set up a Direct Debit.
-       |If you are not the account holder or you wish to set up a Direct Debit with a multi-signature account, we recommend you speak to an adviser on 0300 200 3835 at the Payment Support Service. You must ensure all account holders are present when calling.
+       |If you are not the account holder or you wish to set up a Direct Debit with a multi-signature account, speak to an adviser on 0300 123 1813. You must ensure all account holders are present when calling.
        |
        |Go to tax account
        |Is this page not working properly? (opens in new tab)""".stripMargin
@@ -127,7 +127,7 @@ object EnglishContent {
   def callUsNotEligibleContent(): String = {
     s"""Please call us
        |You are not eligible to set up a payment plan online.
-       |For further support you can contact the Payment Support Service and speak to an adviser on 0300 200 3835.
+       |For further support, you can contact us on 0300 123 1813 to speak to an adviser.
        |If you cannot use speech recognition software
        |Find out how to deal with HMRC if you need extra support.
        |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
@@ -147,7 +147,7 @@ object EnglishContent {
   def callUsNotEnrolledContent(): String = {
     s"""Please call us
        |You may still be able to set up a payment plan over the phone, but you are not eligible for an online payment plan.
-       |We recommend you speak to an adviser on 0300 200 3835 at the Payment Support Service to talk about your payment options.
+       |For further support, you can contact us on 0300 123 1813 to speak to an adviser.
        |If you cannot use speech recognition software
        |Find out how to deal with HMRC if you need extra support.
        |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
@@ -166,7 +166,7 @@ object EnglishContent {
   def callUsNotDebtTooLargeContent(): String = {
     s"""Please call us
        |To be eligible to set up a payment plan online the tax you owe must be £30,000 or less.
-       |For further support you can contact the Payment Support Service and speak to an adviser on 0300 200 3835.
+       |For further support, you can contact us on 0300 123 1813 to speak to an adviser.
        |If you cannot use speech recognition software
        |Find out how to deal with HMRC if you need extra support.
        |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
@@ -186,7 +186,7 @@ object EnglishContent {
     s"""File your return to use this service
        |To be eligible to set up a payment plan online you need to have filed your Self Assessment tax return. Once you have done this, you can return to the service.
        |Go to your tax account to file your Self Assessment tax return.
-       |For further support you can contact the Payment Support Service and speak to an adviser on 0300 200 3835.
+       |For further support, you can contact us on 0300 123 1813 to speak to an adviser.
        |If you cannot use speech recognition software
        |Find out how to deal with HMRC if you need extra support.
        |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
@@ -430,12 +430,12 @@ object EnglishContent {
 
   def spendingMoreThanIncomeText(): String = {
     s"""Your spending is higher than your income
-       |As your spending is higher than your income, call the Payment Support Service on 0300 200 3835 to discuss your debt. You may also want to seek independent debt advice.""".stripMargin
+       |As your spending is higher than your income, call us on 0300 123 1813 to discuss your debt. You may also want to seek independent debt advice.""".stripMargin
   }
 
   def spendingSameAsIncomeText(): String = {
     s"""Your spending is the same as your income
-       |As your spending is the same as your income, call the Payment Support Service on 0300 200 3835 to discuss your debt. You may also want to seek independent debt advice.""".stripMargin
+       |As your spending is the same as your your income, call us on 0300 123 1813 to discuss your debt. You may also want to seek independent debt advice.""".stripMargin
   }
 
   def cannotAgreePlanContent(): String = {

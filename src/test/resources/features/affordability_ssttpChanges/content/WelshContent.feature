@@ -129,6 +129,7 @@ Feature: Welsh Content
       | Welsh | £2          | Rhowch rifau yn unig                                      |
 
 ### Select Day of Month Page
+
   Scenario Outline: Error Validation on What Day of Month page - No selection
     Given the user is created and logs in
     And the user is on the StartPage
@@ -151,8 +152,9 @@ Feature: Welsh Content
       | abc         | other        | Nodwch rif rhwng 1 a 28                        |
       | 29          | other        | Nodwch rif rhwng 1 a 28                        |
 
-###### AFFORDABILITY SCREENS
 
+
+###### AFFORDABILITY SCREENS
 
   Scenario: Welsh - Affordability Screens Content - Branch off TEMPORARY, tests will need to be merged to main tests when journey complete
     Given A user logs in and gets to the affordability pages
@@ -243,10 +245,12 @@ Feature: Welsh Content
 
   Scenario: Welsh - Error Validation on Add Income Page - Nothing entered
     Given A user logs in and gets to the affordability pages
+    When the User toggles on Welsh language
     And the user clicks continue
     And the user clicks on the add income link
     And the user clicks continue
     Then the income invalid field should display "Mae’n rhaid i chi nodi’ch incwm Os nad oes gennych unrhyw incwm, ffoniwch ni ar 0300 200 1900"
+    Then the User toggles on English language
 
 
   Scenario Outline: Welsh - Error Validation on Add Spending Page
