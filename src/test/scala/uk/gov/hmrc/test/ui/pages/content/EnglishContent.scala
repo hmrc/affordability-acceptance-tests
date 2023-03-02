@@ -434,7 +434,7 @@ object EnglishContent {
 
   def spendingSameAsIncomeText(): String = {
     s"""Your spending is the same as your income
-       |As your spending is the same as your your income, call us on 0300 123 1813 to discuss your debt. You may also want to seek independent debt advice.""".stripMargin
+       |As your spending is the same as your income, call us on 0300 123 1813 to discuss your debt. You may also want to seek independent debt advice.""".stripMargin
   }
 
   def cannotAgreePlanContent(): String = {
