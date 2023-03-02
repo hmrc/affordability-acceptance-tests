@@ -342,7 +342,7 @@ Feature: Welsh Content
       | Welsh | 1.000 | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer |
 
     ### Cannot Agree Plan Page
-  Scenario: Affordability Screens - Cannot Agree Plan Page - Change Income and Spending link
+  Scenario: Welsh - Affordability Screens - Cannot Agree Plan Page - Change Income and Spending link
     Given A user logs in and gets to the affordability pages
     When the User toggles on Welsh language
     And the user clicks continue
