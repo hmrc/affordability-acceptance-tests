@@ -1,10 +1,5 @@
 Feature: Error Validation on various pages created/updated by Affordability changes
 
-  #                                                                                                                 #
-  # "Given A user logs in and gets to the About your bank account page step" is used to get through the             #
-  #  SSTTP journey up until the point at which the Affordability tickets have made changes to the journey/content.  #
-  #                                                                                                                 #
-
 ### Select Day of Month Page
   Scenario Outline: Error Validation on What Day of Month page - No selection
     Given the user is created and logs in
@@ -190,10 +185,10 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     Then the User toggles on English language
 
     Examples:
-      | lang    | value | Message                                                                           |
-      | English | !@    | Enter numbers only for                                                            |
-      | English | -1    | Enter a positive number only for                                                  |
-      | English | 1.000 | Amount must not contain more than 2 decimal places for                            |
+      | lang    | value | Message                                                |
+      | English | !@    | Enter numbers only for                                 |
+      | English | -1    | Enter a positive number only for                       |
+      | English | 1.000 | Amount must not contain more than 2 decimal places for |
 
   Scenario: Error Validation on Add Income Page - Nothing entered
     Given A user logs in and gets to the affordability pages
@@ -236,3 +231,53 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | English | !@    | Enter numbers only for                                 |
       | English | -1    | Enter a positive number only for                       |
       | English | 1.000 | Amount must not contain more than 2 decimal places for |
+
+### Affordability - How Many Months
+  Scenario Outline: Affordability - Error Validation on How Many Months Page
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters <value> on the how many months page
+    And the user clicks next
+    Then the custom amount field should display "<error>"
+
+    Examples:
+      | value   | error                                                                                     |
+      | 249.99  | That amount is too low, enter an amount that is at least £250 but no more than £3,013.44  |
+      | 3013.45 | That amount is too high, enter an amount that is at least £250 but no more than £3,013.44 |
+      |         | Enter an amount                                                                           |
+      | !@      | Enter numbers only                                                                        |
+      | ABC     | Enter numbers only                                                                        |
+      | -260    | Enter a positive number only                                                              |
+
+### Affordability - How Many Months Custom
+  Scenario Outline: Affordability - Error Validation on How Many Months Page (Custom amount)
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters custom amount on the how many months page
+    And the user clicks next
+    And the user enters <value> on the how many months page
+    And the user clicks next
+    Then the custom amount field should display "<error>"
+
+    Examples:
+      | value   | error                                                                                     |
+      | 249.99  | That amount is too low, enter an amount that is at least £250 but no more than £3,013.44  |
+      | 3013.45 | That amount is too high, enter an amount that is at least £250 but no more than £3,013.44 |
+      |         | Enter an amount                                                                           |
+      | !@      | Enter numbers only                                                                        |
+      | ABC     | Enter numbers only                                                                        |
+      | -260    | Enter a positive number only                                                              |

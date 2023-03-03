@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.test.ui.stepdefs.pages.ssttp
 
-import uk.gov.hmrc.test.ui.pages.journey.affordability.AffordabilityCheckPaymentPlanPage
+import uk.gov.hmrc.test.ui.pages.journey.affordability.{AffordabilityCheckPaymentPlanPage, HowManyMonthsPage}
 import uk.gov.hmrc.test.ui.pages.journey.ssttp._
 import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
 import uk.gov.hmrc.test.ui.testdata.{BankDetails, ScenarioContext}

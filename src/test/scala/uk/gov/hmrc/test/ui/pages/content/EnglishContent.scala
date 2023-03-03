@@ -486,6 +486,48 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def howManyMonthsText(): String = {
+    s"""How much can you pay each month?
+       |Based on your left over income, this is how much we think you could pay each month. Your final monthly payment may be more or less if the interest rate changes.
+       |If the plan you choose runs into the next tax year, you still need to pay future tax bills on time.
+       |£250 per month over 13 months
+       |Includes total interest estimated at £33.76
+       |or
+       |£300 per month over 11 months
+       |Includes total interest estimated at £26.47
+       |£400 per month over 8 months
+       |Includes total interest estimated at £17.51
+       |A different monthly amount
+       |Enter an amount that is at least £250 but no more than £3,013.44
+       |£
+       |I cannot afford to make these payments
+       |You may still be able to set up a payment plan over the phone. Call us on 0300 123 1813 to discuss your debt.
+       |Continue
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
+  def howManyMonthsCustomText(): String = {
+    s"""How much can you pay each month?
+       |You have chosen to pay £300 per month. Your final monthly payment may be more or less if the interest rate changes.
+       |If the plan you choose runs into the next tax year, you still need to pay future tax bills on time.
+       |£300 per month over 11 months
+       |Includes total interest estimated at £26.47
+       |or
+       |£250 per month over 13 months
+       |Includes total interest estimated at £33.76
+       |£300 per month over 11 months
+       |Includes total interest estimated at £26.47
+       |£400 per month over 8 months
+       |Includes total interest estimated at £17.51
+       |A different monthly amount
+       |Enter an amount that is at least £250 but no more than £3,013.44
+       |£
+       |I cannot afford to make these payments
+       |You may still be able to set up a payment plan over the phone. Call us on 0300 123 1813 to discuss your debt.
+       |Continue
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
 
   // template function
   def templateText(): String = {

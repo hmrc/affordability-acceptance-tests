@@ -18,7 +18,7 @@ package uk.gov.hmrc.test.ui.stepdefs.other
 
 import org.openqa.selenium.By
 import org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated
-import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, AddSpendingPage, AffordabilityCheckPaymentPlanPage, CannotAgreePlanPage, CheckYouCanAffordPage, HowMuchYouCanAffordPage}
+import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, AddSpendingPage, AffordabilityCheckPaymentPlanPage, CannotAgreePlanPage, CheckYouCanAffordPage, HowManyMonthsPage, HowMuchYouCanAffordPage}
 import uk.gov.hmrc.test.ui.pages.journey.ssttp._
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.pages.testonly.TestOnlyStartPage
@@ -184,8 +184,14 @@ class CommonSteps extends Steps with DriverActions {
       case "CannotAgreePlanPage" =>
         //        CannotAgreePlanPage.shouldBeLoaded()
         CannotAgreePlanPage.assertContent()
-      case "HowManyMonthsPage" =>
+      case "HowManyMonthsPageUpfront" =>
         HowManyMonthsPage.shouldBeLoaded()
+      case "HowManyMonthsPage" =>
+//        HowManyMonthsPage.shouldBeLoaded()
+        HowManyMonthsPage.assertContent()
+      case "HowManyMonthsPageCustom" =>
+//        HowManyMonthsPage.shouldBeLoaded()
+        HowManyMonthsPage.assertContentCustom()
       case "TBC" => ""
     }
   }
@@ -367,6 +373,13 @@ class CommonSteps extends Steps with DriverActions {
       case "a different day" =>
         //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
         HelperFunctions.errorMessage("other") should be(s"$prependError\n$message")
+      //How Many Months Page
+      case "custom amount" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("custom-amount") should be(s"$prependError\n$message")
+      case "plan selection" =>
+        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
+        HelperFunctions.errorMessage("plan-selection") should be(s"$prependError\n$message")
       case _ =>
         println("No field found - check field name passed to method (elem)")
     }

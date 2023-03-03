@@ -46,6 +46,7 @@ object CannotAgreePlanPage extends BasePage {
   }
 
   def clickChangeYourIncomeLink(): Unit = {
-    click on linkText("change your income and spending.")
+    if (langToggle == Language.welsh) click on linkText("newid eich incwm a’ch gwariant.")
+    else click on linkText("change your income and spending.")
   }
 }
