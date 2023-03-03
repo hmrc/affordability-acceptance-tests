@@ -401,6 +401,7 @@ Feature: Welsh Content
       | !@      | Nodwch rifau yn unig                                                                      |
       | ABC     | Nodwch rifau yn unig                                                                      |
       | -260    | Nodwch rif positif yn unig                                                                |
+      | 1.111   | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol                                         |
 
 
 
