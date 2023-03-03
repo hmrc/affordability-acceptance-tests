@@ -120,8 +120,10 @@ Feature: English Content
     And the user clicks continue
     And the user is on the HowMuchYouCanAffordPageHappy
     And the user clicks continue
+    And the user is on the HowManyMonthsPage
     And the user enters custom amount on the how many months page
     And the user clicks next
+    And the user is on the HowManyMonthsPageCustom
     And the user enters user specified on the how many months page
     And the user clicks next
     Then the choosing more than 50 percent warning message shows

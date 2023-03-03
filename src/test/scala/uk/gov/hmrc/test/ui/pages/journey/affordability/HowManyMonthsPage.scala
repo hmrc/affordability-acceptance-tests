@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package uk.gov.hmrc.test.ui.pages.journey.ssttp
+package uk.gov.hmrc.test.ui.pages.journey.affordability
 
+import org.scalatest.Assertion
 import uk.gov.hmrc.test.ui.pages.BasePage
+import uk.gov.hmrc.test.ui.pages.content.{EnglishContent, WelshContent}
 import uk.gov.hmrc.test.ui.testdata.Language
 import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 
@@ -37,10 +39,19 @@ object HowManyMonthsPage extends BasePage {
 
   def pageContent: String = id("main-content").webElement.getText
 
-  //  def assertContent(): Assertion =  {
-  //    if (langToggle == Language.welsh) pageContent should be(WelshContent.accountOnFilePageText())
-  //    else pageContent should be(EnglishContent.accountOnFilePageText())
-  //  }
+  def assertContent(): Assertion =  {
+    expandOtherAmount()
+    expandLink()
+    if (langToggle == Language.welsh) pageContent should be(WelshContent.howManyMonthsText())
+    else pageContent should be(EnglishContent.howManyMonthsText())
+  }
+
+  def assertContentCustom(): Assertion = {
+    expandOtherAmount()
+    expandLink()
+    if (langToggle == Language.welsh) pageContent should be(WelshContent.howManyMonthsCustomText())
+    else pageContent should be(EnglishContent.howManyMonthsCustomText())
+  }
 
   def enterAmountOfMonths(amount: String) = {
     amount match {
@@ -50,7 +61,17 @@ object HowManyMonthsPage extends BasePage {
       case "custom amount" => id("customAmountOption").webElement.click()
                               id("custom-amount-input").webElement.sendKeys("300")
       case "user specified" => id("0").webElement.click()
+      case _ => id("customAmountOption").webElement.click()
+                id("custom-amount-input").webElement.sendKeys(amount)
     }
+  }
+
+  def expandLink(): Unit ={
+    click on cssSelector("#paymentTodayForm > details > summary > span")
+  }
+
+  def expandOtherAmount(): Unit = {
+    id("customAmountOption").webElement.click()
   }
 
 

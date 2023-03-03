@@ -233,7 +233,7 @@ Feature: Welsh Content
 #    Enter more steps here
     Then the User toggles on English language
 
-  Scenario: Affordability Screens Content - User Specified amount selected, warning message shown
+  Scenario: Welsh - Affordability Screens Content - User Specified amount selected, warning message shown
     Given A user logs in and gets to the affordability pages
     When the User toggles on Welsh language
     And the user is on the CheckYouCanAffordPage
@@ -250,8 +250,10 @@ Feature: Welsh Content
     And the user clicks continue
     And the user is on the HowMuchYouCanAffordPageHappy
     And the user clicks continue
+    And the user is on the HowManyMonthsPage
     And the user enters custom amount on the how many months page
     And the user clicks next
+    And the user is on the HowManyMonthsPageCustom
     And the user enters user specified on the how many months page
     And the user clicks next
     Then the choosing more than 50 percent warning message shows
@@ -358,5 +360,47 @@ Feature: Welsh Content
     And the user clicks on the change income and spending link
     Then the user is on the HowMuchYouCanAffordPageSpendingSame
     Then the User toggles on English language
+
+    ### Affordability - How Many Months
+  Scenario: Welsh - Affordability - Error Validation on How Many Months Page - No selection
+    Given A user logs in and gets to the affordability pages
+    When the User toggles on Welsh language
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user clicks next
+    Then the plan selection field should display "Dewiswch opsiwn"
+    Then the User toggles on English language
+
+  Scenario Outline: Welsh - Affordability - Error Validation on How Many Months Page
+    Given A user logs in and gets to the affordability pages
+    When the User toggles on Welsh language
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters <value> on the how many months page
+    And the user clicks next
+    Then the custom amount field should display "<error>"
+    Then the User toggles on English language
+
+    Examples:
+      | value   | error                                                                                     |
+      | 249.99  | Mae’r swm hwnnw’n rhy isel, rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,013.44  |
+      | 3013.45 | Mae’r swm hwnnw’n rhy uchel, rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,013.44 |
+      |         | Nodwch swm                                                                                |
+      | !@      | Nodwch rifau yn unig                                                                      |
+      | ABC     | Nodwch rifau yn unig                                                                      |
+      | -260    | Nodwch rif positif yn unig                                                                |
+
 
 

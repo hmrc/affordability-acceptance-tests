@@ -49,8 +49,8 @@ Feature: Navigation tests
     And the user is on the <expectedPage>
 
     Examples:
-      | element                | page                              | expectedPage       |
-      | Upfront Payment Yes No | AffordabilityCheckPaymentPlanPage | UpfrontPaymentPage |
-      | Upfront Payment Amount | AffordabilityCheckPaymentPlanPage | UpfrontPaymentPage |
-      | Collected On           | AffordabilityCheckPaymentPlanPage | WhatDayOfMonthPage |
-      | Monthly Payment        | AffordabilityCheckPaymentPlanPage | HowManyMonthsPage  |
+      | element                | page                              | expectedPage             |
+      | Upfront Payment Yes No | AffordabilityCheckPaymentPlanPage | UpfrontPaymentPage       |
+      | Upfront Payment Amount | AffordabilityCheckPaymentPlanPage | UpfrontPaymentPage       |
+      | Collected On           | AffordabilityCheckPaymentPlanPage | WhatDayOfMonthPage       |
+      | Monthly Payment        | AffordabilityCheckPaymentPlanPage | HowManyMonthsPageUpfront |
