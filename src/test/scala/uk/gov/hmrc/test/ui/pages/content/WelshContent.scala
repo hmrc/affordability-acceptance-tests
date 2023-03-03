@@ -376,7 +376,7 @@ object WelshContent {
        |Er enghraifft, ynni, dŵr, ffôn, band eang
        |£
        |Ad-daliadau dyledion
-       |Er enghraifft, cerdyn credyd, benthyciad, taliadau Gorchymyn Llys
+       |Er enghraifft, benthyciad, taliadau Gorchymyn Llys
        |£
        |Teithio
        |Er enghraifft, cerbydau, tanwydd, tocynnau tymor
