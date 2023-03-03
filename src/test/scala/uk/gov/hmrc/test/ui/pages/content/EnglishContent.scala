@@ -377,7 +377,7 @@ object EnglishContent {
        |For example, energy, water, phone, broadband
        |£
        |Debt repayments
-       |For example, credit card, loan, court order payments
+       |For example, loan, court order payments
        |£
        |Travel
        |For example, vehicles, fuel, season ticket
