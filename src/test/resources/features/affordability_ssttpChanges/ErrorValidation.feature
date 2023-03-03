@@ -233,6 +233,19 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | English | 1.000 | Amount must not contain more than 2 decimal places for |
 
 ### Affordability - How Many Months
+  Scenario: Affordability - Error Validation on How Many Months Page - No selection
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user clicks next
+    Then the plan selection field should display "Select an option"
+
   Scenario Outline: Affordability - Error Validation on How Many Months Page
     Given A user logs in and gets to the affordability pages
     And the user clicks continue
