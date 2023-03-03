@@ -268,6 +268,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | !@      | Enter numbers only                                                                        |
       | ABC     | Enter numbers only                                                                        |
       | -260    | Enter a positive number only                                                              |
+      | 1.111   | Amount must not contain more than 2 decimal places                                        |
 
 ### Affordability - How Many Months Custom
   Scenario Outline: Affordability - Error Validation on How Many Months Page (Custom amount)
@@ -294,3 +295,4 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | !@      | Enter numbers only                                                                        |
       | ABC     | Enter numbers only                                                                        |
       | -260    | Enter a positive number only                                                              |
+      | 1.111   | Amount must not contain more than 2 decimal places                                        |
