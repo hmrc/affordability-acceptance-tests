@@ -278,7 +278,6 @@ object WelshContent {
     s"""Ar ba ddiwrnod a ydych eisiau talu bob mis?
        |yr 28ain neu’r diwrnod gwaith nesaf
        |Diwrnod gwahanol
-       |
        |Yn eich blaen
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
