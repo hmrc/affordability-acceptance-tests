@@ -279,7 +279,6 @@ object EnglishContent {
     s"""Which day do you want to pay each month?
        |28th or next working day
        |A different day
-       |
        |Continue
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
@@ -498,7 +497,7 @@ object EnglishContent {
        |£400 per month over 8 months
        |Includes total interest estimated at £17.51
        |A different monthly amount
-       |Enter an amount that is at least £250 but no more than £3,013.44
+       |Enter an amount that is at least £250 but no more than £3,017.55
        |£
        |I cannot afford to make these payments
        |You may still be able to set up a payment plan over the phone. Call us on 0300 123 1813 to discuss your debt.
@@ -520,7 +519,7 @@ object EnglishContent {
        |£400 per month over 8 months
        |Includes total interest estimated at £17.51
        |A different monthly amount
-       |Enter an amount that is at least £250 but no more than £3,013.44
+       |Enter an amount that is at least £250 but no more than £3,017.55
        |£
        |I cannot afford to make these payments
        |You may still be able to set up a payment plan over the phone. Call us on 0300 123 1813 to discuss your debt.
