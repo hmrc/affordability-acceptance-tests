@@ -395,7 +395,7 @@ Feature: Welsh Content
 
     Examples:
       | value   | error                                                                                     |
-      | 249.99  | Mae’r swm hwnnw’n rhy isel, rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,013.44  |
+      | 249.99  | Mae’r swm hwnnw’n rhy isel, rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,017.55  |
       | 3017.56 | Mae’r swm hwnnw’n rhy uchel, rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,017.55 |
       |         | Nodwch swm                                                                                |
       | !@      | Nodwch rifau yn unig                                                                      |

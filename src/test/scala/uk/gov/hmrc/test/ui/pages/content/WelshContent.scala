@@ -496,7 +496,7 @@ object WelshContent {
        |£400 y mis, am 8 mis
        |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £17.51
        |Swm misol gwahanol
-       |Rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,013.44
+       |Rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,017.55
        |£
        |Nid wyf yn gallu fforddio’r taliadau hyn
        |Mae’n bosibl y byddwch yn dal i allu trefnu cynllun talu dros y ffôn. Ffoniwch Wasanaeth Cwsmeriaid Cymraeg CThEF ar 0300 200 1900 i drafod eich opsiynau.
@@ -518,7 +518,7 @@ object WelshContent {
        |£400 y mis, am 8 mis
        |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £17.51
        |Swm misol gwahanol
-       |Rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,013.44
+       |Rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,017.55
        |£
        |Nid wyf yn gallu fforddio’r taliadau hyn
        |Mae’n bosibl y byddwch yn dal i allu trefnu cynllun talu dros y ffôn. Ffoniwch Wasanaeth Cwsmeriaid Cymraeg CThEF ar 0300 200 1900 i drafod eich opsiynau.

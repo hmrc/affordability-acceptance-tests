@@ -262,7 +262,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
 
     Examples:
       | value   | error                                                                                     |
-      | 249.99  | That amount is too low, enter an amount that is at least £250 but no more than £3,013.44  |
+      | 249.99  | That amount is too low, enter an amount that is at least £250 but no more than £3,017.55  |
       | 3017.56 | That amount is too high, enter an amount that is at least £250 but no more than £3,017.55 |
       |         | Enter an amount                                                                           |
       | !@      | Enter numbers only                                                                        |
@@ -289,7 +289,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
 
     Examples:
       | value   | error                                                                                     |
-      | 249.99  | That amount is too low, enter an amount that is at least £250 but no more than £3,013.44  |
+      | 249.99  | That amount is too low, enter an amount that is at least £250 but no more than £3,017.55  |
       | 3017.56 | That amount is too high, enter an amount that is at least £250 but no more than £3,017.55 |
       |         | Enter an amount                                                                           |
       | !@      | Enter numbers only                                                                        |
