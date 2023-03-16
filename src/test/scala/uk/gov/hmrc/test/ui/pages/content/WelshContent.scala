@@ -298,32 +298,32 @@ object WelshContent {
 
   def addIncomeAndSpendingContentBlank(): String = {
     s"""Ychwanegu eich incwm a’ch gwariant
-       |Ychwanegu incwm
        |1. Incwm
-       |Ychwanegu gwariant
+       |Ychwanegu incwm
        |2. Gwariant
+       |Ychwanegu gwariant
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def addIncomeAndSpendingContentIncomeFull(): String = {
     s"""Ychwanegu eich incwm a’ch gwariant
-       |Newid incwm
        |1. Incwm
+       |Newid incwm
        |Incwm misol ar ôl treth £100
        |Budd-daliadau £200
        |Incwm misol arall £300
        |Cyfanswm eich incwm £600
-       |Ychwanegu gwariant
        |2. Gwariant
+       |Ychwanegu gwariant
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def addIncomeAndSpendingContentSpendingFull(): String = {
     s"""Ychwanegu eich incwm a’ch gwariant
-       |Ychwanegu incwm
        |1. Incwm
-       |Newid gwariant
+       |Ychwanegu incwm
        |2. Gwariant
+       |Newid gwariant
        |Tai £10
        |Cyfraniadau pensiwn £10
        |Treth Gyngor £10
@@ -391,14 +391,14 @@ object WelshContent {
 
   def howMuchYouCouldAffordFullHappy(): String = {
     s"""Faint y gallech ei fforddio
-       |Newid incwm
        |1. Incwm
+       |Newid incwm
        |Incwm misol ar ôl treth £100
        |Budd-daliadau £200
        |Incwm misol arall £300
        |Cyfanswm eich incwm £600
-       |Newid gwariant
        |2. Gwariant
+       |Newid gwariant
        |Tai £10
        |Cyfraniadau pensiwn £10
        |Treth Gyngor £10
