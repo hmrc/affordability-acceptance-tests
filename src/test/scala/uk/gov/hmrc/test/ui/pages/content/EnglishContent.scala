@@ -300,10 +300,8 @@ object EnglishContent {
   def addIncomeAndSpendingContentBlank(): String = {
     s"""Add your income and spending
        |Add income
-       |details
        |1. Income
        |Add spending
-       |details
        |2. Spending
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
@@ -311,14 +309,12 @@ object EnglishContent {
   def addIncomeAndSpendingContentIncomeFull(): String = {
     s"""Add your income and spending
        |Change income
-       |details
        |1. Income
        |Monthly income after tax £100
        |Benefits £200
        |Other monthly income £300
        |Total income £600
        |Add spending
-       |details
        |2. Spending
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
@@ -326,10 +322,8 @@ object EnglishContent {
   def addIncomeAndSpendingContentSpendingFull(): String = {
     s"""Add your income and spending
        |Add income
-       |details
        |1. Income
        |Change spending
-       |details
        |2. Spending
        |Housing £10
        |Pension contributions £10
@@ -399,14 +393,12 @@ object EnglishContent {
   def howMuchYouCouldAffordFullHappy(): String = {
     s"""How much you could afford
        |Change income
-       |details
        |1. Income
        |Monthly income after tax £100
        |Benefits £200
        |Other monthly income £300
        |Total income £600
        |Change spending
-       |details
        |2. Spending
        |Housing £10
        |Pension contributions £10
