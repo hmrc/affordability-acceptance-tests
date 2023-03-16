@@ -27,7 +27,7 @@ object AddIncomeAndSpendingPage extends BasePage {
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/add-income-spending"
 
   def addIncomeLink: WebElement = id("monthly-income").webElement
-  def addSpendingLink: WebElement = cssSelector("li:nth-child(2) > span > a").webElement
+  def addSpendingLink: WebElement = cssSelector("monthly-spending").webElement
 
   def expectedPageTitle = {
     if (langToggle == Language.welsh) "Ychwanegu eich incwm a’ch gwariant - Trefnu cynllun talu - GOV.UK"
