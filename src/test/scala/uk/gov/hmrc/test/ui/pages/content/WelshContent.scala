@@ -76,7 +76,7 @@ object WelshContent {
        |ydych yn talu bil treth arall yn hwyr
        |nad ydych yn cyflwyno’ch Ffurflenni Treth yn y dyfodol mewn pryd
        |!
-       |Warning
+       |Rhybudd
        |Os byddwn yn canslo’r cytundeb hwn, bydd yn rhaid i chi dalu’r cyfanswm sydd arnoch ar unwaith.
        |Gallwn ddefnyddio unrhyw ad-daliadau y gallech eu cael i dalu’ch taliadau treth.
        |Nid yw’r cynllun hwn yn cwmpasu’ch biliau treth yn y dyfodol. Bydd dal angen i chi dalu eich biliau yn y dyfodol yn llawn ac mewn pryd.
@@ -299,10 +299,8 @@ object WelshContent {
   def addIncomeAndSpendingContentBlank(): String = {
     s"""Ychwanegu eich incwm a’ch gwariant
        |Ychwanegu incwm
-       |manylion
        |1. Incwm
        |Ychwanegu gwariant
-       |manylion
        |2. Gwariant
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
@@ -310,14 +308,12 @@ object WelshContent {
   def addIncomeAndSpendingContentIncomeFull(): String = {
     s"""Ychwanegu eich incwm a’ch gwariant
        |Newid incwm
-       |manylion
        |1. Incwm
        |Incwm misol ar ôl treth £100
        |Budd-daliadau £200
        |Incwm misol arall £300
        |Cyfanswm eich incwm £600
        |Ychwanegu gwariant
-       |manylion
        |2. Gwariant
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
@@ -325,10 +321,8 @@ object WelshContent {
   def addIncomeAndSpendingContentSpendingFull(): String = {
     s"""Ychwanegu eich incwm a’ch gwariant
        |Ychwanegu incwm
-       |manylion
        |1. Incwm
        |Newid gwariant
-       |manylion
        |2. Gwariant
        |Tai £10
        |Cyfraniadau pensiwn £10
@@ -398,14 +392,12 @@ object WelshContent {
   def howMuchYouCouldAffordFullHappy(): String = {
     s"""Faint y gallech ei fforddio
        |Newid incwm
-       |manylion
        |1. Incwm
        |Incwm misol ar ôl treth £100
        |Budd-daliadau £200
        |Incwm misol arall £300
        |Cyfanswm eich incwm £600
        |Newid gwariant
-       |manylion
        |2. Gwariant
        |Tai £10
        |Cyfraniadau pensiwn £10
