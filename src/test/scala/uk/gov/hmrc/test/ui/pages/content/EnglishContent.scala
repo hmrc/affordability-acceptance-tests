@@ -250,6 +250,7 @@ object EnglishContent {
        |Yes
        |No
        |
+       |Continue
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
