@@ -249,6 +249,7 @@ object EnglishContent {
        |Can you make an upfront payment?
        |Yes
        |No
+       |
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
