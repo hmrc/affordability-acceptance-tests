@@ -30,12 +30,12 @@ object UpfrontPaymentPage extends BasePage {
   def noButton: WebElement = id("paytoday-false").webElement
 
   def expectedPageTitle = {
-    if (langToggle == Language.welsh) "A allwch wneud taliad ymlaen llaw? - Trefnu cynllun talu - GOV.UK"
-    else "Can you make an upfront payment? - Set up a Self Assessment payment plan - GOV.UK"
+    if (langToggle == Language.welsh) "Taliad ymlaen llaw - Trefnu cynllun talu - GOV.UK"
+    else "Upfront Payment - Set up a Self Assessment payment plan - GOV.UK"
   }
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "A allwch wneud taliad ymlaen llaw?"
-    else "Can you make an upfront payment?"
+    if (langToggle == Language.welsh) "Taliad ymlaen llaw"
+    else "Upfront Payment"
   }
 
   def expectedPageTitleError: String = "Error: " + expectedPageTitle
