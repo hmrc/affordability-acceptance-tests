@@ -243,13 +243,12 @@ object EnglishContent {
   }
 
   def upfrontPaymentContent(): String = {
-    s"""Can you make an upfront payment?
+    s"""Upfront payment
        |Your monthly payments will be lower if you can make an upfront payment. This payment will be taken from your bank account within 10 working days.
        |If you have savings, consider using them to make a payment now.
+       |Can you make an upfront payment?
        |Yes
        |No
-       |
-       |Continue
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
