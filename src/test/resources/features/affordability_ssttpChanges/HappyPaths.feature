@@ -63,7 +63,7 @@ Feature: Happy Paths - Affordability
       | Test'.&/                                | Account Name   |
       | 20 71 06                                | Sortcode       |
       | 20-71-06                                | Sortcode       |
-      | 12    34  5678                          | Account Number |
+      | 44    31  1677                          | Account Number |
 
 
 
