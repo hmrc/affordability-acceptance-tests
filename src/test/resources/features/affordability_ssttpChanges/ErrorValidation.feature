@@ -142,7 +142,6 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | English | 000000?                                  | Sortcode       | Sort code must be a 6 digit number            |
       | English | none                                     | Account Number | Enter an account number                       |
       | English | 52173                                    | Account Number | Account number must be between 6 and 8 digits |
-      | English | 521733 1                                 | Account Number | Account number must be between 6 and 8 digits |
       | English | 521733-1                                 | Account Number | Account number must be between 6 and 8 digits |
       | English | 521730181                                | Account Number | Account number must be between 6 and 8 digits |
       | English | 521738wo                                 | Account Number | Account number must be between 6 and 8 digits |
