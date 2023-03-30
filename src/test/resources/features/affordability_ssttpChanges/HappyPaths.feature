@@ -58,11 +58,12 @@ Feature: Happy Paths - Affordability
     Then the submission has been successful
 
     Examples:
-      | Input Value                             | Field        |
-      | TestTestTestTestTestTestTestTestTestTes | Account Name |
-      | Test'.&/                                | Account Name |
-      | 20 71 06                                | Sortcode     |
-      | 20-71-06                                | Sortcode     |
+      | Input Value                             | Field          |
+      | TestTestTestTestTestTestTestTestTestTes | Account Name   |
+      | Test'.&/                                | Account Name   |
+      | 20 71 06                                | Sortcode       |
+      | 20-71-06                                | Sortcode       |
+      | 12    34  5678                          | Account Number |
 
 
 
