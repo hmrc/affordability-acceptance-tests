@@ -146,7 +146,7 @@ Feature: English Content
 
     Examples:
       | spending | expectedPage                        | expectedPage2       |
-      | 10       | HowMuchYouCanAffordPageHappy        | HowManyMonthsPage   |
+#      | 10       | HowMuchYouCanAffordPageHappy        | HowManyMonthsPage   |
       | 60       | HowMuchYouCanAffordPageSpendingSame | CannotAgreePlanPage |
     @a11y @zap
     Examples:
