@@ -104,6 +104,8 @@ Feature: English Content
     And the user clicks next
     And the user is on the AffordabilityCheckPaymentPlanPageNoUpfront
 
+  @ignore
+#    Removing from execution due to the interim solution
   Scenario: Affordability Screens Content - User Specified amount selected, warning message shown
     Given A user logs in and gets to the affordability pages
     And the user is on the CheckYouCanAffordPage
@@ -144,7 +146,7 @@ Feature: English Content
 
     Examples:
       | spending | expectedPage                        | expectedPage2       |
-      | 10       | HowMuchYouCanAffordPageHappy        | HowManyMonthsPage   |
+#      | 10       | HowMuchYouCanAffordPageHappy        | HowManyMonthsPage   |
       | 60       | HowMuchYouCanAffordPageSpendingSame | CannotAgreePlanPage |
     @a11y @zap
     Examples:

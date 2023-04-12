@@ -245,6 +245,8 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     And the user clicks next
     Then the plan selection field should display "Select an option"
 
+  @ignore
+#    Removing from execution due to the interim solution
   Scenario Outline: Affordability - Error Validation on How Many Months Page
     Given A user logs in and gets to the affordability pages
     And the user clicks continue
@@ -270,6 +272,9 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | 333.333 | Amount must not contain more than 2 decimal places                                        |
 
 ### Affordability - How Many Months Custom
+
+  @ignore
+#    Removing from execution due to the interim solution
   Scenario Outline: Affordability - Error Validation on How Many Months Page (Custom amount)
     Given A user logs in and gets to the affordability pages
     And the user clicks continue

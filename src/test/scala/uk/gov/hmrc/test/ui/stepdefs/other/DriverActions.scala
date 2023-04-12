@@ -16,6 +16,7 @@
 
 package uk.gov.hmrc.test.ui.stepdefs.other
 
+import org.openqa.selenium.chrome.ChromeOptions
 import org.openqa.selenium.support.ui.{ExpectedCondition, WebDriverWait}
 import org.openqa.selenium.support.ui.ExpectedConditions.{urlToBe, visibilityOfElementLocated}
 import org.openqa.selenium.{By, JavascriptExecutor, WebDriver, WebElement}
@@ -28,7 +29,13 @@ import java.util.concurrent.TimeUnit
 
 trait DriverActions extends WebBrowser {
 
-  implicit def driver: WebDriver = SingletonDriver.getInstance()
+  implicit def driver: WebDriver = {
+    val options = new ChromeOptions
+    options.addArguments("--remote-allow-origins=*")
+    val runZap = sys.props.getOrElse("zapBrowser", "false").toBoolean
+    if (runZap) SingletonDriver.getInstance(Some(options))
+    else SingletonDriver.getInstance(Some(options))
+  }
 
   def back(): Unit = click on cssSelector("body > div > a")
 

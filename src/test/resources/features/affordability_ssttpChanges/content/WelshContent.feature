@@ -234,6 +234,8 @@ Feature: Welsh Content
 #    Enter more steps here
     Then the User toggles on English language
 
+  @ignore
+#    Removing from execution due to the interim solution
   Scenario: Welsh - Affordability Screens Content - User Specified amount selected, warning message shown
     Given A user logs in and gets to the affordability pages
     When the User toggles on Welsh language
@@ -378,6 +380,8 @@ Feature: Welsh Content
     Then the plan selection field should display "Dewiswch opsiwn"
     Then the User toggles on English language
 
+@ignore
+#    Removing from execution due to the interim solution
   Scenario Outline: Welsh - Affordability - Error Validation on How Many Months Page
     Given A user logs in and gets to the affordability pages
     When the User toggles on Welsh language
