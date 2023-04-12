@@ -16,7 +16,7 @@ resolvers ++= Seq(
 
 libraryDependencies ++= Seq(
   "org.scalatest"           %% "scalatest"              % scalatestVersion excludeAll ExclusionRule(organization = "org.seleniumhq.selenium"),
-  "org.seleniumhq.selenium" %  "selenium-java"          % "3.9.1",
+  "org.seleniumhq.selenium" %  "selenium-java"          % "4.8.1",
   "io.cucumber"             %% "cucumber-scala"         % cucumberVersion,
   "io.cucumber"             % "cucumber-junit"          % cucumberVersion,
   "io.cucumber"             % "cucumber-picocontainer"  % cucumberVersion,
