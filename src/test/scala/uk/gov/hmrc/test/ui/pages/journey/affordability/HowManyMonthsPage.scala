@@ -55,9 +55,9 @@ object HowManyMonthsPage extends BasePage {
 
   def enterAmountOfMonths(amount: String) = {
     amount match {
-      case "50 percent" => id("50").webElement.click()
-      case "60 percent" => id("60").webElement.click()
-      case "80 percent" => id("80").webElement.click()
+      case "50 percent" => id("basic").webElement.click()
+      case "60 percent" => id("higher").webElement.click()
+      case "80 percent" => id("additional").webElement.click()
       case "custom amount" => id("customAmountOption").webElement.click()
                               id("custom-amount-input").webElement.sendKeys("300")
       case "user specified" => id("0").webElement.click()
