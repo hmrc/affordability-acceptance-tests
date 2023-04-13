@@ -135,7 +135,7 @@ Feature: Welsh Content
     And the user clicks next
     And the user clicks continue
     And the user clicks on the add income link
-    And the user adds monthly income of 100, benefits of 200 and other income of 300
+    And the user adds monthly income of 1000, benefits of 200 and other income of 300
     And the user clicks continue
     And the user clicks on the add spending link
     And the user adds monthly spending of 10 to all fields
