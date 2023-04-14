@@ -242,6 +242,33 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def viewPaymentPlanContentLegacy(): String = {
+    s"""Your payment plan
+       |Payment reference ABCDabcd1234
+       |Upfront payment amount £0
+       |Monthly payments
+       |Payments collected on 28th or next working day
+       |February 2020 £231.73
+       |March 2020 £231.73
+       |April 2020 £231.73
+       |May 2020 £231.73
+       |June 2020 £231.73
+       |July 2020 £231.73
+       |August 2020 £231.73
+       |September 2020 £231.73
+       |October 2020 £231.73
+       |November 2020 £231.73
+       |December 2020 £231.73
+       |January 2021 £231.73
+       |February 2021 £268.94
+       |Estimated total interest
+       |included in monthly payments
+       |£37.21
+       |Total to pay £3,049.76
+       |Print a copy of your payment plan
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
   def upfrontPaymentContent(): String = {
     s"""Upfront payment
        |Your monthly payments will be lower if you can make an upfront payment. This payment will be taken from your bank account within 10 working days.
@@ -474,6 +501,41 @@ object EnglishContent {
        |included in monthly payments
        |£33.76
        |Total to pay £3,046.31
+       |Agree and continue
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
+  def checkYouPaymentPlanContentNoUpfrontLegacy(): String = {
+    s"""Check your payment plan
+       |Can you make an upfront payment? No Change
+       |whether you can make an upfront payment
+       |Upfront payment
+       |Taken within 10 working days
+       |£0 Change
+       |upfront payment amount
+       |Monthly payments
+       |Payments collected on 28th or next working day Change
+       |the day of the month that payments will be collected on
+       |13 monthly payments of £231.73 Change
+       |the day of the month that payments will be collected on
+       |Payment schedule
+       |February 2020 £231.73
+       |March 2020 £231.73
+       |April 2020 £231.73
+       |May 2020 £231.73
+       |June 2020 £231.73
+       |July 2020 £231.73
+       |August 2020 £231.73
+       |September 2020 £231.73
+       |October 2020 £231.73
+       |November 2020 £231.73
+       |December 2020 £231.73
+       |January 2021 £231.73
+       |February 2021 £268.94
+       |Estimated total interest
+       |included in monthly payments
+       |£37.21
+       |Total to pay £3,049.76
        |Agree and continue
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }

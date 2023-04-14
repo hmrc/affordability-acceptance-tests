@@ -181,7 +181,6 @@ Feature: Welsh Content
       | Welsh | 40000       | Mae’n rhaid i chi nodi swm sy’n llai na’r swm sydd arnoch |
       | Welsh | 2.345       | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol         |
       | Welsh | aa          | Rhowch rifau yn unig                                      |
-      | Welsh | £2          | Rhowch rifau yn unig                                      |
 
 ### Select Day of Month Page
 

@@ -24,6 +24,8 @@ case class TestConfig(authLoginStubUrl: String,
 object Configuration {
   lazy val environment: String = Option(System.getProperty("environment")).getOrElse("local").toLowerCase
 
+  lazy val serviceType: String = "Legacy"
+
   lazy val testConfig: TestConfig = environment match {
     case "local" =>
       TestConfig(
