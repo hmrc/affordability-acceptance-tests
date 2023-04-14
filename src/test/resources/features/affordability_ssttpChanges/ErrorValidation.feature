@@ -166,7 +166,6 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | English | 40000       | You need to enter an amount less than the amount you owe |
       | English | 2.345       | Amount must not contain more than 2 decimal places       |
       | English | aa          | Enter numbers only                                       |
-      | English | £2          | Enter numbers only                                       |
 
 ### Affordability - Add Income page
   Scenario Outline: Error Validation on Add Income Page

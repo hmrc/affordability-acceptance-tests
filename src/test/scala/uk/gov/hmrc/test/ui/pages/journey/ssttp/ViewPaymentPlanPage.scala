@@ -5,6 +5,7 @@ import uk.gov.hmrc.test.ui.pages.BasePage
 import uk.gov.hmrc.test.ui.pages.content.{EnglishContent, WelshContent}
 import uk.gov.hmrc.test.ui.testdata.Language
 import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
+import uk.gov.hmrc.test.ui.utils.Configuration.serviceType
 
 object ViewPaymentPlanPage extends BasePage {
 
@@ -25,8 +26,12 @@ object ViewPaymentPlanPage extends BasePage {
   def expectedPageTitleError: String = "Error: " + expectedPageTitle
 
   def assertContent(): Assertion = {
-    if (langToggle == Language.welsh) pageContent should be(WelshContent.viewPaymentPlanContent())
-    else pageContent should be(EnglishContent.viewPaymentPlanContent())
+    if (serviceType == "Legacy")
+      if (langToggle == Language.welsh) pageContent should be(WelshContent.viewPaymentPlanContentLegacy())
+      else pageContent should be(EnglishContent.viewPaymentPlanContentLegacy())
+    else
+      if (langToggle == Language.welsh) pageContent should be(WelshContent.viewPaymentPlanContent())
+      else pageContent should be(EnglishContent.viewPaymentPlanContent())
   }
 
 }

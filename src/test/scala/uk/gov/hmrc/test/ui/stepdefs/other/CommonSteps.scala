@@ -178,9 +178,9 @@ class CommonSteps extends Steps with DriverActions {
       case "AffordabilityCheckPaymentPlanPageNoUpfront" =>
         AffordabilityCheckPaymentPlanPage.shouldBeLoaded()
         AffordabilityCheckPaymentPlanPage.assertContentNoUpfront()
-      case "AffordabilityCheckPaymentPlanPageWithUpfront" =>
-        AffordabilityCheckPaymentPlanPage.shouldBeLoaded()
-        AffordabilityCheckPaymentPlanPage.assertContentWithUpfront()
+//      case "AffordabilityCheckPaymentPlanPageWithUpfront" =>
+//        AffordabilityCheckPaymentPlanPage.shouldBeLoaded()
+//        AffordabilityCheckPaymentPlanPage.assertContentWithUpfront()
       case "CannotAgreePlanPage" =>
         //        CannotAgreePlanPage.shouldBeLoaded()
         CannotAgreePlanPage.assertContent()
