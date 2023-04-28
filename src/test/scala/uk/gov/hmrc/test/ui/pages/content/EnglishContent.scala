@@ -560,6 +560,26 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def howManyMonthsTextLegacy(): String = {
+    s"""How much can you pay each month?
+       |Based on your left over income, you can now select a payment plan. The final monthly payment in your plan will be more as it will include interest and any remaining tax you owe.
+       |If the plan you choose runs into the next tax year, you still need to pay future tax bills on time.
+       |£231.73 per month over 13 months
+       |Includes total interest estimated at £37.21
+       |or
+       |£251.05 per month over 12 months
+       |Includes total interest estimated at £33.56
+       |£273.87 per month over 11 months
+       |Includes total interest estimated at £29.94
+       |Pay more per month
+       |Enter an amount between £273.87 and £1,506.28 to pay over fewer months. We will suggest a plan that is closest to the amount you enter.
+       |£
+       |I cannot afford to make these payments
+       |You may still be able to set up a payment plan over the phone. Call us on 0300 123 1813 to discuss your debt.
+       |Continue
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
   def howManyMonthsCustomText(): String = {
     s"""How much can you pay each month?
        |You have chosen to pay £300 per month. Your final monthly payment may be more or less if the interest rate changes.
@@ -575,6 +595,28 @@ object EnglishContent {
        |Includes total interest estimated at £17.51
        |A different monthly amount
        |Enter an amount that is at least £250 but no more than £3,017.55
+       |£
+       |I cannot afford to make these payments
+       |You may still be able to set up a payment plan over the phone. Call us on 0300 123 1813 to discuss your debt.
+       |Continue
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
+  def howManyMonthsCustomTextLegacy(): String = {
+    s"""How much can you pay each month?
+       |Based on your left over income, you can now select a payment plan. The final monthly payment in your plan will be more as it will include interest and any remaining tax you owe.
+       |If the plan you choose runs into the next tax year, you still need to pay future tax bills on time.
+       |£301.26 per month over 10 months
+       |Includes total interest estimated at £26.31
+       |or
+       |£231.73 per month over 13 months
+       |Includes total interest estimated at £37.21
+       |£251.05 per month over 12 months
+       |Includes total interest estimated at £33.56
+       |£273.87 per month over 11 months
+       |Includes total interest estimated at £29.94
+       |Pay more per month
+       |Enter an amount between £273.87 and £1,506.28 to pay over fewer months. We will suggest a plan that is closest to the amount you enter.
        |£
        |I cannot afford to make these payments
        |You may still be able to set up a payment plan over the phone. Call us on 0300 123 1813 to discuss your debt.
