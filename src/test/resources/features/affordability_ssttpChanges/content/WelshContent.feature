@@ -3,7 +3,6 @@ Feature: Welsh Content
 
 ### Happy Path - Welsh Content
 
-
   Scenario: Welsh - Happy Path - Full Journey - Welsh Content
     Given the user is created and logs in
     And the User toggles on Welsh language
@@ -345,7 +344,9 @@ Feature: Welsh Content
       | Welsh | -1    | Nodwch rif positif yn unig ar gyfer                        |
       | Welsh | 1.000 | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer |
 
+
     ### Cannot Agree Plan Page
+
   Scenario: Welsh - Affordability Screens - Cannot Agree Plan Page - Change Income and Spending link
     Given A user logs in and gets to the affordability pages
     When the User toggles on Welsh language
@@ -363,7 +364,9 @@ Feature: Welsh Content
     Then the user is on the HowMuchYouCanAffordPageSpendingSame
     Then the User toggles on English language
 
+
     ### Affordability - How Many Months
+
   Scenario: Welsh - Affordability - Error Validation on How Many Months Page - No selection
     Given A user logs in and gets to the affordability pages
     When the User toggles on Welsh language

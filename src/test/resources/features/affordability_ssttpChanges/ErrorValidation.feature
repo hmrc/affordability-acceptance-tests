@@ -244,8 +244,6 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     And the user clicks next
     Then the plan selection field should display "Select an option"
 
-  @ignore
-#    Removing from execution due to the interim solution
   Scenario Outline: Affordability - Error Validation on How Many Months Page
     Given A user logs in and gets to the affordability pages
     And the user clicks continue
@@ -261,19 +259,19 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     Then the custom amount field should display "<error>"
 
     Examples:
-      | value   | error                                                                                     |
-      | 249.99  | That amount is too low, enter an amount that is at least £250 but no more than £3,017.55  |
-      | 3017.56 | That amount is too high, enter an amount that is at least £250 but no more than £3,017.55 |
-      |         | Enter an amount                                                                           |
-      | !@      | Enter numbers only                                                                        |
-      | ABC     | Enter numbers only                                                                        |
-      | -260    | Enter a positive number only                                                              |
-      | 333.333 | Amount must not contain more than 2 decimal places                                        |
+      | value   | error                                                               |
+#      | 249.99  | That amount is too low, enter an amount that is at least £250 but no more than £3,017.55  | # Optimised
+#      | 3017.56 | That amount is too high, enter an amount that is at least £250 but no more than £3,017.55 | # Optimised
+      | 273.86  | Enter an amount that is at least £273.87 but no more than £1,506.28 |
+      | 1506.29 | Enter an amount that is at least £273.87 but no more than £1,506.28 |
+      |         | Enter an amount                                                     |
+      | !@      | Enter numbers only                                                  |
+      | ABC     | Enter numbers only                                                  |
+      | -260    | Enter a positive number only                                        |
+      | 333.333 | Amount must not contain more than 2 decimal places                  |
 
 ### Affordability - How Many Months Custom
 
-  @ignore
-#    Removing from execution due to the interim solution
   Scenario Outline: Affordability - Error Validation on How Many Months Page (Custom amount)
     Given A user logs in and gets to the affordability pages
     And the user clicks continue
@@ -291,11 +289,13 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     Then the custom amount field should display "<error>"
 
     Examples:
-      | value   | error                                                                                     |
-      | 249.99  | That amount is too low, enter an amount that is at least £250 but no more than £3,017.55  |
-      | 3017.56 | That amount is too high, enter an amount that is at least £250 but no more than £3,017.55 |
-      |         | Enter an amount                                                                           |
-      | !@      | Enter numbers only                                                                        |
-      | ABC     | Enter numbers only                                                                        |
-      | -260    | Enter a positive number only                                                              |
-      | 333.111 | Amount must not contain more than 2 decimal places                                        |
+      | value   | error                                                               |
+#      | 249.99  | That amount is too low, enter an amount that is at least £250 but no more than £3,017.55  | # Optimised
+#      | 3017.56 | That amount is too high, enter an amount that is at least £250 but no more than £3,017.55 | # Optimised
+      | 273.86  | Enter an amount that is at least £273.87 but no more than £1,506.28 |
+      | 1506.29 | Enter an amount that is at least £273.87 but no more than £1,506.28 |
+      |         | Enter an amount                                                     |
+      | !@      | Enter numbers only                                                  |
+      | ABC     | Enter numbers only                                                  |
+      | -260    | Enter a positive number only                                        |
+      | 333.111 | Amount must not contain more than 2 decimal places                  |

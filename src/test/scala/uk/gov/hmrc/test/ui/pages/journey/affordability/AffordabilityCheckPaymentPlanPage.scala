@@ -39,25 +39,27 @@ object AffordabilityCheckPaymentPlanPage extends BasePage {
 
   def pageContent: String = id("main-content").webElement.getText
 
-  def assertContentNoUpfront(): Assertion =  {
+  def assertContentNoUpfront(): Assertion = {
     expandSchedule()
-    if (serviceType == "Legacy")
+    if (serviceType == "Legacy") {
       if (langToggle == Language.welsh) pageContent should be(WelshContent.checkYouPaymentPlanContentNoUpfrontLegacy())
       else pageContent should be(EnglishContent.checkYouPaymentPlanContentNoUpfrontLegacy())
-    else
+    }
+    else {
       if (langToggle == Language.welsh) pageContent should be(WelshContent.checkYouPaymentPlanContentNoUpfront())
       else pageContent should be(EnglishContent.checkYouPaymentPlanContentNoUpfront())
     }
+  }
 
-//  def assertContentWithUpfront(): Assertion = {
-//    expandSchedule()
-//    if (serviceType == "Legacy")
-//      if (langToggle == Language.welsh) pageContent should be(WelshContent.checkYouPaymentPlanContentNoUpfrontLegacy())
-//      else pageContent should be(EnglishContent.checkYouPaymentPlanContentNoUpfront())
-//    else
-//      if (langToggle == Language.welsh) pageContent should be(WelshContent.checkYouPaymentPlanContentNoUpfrontLegacy())
-//      else pageContent should be(EnglishContent.checkYouPaymentPlanContentNoUpfront())
-//  }
+  //  def assertContentWithUpfront(): Assertion = {
+  //    expandSchedule()
+  //    if (serviceType == "Legacy")
+  //      if (langToggle == Language.welsh) pageContent should be(WelshContent.checkYouPaymentPlanContentNoUpfrontLegacy())
+  //      else pageContent should be(EnglishContent.checkYouPaymentPlanContentNoUpfront())
+  //    else
+  //      if (langToggle == Language.welsh) pageContent should be(WelshContent.checkYouPaymentPlanContentNoUpfrontLegacy())
+  //      else pageContent should be(EnglishContent.checkYouPaymentPlanContentNoUpfront())
+  //  }
 
   def clickChangeLink(link: String) = {
     link match {
@@ -68,7 +70,7 @@ object AffordabilityCheckPaymentPlanPage extends BasePage {
     }
   }
 
-  def expandSchedule(): Unit ={
+  def expandSchedule(): Unit = {
     cssSelector("#content > details > summary > span").webElement.click()
   }
 

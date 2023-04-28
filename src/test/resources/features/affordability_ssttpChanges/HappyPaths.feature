@@ -66,7 +66,6 @@ Feature: Happy Paths - Affordability
       | 44    31  1677                          | Account Number |
 
 
-
 ### Confirm your Direct Debit Details Page
 
   Scenario: Change Link on Confirm Direct Debit Details page takes back to Type Of Account Page
@@ -97,7 +96,6 @@ Feature: Happy Paths - Affordability
     Then the user is on the TypeOfAccountPage
 
 
-
 ### Affordability - Add Income page
 
   Scenario Outline: Validation on Add Income Page
@@ -114,6 +112,7 @@ Feature: Happy Paths - Affordability
       | none          | 1        | 0           |
       | 0             | none     | 1           |
       | 1             | 0        | none        |
+
 
 ### Affordability - Add Spending page
 
