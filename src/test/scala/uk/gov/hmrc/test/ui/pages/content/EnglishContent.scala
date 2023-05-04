@@ -262,7 +262,7 @@ object EnglishContent {
        |January 2021 £231.73
        |February 2021 £268.94
        |Estimated total interest
-       |included in monthly payments
+       |Included in your plan
        |£37.21
        |Total to pay £3,049.76
        |Print a copy of your payment plan
@@ -516,9 +516,8 @@ object EnglishContent {
        |Monthly payments
        |Payments collected on 28th or next working day Change
        |the day of the month that payments will be collected on
-       |13 monthly payments of £231.73 Change
+       |Payment plan Change
        |the day of the month that payments will be collected on
-       |Payment schedule
        |February 2020 £231.73
        |March 2020 £231.73
        |April 2020 £231.73
@@ -533,7 +532,7 @@ object EnglishContent {
        |January 2021 £231.73
        |February 2021 £268.94
        |Estimated total interest
-       |included in monthly payments
+       |Included in your plan
        |£37.21
        |Total to pay £3,049.76
        |Agree and continue
