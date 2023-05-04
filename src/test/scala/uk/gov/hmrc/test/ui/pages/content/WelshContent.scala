@@ -261,7 +261,7 @@ object WelshContent {
        |Ionawr 2021 £231.73
        |Chwefror 2021 £268.94
        |Amcangyfrif o gyfanswm y llog
-       |wedi’i gynnwys yn y taliadau misol
+       |Yn gynwysedig yn eich cynllun
        |£37.21
        |Y cyfanswm i’w dalu £3,049.76
        |Argraffwch gopi o’ch cynllun talu
@@ -558,23 +558,23 @@ object WelshContent {
        |Yn eich blaen
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
-  //TODO
+
   def howManyMonthsTextLegacy(): String = {
     s"""Faint y gallwch ei dalu bob mis?
-       |Yn seiliedig ar eich incwm sydd dros ben, rydym o’r farn y byddech yn gallu talu’r swm hwn bob mis. Os bydd y gyfradd llog yn newid, mae’n bosibl y bydd eich taliad misol olaf yn fwy neu’n llai na’r swm hwn.
+       |Yn seiliedig ar yr incwm sydd gennych dros ben, gallwch nawr ddewis gynllun talu. Bydd y taliad misol olaf yn eich cynllun yn fwy oherwydd y bydd yn cynnwys llog ac unrhyw dreth sy’n weddill sydd arnoch.
        |Os bydd y cynllun yr ydych yn ei ddewis yn rhedeg i mewn i’r flwyddyn dreth nesaf, bydd dal angen i chi dalu’ch biliau treth yn y dyfodol mewn pryd.
-       |£250 y mis, am 13 mis
-       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £33.76
+       |£231.73 y mis, am 13 mis
+       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £37.21
        |neu
-       |£300 y mis, am 11 mis
-       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £26.47
-       |£400 y mis, am 8 mis
-       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £17.51
-       |Swm misol gwahanol
-       |Rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,017.55
+       |£251.05 y mis, am 12 mis
+       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £33.56
+       |£273.87 y mis, am 11 mis
+       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £29.94
+       |Talu mwy bob mis
+       |Nodwch swm sydd rhwng £273.87 a £1,506.28 i’w dalu dros lai o fisoedd. Byddwn yn awgrymu cynllun sydd agosaf at y swm y byddwch yn ei nodi.
        |£
        |Nid wyf yn gallu fforddio’r taliadau hyn
-       |Mae’n bosibl y byddwch yn dal i allu trefnu cynllun talu dros y ffôn. Ffoniwch Wasanaeth Cwsmeriaid Cymraeg CThEF ar 0300 200 1900 i drafod eich opsiynau.
+       |Mae’n bosibl y byddwch yn dal i allu trefnu cynllun talu dros y ffôn. Ffoniwch ni ar 0300 200 1900 i drafod eich dyled.
        |Yn eich blaen
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
@@ -601,25 +601,24 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
-  //TODO
   def howManyMonthsCustomTextLegacy(): String = {
     s"""Faint y gallwch ei dalu bob mis?
-       |Rydych wedi dewis talu £300 y mis. Os bydd y gyfradd llog yn newid, mae’n bosibl y bydd eich taliad misol olaf yn fwy neu’n llai na’r swm hwn.
+       |Yn seiliedig ar yr incwm sydd gennych dros ben, gallwch nawr ddewis gynllun talu. Bydd y taliad misol olaf yn eich cynllun yn fwy oherwydd y bydd yn cynnwys llog ac unrhyw dreth sy’n weddill sydd arnoch.
        |Os bydd y cynllun yr ydych yn ei ddewis yn rhedeg i mewn i’r flwyddyn dreth nesaf, bydd dal angen i chi dalu’ch biliau treth yn y dyfodol mewn pryd.
-       |£300 y mis, am 11 mis
-       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £26.47
+       |£301.26 y mis, am 10 mis
+       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £26.31
        |neu
-       |£250 y mis, am 13 mis
-       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £33.76
-       |£300 y mis, am 11 mis
-       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £26.47
-       |£400 y mis, am 8 mis
-       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £17.51
-       |Swm misol gwahanol
-       |Rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,017.55
+       |£231.73 y mis, am 13 mis
+       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £37.21
+       |£251.05 y mis, am 12 mis
+       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £33.56
+       |£273.87 y mis, am 11 mis
+       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £29.94
+       |Talu mwy bob mis
+       |Nodwch swm sydd rhwng £273.87 a £1,506.28 i’w dalu dros lai o fisoedd. Byddwn yn awgrymu cynllun sydd agosaf at y swm y byddwch yn ei nodi.
        |£
        |Nid wyf yn gallu fforddio’r taliadau hyn
-       |Mae’n bosibl y byddwch yn dal i allu trefnu cynllun talu dros y ffôn. Ffoniwch Wasanaeth Cwsmeriaid Cymraeg CThEF ar 0300 200 1900 i drafod eich opsiynau.
+       |Mae’n bosibl y byddwch yn dal i allu trefnu cynllun talu dros y ffôn. Ffoniwch ni ar 0300 200 1900 i drafod eich dyled.
        |Yn eich blaen
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }

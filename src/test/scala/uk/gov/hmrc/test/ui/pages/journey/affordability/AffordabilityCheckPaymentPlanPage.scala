@@ -40,12 +40,12 @@ object AffordabilityCheckPaymentPlanPage extends BasePage {
   def pageContent: String = id("main-content").webElement.getText
 
   def assertContentNoUpfront(): Assertion = {
-    expandSchedule()
     if (serviceType == "Legacy") {
       if (langToggle == Language.welsh) pageContent should be(WelshContent.checkYouPaymentPlanContentNoUpfrontLegacy())
       else pageContent should be(EnglishContent.checkYouPaymentPlanContentNoUpfrontLegacy())
     }
     else {
+      expandSchedule()
       if (langToggle == Language.welsh) pageContent should be(WelshContent.checkYouPaymentPlanContentNoUpfront())
       else pageContent should be(EnglishContent.checkYouPaymentPlanContentNoUpfront())
     }
