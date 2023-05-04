@@ -504,7 +504,7 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
-  def checkYouPaymentPlanContentNoUpfrontLegacy(): String = {
+    def checkYouPaymentPlanContentNoUpfrontLegacy(): String = {
     s"""Gwirio’ch cynllun talu
        |A allwch wneud taliad ymlaen llaw? Na Newid
        |p’un a allwch wneud taliad ymlaen llaw
@@ -515,9 +515,8 @@ object WelshContent {
        |Taliadau misol
        |Mae taliadau’n cael eu casglu ar yr 28ain neu’r diwrnod gwaith nesaf Newid
        |ar ba ddiwrnod o’r mis y caiff taliadau eu casglu
-       |13 taliad misol o £231.73 Newid
+       |Cynllun talu Newid
        |ar ba ddiwrnod o’r mis y caiff taliadau eu casglu
-       |Amserlen ar gyfer talu
        |Chwefror 2020 £231.73
        |Mawrth 2020 £231.73
        |Ebrill 2020 £231.73
@@ -532,7 +531,7 @@ object WelshContent {
        |Ionawr 2021 £231.73
        |Chwefror 2021 £268.94
        |Amcangyfrif o gyfanswm y llog
-       |wedi’i gynnwys yn y taliadau misol
+       |Yn gynwysedig yn eich cynllun
        |£37.21
        |Y cyfanswm i’w dalu £3,049.76
        |Cytuno ac yn eich blaen
