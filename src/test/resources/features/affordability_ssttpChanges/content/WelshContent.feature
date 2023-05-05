@@ -177,7 +177,7 @@ Feature: Welsh Content
       | Welsh | none        | Nodwch swm o £1 neu fwy                                   |
       | Welsh | 0.50        | Nodwch swm o £1 neu fwy                                   |
       | Welsh | -1          | Nodwch swm o £1 neu fwy                                   |
-      | Welsh | 40000       | Mae’n rhaid i chi nodi swm sy’n llai na’r swm sydd arnoch |
+      | Welsh | 3010.56     | Nodwch swm sydd o leiaf £1 ond sydd ddim mwy na £3,010.55 |
       | Welsh | 2.345       | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol         |
       | Welsh | aa          | Rhowch rifau yn unig                                      |
 
@@ -397,16 +397,16 @@ Feature: Welsh Content
     Then the User toggles on English language
 
     Examples:
-      | value   | error                                                                                     |
+      | value   | error                                                          |
 #      | 249.99  | Mae’r swm hwnnw’n rhy isel, rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,017.55  | # Optimised
 #      | 3017.56 | Mae’r swm hwnnw’n rhy uchel, rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,017.55 | # Optimised
       | 273.86  | Nodwch swm sydd o leiaf £273.87 ond sydd ddim mwy na £1,506.28 |
       | 1506.29 | Nodwch swm sydd o leiaf £273.87 ond sydd ddim mwy na £1,506.28 |
-      |         | Nodwch swm                                                                                |
-      | !@      | Nodwch rifau yn unig                                                                      |
-      | ABC     | Nodwch rifau yn unig                                                                      |
-      | -260    | Nodwch rif positif yn unig                                                                |
-      | 333.111 | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol                                         |
+      |         | Nodwch swm                                                     |
+      | !@      | Nodwch rifau yn unig                                           |
+      | ABC     | Nodwch rifau yn unig                                           |
+      | -260    | Nodwch rif positif yn unig                                     |
+      | 333.111 | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol              |
 
 
 

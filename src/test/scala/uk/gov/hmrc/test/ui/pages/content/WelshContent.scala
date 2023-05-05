@@ -296,7 +296,7 @@ object WelshContent {
 
   def upfrontPaymentAmountContent(): String = {
     s"""Faint y gallwch ei dalu ymlaen llaw?
-       |Nodwch swm sydd rhwng £1 a £3,012.55
+       |Nodwch swm sydd rhwng £1 a £3,010.55
        |£
        |Yn eich blaen
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin

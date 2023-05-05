@@ -297,7 +297,7 @@ object EnglishContent {
 
   def upfrontPaymentAmountContent(): String = {
     s"""How much can you pay upfront?
-       |Enter an amount between £1 and £3,012.55
+       |Enter an amount between £1 and £3,010.55
        |£
        |Continue
        |Is this page not working properly? (opens in new tab)""".stripMargin

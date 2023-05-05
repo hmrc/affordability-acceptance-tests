@@ -159,13 +159,13 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     Then the amount field should display "<Message>"
 
     Examples:
-      | lang    | Input Value | Message                                                  |
-      | English | none        | Enter an amount of £1 or above                           |
-      | English | 0.50        | Enter an amount of £1 or above                           |
-      | English | -1          | Enter an amount of £1 or above                           |
-      | English | 40000       | You need to enter an amount less than the amount you owe |
-      | English | 2.345       | Amount must not contain more than 2 decimal places       |
-      | English | aa          | Enter numbers only                                       |
+      | lang    | Input Value | Message                                                        |
+      | English | none        | Enter an amount of £1 or above                                 |
+      | English | 0.50        | Enter an amount of £1 or above                                 |
+      | English | -1          | Enter an amount of £1 or above                                 |
+      | English | 3010.56     | Enter an amount that is at least £1 but no more than £3,010.55 |
+      | English | 2.345       | Amount must not contain more than 2 decimal places             |
+      | English | aa          | Enter numbers only                                             |
 
 ### Affordability - Add Income page
   Scenario Outline: Error Validation on Add Income Page
