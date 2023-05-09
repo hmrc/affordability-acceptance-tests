@@ -291,6 +291,9 @@ object EnglishContent {
        |Remaining amount to pay £2,812.55
        |Interest will be added to this amount
        |How we calculate interest
+       |We charge interest on all overdue amounts.
+       |We charge the Bank of England base rate plus 2.5% per year.
+       |If the interest rate changes during your payment plan, you may need to settle any difference at the end. We will contact you if this is the case.
        |Continue
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }

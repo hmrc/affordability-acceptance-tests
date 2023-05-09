@@ -290,6 +290,9 @@ object WelshContent {
        |Swm sy’n weddill i’w dalu £2,812.55
        |Bydd llog yn cael ei ychwanegu at y swm hwn
        |Sut rydym yn cyfrifo llog
+       |Rydym yn codi llog ar bob swm sy’n hwyr.
+       |Rydym yn codi cyfradd sylfaenol Banc Lloegr ynghyd â 2.5% y flwyddyn.
+       |Os bydd y gyfradd llog yn newid yn ystod eich cynllun talu, efallai bydd yn rhaid i chi setlo unrhyw wahaniaeth ar y diwedd. Byddwn yn cysylltu â chi os yw hyn yn wir.
        |Yn eich blaen
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }

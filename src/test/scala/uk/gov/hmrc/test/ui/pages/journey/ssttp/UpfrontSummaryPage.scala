@@ -39,12 +39,17 @@ object UpfrontSummaryPage extends BasePage {
   def pageContent: String = id("main-content").webElement.getText
 
   def assertContent(): Assertion =  {
+    expandLink()
     if (langToggle == Language.welsh) pageContent should be(WelshContent.paymentSummaryContent())
     else pageContent should be(EnglishContent.paymentSummaryContent())
   }
 
   def clickChangeLink() = {
     cssSelector("#payment-summary-list > div:nth-child(1) > dd.govuk-summary-list__actions > a").webElement.click()
+  }
+
+  def expandLink() = {
+    cssSelector("#content > details > summary > span").webElement.click()
   }
 
 }
