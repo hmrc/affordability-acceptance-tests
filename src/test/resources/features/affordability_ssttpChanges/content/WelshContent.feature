@@ -173,13 +173,14 @@ Feature: Welsh Content
     Then the User toggles on English language
 
     Examples:
-      | lang  | Input Value | Message                                                   |
-      | Welsh | none        | Nodwch swm o £1 neu fwy                                   |
-      | Welsh | 0.50        | Nodwch swm o £1 neu fwy                                   |
-      | Welsh | -1          | Nodwch swm o £1 neu fwy                                   |
-      | Welsh | 3010.56     | Nodwch swm sydd o leiaf £1 ond sydd ddim mwy na £3,010.55 |
-      | Welsh | 2.345       | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol         |
-      | Welsh | aa          | Rhowch rifau yn unig                                      |
+      | lang  | Input Value      | Message                                                   |
+      | Welsh | none             | Nodwch swm o £1 neu fwy                                   |
+      | Welsh | 0.50             | Nodwch swm o £1 neu fwy                                   |
+      | Welsh | -1               | Nodwch swm o £1 neu fwy                                   |
+      | Welsh | 3010.56          | Nodwch swm sydd o leiaf £1 ond sydd ddim mwy na £3,010.55 |
+      | Welsh | 2.345            | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol         |
+      | Welsh | aa               | Rhowch rifau yn unig                                      |
+      | Welsh | 1000000000000.01 | Nodwch swm sydd o leiaf £1 ond sydd ddim mwy na £3,010.55 |
 
 ### Select Day of Month Page
 
