@@ -565,6 +565,7 @@ object EnglishContent {
   def howManyMonthsTextLegacy(): String = {
     s"""How much can you pay each month?
        |Based on your left over income, you can now select a payment plan. The final monthly payment in your plan will be more as it will include interest and any remaining tax you owe.
+       |We charge the Bank of England base rate plus 2.5% per year.
        |If the plan you choose runs into the next tax year, you still need to pay future tax bills on time.
        |£231.73 per month over 13 months
        |Includes total interest estimated at £37.21
@@ -607,6 +608,7 @@ object EnglishContent {
   def howManyMonthsCustomTextLegacy(): String = {
     s"""How much can you pay each month?
        |Based on your left over income, you can now select a payment plan. The final monthly payment in your plan will be more as it will include interest and any remaining tax you owe.
+       |We charge the Bank of England base rate plus 2.5% per year.
        |If the plan you choose runs into the next tax year, you still need to pay future tax bills on time.
        |£301.26 per month over 10 months
        |Includes total interest estimated at £26.31

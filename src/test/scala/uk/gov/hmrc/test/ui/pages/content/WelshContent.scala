@@ -564,6 +564,7 @@ object WelshContent {
   def howManyMonthsTextLegacy(): String = {
     s"""Faint y gallwch ei dalu bob mis?
        |Yn seiliedig ar yr incwm sydd gennych dros ben, gallwch nawr ddewis gynllun talu. Bydd y taliad misol olaf yn eich cynllun yn fwy oherwydd y bydd yn cynnwys llog ac unrhyw dreth sy’n weddill sydd arnoch.
+       |Rydym yn codi cyfradd sylfaenol Banc Lloegr ynghyd â 2.5% y flwyddyn.
        |Os bydd y cynllun yr ydych yn ei ddewis yn rhedeg i mewn i’r flwyddyn dreth nesaf, bydd dal angen i chi dalu’ch biliau treth yn y dyfodol mewn pryd.
        |£231.73 y mis, am 13 mis
        |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £37.21
@@ -606,6 +607,7 @@ object WelshContent {
   def howManyMonthsCustomTextLegacy(): String = {
     s"""Faint y gallwch ei dalu bob mis?
        |Yn seiliedig ar yr incwm sydd gennych dros ben, gallwch nawr ddewis gynllun talu. Bydd y taliad misol olaf yn eich cynllun yn fwy oherwydd y bydd yn cynnwys llog ac unrhyw dreth sy’n weddill sydd arnoch.
+       |Rydym yn codi cyfradd sylfaenol Banc Lloegr ynghyd â 2.5% y flwyddyn.
        |Os bydd y cynllun yr ydych yn ei ddewis yn rhedeg i mewn i’r flwyddyn dreth nesaf, bydd dal angen i chi dalu’ch biliau treth yn y dyfodol mewn pryd.
        |£301.26 y mis, am 10 mis
        |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £26.31
