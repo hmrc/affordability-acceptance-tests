@@ -71,7 +71,7 @@ object HowManyMonthsPage extends BasePage {
       case "60 percent" => id("higher").webElement.click()
       case "80 percent" => id("additional").webElement.click()
       case "custom amount" => id("customAmountOption").webElement.click()
-        id("custom-amount-input").webElement.sendKeys("300")
+        id("custom-amount-input").webElement.sendKeys("£3   00")
       case "user specified" => id("custom").webElement.click()
       case _ => id("customAmountOption").webElement.click()
         id("custom-amount-input").webElement.sendKeys(amount)
