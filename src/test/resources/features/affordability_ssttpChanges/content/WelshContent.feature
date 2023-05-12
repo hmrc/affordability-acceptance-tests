@@ -179,7 +179,7 @@ Feature: Welsh Content
       | Welsh | -1               | Nodwch swm o £1 neu fwy                                   |
       | Welsh | 3010.56          | Nodwch swm sydd o leiaf £1 ond sydd ddim mwy na £3,010.55 |
       | Welsh | 2.345            | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol         |
-      | Welsh | aa               | Rhowch rifau yn unig                                      |
+      | Welsh | aa               | Nodwch swm sydd o leiaf £1 ond sydd ddim mwy na £3,010.55 |
       | Welsh | 1000000000000.01 | Nodwch swm sydd o leiaf £1 ond sydd ddim mwy na £3,010.55 |
 
 ### Select Day of Month Page
@@ -295,9 +295,27 @@ Feature: Welsh Content
 
     Examples:
       | lang  | value | Message                                                    |
-      | Welsh | !@    | Nodwch rifau yn unig ar gyfer                              |
       | Welsh | 1.000 | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer |
       | Welsh | -1    | Nodwch rif positif yn unig ar gyfer                        |
+
+  Scenario Outline: Welsh - Error Validation on Add Income Page - Invalid Chars
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add income link
+    When the User toggles on <lang> language
+    When the user enters <value> into the monthly income field
+    When the user enters <value> into the benefits field
+    When the user enters <value> into the other income field
+    And the user clicks continue
+    Then the monthly income field should display "Mae’n rhaid i incwm misol ar ôl treth <Message>"
+    Then the benefits field should display "Mae’n rhaid i fuddiannau <Message>"
+    Then the other income field should display "Mae’n rhaid i incwm misol arall <Message>"
+    Then the User toggles on English language
+
+    Examples:
+      | lang  | value | Message                            |
+      | Welsh | !@    | fod yn swm, megis £100 neu £250.75 |
+
 
   Scenario: Welsh - Error Validation on Add Income Page - Nothing entered
     Given A user logs in and gets to the affordability pages
@@ -339,9 +357,40 @@ Feature: Welsh Content
 
     Examples:
       | lang  | value | Message                                                    |
-      | Welsh | !@    | Nodwch rifau yn unig ar gyfer                              |
       | Welsh | -1    | Nodwch rif positif yn unig ar gyfer                        |
       | Welsh | 1.000 | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol ar gyfer |
+
+  Scenario Outline: Welsh - Error Validation on Add Spending Page - Invalid Chars
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add spending link
+    When the User toggles on <lang> language
+    When the user enters <value> into the housing field
+    When the user enters <value> into the pension field
+    When the user enters <value> into the council tax field
+    When the user enters <value> into the utilities field
+    When the user enters <value> into the debt repayments field
+    When the user enters <value> into the travel field
+    When the user enters <value> into the childcare field
+    When the user enters <value> into the insurance field
+    When the user enters <value> into the groceries field
+    When the user enters <value> into the health field
+    And the user clicks continue
+    Then the housing field should display "Mae’n rhaid i daliadau tai <Message>"
+    Then the pension field should display "Mae’n rhaid i gyfraniadau pensiwn <Message>"
+    Then the council tax field should display "Mae’n rhaid i dreth gyngor <Message>"
+    Then the utilities field should display "Mae’n rhaid i gyfleustodau <Message>"
+    Then the debt repayments field should display "Mae’n rhaid i ad-daliadau dyledion <Message>"
+    Then the travel field should display "Mae’n rhaid i deithio <Message>"
+    Then the childcare field should display "Mae’n rhaid i gostau gofal plant <Message>"
+    Then the insurance field should display "Mae’n rhaid i yswiriant <Message>"
+    Then the groceries field should display "Mae’n rhaid i nwyddau groser <Message>"
+    Then the health field should display "Mae’n rhaid i iechyd <Message>"
+    Then the User toggles on English language
+
+    Examples:
+      | lang  | value | Message                            |
+      | Welsh | !@    | fod yn swm, megis £100 neu £250.75 |
 
 
     ### Cannot Agree Plan Page
@@ -404,9 +453,9 @@ Feature: Welsh Content
       | 273.86  | Nodwch swm sydd o leiaf £273.87 ond sydd ddim mwy na £1,506.28 |
       | 1506.29 | Nodwch swm sydd o leiaf £273.87 ond sydd ddim mwy na £1,506.28 |
       |         | Nodwch swm                                                     |
-      | !@      | Nodwch rifau yn unig                                           |
-      | ABC     | Nodwch rifau yn unig                                           |
-      | -260    | Nodwch rif positif yn unig                                     |
+      | !@      | Nodwch swm sydd o leiaf £273.87 ond sydd ddim mwy na £1,506.28 |
+      | ABC     | Nodwch swm sydd o leiaf £273.87 ond sydd ddim mwy na £1,506.28 |
+      | -260    | Nodwch swm sydd o leiaf £273.87 ond sydd ddim mwy na £1,506.28 |
       | 333.111 | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol              |
 
 
