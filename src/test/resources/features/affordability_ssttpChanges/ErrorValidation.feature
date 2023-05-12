@@ -165,7 +165,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | English | -1               | Enter an amount of £1 or above                                 |
       | English | 3010.56          | Enter an amount that is at least £1 but no more than £3,010.55 |
       | English | 2.345            | Amount must not contain more than 2 decimal places             |
-      | English | aa               | Enter numbers only                                             |
+      | English | aa               | Upfront payment must be an amount, like £100 or £250.75        |
       | English | 1000000000000.01 | Enter an amount that is at least £1 but no more than £3,010.55 |
 
 ### Affordability - Add Income page
@@ -185,9 +185,27 @@ Feature: Error Validation on various pages created/updated by Affordability chan
 
     Examples:
       | lang    | value | Message                                                |
-      | English | !@    | Enter numbers only for                                 |
       | English | -1    | Enter a positive number only for                       |
       | English | 1.000 | Amount must not contain more than 2 decimal places for |
+
+
+  Scenario Outline: Error Validation on Add Income Page - invalid chars
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add income link
+    When the User toggles on <lang> language
+    When the user enters <value> into the monthly income field
+    When the user enters <value> into the benefits field
+    When the user enters <value> into the other income field
+    And the user clicks continue
+    Then the monthly income field should display "Monthly income after tax <Message>"
+    Then the benefits field should display "Benefits <Message>"
+    Then the other income field should display "Other monthly income <Message>"
+    Then the User toggles on English language
+
+    Examples:
+      | lang    | value | Message                                 |
+      | English | !@    | must be an amount, like £100 or £250.75 |
 
   Scenario: Error Validation on Add Income Page - Nothing entered
     Given A user logs in and gets to the affordability pages
@@ -227,9 +245,40 @@ Feature: Error Validation on various pages created/updated by Affordability chan
 
     Examples:
       | lang    | value | Message                                                |
-      | English | !@    | Enter numbers only for                                 |
       | English | -1    | Enter a positive number only for                       |
       | English | 1.000 | Amount must not contain more than 2 decimal places for |
+
+  Scenario Outline: Error Validation on Add Spending Page - Invalid chars
+    Given A user logs in and gets to the affordability pages
+    And the user clicks continue
+    And the user clicks on the add spending link
+    When the User toggles on <lang> language
+    When the user enters <value> into the housing field
+    When the user enters <value> into the pension field
+    When the user enters <value> into the council tax field
+    When the user enters <value> into the utilities field
+    When the user enters <value> into the debt repayments field
+    When the user enters <value> into the travel field
+    When the user enters <value> into the childcare field
+    When the user enters <value> into the insurance field
+    When the user enters <value> into the groceries field
+    When the user enters <value> into the health field
+    And the user clicks continue
+    Then the housing field should display "Housing <Message>"
+    Then the pension field should display "Pension contributions <Message>"
+    Then the council tax field should display "Council tax <Message>"
+    Then the utilities field should display "Utilities <Message>"
+    Then the debt repayments field should display "Debt repayments <Message>"
+    Then the travel field should display "Travel <Message>"
+    Then the childcare field should display "Childcare costs <Message>"
+    Then the insurance field should display "Insurance <Message>"
+    Then the groceries field should display "Groceries <Message>"
+    Then the health field should display "Health <Message>"
+    Then the User toggles on English language
+
+    Examples:
+      | lang    | value | Message                                 |
+      | English | !@    | must be an amount, like £100 or £250.75 |
 
 ### Affordability - How Many Months
   Scenario: Affordability - Error Validation on How Many Months Page - No selection
@@ -266,9 +315,9 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | 273.86  | Enter an amount that is at least £273.87 but no more than £1,506.28 |
       | 1506.29 | Enter an amount that is at least £273.87 but no more than £1,506.28 |
       |         | Enter an amount                                                     |
-      | !@      | Enter numbers only                                                  |
-      | ABC     | Enter numbers only                                                  |
-      | -260    | Enter a positive number only                                        |
+      | !@      | Enter an amount that is at least £273.87 but no more than £1,506.28 |
+      | ABC     | Enter an amount that is at least £273.87 but no more than £1,506.28 |
+      | -260    | Enter an amount that is at least £273.87 but no more than £1,506.28 |
       | 333.333 | Amount must not contain more than 2 decimal places                  |
 
 ### Affordability - How Many Months Custom
@@ -296,7 +345,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | 273.86  | Enter an amount that is at least £273.87 but no more than £1,506.28 |
       | 1506.29 | Enter an amount that is at least £273.87 but no more than £1,506.28 |
       |         | Enter an amount                                                     |
-      | !@      | Enter numbers only                                                  |
-      | ABC     | Enter numbers only                                                  |
-      | -260    | Enter a positive number only                                        |
+      | !@      | Enter an amount that is at least £273.87 but no more than £1,506.28 |
+      | ABC     | Enter an amount that is at least £273.87 but no more than £1,506.28 |
+      | -260    | Enter an amount that is at least £273.87 but no more than £1,506.28 |
       | 333.111 | Amount must not contain more than 2 decimal places                  |
