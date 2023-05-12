@@ -111,10 +111,13 @@ Feature: Happy Paths - Affordability
     And the user is on the AddSpendingPage
 
     Examples:
-      | monthlyIncome | benefits | otherAmount |
-      | none          | 1        | 0           |
-      | 0             | none     | 1           |
-      | 1             | 0        | none        |
+      | monthlyIncome | benefits  | otherAmount |
+      | none          | 1         | 0           |
+      | 0             | none      | 1           |
+      | 1             | 0         | none        |
+      | 1,000         | 1,000     | 1,000,000   |
+      | 1   98   1    | 1   3  23 | 09 87 7     |
+      | £1            | £2        | £3          |
 
 
 ### Affordability - Add Spending page
@@ -139,12 +142,15 @@ Feature: Happy Paths - Affordability
     And the user is on the AddSpendingPage
 
     Examples:
-      | Housing | Pension | Council Tax | Utilities | Debt | Travel | Childcare | Insurance | Groceries | Health |
-      | none    | 1       | 0           | none      | 0    | 1      | none      | 0         | 1         | none   |
-      | 1       | 0       | none        | 1         | none | 0      | 1         | none      | 0         | 1      |
-      | 0       | none    | 1           | 0         | 1    | none   | 0         | 1         | none      | 0      |
-      | 0       | 0       | 0           | 0         | 0    | 0      | 0         | 0         | 0         | 0      |
-      | none    | none    | none        | none      | none | none   | none      | none      | none      | none   |
+      | Housing    | Pension    | Council Tax | Utilities  | Debt       | Travel     | Childcare  | Insurance  | Groceries  | Health     |
+      | none       | 1          | 0           | none       | 0          | 1          | none       | 0          | 1          | none       |
+      | 1          | 0          | none        | 1          | none       | 0          | 1          | none       | 0          | 1          |
+      | 0          | none       | 1           | 0          | 1          | none       | 0          | 1          | none       | 0          |
+      | 0          | 0          | 0           | 0          | 0          | 0          | 0          | 0          | 0          | 0          |
+      | none       | none       | none        | none       | none       | none       | none       | none       | none       | none       |
+      | 1,000      | 1,000      | 1,000       | 1,000      | 1,000      | 1,000      | 1,000      | 1,000      | 1,000      | 1,000      |
+      | 1   98   1 | 1   98   1 | 1   98   1  | 1   98   1 | 1   98   1 | 1   98   1 | 1   98   1 | 1   98   1 | 1   98   1 | 1   98   1 |
+      | £1         | £1         | £1          | £1         | £1         | £1         | £1         | £1         | £1         | £1         |
 
 
 
