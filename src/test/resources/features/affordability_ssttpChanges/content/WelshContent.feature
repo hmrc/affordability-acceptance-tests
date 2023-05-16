@@ -458,5 +458,35 @@ Feature: Welsh Content
       | -260    | Nodwch swm sydd o leiaf £273.87 ond sydd ddim mwy na £1,506.28 |
       | 333.111 | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol              |
 
+    ### Direct Debit Error Page
+
+  Scenario Outline: Welsh - Direct Debit Error Page
+    Given A user logs in and gets to the affordability pages
+    When the User toggles on Welsh language
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 1000, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters 50 percent on the how many months page
+    And the user clicks next
+    And the user clicks continue
+    When the user selects personal and is the account holder on the About account page
+    And the user clicks continue
+    And the user enters valid bank details
+    And the user clicks continue
+    And the user clicks continue_button
+    When there is an error with direct debit setup <type>
+    Then the user is on the <page>
+    Then the User toggles on English language
+
+    Examples:
+      | page                      | type       |
+      | DirectDebitErrorPage      | error      |
+      | DirectDebitAssistancePage | assistance |
+
 
 

@@ -18,13 +18,14 @@ package uk.gov.hmrc.test.ui.stepdefs.other
 
 import org.openqa.selenium.By
 import org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated
-import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, AddSpendingPage, AffordabilityCheckPaymentPlanPage, CannotAgreePlanPage, CheckYouCanAffordPage, HowManyMonthsPage, HowMuchYouCanAffordPage}
+import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, AddSpendingPage, AffordabilityCheckPaymentPlanPage, CannotAgreePlanPage, CheckYouCanAffordPage, DirectDebitAssistancePage, DirectDebitErrorPage, HowManyMonthsPage, HowMuchYouCanAffordPage}
 import uk.gov.hmrc.test.ui.pages.journey.ssttp._
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.pages.testonly.TestOnlyStartPage
 import uk.gov.hmrc.test.ui.testdata.{Language, ScenarioContext}
 
 class CommonSteps extends Steps with DriverActions {
+
 
   Given("""^A user logs in and gets to the How much can you pay upfront page$""") { () =>
     TestOnlyStartPage.createUserAndLogin()
@@ -106,6 +107,15 @@ class CommonSteps extends Steps with DriverActions {
       case "CannotSetupDDPage" =>
         CannotSetupDDPage.shouldBeLoaded()
         CannotSetupDDPage.assertContent()
+      case "DirectDebitErrorPage" =>
+        DirectDebitErrorPage.shouldBeLoaded()
+        DirectDebitErrorPage.assertContent()
+      case "DirectDebitErrorPage" =>
+        DirectDebitErrorPage.shouldBeLoaded()
+        DirectDebitErrorPage.assertContent()
+      case "DirectDebitAssistancePage" =>
+        DirectDebitAssistancePage.shouldBeLoaded()
+        DirectDebitAssistancePage.assertContent()
       case "TypeOfAccountPage" =>
         //        TypeOfAccountPage.shouldBeLoaded()
         TypeOfAccountPage.assertContent()
@@ -178,19 +188,19 @@ class CommonSteps extends Steps with DriverActions {
       case "AffordabilityCheckPaymentPlanPageNoUpfront" =>
         AffordabilityCheckPaymentPlanPage.shouldBeLoaded()
         AffordabilityCheckPaymentPlanPage.assertContentNoUpfront()
-//      case "AffordabilityCheckPaymentPlanPageWithUpfront" =>
-//        AffordabilityCheckPaymentPlanPage.shouldBeLoaded()
-//        AffordabilityCheckPaymentPlanPage.assertContentWithUpfront()
+      //      case "AffordabilityCheckPaymentPlanPageWithUpfront" =>
+      //        AffordabilityCheckPaymentPlanPage.shouldBeLoaded()
+      //        AffordabilityCheckPaymentPlanPage.assertContentWithUpfront()
       case "CannotAgreePlanPage" =>
         //        CannotAgreePlanPage.shouldBeLoaded()
         CannotAgreePlanPage.assertContent()
       case "HowManyMonthsPageUpfront" =>
         HowManyMonthsPage.shouldBeLoaded()
       case "HowManyMonthsPage" =>
-//        HowManyMonthsPage.shouldBeLoaded()
+        //        HowManyMonthsPage.shouldBeLoaded()
         HowManyMonthsPage.assertContent()
       case "HowManyMonthsPageCustom" =>
-//        HowManyMonthsPage.shouldBeLoaded()
+        //        HowManyMonthsPage.shouldBeLoaded()
         HowManyMonthsPage.assertContentCustom()
       case "TBC" => ""
     }
