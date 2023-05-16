@@ -1,6 +1,6 @@
 package uk.gov.hmrc.test.ui.stepdefs.pages.affordability
 
-import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, AddSpendingPage, AffordabilityCheckPaymentPlanPage, CannotAgreePlanPage}
+import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, AddSpendingPage, AffordabilityCheckPaymentPlanPage, CannotAgreePlanPage, DirectDebitAssistancePage, DirectDebitErrorPage}
 import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
 
 class AffordabilityPagesStepDef extends Steps with DriverActions {
@@ -14,7 +14,7 @@ class AffordabilityPagesStepDef extends Steps with DriverActions {
   }
 
   And("""^the user adds monthly income of (.*), benefits of (.*) and other income of (.*)$""") { (monthly: String, benefit: String, other: String) =>
-    AddIncomePage.enterIncomeDetails(monthly,benefit,other)
+    AddIncomePage.enterIncomeDetails(monthly, benefit, other)
   }
 
   And("""^the user adds monthly spending of (.*) to all fields$""") { (amount: String) =>
@@ -23,6 +23,13 @@ class AffordabilityPagesStepDef extends Steps with DriverActions {
 
   And("""^the choosing more than 50 percent warning message shows$""") { () =>
     AffordabilityCheckPaymentPlanPage.warningText()
+  }
+
+  When("""^there is an error with direct debit setup (assistance|error)$""") { (tyype: String) =>
+    tyype match {
+      case "assistance" => goTo(DirectDebitAssistancePage.url)
+      case "error" => goTo(DirectDebitErrorPage.url)
+    }
   }
 
 }

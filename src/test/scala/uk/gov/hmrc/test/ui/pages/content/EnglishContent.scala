@@ -473,6 +473,18 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def directDebitErrorContent(): String = {
+    s"""Call us about a payment plan
+       |We’re having problems submitting your Direct Debit instruction.
+       |Call us on 0300 123 1813 as you may be able to set up a plan over the phone.
+       |Our opening times are Monday to Friday, 8am to 6pm. We are closed on weekends and bank holidays.
+       |If you need extra support
+       |Find out the different ways to deal with HMRC if you need some help.
+       |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
+       |If you are outside the UK: +44 2890 538 192
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
   def checkYouPaymentPlanContentNoUpfront(): String = {
     s"""Check your payment plan
        |Can you make an upfront payment? No Change
