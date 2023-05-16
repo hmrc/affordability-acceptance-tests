@@ -481,7 +481,7 @@ object EnglishContent {
        |If you need extra support
        |Find out the different ways to deal with HMRC if you need some help.
        |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
-       |If you are outside the UK: +44 2890 538 192
+       |If you are outside the UK: +44 2890 538 192.
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
