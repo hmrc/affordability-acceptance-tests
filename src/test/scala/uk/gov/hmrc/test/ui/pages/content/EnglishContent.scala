@@ -60,7 +60,6 @@ object EnglishContent {
 
   def setupDirectDebitContent(): String = {
     s"""Set up Direct Debit
-       |Enter your banking details
        |Name on the account
        |Sort code
        |Must be 6 digits long

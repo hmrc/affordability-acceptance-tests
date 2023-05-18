@@ -29,7 +29,7 @@ Feature: Navigation tests
     And the user clicks start
     And the user clicks continue
     When the user clicks yes on the upfront payment page
-    And the user clicks next
+    And the user clicks continue
     When the user enters 200 on the upfront payment amount page
     And the user clicks continue
     And the user clicks continue
@@ -44,7 +44,7 @@ Feature: Navigation tests
     And the user clicks continue
     And the user clicks continue
     And the user enters 50 percent on the how many months page
-    And the user clicks next
+    And the user clicks continue
     When the user clicks on the change <element> link on the <page>
     And the user is on the <expectedPage>
 

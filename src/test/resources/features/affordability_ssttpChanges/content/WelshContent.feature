@@ -12,7 +12,7 @@ Feature: Welsh Content
     And the user clicks continue
     And the user is on the UpfrontPaymentPage
     When the user clicks no on the upfront payment page
-    And the user clicks next
+    And the user clicks continue
     And the user is on the WhatDayOfMonthPage
     And the user enters 28 on the what day of the month page
     And the user clicks next
@@ -25,7 +25,7 @@ Feature: Welsh Content
     And the user clicks continue
     And the user clicks continue
     And the user enters 50 percent on the how many months page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     Then the user is on the TypeOfAccountPage
     When the user selects personal and isn't the account holder on the About account page
@@ -54,7 +54,7 @@ Feature: Welsh Content
     And the User toggles on Welsh language
     And the user is on the UpfrontPaymentPage
     When the user clicks yes on the upfront payment page
-    And the user clicks next
+    And the user clicks continue
     And the user is on the UpfrontPaymentAmountPage
     When the user enters 200 on the upfront payment amount page
     And the user clicks continue
@@ -71,7 +71,7 @@ Feature: Welsh Content
     And the user clicks continue
     And the user clicks continue
     And the user enters 50 percent on the how many months page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     When the user selects personal and is the account holder on the About account page
     And the user clicks continue
@@ -104,7 +104,7 @@ Feature: Welsh Content
     And the user clicks start
     And the user clicks continue
     When the user clicks no on the upfront payment page
-    And the user clicks next
+    And the user clicks continue
     And the user enters 28 on the what day of the month page
     And the user clicks next
     And the user clicks continue
@@ -116,7 +116,7 @@ Feature: Welsh Content
     And the user clicks continue
     And the user clicks continue
     And the user enters 50 percent on the how many months page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the User toggles on Welsh language
     And the user clicks continue
@@ -129,7 +129,7 @@ Feature: Welsh Content
     And the user clicks start
     And the user clicks continue
     When the user clicks no on the upfront payment page
-    And the user clicks next
+    And the user clicks continue
     And the user enters 28 on the what day of the month page
     And the user clicks next
     And the user clicks continue
@@ -141,7 +141,7 @@ Feature: Welsh Content
     And the user clicks continue
     And the user clicks continue
     And the user enters 50 percent on the how many months page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     When the user selects personal and is the account holder on the About account page
     And the user clicks continue
@@ -165,7 +165,7 @@ Feature: Welsh Content
     And the user clicks start
     And the user clicks continue
     When the user clicks yes on the upfront payment page
-    And the user clicks next
+    And the user clicks continue
     When the User toggles on <lang> language
     When the user enters <Input Value> into the amount field
     And the user clicks continue
@@ -191,7 +191,7 @@ Feature: Welsh Content
     And the user clicks continue
     When the User toggles on Welsh language
     When the user clicks no on the upfront payment page
-    And the user clicks next
+    And the user clicks continue
     And the user is on the WhatDayOfMonthPage
     When the user enters <Input Value> into the <Field> field
     And the user clicks next
@@ -228,7 +228,7 @@ Feature: Welsh Content
     And the user is on the HowMuchYouCanAffordPageHappy
     And the user clicks continue
     And the user enters 50 percent on the how many months page
-    And the user clicks next
+    And the user clicks continue
     And the user is on the AffordabilityCheckPaymentPlanPageNoUpfront
 #    Enter more steps here
     Then the User toggles on English language
@@ -252,10 +252,10 @@ Feature: Welsh Content
     And the user clicks continue
     And the user is on the HowManyMonthsPage
     And the user enters custom amount on the how many months page
-    And the user clicks next
+    And the user clicks continue
     And the user is on the HowManyMonthsPageCustom
     And the user enters user specified on the how many months page
-    And the user clicks next
+    And the user clicks continue
     Then the choosing more than 50 percent warning message shows
     Then the User toggles on English language
 
@@ -442,7 +442,7 @@ Feature: Welsh Content
     And the user clicks continue
     And the user clicks continue
     And the user enters <value> on the how many months page
-    And the user clicks next
+    And the user clicks continue
     Then the custom amount field should display "<error>"
     Then the User toggles on English language
 
@@ -472,7 +472,7 @@ Feature: Welsh Content
     And the user clicks continue
     And the user clicks continue
     And the user enters 50 percent on the how many months page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     When the user selects personal and is the account holder on the About account page
     And the user clicks continue
