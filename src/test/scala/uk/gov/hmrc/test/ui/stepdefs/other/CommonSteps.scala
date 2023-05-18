@@ -69,10 +69,7 @@ class CommonSteps extends Steps with DriverActions {
   And("""^the user clicks (start|continue|next|continue_button|back|browser back)$""") { (action: String) =>
     action match {
       case "start" => StartPage.clickStartNow()
-      //TODO sort out a standard for continue button ids! grr multiple id's used in Frontend code.
       case "continue" => continue()
-      case "next" => next()
-      case "continue_button" => continueButton()
       case "back" => back()
       case "browser back" => browserBack()
     }
