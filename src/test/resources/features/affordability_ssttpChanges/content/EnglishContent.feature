@@ -7,7 +7,7 @@ Feature: English Content
     When the user clicks no on the upfront payment page
     And the user clicks continue
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 100, benefits of 200 and other income of 300
@@ -26,9 +26,9 @@ Feature: English Content
     And the user enters valid bank details
     And the user clicks continue
     And the user is on the ConfirmDirectDebitDetailsPage
-    And the user clicks continue_button
+    And the user clicks continue
     Then the user is on the TermsAndConditionsPage
-    And the user clicks continue_button
+    And the user clicks continue
     Then the submission has been successful
     Then the user is on the SuccessConfirmationPage
     Then the user clicks View your payment plan
@@ -50,7 +50,7 @@ Feature: English Content
     And the user clicks continue
     And the user is on the WhatDayOfMonthPage
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 100, benefits of 200 and other income of 300
@@ -66,8 +66,8 @@ Feature: English Content
     And the user clicks continue
     When the user enters valid bank details
     And the user clicks continue
-    And the user clicks continue_button
-    And the user clicks continue_button
+    And the user clicks continue
+    And the user clicks continue
     Then the submission has been successful
     And the conditional sentence for Upfront payment is displayed
 

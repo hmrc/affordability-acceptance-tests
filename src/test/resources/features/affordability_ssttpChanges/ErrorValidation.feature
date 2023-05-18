@@ -10,7 +10,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     And the user clicks continue
     And the user is on the WhatDayOfMonthPage
     When the user enters <Input Value> into the <Field> field
-    And the user clicks next
+    And the user clicks continue
     Then the <Field> field should display "<Message>"
 
     Examples:
@@ -29,7 +29,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     When the user clicks no on the upfront payment page
     And the user clicks continue
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 1000, benefits of 200 and other income of 300
@@ -57,7 +57,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     When the user clicks no on the upfront payment page
     And the user clicks continue
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 1000, benefits of 200 and other income of 300
@@ -81,7 +81,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     When the user clicks no on the upfront payment page
     And the user clicks continue
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 1000, benefits of 200 and other income of 300
@@ -107,7 +107,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     When the user clicks no on the upfront payment page
     And the user clicks continue
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 1000, benefits of 200 and other income of 300
@@ -291,7 +291,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     And the user adds monthly spending of 10 to all fields
     And the user clicks continue
     And the user clicks continue
-    And the user clicks next
+    And the user clicks continue
     Then the plan selection field should display "Select an option"
 
   Scenario Outline: Affordability - Error Validation on How Many Months Page
