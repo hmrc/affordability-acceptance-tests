@@ -32,7 +32,7 @@ class CommonSteps extends Steps with DriverActions {
     StartPage.clickStartNow()
     continue()
     UpfrontPaymentPage.selectRadio("yes")
-    next()
+    continue()
   }
 
   Given("""^A user logs in and gets to the About your bank account page$""") { () =>
@@ -40,11 +40,11 @@ class CommonSteps extends Steps with DriverActions {
     StartPage.clickStartNow()
     continue()
     UpfrontPaymentPage.selectRadio("no")
-    next()
+    continue()
     WhatDayOfMonthPage.enterDayOfMonth("28")
-    next()
+    continue()
     HowManyMonthsPage.enterAmountOfMonths("50 percent")
-    next()
+    continue()
     continue()
   }
 
@@ -53,9 +53,9 @@ class CommonSteps extends Steps with DriverActions {
     StartPage.clickStartNow()
     continue()
     UpfrontPaymentPage.selectRadio("no")
-    next()
+    continue()
     WhatDayOfMonthPage.enterDayOfMonth("28")
-    next()
+    continue()
   }
 
   And("""^user enters affordability pages$""") { () =>

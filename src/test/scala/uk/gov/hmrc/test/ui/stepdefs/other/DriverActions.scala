@@ -40,8 +40,6 @@ trait DriverActions extends WebBrowser {
   def back(): Unit = click on id("back-link")
 
   def continue(): Unit = click on id("continue")
-  def continueButton(): Unit = click on id("continue")
-  def next(): Unit = click on id("continue")
 
   def langToggle: String = ScenarioContext.getOrElse[String]("langToggle", Language.english)
 
