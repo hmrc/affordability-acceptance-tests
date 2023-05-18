@@ -66,7 +66,7 @@ class CommonSteps extends Steps with DriverActions {
     TestOnlyStartPage.createUserAndGoToPage(page)
   }
 
-  And("""^the user clicks (start|continue|next|continue_button|back|browser back)$""") { (action: String) =>
+  And("""^the user clicks (start|continue|back|browser back)$""") { (action: String) =>
     action match {
       case "start" => StartPage.clickStartNow()
       case "continue" => continue()
