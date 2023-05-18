@@ -10,7 +10,7 @@ Feature: Happy Paths - Affordability
     When the user clicks no on the upfront payment page
     And the user clicks continue
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 1000, benefits of 200 and other income of 300
@@ -37,7 +37,7 @@ Feature: Happy Paths - Affordability
     When the user clicks no on the upfront payment page
     And the user clicks continue
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 1000, benefits of 200 and other income of 300
@@ -53,7 +53,7 @@ Feature: Happy Paths - Affordability
     And the user clicks continue
     And the user enters valid bank details
     And the user clicks continue
-    And the user clicks continue_button
+    And the user clicks continue
     When there is an error with direct debit setup <type>
     Then the user is on the <page>
 
@@ -71,7 +71,7 @@ Feature: Happy Paths - Affordability
     When the user clicks no on the upfront payment page
     And the user clicks continue
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 1000, benefits of 200 and other income of 300
@@ -88,8 +88,8 @@ Feature: Happy Paths - Affordability
     And the user enters valid bank details
     When the user enters <Input Value> into the <Field> field
     And the user clicks continue
-    And the user clicks continue_button
-    And the user clicks continue_button
+    And the user clicks continue
+    And the user clicks continue
     Then the submission has been successful
 
     Examples:
@@ -110,7 +110,7 @@ Feature: Happy Paths - Affordability
     When the user clicks no on the upfront payment page
     And the user clicks continue
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 1000, benefits of 200 and other income of 300

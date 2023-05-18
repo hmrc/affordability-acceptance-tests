@@ -15,7 +15,7 @@ Feature: Welsh Content
     And the user clicks continue
     And the user is on the WhatDayOfMonthPage
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 100, benefits of 200 and other income of 300
@@ -38,9 +38,9 @@ Feature: Welsh Content
     And the user enters valid bank details
     And the user clicks continue
     And the user is on the ConfirmDirectDebitDetailsPage
-    And the user clicks continue_button
+    And the user clicks continue
     Then the user is on the TermsAndConditionsPage
-    And the user clicks continue_button
+    And the user clicks continue
     Then the submission has been successful
     Then the user is on the SuccessConfirmationPage
     Then the user clicks View your payment plan
@@ -61,7 +61,7 @@ Feature: Welsh Content
     And the user is on the PaymentSummaryPage
     And the user clicks continue
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 100, benefits of 200 and other income of 300
@@ -77,8 +77,8 @@ Feature: Welsh Content
     And the user clicks continue
     When the user enters valid bank details
     And the user clicks continue
-    And the user clicks continue_button
-    And the user clicks continue_button
+    And the user clicks continue
+    And the user clicks continue
     Then the submission has been successful
     And the conditional sentence for Upfront payment is displayed
     And the language toggle is reset to English
@@ -106,7 +106,7 @@ Feature: Welsh Content
     When the user clicks no on the upfront payment page
     And the user clicks continue
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 100, benefits of 200 and other income of 300
@@ -131,7 +131,7 @@ Feature: Welsh Content
     When the user clicks no on the upfront payment page
     And the user clicks continue
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 1000, benefits of 200 and other income of 300
@@ -194,7 +194,7 @@ Feature: Welsh Content
     And the user clicks continue
     And the user is on the WhatDayOfMonthPage
     When the user enters <Input Value> into the <Field> field
-    And the user clicks next
+    And the user clicks continue
     Then the <Field> field should display "<Message>"
     Then the User toggles on English language
 
@@ -426,7 +426,7 @@ Feature: Welsh Content
     And the user adds monthly spending of 10 to all fields
     And the user clicks continue
     And the user clicks continue
-    And the user clicks next
+    And the user clicks continue
     Then the plan selection field should display "Dewiswch opsiwn"
     Then the User toggles on English language
 
@@ -478,7 +478,7 @@ Feature: Welsh Content
     And the user clicks continue
     And the user enters valid bank details
     And the user clicks continue
-    And the user clicks continue_button
+    And the user clicks continue
     When there is an error with direct debit setup <type>
     Then the user is on the <page>
     Then the User toggles on English language

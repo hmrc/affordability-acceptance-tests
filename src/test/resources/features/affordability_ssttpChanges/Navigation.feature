@@ -34,7 +34,7 @@ Feature: Navigation tests
     And the user clicks continue
     And the user clicks continue
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 100, benefits of 200 and other income of 300

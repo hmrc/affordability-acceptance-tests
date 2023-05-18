@@ -32,7 +32,7 @@ class CommonSteps extends Steps with DriverActions {
     StartPage.clickStartNow()
     continue()
     UpfrontPaymentPage.selectRadio("yes")
-    next()
+    continue()
   }
 
   Given("""^A user logs in and gets to the About your bank account page$""") { () =>
@@ -40,11 +40,11 @@ class CommonSteps extends Steps with DriverActions {
     StartPage.clickStartNow()
     continue()
     UpfrontPaymentPage.selectRadio("no")
-    next()
+    continue()
     WhatDayOfMonthPage.enterDayOfMonth("28")
-    next()
+    continue()
     HowManyMonthsPage.enterAmountOfMonths("50 percent")
-    next()
+    continue()
     continue()
   }
 
@@ -53,9 +53,9 @@ class CommonSteps extends Steps with DriverActions {
     StartPage.clickStartNow()
     continue()
     UpfrontPaymentPage.selectRadio("no")
-    next()
+    continue()
     WhatDayOfMonthPage.enterDayOfMonth("28")
-    next()
+    continue()
   }
 
   And("""^user enters affordability pages$""") { () =>
@@ -66,13 +66,10 @@ class CommonSteps extends Steps with DriverActions {
     TestOnlyStartPage.createUserAndGoToPage(page)
   }
 
-  And("""^the user clicks (start|continue|next|continue_button|back|browser back)$""") { (action: String) =>
+  And("""^the user clicks (start|continue|back|browser back)$""") { (action: String) =>
     action match {
       case "start" => StartPage.clickStartNow()
-      //TODO sort out a standard for continue button ids! grr multiple id's used in Frontend code.
       case "continue" => continue()
-      case "next" => next()
-      case "continue_button" => continueButton()
       case "back" => back()
       case "browser back" => browserBack()
     }

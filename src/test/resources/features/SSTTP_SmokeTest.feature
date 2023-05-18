@@ -11,7 +11,7 @@ Feature: SUPP - SmokeTest
     And the user clicks continue
     And the user clicks continue
     And the user enters 28 on the what day of the month page
-    And the user clicks next
+    And the user clicks continue
     And the user clicks continue
     And the user clicks on the add income link
     And the user adds monthly income of 100, benefits of 200 and other income of 300
@@ -27,6 +27,6 @@ Feature: SUPP - SmokeTest
     And the user clicks continue
     When the user enters valid bank details
     And the user clicks continue
-    And the user clicks continue_button
-    And the user clicks continue_button
+    And the user clicks continue
+    And the user clicks continue
     Then the user clicks View your payment plan
