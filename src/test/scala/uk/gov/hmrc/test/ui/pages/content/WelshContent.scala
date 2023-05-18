@@ -59,7 +59,6 @@ object WelshContent {
 
   def setupDirectDebitContent(): String = {
     s"""Trefnu Debyd Uniongyrchol
-       |Enter your banking details
        |Yr enw sydd ar y cyfrif
        |Cod didoli
        |Mae’n rhaid i hyn fod yn 6 digid o hyd
