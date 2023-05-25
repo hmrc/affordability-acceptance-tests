@@ -38,27 +38,13 @@ object ConfirmDirectDebitDetailsPage extends BasePage {
 
   def pageContent: String = id("main-content").webElement.getText
 
-  def ddGuaranteeContent: String = cssSelector("#content > section > details > div").webElement.getText
-
-  def ddGuaranteeLinkContent: String = cssSelector("#content > section > details > summary > span").webElement.getText
-
-  //  def assertContent(): Assertion =  {
-  //    if (langToggle == Language.welsh) pageContent should be(WelshContent.accountOnFilePageText())
-  //    else pageContent should be(EnglishContent.accountOnFilePageText())
-  //  }
+  def ddGuaranteeContent: String = cssSelector("#content > div.govuk-body__text").webElement.getText
 
   def clickChangeLink(link: String) = {
     id(s"change-$link").webElement.click()
   }
 
-  def expandDDGuarantee(): Unit = {
-    cssSelector("#content > section > details > summary > span").webElement.click()
-  }
-
   def assertContentSlim(): Unit = {
-    if (langToggle == Language.welsh) ddGuaranteeLinkContent should be("Rydych wedi’ch gwarchod gan y Warant Debyd Uniongyrchol")
-    else ddGuaranteeLinkContent should be("You are covered by the Direct Debit Guarantee")
-    expandDDGuarantee()
     if (langToggle == Language.welsh) ddGuaranteeContent should be(WelshContent.ddGuaranteeContent())
     else ddGuaranteeContent should be(EnglishContent.ddGuaranteeContent())
   }
