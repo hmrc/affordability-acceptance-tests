@@ -646,7 +646,7 @@ object WelshContent {
        |Os ydych wedi gwneud camgymeriad, ewch yn ôl i ychwanegu’ch incwm.
        |Os oes angen cymorth ychwanegol arnoch chi
        |Dysgwch am y ffyrdd gwahanol o ddelio â CThEF os oes angen help arnoch chi.
-       |Gallwch hefyd ddefnyddio Relay UK os na allwch glywed na siarad dros y ffôn: deialwch 18001 ac yna 0345 300 3900.
+       |Gallwch hefyd ddefnyddio Relay UK os na allwch glywed na siarad dros y ffôn: deialwch 18001 ac yna 0345 300 3900. Sylwer – dim ond galwadau ffôn Saesneg eu hiaith y mae Relay UK yn gallu ymdrin â nhw.
        |Os ydych y tu allan i’r DU: +44 300 200 1900.
        |Ewch i’r cyfrif treth
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
