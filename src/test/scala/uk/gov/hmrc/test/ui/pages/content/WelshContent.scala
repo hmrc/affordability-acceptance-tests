@@ -471,7 +471,7 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
-  def directDebitErrorContent(): String = {``
+  def directDebitErrorContent(): String = {
     s"""Ffoniwch ni ynghylch cynllun talu
        |Rydym yn cael anawsterau wrth gyflwyno’ch cyfarwyddyd Debyd Uniongyrchol.
        |Ffoniwch ni ar 0300 200 1900 oherwydd mae’n bosibl y gallwch drefnu cynllun dros y ffôn.
