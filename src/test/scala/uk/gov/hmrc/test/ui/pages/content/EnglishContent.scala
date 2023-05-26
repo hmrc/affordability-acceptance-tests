@@ -639,6 +639,19 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def noIncomePageContent(): String = {
+    s"""Call us about a payment plan
+       |You told us that you have no income. You cannot set up a Self Assessment payment plan online if you do not have any income.
+       |Call us on 0300 123 1813 as you may be able to set up a plan over the phone.
+       |Our opening times are Monday to Friday, 8am to 6pm. We are closed on weekends and bank holidays.
+       |Go back to add your income if you made a mistake.
+       |If you need extra support
+       |Find out the different ways to deal with HMRC if you need some help.
+       |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
+       |If you are outside the UK: +44 2890 538 192.
+       |Go to tax account
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
 
   // template function
   def templateText(): String = {

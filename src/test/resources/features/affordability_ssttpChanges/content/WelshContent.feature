@@ -316,16 +316,22 @@ Feature: Welsh Content
       | lang  | value | Message                            |
       | Welsh | !@    | fod yn swm, megis £100 neu £250.75 |
 
-
-  Scenario: Welsh - Error Validation on Add Income Page - Nothing entered
+  Scenario Outline: Welsh - Error Validation on Add Income Page - Nothing entered
     Given A user logs in and gets to the affordability pages
     When the User toggles on Welsh language
     And the user clicks continue
     And the user clicks on the add income link
+    When the user enters <value> into the monthly income field
+    When the user enters <value> into the benefits field
+    When the user enters <value> into the other income field
     And the user clicks continue
-    Then the income invalid field should display "Mae’n rhaid i chi nodi’ch incwm Os nad oes gennych unrhyw incwm, ffoniwch ni ar 0300 200 1900"
+    Then the user is on the NoIncomePage
     Then the User toggles on English language
 
+    Examples:
+      | value |
+      | none  |
+      | 0     |
 
   Scenario Outline: Welsh - Error Validation on Add Spending Page
     Given A user logs in and gets to the affordability pages
