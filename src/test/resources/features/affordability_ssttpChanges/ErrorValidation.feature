@@ -207,12 +207,21 @@ Feature: Error Validation on various pages created/updated by Affordability chan
       | lang    | value | Message                                 |
       | English | !@    | must be an amount, like £100 or £250.75 |
 
-  Scenario: Error Validation on Add Income Page - Nothing entered
+  @a11y @zap
+  Scenario Outline: Error Validation on Add Income Page - Nothing entered
     Given A user logs in and gets to the affordability pages
     And the user clicks continue
     And the user clicks on the add income link
+    When the user enters <value> into the monthly income field
+    When the user enters <value> into the benefits field
+    When the user enters <value> into the other income field
     And the user clicks continue
-    Then the income invalid field should display "You must enter your income If you do not have any income, call us on 0300 123 1813"
+    Then the user is on the NoIncomePage
+
+    Examples:
+      | value |
+      | none  |
+      | 0     |
 
 ### Affordability - Add Spending page
   Scenario Outline: Error Validation on Add Spending Page
