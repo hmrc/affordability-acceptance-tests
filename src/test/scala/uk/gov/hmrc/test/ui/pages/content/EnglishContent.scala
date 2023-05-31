@@ -40,7 +40,11 @@ object EnglishContent {
     s"""You cannot set up a Direct Debit online
        |You need a named account holder or someone with authorisation to set up a Direct Debit.
        |If you are not the account holder or you wish to set up a Direct Debit with a multi-signature account, speak to an adviser on 0300 123 1813. You must ensure all account holders are present when calling.
-       |
+       |Our opening times are Monday to Friday, 8am to 6pm. We are closed on weekends and bank holidays.
+       |If you need extra support
+       |Find out the different ways to deal with HMRC if you need some help.
+       |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
+       |If you are outside the UK: +44 2890 538 192.
        |Go to tax account
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
@@ -182,16 +186,14 @@ object EnglishContent {
   }
 
   def needToFileContent(): String = {
-    s"""File your return to use this service
-       |To be eligible to set up a payment plan online you need to have filed your Self Assessment tax return. Once you have done this, you can return to the service.
-       |Go to your tax account to file your Self Assessment tax return.
-       |For further support, you can contact us on 0300 123 1813 to speak to an adviser.
-       |If you cannot use speech recognition software
-       |Find out how to deal with HMRC if you need extra support.
+    s"""File your Self Assessment tax return to use this service
+       |You must file your tax return before you can set up a Self Assessment payment plan online.
+       |Call us on 0300 123 1813 if you need to speak to an adviser.
+       |Our opening times are Monday to Friday, 8am to 6pm. We are closed on weekends and bank holidays.
+       |If you need extra support
+       |Find out the different ways to deal with HMRC if you need some help.
        |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
        |If you are outside the UK: +44 2890 538 192.
-       |Our opening times are:
-       |Monday to Friday: 8am to 6pm
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 

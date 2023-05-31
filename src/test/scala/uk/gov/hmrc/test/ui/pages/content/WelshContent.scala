@@ -39,7 +39,11 @@ object WelshContent {
     s"""Ni allwch drefnu Debyd Uniongyrchol ar-lein
        |Mae angen rhywun sydd wedi’i enwi’n ddeiliad y cyfrif, neu rywun ag awdurdod, er mwyn trefnu Debyd Uniongyrchol.
        |Os nad chi yw deiliad y cyfrif, neu os ydych yn dymuno trefnu Debyd Uniongyrchol gyda chyfrif aml-lofnod, rydym yn argymell eich bod yn siarad ag ymgynghorydd ar 0300 200 1900 yn y Gwasanaeth Cwsmeriaid Cymraeg. Rhaid i chi sicrhau bod holl ddeiliaid y cyfrif yn bresennol wrth ffonio.
-       |
+       |Ein horiau agor yw Dydd Llun i Ddydd Gwener, 08:30 i 17:00. Rydym ar gau ar benwythnosau a gwyliau banc.
+       |Os oes angen cymorth ychwanegol arnoch chi
+       |Dysgwch am y ffyrdd gwahanol o ddelio â CThEF os oes angen help arnoch chi.
+       |Gallwch hefyd ddefnyddio Relay UK os na allwch glywed na siarad dros y ffôn: deialwch 18001 ac yna 0345 300 3900. Sylwer – dim ond galwadau ffôn Saesneg eu hiaith y mae Relay UK yn gallu ymdrin â nhw.
+       |Os ydych y tu allan i’r DU: +44 300 200 1900.
        |Ewch i’r cyfrif treth
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
@@ -181,16 +185,14 @@ object WelshContent {
   }
 
   def needToFileContent(): String = {
-    s"""Cyflwynwch eich Ffurflen Dreth er mwyn defnyddio’r gwasanaeth hwn
-       |I fod yn gymwys i drefnu cynllun talu ar-lein, mae’n rhaid i chi fod wedi cyflwyno’ch Ffurflen Dreth Hunanasesiad. Pan fyddwch wedi gwneud hyn, gallwch ddychwelyd i’r gwasanaeth.
-       |Ewch i’ch cyfrif treth er mwyn cyflwyno’ch Ffurflen Dreth Hunanasesiad.
-       |I gael cymorth pellach, gallwch gysylltu â Gwasanaeth Cwsmeriaid Cymraeg CThEF ar 0300 200 1900 i siarad ag ymgynghorydd.
-       |Os na allwch ddefnyddio meddalwedd adnabod lleferydd
-       |Cael gwybod sut i ddelio â CThEF os oes angen cymorth ychwanegol arnoch.
+    s"""Cyflwynwch eich Ffurflen Dreth Hunanasesiad er mwyn defnyddio’r gwasanaeth hwn
+       |Mae’n rhaid i chi gyflwyno’ch Ffurflen Dreth cyn i chi allu trefnu cynllun talu ar gyfer Hunanasesiad ar-lein.
+       |Ffoniwch ni ar 0300 200 1900 os oes angen i chi siarad ag ymgynghorydd.
+       |Ein horiau agor yw Dydd Llun i Ddydd Gwener, 08:30 i 17:00. Rydym ar gau ar benwythnosau a gwyliau banc.
+       |Os oes angen cymorth ychwanegol arnoch chi
+       |Dysgwch am y ffyrdd gwahanol o ddelio â CThEF os oes angen help arnoch chi.
        |Gallwch hefyd ddefnyddio Relay UK os na allwch glywed na siarad dros y ffôn: deialwch 18001 ac yna 0345 300 3900. Sylwer – dim ond galwadau ffôn Saesneg eu hiaith y mae Relay UK yn gallu ymdrin â nhw.
-       |Os ydych y tu allan i’r DU: +44 300 200 1900
-       |Ein horiau agor yw:
-       |Dydd Llun i ddydd Gwener: 08:30 i 17:00 (rydym ar gau ar benwythnosau a gwyliau banc)
+       |Os ydych y tu allan i’r DU: +44 300 200 1900.
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
