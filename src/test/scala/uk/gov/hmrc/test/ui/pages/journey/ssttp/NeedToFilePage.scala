@@ -8,16 +8,16 @@ import uk.gov.hmrc.test.ui.utils.Configuration.testConfig
 
 object NeedToFilePage extends BasePage {
 
-  val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/eligibility/you-need-to-file"
+  val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/file-your-tax-return"
 
   def expectedPageTitle = {
-    if (langToggle == Language.welsh) "Cyflwynwch eich Ffurflen Dreth er mwyn defnyddio’r gwasanaeth hwn - Trefnu cynllun talu - GOV.UK"
-    else "File your return to use this service - Set up a Self Assessment payment plan - GOV.UK"
+    if (langToggle == Language.welsh) "Cyflwynwch eich Ffurflen Dreth Hunanasesiad er mwyn defnyddio’r gwasanaeth hwn - Trefnu cynllun talu - GOV.UK"
+    else "File your Self Assessment tax return to use this service - Set up a Self Assessment payment plan - GOV.UK"
   }
 
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "Cyflwynwch eich Ffurflen Dreth er mwyn defnyddio’r gwasanaeth hwn"
-    else "File your return to use this service"
+    if (langToggle == Language.welsh) "Cyflwynwch eich Ffurflen Dreth Hunanasesiad er mwyn defnyddio’r gwasanaeth hwn"
+    else "File your Self Assessment tax return to use this service"
   }
 
   def expectedPageTitleError: String = "Error: " + expectedPageTitle
@@ -29,7 +29,6 @@ object NeedToFilePage extends BasePage {
   def pageContent: String = id("main-content").webElement.getText
 
   def assertContent(): Assertion = {
-    expandLink()
     if (langToggle == Language.welsh) pageContent should be(WelshContent.needToFileContent())
     else pageContent should be(EnglishContent.needToFileContent())
   }
