@@ -131,6 +131,9 @@ class CommonSteps extends Steps with DriverActions {
       case "CallUsNotEligiblePage" =>
         CallUsNotEligiblePage.shouldBeLoaded()
         CallUsNotEligiblePage.assertContent()
+      case "CallUsDebtTooOldPage" =>
+        CallUsDebtTooOldPage.shouldBeLoaded()
+        CallUsDebtTooOldPage.assertContent()
       case "CallUsNotEnrolledPage" =>
         CallUsNotEnrolledPage.shouldBeLoaded()
         CallUsNotEnrolledPage.assertContent()

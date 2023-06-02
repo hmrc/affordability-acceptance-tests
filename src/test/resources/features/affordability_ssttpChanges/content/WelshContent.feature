@@ -94,6 +94,7 @@ Feature: Welsh Content
       | CallUsNotEligiblePage  |
       | CallUsNotEnrolledPage  |
       | CallUsDebtTooLargePage |
+      | CallUsDebtTooOldPage |
       | NeedToFilePage         |
 
 
