@@ -48,12 +48,21 @@ object TestOnlyStartPage extends BasePage {
     linkText("clear play session").webElement.click()
     linkText("create user and log in").webElement.click()
     waitForPageToLoad()
+    //TODO test data setup for each scenario / kickout eligibility
+//    page match {
+//      case "NeedToFilePage" =>
+//      case "CallUsNotEligiblePage" =>
+//      case "CallUsNotEnrolledPage" =>
+//      case "CallUsDebtTooLargePage" =>
+//      case "CallUsDebtTooOldPage" =>
     cssSelector("#content > form > button").webElement.click()
+    //TODO remove once test data is setup for scenarios instead of shortcuts
     page match {
       case "NeedToFilePage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(13) > a").webElement.click()
       case "CallUsNotEligiblePage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(14) > a").webElement.click()
       case "CallUsNotEnrolledPage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(15) > a").webElement.click()
       case "CallUsDebtTooLargePage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(16) > a").webElement.click()
+      case "CallUsDebtTooOldPage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(17) > a").webElement.click()
     }
   }
 

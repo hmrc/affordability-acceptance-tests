@@ -11,25 +11,20 @@ object CallUsDebtTooLargePage extends BasePage {
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/eligibility/debt-large/call-us"
 
   def expectedPageTitle = {
-    if (langToggle == Language.welsh) "Ffoniwch ni - Trefnu cynllun talu - GOV.UK"
-    else "Please call us - Set up a Self Assessment payment plan - GOV.UK"
+    if (langToggle == Language.welsh) "Ffoniwch ni ynghylch cynllun talu - Trefnu cynllun talu - GOV.UK"
+    else "Call us about a payment plan - Set up a Self Assessment payment plan - GOV.UK"
   }
 
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "Ffoniwch ni"
-    else "Please call us"
+    if (langToggle == Language.welsh) "Ffoniwch ni ynghylch cynllun talu"
+    else "Call us about a payment plan"
   }
 
   def expectedPageTitleError: String = "Error: " + expectedPageTitle
 
-  def expandLink(): Unit = {
-    cssSelector("#content > section > details > summary > span").webElement.click()
-  }
-
   def pageContent: String = id("main-content").webElement.getText
 
   def assertContent(): Assertion = {
-    expandLink()
     if (langToggle == Language.welsh) pageContent should be(WelshContent.callUsNotDebtTooLargeContent())
     else pageContent should be(EnglishContent.callUsNotDebtTooLargeContent())
   }

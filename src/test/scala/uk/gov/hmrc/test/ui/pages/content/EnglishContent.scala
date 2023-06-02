@@ -128,22 +128,42 @@ object EnglishContent {
   }
 
   def callUsNotEligibleContent(): String = {
-    s"""Please call us
-       |You are not eligible to set up a payment plan online.
-       |For further support, you can contact us on 0300 123 1813 to speak to an adviser.
-       |If you cannot use speech recognition software
-       |Find out how to deal with HMRC if you need extra support.
+    s"""Call us about a payment plan
+       |You are not eligible to set up a Self Assessment payment plan online.
+       |Call us on 0300 123 1813 as you may be able to set up a plan over the phone.
+       |Our opening times are Monday to Friday, 8am to 6pm. We are closed on weekends and bank holidays.
+       |If you need extra support
+       |Find out the different ways to deal with HMRC if you need some help.
        |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
        |If you are outside the UK: +44 2890 538 192.
        |Before you call, make sure you have:
+       |your 10-digit Unique Taxpayer Reference (UTR) number
        |information on any savings or investments you have
        |your bank details
        |details of your income and spending
-       |We’re likely to ask:
-       |what you’ve done to try to pay the bill
+       |We're likely to ask:
+       |what you've done to try to pay the bill
        |if you can pay some of the bill now
-       |Our opening times are:
-       |Monday to Friday: 8am to 6pm
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
+  def callUsDebtTooOldContent(): String = {
+    s"""Call us about a payment plan
+       |You cannot set up a Self Assessment payment plan online because your payment deadline was over 60 days ago.
+       |Call us on 0300 123 1813 as you may be able to set up a plan over the phone.
+       |Our opening times are Monday to Friday, 8am to 6pm. We are closed on weekends and bank holidays.
+       |If you need extra support
+       |Find out the different ways to deal with HMRC if you need some help.
+       |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
+       |If you are outside the UK: +44 2890 538 192.
+       |Before you call, make sure you have:
+       |your 10-digit Unique Taxpayer Reference (UTR) number
+       |information on any savings or investments you have
+       |your bank details
+       |details of your income and spending
+       |We're likely to ask:
+       |what you've done to try to pay the bill
+       |if you can pay some of the bill now
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
@@ -154,7 +174,7 @@ object EnglishContent {
        |If you cannot use speech recognition software
        |Find out how to deal with HMRC if you need extra support.
        |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
-       |If you are outside the UK: +44 2890 538 192.
+       |If you are outside the UK: +44 2890 538 192
        |Before you call, make sure you have:
        |information on any savings or investments you have
        |your bank details
@@ -167,21 +187,22 @@ object EnglishContent {
   }
 
   def callUsNotDebtTooLargeContent(): String = {
-    s"""Please call us
-       |To be eligible to set up a payment plan online the tax you owe must be £30,000 or less.
-       |For further support, you can contact us on 0300 123 1813 to speak to an adviser.
-       |If you cannot use speech recognition software
-       |Find out how to deal with HMRC if you need extra support.
+    s"""Call us about a payment plan
+       |You cannot set up a Self Assessment payment plan online because you owe more than £30,000.
+       |Call us on 0300 123 1813 as you may be able to set up a plan over the phone.
+       |Our opening times are Monday to Friday, 8am to 6pm. We are closed on weekends and bank holidays.
+       |If you need extra support
+       |Find out the different ways to deal with HMRC if you need some help.
        |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
        |If you are outside the UK: +44 2890 538 192.
        |Before you call, make sure you have:
+       |your 10-digit Unique Taxpayer Reference (UTR) number
        |information on any savings or investments you have
        |your bank details
-       |We’re likely to ask:
-       |what you’ve done to try to pay the bill
+       |details of your income and spending
+       |We're likely to ask:
+       |what you've done to try to pay the bill
        |if you can pay some of the bill now
-       |Our opening times are:
-       |Monday to Friday: 8am to 6pm
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
