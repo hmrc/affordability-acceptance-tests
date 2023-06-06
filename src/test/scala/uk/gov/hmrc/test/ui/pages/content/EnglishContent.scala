@@ -676,6 +676,26 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def alreadyHavePlanPageContent(): String = {
+    s"""You already have a payment plan with HMRC
+       |You cannot set up a Self Assessment payment plan online.
+       |Call us on 0300 123 1813 as you may be able to set up a plan over the phone.
+       |Our opening times are Monday to Friday, 8am to 6pm. We are closed on weekends and bank holidays.
+       |If you need extra support
+       |Find out the different ways to deal with HMRC if you need some help.
+       |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
+       |If you are outside the UK: +44 2890 538 192.
+       |Before you call, make sure you have:
+       |your 10-digit Unique Taxpayer Reference (UTR) number
+       |information on any savings or investments you have
+       |your bank details
+       |details of your income and spending
+       |We're likely to ask:
+       |what you've done to try to pay the bill
+       |if you can pay some of the bill now
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""
