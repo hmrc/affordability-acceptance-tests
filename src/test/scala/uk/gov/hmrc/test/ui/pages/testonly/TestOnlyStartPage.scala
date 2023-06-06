@@ -63,6 +63,12 @@ object TestOnlyStartPage extends BasePage {
       case "CallUsNotEnrolledPage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(15) > a").webElement.click()
       case "CallUsDebtTooLargePage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(16) > a").webElement.click()
       case "CallUsDebtTooOldPage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(17) > a").webElement.click()
+      case "CallUsAlreadyHavePlanPage" =>
+        click on linkText("create user and log in")
+        click on id("hasExistingDirectDebit")
+        click on cssSelector("#content > form > button")
+        click on cssSelector("#content > ul:nth-child(9) > li:nth-child(1) > a")
+        click on id("start-now")
     }
   }
 

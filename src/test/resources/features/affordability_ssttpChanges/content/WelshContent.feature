@@ -90,13 +90,13 @@ Feature: Welsh Content
     And the User toggles on English language
 
     Examples:
-      | page                   |
-      | CallUsNotEligiblePage  |
-      | CallUsNotEnrolledPage  |
-      | CallUsDebtTooLargePage |
-      | CallUsDebtTooOldPage |
-      | NeedToFilePage         |
-
+      | page                      |
+      | CallUsNotEligiblePage     |
+      | CallUsNotEnrolledPage     |
+      | CallUsDebtTooLargePage    |
+      | CallUsDebtTooOldPage      |
+      | NeedToFilePage            |
+      | CallUsAlreadyHavePlanPage |
 
 ### Error Validation
 

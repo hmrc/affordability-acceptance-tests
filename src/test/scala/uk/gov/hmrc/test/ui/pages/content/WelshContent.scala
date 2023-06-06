@@ -675,6 +675,26 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
+  def alreadyHavePlanPageContent(): String = {
+    s"""Mae eisoes gennych gynllun talu gyda CThEF
+       |Ni allwch drefnu cynllun talu Hunanasesiad ar-lein.
+       |Ffoniwch ni ar 0300 200 1900 oherwydd mae’n bosibl y gallwch drefnu cynllun dros y ffôn.
+       |Ein horiau agor yw Dydd Llun i Ddydd Gwener, 08:30 i 17:00. Rydym ar gau ar benwythnosau a gwyliau banc.
+       |Os oes angen cymorth ychwanegol arnoch chi
+       |Dysgwch am y ffyrdd gwahanol o ddelio â CThEF os oes angen help arnoch chi.
+       |Gallwch hefyd ddefnyddio Relay UK os na allwch glywed na siarad dros y ffôn: deialwch 18001 ac yna 0345 300 3900. Sylwer – dim ond galwadau ffôn Saesneg eu hiaith y mae Relay UK yn gallu ymdrin â nhw.
+       |Os ydych y tu allan i’r DU: +44 300 200 1900.
+       |Cyn i chi ffonio, sicrhewch fod gennych y canlynol:
+       |eich Cyfeirnod Unigryw y Trethdalwr (UTR) 10 digid
+       |gwybodaeth am unrhyw gynilion neu fuddsoddiadau sydd gennych
+       |eich manylion banc
+       |manylion eich incwm a’ch gwariant
+       |Rydym yn debygol o ofyn y canlynol:
+       |beth rydych wedi’i wneud i geisio talu’r bil
+       |a allwch dalu rhywfaint o’r bil nawr
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
+  }
+
   // template function
   def templateText(): String = {
     s"""

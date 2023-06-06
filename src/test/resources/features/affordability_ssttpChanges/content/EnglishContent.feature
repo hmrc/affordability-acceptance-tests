@@ -77,12 +77,13 @@ Feature: English Content
     Then the user is on the <page>
 
     Examples:
-      | page                   |
-      | CallUsNotEligiblePage  |
-      | CallUsNotEnrolledPage  |
-      | CallUsDebtTooLargePage |
-      | CallUsDebtTooOldPage   |
-      | NeedToFilePage         |
+      | page                      |
+      | CallUsNotEligiblePage     |
+      | CallUsNotEnrolledPage     |
+      | CallUsDebtTooLargePage    |
+      | CallUsDebtTooOldPage      |
+      | NeedToFilePage            |
+      | CallUsAlreadyHavePlanPage |
 
 
   Scenario: Affordability Screens Content -
