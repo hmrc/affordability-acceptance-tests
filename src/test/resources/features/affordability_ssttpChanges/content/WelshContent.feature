@@ -495,5 +495,24 @@ Feature: Welsh Content
       | DirectDebitErrorPage      | error      |
       | DirectDebitAssistancePage | assistance |
 
+  Scenario: Welsh - Error Validation on Set Up Direct Debit page - Supports DD Debit = No
+    Given A user logs in and gets to the affordability pages
+    When the User toggles on Welsh language
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 1000, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters 50 percent on the how many months page
+    And the user clicks continue
+    And the user clicks continue
+    When the user selects personal and is the account holder on the About account page
+    And the user clicks continue
+    When the user enters supportsDirectDebit=No bank details
+    And the user clicks continue
+    Then the Sortcode field should display "Rydych wedi nodi cod didoli nad yw’n derbyn y math hwn o daliad. Gwiriwch eich bod wedi nodi cod didoli dilys, neu nodwch fanylion ar gyfer cyfrif gwahanol"
 
 
