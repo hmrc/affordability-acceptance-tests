@@ -312,10 +312,6 @@ object WelshContent {
        |swm y taliad ymlaen llaw
        |Swm sy’n weddill i’w dalu £2,812.55
        |Bydd llog yn cael ei ychwanegu at y swm hwn
-       |Sut rydym yn cyfrifo llog
-       |Rydym yn codi llog ar bob swm sy’n hwyr.
-       |Rydym yn codi cyfradd sylfaenol Banc Lloegr ynghyd â 2.5% y flwyddyn.
-       |Os bydd y gyfradd llog yn newid yn ystod eich cynllun talu, efallai bydd yn rhaid i chi setlo unrhyw wahaniaeth ar y diwedd. Byddwn yn cysylltu â chi os yw hyn yn wir.
        |Yn eich blaen
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
@@ -599,7 +595,10 @@ object WelshContent {
   def howManyMonthsTextLegacy(): String = {
     s"""Faint y gallwch ei dalu bob mis?
        |Yn seiliedig ar yr incwm sydd gennych dros ben, gallwch nawr ddewis gynllun talu. Bydd y taliad misol olaf yn eich cynllun yn fwy oherwydd y bydd yn cynnwys llog ac unrhyw dreth sy’n weddill sydd arnoch.
+       |Sut rydym yn cyfrifo llog
+       |Rydym yn codi llog ar bob swm sy’n hwyr.
        |Rydym yn codi cyfradd sylfaenol Banc Lloegr ynghyd â 2.5% y flwyddyn.
+       |Os bydd y gyfradd llog yn newid yn ystod eich cynllun talu, efallai bydd yn rhaid i chi setlo unrhyw wahaniaeth ar y diwedd. Byddwn yn cysylltu â chi os yw hyn yn wir.
        |Os bydd y cynllun yr ydych yn ei ddewis yn rhedeg i mewn i’r flwyddyn dreth nesaf, bydd dal angen i chi dalu’ch biliau treth yn y dyfodol mewn pryd.
        |£231.73 y mis, am 13 mis
        |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £37.21
@@ -642,7 +641,10 @@ object WelshContent {
   def howManyMonthsCustomTextLegacy(): String = {
     s"""Faint y gallwch ei dalu bob mis?
        |Yn seiliedig ar yr incwm sydd gennych dros ben, gallwch nawr ddewis gynllun talu. Bydd y taliad misol olaf yn eich cynllun yn fwy oherwydd y bydd yn cynnwys llog ac unrhyw dreth sy’n weddill sydd arnoch.
+       |Sut rydym yn cyfrifo llog
+       |Rydym yn codi llog ar bob swm sy’n hwyr.
        |Rydym yn codi cyfradd sylfaenol Banc Lloegr ynghyd â 2.5% y flwyddyn.
+       |Os bydd y gyfradd llog yn newid yn ystod eich cynllun talu, efallai bydd yn rhaid i chi setlo unrhyw wahaniaeth ar y diwedd. Byddwn yn cysylltu â chi os yw hyn yn wir.
        |Os bydd y cynllun yr ydych yn ei ddewis yn rhedeg i mewn i’r flwyddyn dreth nesaf, bydd dal angen i chi dalu’ch biliau treth yn y dyfodol mewn pryd.
        |£301.26 y mis, am 10 mis
        |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £26.31

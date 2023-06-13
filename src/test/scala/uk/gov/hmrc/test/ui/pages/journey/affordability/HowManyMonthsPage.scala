@@ -41,7 +41,8 @@ object HowManyMonthsPage extends BasePage {
 
   def assertContent(): Assertion = {
     expandOtherAmount()
-    expandLink()
+    expandLinkInterest()
+    expandLinkCannotAfford()
     if (serviceType == "Legacy") {
       if (langToggle == Language.welsh) pageContent should be(WelshContent.howManyMonthsTextLegacy())
       else pageContent should be(EnglishContent.howManyMonthsTextLegacy())
@@ -54,7 +55,8 @@ object HowManyMonthsPage extends BasePage {
 
   def assertContentCustom(): Assertion = {
     expandOtherAmount()
-    expandLink()
+    expandLinkInterest()
+    expandLinkCannotAfford()
     if (serviceType == "Legacy") {
       if (langToggle == Language.welsh) pageContent should be(WelshContent.howManyMonthsCustomTextLegacy())
       else pageContent should be(EnglishContent.howManyMonthsCustomTextLegacy())
@@ -78,7 +80,11 @@ object HowManyMonthsPage extends BasePage {
     }
   }
 
-  def expandLink(): Unit = {
+  def expandLinkInterest(): Unit = {
+    click on cssSelector("#paymentTodayForm > fieldset > details > summary > span")
+  }
+
+  def expandLinkCannotAfford(): Unit = {
     click on cssSelector("#paymentTodayForm > details > summary > span")
   }
 
