@@ -77,7 +77,7 @@ object AffordabilityCheckPaymentPlanPage extends BasePage {
   def warningText(): Unit = {
     def text: String = cssSelector("#content > div > strong").webElement.getText
 
-    if (langToggle == Language.welsh) text should be("Warning\nRydych yn dewis cynllun talu lle mae’ch taliadau misol dros hanner eich incwm sydd dros ben. Gwnewch yn siŵr eich bod yn gallu fforddio talu.")
+    if (langToggle == Language.welsh) text should be("Rhybudd\nRydych yn dewis cynllun talu lle mae’ch taliadau misol dros hanner eich incwm sydd dros ben. Gwnewch yn siŵr eich bod yn gallu fforddio talu.")
     else text should be("Warning\nYou are choosing a payment plan where your monthly payments are over half of your left over income. Make sure you can afford to pay.")
   }
 
