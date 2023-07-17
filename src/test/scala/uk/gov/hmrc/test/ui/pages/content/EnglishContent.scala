@@ -360,10 +360,14 @@ object EnglishContent {
     s"""Add your income and spending
        |1. Income
        |Change income
-       |Monthly income after tax £100
-       |Benefits £200
-       |Other monthly income £300
-       |Total income £600
+       |Monthly income after tax
+       |£100
+       |Benefits
+       |£200
+       |Other monthly income
+       |£300
+       |Total income
+       |£600
        |2. Spending
        |Add spending
        |Is this page not working properly? (opens in new tab)""".stripMargin
@@ -375,17 +379,28 @@ object EnglishContent {
        |Add income
        |2. Spending
        |Change spending
-       |Housing £10
-       |Pension contributions £10
-       |Council tax £10
-       |Utilities £10
-       |Debt repayments £10
-       |Travel £10
-       |Childcare costs £10
-       |Insurance £10
-       |Groceries £10
-       |Health £10
-       |Total spending £100
+       |Housing
+       |£10
+       |Pension contributions
+       |£10
+       |Council tax
+       |£10
+       |Utilities
+       |£10
+       |Debt repayments
+       |£10
+       |Travel
+       |£10
+       |Childcare costs
+       |£10
+       |Insurance
+       |£10
+       |Groceries
+       |£10
+       |Health
+       |£10
+       |Total spending
+       |£100
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
@@ -444,26 +459,43 @@ object EnglishContent {
     s"""How much you could afford
        |1. Income
        |Change income
-       |Monthly income after tax £100
-       |Benefits £200
-       |Other monthly income £300
-       |Total income £600
+       |Monthly income after tax
+       |£100
+       |Benefits
+       |£200
+       |Other monthly income
+       |£300
+       |Total income
+       |£600
        |2. Spending
        |Change spending
-       |Housing £10
-       |Pension contributions £10
-       |Council tax £10
-       |Utilities £10
-       |Debt repayments £10
-       |Travel £10
-       |Childcare costs £10
-       |Insurance £10
-       |Groceries £10
-       |Health £10
-       |Total spending £100
+       |Housing
+       |£10
+       |Pension contributions
+       |£10
+       |Council tax
+       |£10
+       |Utilities
+       |£10
+       |Debt repayments
+       |£10
+       |Travel
+       |£10
+       |Childcare costs
+       |£10
+       |Insurance
+       |£10
+       |Groceries
+       |£10
+       |Health
+       |£10
+       |Total spending
+       |£100
        |3. Left over income
-       |Total left over income £500
-       |Half of left over income £250
+       |Total left over income
+       |£500
+       |Half of left over income
+       |£250
        |Continue
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }

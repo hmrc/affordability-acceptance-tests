@@ -359,10 +359,14 @@ object WelshContent {
     s"""Ychwanegu eich incwm a’ch gwariant
        |1. Incwm
        |Newid incwm
-       |Incwm misol ar ôl treth £100
-       |Budd-daliadau £200
-       |Incwm misol arall £300
-       |Cyfanswm eich incwm £600
+       |Incwm misol ar ôl treth
+       |£100
+       |Budd-daliadau
+       |£200
+       |Incwm misol arall
+       |£300
+       |Cyfanswm eich incwm
+       |£600
        |2. Gwariant
        |Ychwanegu gwariant
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
@@ -374,17 +378,28 @@ object WelshContent {
        |Ychwanegu incwm
        |2. Gwariant
        |Newid gwariant
-       |Tai £10
-       |Cyfraniadau pensiwn £10
-       |Treth Gyngor £10
-       |Cyfleustodau £10
-       |Ad-daliadau dyledion £10
-       |Teithio £10
-       |Costau gofal plant £10
-       |Yswiriant £10
-       |Nwyddau Groser £10
-       |Iechyd £10
-       |Cyfanswm y gwariant £100
+       |Tai
+       |£10
+       |Cyfraniadau pensiwn
+       |£10
+       |Treth Gyngor
+       |£10
+       |Cyfleustodau
+       |£10
+       |Ad-daliadau dyledion
+       |£10
+       |Teithio
+       |£10
+       |Costau gofal plant
+       |£10
+       |Yswiriant
+       |£10
+       |Nwyddau Groser
+       |£10
+       |Iechyd
+       |£10
+       |Cyfanswm y gwariant
+       |£100
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
@@ -443,26 +458,42 @@ object WelshContent {
     s"""Faint y gallech ei fforddio
        |1. Incwm
        |Newid incwm
-       |Incwm misol ar ôl treth £100
-       |Budd-daliadau £200
-       |Incwm misol arall £300
-       |Cyfanswm eich incwm £600
+       |Incwm misol ar ôl treth
+       |£100
+       |Budd-daliadau
+       |£200
+       |Incwm misol arall
+       |£300
+       |Cyfanswm eich incwm
+       |£600
        |2. Gwariant
        |Newid gwariant
        |Tai £10
-       |Cyfraniadau pensiwn £10
-       |Treth Gyngor £10
-       |Cyfleustodau £10
-       |Ad-daliadau dyledion £10
-       |Teithio £10
-       |Costau gofal plant £10
-       |Yswiriant £10
-       |Nwyddau Groser £10
-       |Iechyd £10
-       |Cyfanswm y gwariant £100
+       |Cyfraniadau pensiwn
+       |£10
+       |Treth Gyngor
+       |£10
+       |Cyfleustodau
+       |£10
+       |Ad-daliadau dyledion
+       |£10
+       |Teithio
+       |£10
+       |Costau gofal plant
+       |£10
+       |Yswiriant
+       |£10
+       |Nwyddau Groser
+       |£10
+       |Iechyd
+       |£10
+       |Cyfanswm y gwariant
+       |£100
        |3. Incwm sydd dros ben
-       |Cyfanswm yr incwm sydd dros ben £500
-       |Hanner yr incwm sydd dros ben £250
+       |Cyfanswm yr incwm sydd dros ben
+       |£500
+       |Hanner yr incwm sydd dros ben
+       |£250
        |Yn eich blaen
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
