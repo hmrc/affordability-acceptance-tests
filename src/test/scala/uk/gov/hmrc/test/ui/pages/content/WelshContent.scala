@@ -468,7 +468,8 @@ object WelshContent {
        |£600
        |2. Gwariant
        |Newid gwariant
-       |Tai £10
+       |Tai
+       |£10
        |Cyfraniadau pensiwn
        |£10
        |Treth Gyngor
