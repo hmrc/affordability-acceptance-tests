@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 HM Revenue & Customs
+ * Copyright 2023 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package uk.gov.hmrc.test.ui.pages.journey.affordability
 
-import org.openqa.selenium.WebElement
 import org.scalatest.Assertion
 import uk.gov.hmrc.test.ui.pages.BasePage
 import uk.gov.hmrc.test.ui.pages.content.{EnglishContent, WelshContent}
@@ -26,12 +26,12 @@ object CannotAgreePlanPage extends BasePage {
 
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/we-cannot-agree-your-payment-plan"
 
-  def expectedPageTitle = {
+  def expectedPageTitle: String = {
     if (langToggle == Language.welsh) "Ni allwn gytuno ar eich cynllun talu ar-lein - Trefnu cynllun talu - GOV.UK"
     else "We cannot agree your payment plan online - Set up a Self Assessment payment plan - GOV.UK"
   }
 
-  def expectedPageHeader = {
+  def expectedPageHeader: String = {
     if (langToggle == Language.welsh) "Ni allwn gytuno ar eich cynllun talu ar-lein"
     else "We cannot agree your payment plan online"
   }

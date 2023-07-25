@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 HM Revenue & Customs
+ * Copyright 2023 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -107,9 +107,6 @@ class CommonSteps extends Steps with DriverActions {
       case "DirectDebitErrorPage" =>
         DirectDebitErrorPage.shouldBeLoaded()
         DirectDebitErrorPage.assertContent()
-      case "DirectDebitErrorPage" =>
-        DirectDebitErrorPage.shouldBeLoaded()
-        DirectDebitErrorPage.assertContent()
       case "DirectDebitAssistancePage" =>
         DirectDebitAssistancePage.shouldBeLoaded()
         DirectDebitAssistancePage.assertContent()
@@ -209,6 +206,7 @@ class CommonSteps extends Steps with DriverActions {
         //        HowManyMonthsPage.shouldBeLoaded()
         HowManyMonthsPage.assertContentCustom()
       case "TBC" => ""
+      case _ => throw new IllegalArgumentException(s"$page page not recognised")
     }
   }
 
@@ -308,7 +306,7 @@ class CommonSteps extends Steps with DriverActions {
 
   Then("""^the (.*) field should display "(.*)"$""") { (elem: String, message: String) =>
     waitForPageToLoad()
-    var elemLower = elem.toLowerCase
+    val elemLower = elem.toLowerCase
 
     def prependError: String = if (langToggle == Language.welsh) "Gwall:" else "Error:"
 
