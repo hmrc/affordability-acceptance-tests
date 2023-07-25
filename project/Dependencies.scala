@@ -9,7 +9,6 @@ object Dependencies {
     "io.cucumber"             %% "cucumber-scala"       % "8.16.0",
     "io.cucumber"              % "cucumber-junit"       % "7.13.0",
     "uk.gov.hmrc"             %% "webdriver-factory"    % "0.45.0",
-//    "org.typelevel"           %% "cats"                 % "0.9.0",
     "com.novocode"             %  "junit-interface"     % "0.11",
     "org.mongodb.scala"       %% "mongo-scala-driver"   % "2.7.0"
   ).map(_ % Test)
