@@ -84,6 +84,7 @@ Feature: English Content
       | CallUsDebtTooOldPage      |
       | NeedToFilePage            |
       | CallUsAlreadyHavePlanPage |
+      | CallUsAdviserPage         |
 
 
   Scenario: Affordability Screens Content -

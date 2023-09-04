@@ -187,6 +187,23 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def callUsAdviserContent(): String = {
+    s"""Set up a payment plan with an adviser
+       |The payment plan you have selected needs to be set up with an adviser.
+       |You can go back to check your income and spending.
+       |Connect to an adviser
+       |Use our webchat to set up a payment plan with an adviser online.
+       |You can also call us on 0300 123 1813 to set up a payment plan over the phone.
+       |Keep this page open when you connect to an adviser.
+       |Our opening times are Monday to Friday, 8am to 6pm. We are closed on weekends and bank holidays.
+       |If you need extra support
+       |Find out the different ways to deal with HMRC if you need some help.
+       |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
+       |If you are outside the UK: +44 2890 538 192.
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
+
   def callUsNotDebtTooLargeContent(): String = {
     s"""Call us about a payment plan
        |You cannot set up a Self Assessment payment plan online because you owe more than £30,000.

@@ -146,6 +146,10 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
+  def callUsAdviserContent(): String = {
+    s"""TBC""".stripMargin
+  }
+
   def callUsNotEnrolledContent(): String = {
     s"""Ffoniwch ni ynghylch cynllun talu
        |Nid ydych yn gymwys i drefnu cynllun talu Hunanasesiad ar-lein.
