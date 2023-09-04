@@ -57,16 +57,16 @@ object TestOnlyStartPage extends BasePage {
     cssSelector("#content > form > button").webElement.click()
     //TODO remove once test data is setup for scenarios instead of shortcuts
     page match {
-      case "NeedToFilePage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(13) > a").webElement.click()
-      case "CallUsNotEligiblePage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(14) > a").webElement.click()
-      case "CallUsNotEnrolledPage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(15) > a").webElement.click()
-      case "CallUsDebtTooLargePage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(16) > a").webElement.click()
-      case "CallUsDebtTooOldPage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(17) > a").webElement.click()
+      case "NeedToFilePage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(17) > a").webElement.click()
+      case "CallUsNotEligiblePage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(18) > a").webElement.click()
+      case "CallUsNotEnrolledPage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(19) > a").webElement.click()
+      case "CallUsDebtTooLargePage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(20) > a").webElement.click()
+      case "CallUsDebtTooOldPage" => cssSelector("#content > ul:nth-child(9) > li:nth-child(21) > a").webElement.click()
       case "CallUsAlreadyHavePlanPage" =>
         click on linkText("create user and log in")
         click on id("hasExistingDirectDebit")
         click on cssSelector("#content > form > button")
-        click on cssSelector("#content > ul:nth-child(9) > li:nth-child(1) > a")
+        click on cssSelector("#content > ul:nth-child(9) > li:nth-child(22) > a")
         click on id("start-now")
     }
   }
