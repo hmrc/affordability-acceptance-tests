@@ -78,12 +78,12 @@ Feature: English Content
 
     Examples:
       | page                      |
-#      | CallUsNotEligiblePage     |
-#      | CallUsNotEnrolledPage     |
-#      | CallUsDebtTooLargePage    |
-#      | CallUsDebtTooOldPage      |
-#      | NeedToFilePage            |
-#      | CallUsAlreadyHavePlanPage |
+      | CallUsNotEligiblePage     |
+      | CallUsNotEnrolledPage     |
+      | CallUsDebtTooLargePage    |
+      | CallUsDebtTooOldPage      |
+      | NeedToFilePage            |
+      | CallUsAlreadyHavePlanPage |
       | CallUsAdviserPage         |
 
 
