@@ -66,7 +66,7 @@ object TestOnlyStartPage extends BasePage {
         click on linkText("create user and log in")
         click on id("hasExistingDirectDebit")
         click on cssSelector("#content > form > button")
-        click on cssSelector("#content > ul:nth-child(9) > li:nth-child(22) > a")
+        click on cssSelector("#content > ul:nth-child(9) > li:nth-child(1) > a")
         click on id("start-now")
       case "CallUsAdviserPage" =>
         click on linkText("create user and log in")
