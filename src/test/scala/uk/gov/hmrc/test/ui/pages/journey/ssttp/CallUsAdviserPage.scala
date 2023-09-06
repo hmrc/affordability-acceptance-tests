@@ -27,12 +27,12 @@ object CallUsAdviserPage extends BasePage {
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/set-up-payment-plan-adviser"
 
   def expectedPageTitle = {
-    if (langToggle == Language.welsh) "TBC - Trefnu cynllun talu - GOV.UK"
+    if (langToggle == Language.welsh) "Trefnu cynllun talu ag ymgynghorydd - Trefnu cynllun talu - GOV.UK"
     else "Set up a payment plan with an adviser - Set up a Self Assessment payment plan - GOV.UK"
   }
 
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "TBC"
+    if (langToggle == Language.welsh) "Trefnu cynllun talu ag ymgynghorydd"
     else "Set up a payment plan with an adviser"
   }
 

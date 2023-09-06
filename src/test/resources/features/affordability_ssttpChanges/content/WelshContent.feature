@@ -97,6 +97,7 @@ Feature: Welsh Content
       | CallUsDebtTooOldPage      |
       | NeedToFilePage            |
       | CallUsAlreadyHavePlanPage |
+      | CallUsAdviserPage         |
 
 ### Error Validation
 
