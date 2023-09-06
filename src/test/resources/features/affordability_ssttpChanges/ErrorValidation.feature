@@ -326,7 +326,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     And the user clicks continue
     And the user clicks continue
     And the user clicks continue
-    Then the plan selection field should display "Select an option"
+    Then the plan selection field should display "Select how much you can pay each month"
 
   Scenario Outline: Affordability - Error Validation on How Many Months Page
     Given A user logs in and gets to the affordability pages
@@ -348,7 +348,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
 #      | 3017.56 | That amount is too high, enter an amount that is at least £250 but no more than £3,017.55 | # Optimised
       | 273.86  | Enter an amount that is at least £273.87 but no more than £1,506.28 |
       | 1506.29 | Enter an amount that is at least £273.87 but no more than £1,506.28 |
-      |         | Enter an amount                                                     |
+      |         | Enter an amount that is at least £273.87 but no more than £1,506.28 |
       | !@      | Enter an amount that is at least £273.87 but no more than £1,506.28 |
       | ABC     | Enter an amount that is at least £273.87 but no more than £1,506.28 |
       | -260    | Enter an amount that is at least £273.87 but no more than £1,506.28 |
@@ -378,7 +378,7 @@ Feature: Error Validation on various pages created/updated by Affordability chan
 #      | 3017.56 | That amount is too high, enter an amount that is at least £250 but no more than £3,017.55 | # Optimised
       | 273.86  | Enter an amount that is at least £273.87 but no more than £1,506.28 |
       | 1506.29 | Enter an amount that is at least £273.87 but no more than £1,506.28 |
-      |         | Enter an amount                                                     |
+      |         | Enter an amount that is at least £273.87 but no more than £1,506.28 |
       | !@      | Enter an amount that is at least £273.87 but no more than £1,506.28 |
       | ABC     | Enter an amount that is at least £273.87 but no more than £1,506.28 |
       | -260    | Enter an amount that is at least £273.87 but no more than £1,506.28 |
