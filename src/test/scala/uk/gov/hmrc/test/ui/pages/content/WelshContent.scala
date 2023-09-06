@@ -147,7 +147,20 @@ object WelshContent {
   }
 
   def callUsAdviserContent(): String = {
-    s"""TBC""".stripMargin
+    s"""Trefnu cynllun talu ag ymgynghorydd
+       |Mae’n angen i’r cynllun talu rydych wedi’i ddewis gael ei drefnu ag ymgynghorydd.
+       |Gallwch fynd yn ôl i wirio’ch incwm a’ch gwariant.
+       |Cysylltu ag ymgynghorydd
+       |Ffoniwch ni ar 0300 200 1900 i sefydlu cynllun talu dros y ffôn.
+       |Mae ein llinellau ffôn ar agor o 08:30 tan 17:00, ddydd Llun i ddydd Gwener. Rydym yn ar gau ar benwythnosau a gwyliau banc.
+       |Gallwch hefyd ddefnyddio ein gwasanaeth sgwrsio dros y we i drefnu cynllun talu ar-lein ag ymgynghorydd. Mae’r gwasanaeth i sgwrsio dros y we ar gael yn Saesneg yn unig.
+       |Mae’r gwasanaeth i sgwrsio dros y we ar gael o ddydd Llun i ddydd Gwener, o 08:00 i 18:00. Mae ar gau ar benwythnosau a gwyliau banc.
+       |Cadwch y dudalen hon ar agor pan fyddwch wedi cysylltu ag ymgynghorydd.
+       |Os oes angen cymorth ychwanegol arnoch chi
+       |Dysgwch am y ffyrdd gwahanol o ddelio â CThEF os oes angen help arnoch chi.
+       |Gallwch hefyd defnyddio Relay UK os na allwch glywed na siarad dros y ffôn: deialwch 18001 ac yna 0345 300 3900. Sylwer – dim ond galwadau ffôn Saesneg eu hiaith y mae Relay UK yn gallu ymdrin â nhw.
+       |Os ydych y tu allan i’r DU: +44 2890 538 192.
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def callUsNotEnrolledContent(): String = {
