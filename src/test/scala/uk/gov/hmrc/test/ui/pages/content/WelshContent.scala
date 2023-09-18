@@ -153,7 +153,7 @@ object WelshContent {
        |Cysylltu ag ymgynghorydd
        |Ffoniwch ni ar 0300 200 1900 i sefydlu cynllun talu dros y ffôn.
        |Mae ein llinellau ffôn ar agor o 08:30 tan 17:00, ddydd Llun i ddydd Gwener. Rydym yn ar gau ar benwythnosau a gwyliau banc.
-       |Gallwch hefyd ddefnyddio ein gwasanaeth sgwrsio dros y we i drefnu cynllun talu ar-lein ag ymgynghorydd. Mae’r gwasanaeth i sgwrsio dros y we ar gael yn Saesneg yn unig.
+       |Gallwch hefyd ddefnyddio ein gwasanaeth sgwrsio dros y we (yn agor tab newydd) i drefnu cynllun talu ar-lein ag ymgynghorydd. Mae’r gwasanaeth i sgwrsio dros y we ar gael yn Saesneg yn unig.
        |Mae’r gwasanaeth i sgwrsio dros y we ar gael o ddydd Llun i ddydd Gwener, o 08:00 i 18:00. Mae ar gau ar benwythnosau a gwyliau banc.
        |Cadwch y dudalen hon ar agor pan fyddwch wedi cysylltu ag ymgynghorydd.
        |Os oes angen cymorth ychwanegol arnoch chi
