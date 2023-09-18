@@ -192,7 +192,7 @@ object EnglishContent {
        |The payment plan you have selected needs to be set up with an adviser.
        |You can go back to check your income and spending.
        |Connect to an adviser
-       |Use our webchat to set up a payment plan with an adviser online.
+       |Use our webchat (opens in new tab) to set up a payment plan with an adviser online.
        |You can also call us on 0300 123 1813 to set up a payment plan over the phone.
        |Keep this page open when you connect to an adviser.
        |Our opening times are Monday to Friday, 8am to 6pm. We are closed on weekends and bank holidays.
