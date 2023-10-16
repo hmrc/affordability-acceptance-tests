@@ -33,7 +33,7 @@ object StartPage extends BasePage {
     else "Set up a Self Assessment payment plan - GOV.UK"
   }
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "Sefydlu cynllun talu ar gyfer Hunanasesiad"
+    if (langToggle == Language.welsh) "Trefnu cynllun talu"
     else "Set up a Self Assessment payment plan"
   }
 
