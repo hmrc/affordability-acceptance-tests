@@ -19,7 +19,7 @@ package uk.gov.hmrc.test.ui.pages.content
 object WelshContent {
 
   def startPageContent(): String = {
-    s"""Sefydlu cynllun talu ar gyfer Hunanasesiad
+    s"""Trefnu cynllun talu
        |Mae cynllun talu yn eich galluogi i dalu’ch taliadau treth fesul rhandaliad dros gyfnod o amser.
        |Mae eich cynllun yn cwmpasu’r dreth sydd arnoch ac, os yw’n berthnasol, y ddau daliad ymlaen llaw tuag at eich bil treth. Mae’r cynllun hefyd yn cwmpasu unrhyw gosbau neu daliadau yn erbyn eich cyfrif. Bydd yn rhaid i chi dalu llog ar y swm a dalwch yn hwyr.
        |I fod yn gymwys i sefydlu cynllun talu ar-lein, mae’n rhaid i’r canlynol fod yn wir amdanoch:
