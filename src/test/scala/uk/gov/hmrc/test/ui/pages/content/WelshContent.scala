@@ -260,33 +260,6 @@ object WelshContent {
        |Swm y taliad ymlaen llaw £0
        |Taliadau misol
        |Mae taliadau’n cael eu casglu ar 28ain neu ar y diwrnod gwaith nesaf
-       |Chwefror 2020 £250
-       |Mawrth 2020 £250
-       |Ebrill 2020 £250
-       |Mai 2020 £250
-       |Mehefin 2020 £250
-       |Gorffennaf 2020 £250
-       |Awst 2020 £250
-       |Medi 2020 £250
-       |Hydref 2020 £250
-       |Tachwedd 2020 £250
-       |Rhagfyr 2020 £250
-       |Ionawr 2021 £250
-       |Chwefror 2021 £46.31
-       |Amcangyfrif o gyfanswm y llog
-       |wedi’i gynnwys yn y taliadau misol
-       |£33.76
-       |Y cyfanswm i’w dalu £3,046.31
-       |Argraffwch gopi o’ch cynllun talu
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
-  }
-
-  def viewPaymentPlanContentLegacy(): String = {
-    s"""Eich cynllun talu
-       |Cyfeirnod y taliad ABCDabcd1234
-       |Swm y taliad ymlaen llaw £0
-       |Taliadau misol
-       |Mae taliadau’n cael eu casglu ar 28ain neu ar y diwrnod gwaith nesaf
        |Cynllun talu
        |Chwefror 2020 £231.73
        |Mawrth 2020 £231.73
@@ -553,42 +526,7 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
-  def checkYouPaymentPlanContentNoUpfront(): String = {
-    s"""Gwirio’ch cynllun talu
-       |A allwch wneud taliad ymlaen llaw? Na Newid
-       |p’un a allwch wneud taliad ymlaen llaw
-       |Taliad ymlaen llaw
-       |I’w gymryd cyn pen 10 diwrnod gwaith
-       |£0 Newid
-       |swm y taliad ymlaen llaw
-       |Taliadau misol
-       |Mae taliadau’n cael eu casglu ar yr 28ain neu’r diwrnod gwaith nesaf Newid
-       |ar ba ddiwrnod o’r mis y caiff taliadau eu casglu
-       |13 taliad misol o £250 Newid
-       |ar ba ddiwrnod o’r mis y caiff taliadau eu casglu
-       |Amserlen ar gyfer talu
-       |Chwefror 2020 £250
-       |Mawrth 2020 £250
-       |Ebrill 2020 £250
-       |Mai 2020 £250
-       |Mehefin 2020 £250
-       |Gorffennaf 2020 £250
-       |Awst 2020 £250
-       |Medi 2020 £250
-       |Hydref 2020 £250
-       |Tachwedd 2020 £250
-       |Rhagfyr 2020 £250
-       |Ionawr 2021 £250
-       |Chwefror 2021 £46.31
-       |Amcangyfrif o gyfanswm y llog
-       |wedi’i gynnwys yn y taliadau misol
-       |£33.76
-       |Y cyfanswm i’w dalu £3,046.31
-       |Cytuno ac yn eich blaen
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
-  }
-
-    def checkYouPaymentPlanContentNoUpfrontLegacy(): String = {
+    def checkYouPaymentPlanContentNoUpfront(): String = {
     s"""Gwirio’ch cynllun talu
        |A allwch wneud taliad ymlaen llaw? Na Newid
        |p’un a allwch wneud taliad ymlaen llaw
@@ -624,26 +562,6 @@ object WelshContent {
 
   def howManyMonthsText(): String = {
     s"""Faint y gallwch ei dalu bob mis?
-       |Yn seiliedig ar eich incwm sydd dros ben, rydym o’r farn y byddech yn gallu talu’r swm hwn bob mis. Os bydd y gyfradd llog yn newid, mae’n bosibl y bydd eich taliad misol olaf yn fwy neu’n llai na’r swm hwn.
-       |Os bydd y cynllun yr ydych yn ei ddewis yn rhedeg i mewn i’r flwyddyn dreth nesaf, bydd dal angen i chi dalu’ch biliau treth yn y dyfodol mewn pryd.
-       |£250 y mis, am 13 mis
-       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £33.76
-       |neu
-       |£300 y mis, am 11 mis
-       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £26.47
-       |£400 y mis, am 8 mis
-       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £17.51
-       |Swm misol gwahanol
-       |Rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,017.55
-       |£
-       |Nid wyf yn gallu fforddio’r taliadau hyn
-       |Mae’n bosibl y byddwch yn dal i allu trefnu cynllun talu dros y ffôn. Ffoniwch Wasanaeth Cwsmeriaid Cymraeg CThEF ar 0300 200 1900 i drafod eich opsiynau.
-       |Yn eich blaen
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
-  }
-
-  def howManyMonthsTextLegacy(): String = {
-    s"""Faint y gallwch ei dalu bob mis?
        |Yn seiliedig ar yr incwm sydd gennych dros ben, gallwch nawr ddewis gynllun talu. Bydd y taliad misol olaf yn eich cynllun yn fwy oherwydd y bydd yn cynnwys llog ac unrhyw dreth sy’n weddill sydd arnoch.
        |Sut rydym yn cyfrifo llog
        |Rydym yn codi llog ar bob swm sy’n hwyr.
@@ -667,28 +585,6 @@ object WelshContent {
   }
 
   def howManyMonthsCustomText(): String = {
-    s"""Faint y gallwch ei dalu bob mis?
-       |Rydych wedi dewis talu £300 y mis. Os bydd y gyfradd llog yn newid, mae’n bosibl y bydd eich taliad misol olaf yn fwy neu’n llai na’r swm hwn.
-       |Os bydd y cynllun yr ydych yn ei ddewis yn rhedeg i mewn i’r flwyddyn dreth nesaf, bydd dal angen i chi dalu’ch biliau treth yn y dyfodol mewn pryd.
-       |£300 y mis, am 11 mis
-       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £26.47
-       |neu
-       |£250 y mis, am 13 mis
-       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £33.76
-       |£300 y mis, am 11 mis
-       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £26.47
-       |£400 y mis, am 8 mis
-       |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £17.51
-       |Swm misol gwahanol
-       |Rhowch swm sydd o leiaf £250 ond heb fod yn fwy na £3,017.55
-       |£
-       |Nid wyf yn gallu fforddio’r taliadau hyn
-       |Mae’n bosibl y byddwch yn dal i allu trefnu cynllun talu dros y ffôn. Ffoniwch Wasanaeth Cwsmeriaid Cymraeg CThEF ar 0300 200 1900 i drafod eich opsiynau.
-       |Yn eich blaen
-       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
-  }
-
-  def howManyMonthsCustomTextLegacy(): String = {
     s"""Faint y gallwch ei dalu bob mis?
        |Yn seiliedig ar yr incwm sydd gennych dros ben, gallwch nawr ddewis gynllun talu. Bydd y taliad misol olaf yn eich cynllun yn fwy oherwydd y bydd yn cynnwys llog ac unrhyw dreth sy’n weddill sydd arnoch.
        |Sut rydym yn cyfrifo llog

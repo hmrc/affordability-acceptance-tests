@@ -20,7 +20,7 @@ import org.scalatest.Assertion
 import uk.gov.hmrc.test.ui.pages.BasePage
 import uk.gov.hmrc.test.ui.pages.content.{EnglishContent, WelshContent}
 import uk.gov.hmrc.test.ui.testdata.Language
-import uk.gov.hmrc.test.ui.utils.Configuration.{serviceType, testConfig}
+import uk.gov.hmrc.test.ui.utils.Configuration.{testConfig}
 
 object HowManyMonthsPage extends BasePage {
 
@@ -44,28 +44,16 @@ object HowManyMonthsPage extends BasePage {
     expandOtherAmount()
     expandLinkInterest()
     expandLinkCannotAfford()
-    if (serviceType == "Legacy") {
-      if (langToggle == Language.welsh) pageContent should be(WelshContent.howManyMonthsTextLegacy())
-      else pageContent should be(EnglishContent.howManyMonthsTextLegacy())
-    }
-    else {
       if (langToggle == Language.welsh) pageContent should be(WelshContent.howManyMonthsText())
       else pageContent should be(EnglishContent.howManyMonthsText())
-    }
   }
 
   def assertContentCustom(): Assertion = {
     expandOtherAmount()
     expandLinkInterest()
     expandLinkCannotAfford()
-    if (serviceType == "Legacy") {
-      if (langToggle == Language.welsh) pageContent should be(WelshContent.howManyMonthsCustomTextLegacy())
-      else pageContent should be(EnglishContent.howManyMonthsCustomTextLegacy())
-    }
-    else {
       if (langToggle == Language.welsh) pageContent should be(WelshContent.howManyMonthsCustomText())
       else pageContent should be(EnglishContent.howManyMonthsCustomText())
-    }
   }
 
   def enterAmountOfMonths(amount: String) = {

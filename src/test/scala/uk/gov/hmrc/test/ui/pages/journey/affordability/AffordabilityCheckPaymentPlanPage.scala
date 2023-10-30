@@ -20,7 +20,7 @@ import org.scalatest.Assertion
 import uk.gov.hmrc.test.ui.pages.BasePage
 import uk.gov.hmrc.test.ui.pages.content.{EnglishContent, WelshContent}
 import uk.gov.hmrc.test.ui.testdata.Language
-import uk.gov.hmrc.test.ui.utils.Configuration.{serviceType, testConfig}
+import uk.gov.hmrc.test.ui.utils.Configuration.{testConfig}
 
 object AffordabilityCheckPaymentPlanPage extends BasePage {
 
@@ -41,26 +41,10 @@ object AffordabilityCheckPaymentPlanPage extends BasePage {
   def pageContent: String = id("main-content").webElement.getText
 
   def assertContentNoUpfront(): Assertion = {
-    if (serviceType == "Legacy") {
-      if (langToggle == Language.welsh) pageContent should be(WelshContent.checkYouPaymentPlanContentNoUpfrontLegacy())
-      else pageContent should be(EnglishContent.checkYouPaymentPlanContentNoUpfrontLegacy())
-    }
-    else {
-      expandSchedule()
       if (langToggle == Language.welsh) pageContent should be(WelshContent.checkYouPaymentPlanContentNoUpfront())
       else pageContent should be(EnglishContent.checkYouPaymentPlanContentNoUpfront())
-    }
   }
 
-  //  def assertContentWithUpfront(): Assertion = {
-  //    expandSchedule()
-  //    if (serviceType == "Legacy")
-  //      if (langToggle == Language.welsh) pageContent should be(WelshContent.checkYouPaymentPlanContentNoUpfrontLegacy())
-  //      else pageContent should be(EnglishContent.checkYouPaymentPlanContentNoUpfront())
-  //    else
-  //      if (langToggle == Language.welsh) pageContent should be(WelshContent.checkYouPaymentPlanContentNoUpfrontLegacy())
-  //      else pageContent should be(EnglishContent.checkYouPaymentPlanContentNoUpfront())
-  //  }
 
   def clickChangeLink(link: String) = {
     link match {

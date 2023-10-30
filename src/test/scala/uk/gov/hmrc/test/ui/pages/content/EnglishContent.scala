@@ -261,33 +261,6 @@ object EnglishContent {
        |Upfront payment amount £0
        |Monthly payments
        |Payments collected on 28th or next working day
-       |February 2020 £250
-       |March 2020 £250
-       |April 2020 £250
-       |May 2020 £250
-       |June 2020 £250
-       |July 2020 £250
-       |August 2020 £250
-       |September 2020 £250
-       |October 2020 £250
-       |November 2020 £250
-       |December 2020 £250
-       |January 2021 £250
-       |February 2021 £46.31
-       |Estimated total interest
-       |included in monthly payments
-       |£33.76
-       |Total to pay £3,046.31
-       |Print a copy of your payment plan
-       |Is this page not working properly? (opens in new tab)""".stripMargin
-  }
-
-  def viewPaymentPlanContentLegacy(): String = {
-    s"""Your payment plan
-       |Payment reference ABCDabcd1234
-       |Upfront payment amount £0
-       |Monthly payments
-       |Payments collected on 28th or next working day
        |Payment plan
        |February 2020 £231.73
        |March 2020 £231.73
@@ -565,41 +538,6 @@ object EnglishContent {
        |Monthly payments
        |Payments collected on 28th or next working day Change
        |the day of the month that payments will be collected on
-       |13 monthly payments of £250 Change
-       |the day of the month that payments will be collected on
-       |Payment schedule
-       |February 2020 £250
-       |March 2020 £250
-       |April 2020 £250
-       |May 2020 £250
-       |June 2020 £250
-       |July 2020 £250
-       |August 2020 £250
-       |September 2020 £250
-       |October 2020 £250
-       |November 2020 £250
-       |December 2020 £250
-       |January 2021 £250
-       |February 2021 £46.31
-       |Estimated total interest
-       |included in monthly payments
-       |£33.76
-       |Total to pay £3,046.31
-       |Agree and continue
-       |Is this page not working properly? (opens in new tab)""".stripMargin
-  }
-
-  def checkYouPaymentPlanContentNoUpfrontLegacy(): String = {
-    s"""Check your payment plan
-       |Can you make an upfront payment? No Change
-       |whether you can make an upfront payment
-       |Upfront payment
-       |Taken within 10 working days
-       |£0 Change
-       |upfront payment amount
-       |Monthly payments
-       |Payments collected on 28th or next working day Change
-       |the day of the month that payments will be collected on
        |Payment plan Change
        |the day of the month that payments will be collected on
        |February 2020 £231.73
@@ -625,26 +563,6 @@ object EnglishContent {
 
   def howManyMonthsText(): String = {
     s"""How much can you pay each month?
-       |Based on your left over income, this is how much we think you could pay each month. Your final monthly payment may be more or less if the interest rate changes.
-       |If the plan you choose runs into the next tax year, you still need to pay future tax bills on time.
-       |£250 per month over 13 months
-       |Includes total interest estimated at £33.76
-       |or
-       |£300 per month over 11 months
-       |Includes total interest estimated at £26.47
-       |£400 per month over 8 months
-       |Includes total interest estimated at £17.51
-       |A different monthly amount
-       |Enter an amount that is at least £250 but no more than £3,017.55
-       |£
-       |I cannot afford to make these payments
-       |You may still be able to set up a payment plan over the phone. Call us on 0300 123 1813 to discuss your debt.
-       |Continue
-       |Is this page not working properly? (opens in new tab)""".stripMargin
-  }
-
-  def howManyMonthsTextLegacy(): String = {
-    s"""How much can you pay each month?
        |Based on your left over income, you can now select a payment plan. The final monthly payment in your plan will be more as it will include interest and any remaining tax you owe.
        |How we calculate interest
        |We charge interest on all overdue amounts.
@@ -668,28 +586,6 @@ object EnglishContent {
   }
 
   def howManyMonthsCustomText(): String = {
-    s"""How much can you pay each month?
-       |You have chosen to pay £300 per month. Your final monthly payment may be more or less if the interest rate changes.
-       |If the plan you choose runs into the next tax year, you still need to pay future tax bills on time.
-       |£300 per month over 11 months
-       |Includes total interest estimated at £26.47
-       |or
-       |£250 per month over 13 months
-       |Includes total interest estimated at £33.76
-       |£300 per month over 11 months
-       |Includes total interest estimated at £26.47
-       |£400 per month over 8 months
-       |Includes total interest estimated at £17.51
-       |A different monthly amount
-       |Enter an amount that is at least £250 but no more than £3,017.55
-       |£
-       |I cannot afford to make these payments
-       |You may still be able to set up a payment plan over the phone. Call us on 0300 123 1813 to discuss your debt.
-       |Continue
-       |Is this page not working properly? (opens in new tab)""".stripMargin
-  }
-
-  def howManyMonthsCustomTextLegacy(): String = {
     s"""How much can you pay each month?
        |Based on your left over income, you can now select a payment plan. The final monthly payment in your plan will be more as it will include interest and any remaining tax you owe.
        |How we calculate interest
