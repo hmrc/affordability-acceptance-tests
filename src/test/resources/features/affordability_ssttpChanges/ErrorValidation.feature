@@ -343,14 +343,14 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     Then the custom amount field should display "<error>"
 
     Examples:
-      | value   | error                                                               |
-      | 273.86  | Enter an amount that is at least £273.87 but no more than £1,506.28 |
-      | 1506.29 | Enter an amount that is at least £273.87 but no more than £1,506.28 |
-      |         | Enter an amount that is at least £273.87 but no more than £1,506.28 |
-      | !@      | Enter an amount that is at least £273.87 but no more than £1,506.28 |
-      | ABC     | Enter an amount that is at least £273.87 but no more than £1,506.28 |
-      | -260    | Enter an amount that is at least £273.87 but no more than £1,506.28 |
-      | 333.333 | Amount must not contain more than 2 decimal places                  |
+      | value   | error                                              |
+      | 273.86  | Enter a monthly payment amount                     |
+      | 1506.29 | Enter a monthly payment amount                     |
+      |         | Enter a monthly payment amount                     |
+      | !@      | Enter a monthly payment amount                     |
+      | ABC     | Enter a monthly payment amount                     |
+      | -260    | Enter a monthly payment amount                     |
+      | 333.333 | Amount must not contain more than 2 decimal places |
 
 ### Affordability - How Many Months Custom
 
@@ -371,11 +371,11 @@ Feature: Error Validation on various pages created/updated by Affordability chan
     Then the custom amount field should display "<error>"
 
     Examples:
-      | value   | error                                                               |
-      | 273.86  | Enter an amount that is at least £273.87 but no more than £1,506.28 |
-      | 1506.29 | Enter an amount that is at least £273.87 but no more than £1,506.28 |
-      |         | Enter an amount that is at least £273.87 but no more than £1,506.28 |
-      | !@      | Enter an amount that is at least £273.87 but no more than £1,506.28 |
-      | ABC     | Enter an amount that is at least £273.87 but no more than £1,506.28 |
-      | -260    | Enter an amount that is at least £273.87 but no more than £1,506.28 |
-      | 333.111 | Amount must not contain more than 2 decimal places                  |
+      | value   | error                                              |
+      | 273.86  | Enter a monthly payment amount                     |
+      | 1506.29 | Enter a monthly payment amount                     |
+      |         | Enter a monthly payment amount                     |
+      | !@      | Enter a monthly payment amount                     |
+      | ABC     | Enter a monthly payment amount                     |
+      | -260    | Enter a monthly payment amount                     |
+      | 333.111 | Amount must not contain more than 2 decimal places |

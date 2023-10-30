@@ -435,7 +435,7 @@ Feature: Welsh Content
     And the user clicks continue
     And the user clicks continue
     And the user clicks continue
-    Then the plan selection field should display "Dewiswch opsiwn"
+    Then the plan selection field should display "Dewiswch faint y gallwch ei dalu bob mis"
     Then the User toggles on English language
 
   Scenario Outline: Welsh - Affordability - Error Validation on How Many Months Page
@@ -455,14 +455,14 @@ Feature: Welsh Content
     Then the User toggles on English language
 
     Examples:
-      | value   | error                                                          |
-      | 273.86  | Nodwch swm sydd o leiaf £273.87 ond sydd ddim mwy na £1,506.28 |
-      | 1506.29 | Nodwch swm sydd o leiaf £273.87 ond sydd ddim mwy na £1,506.28 |
-      |         | Nodwch swm sydd o leiaf £273.87 ond sydd ddim mwy na £1,506.28 |
-      | !@      | Nodwch swm sydd o leiaf £273.87 ond sydd ddim mwy na £1,506.28 |
-      | ABC     | Nodwch swm sydd o leiaf £273.87 ond sydd ddim mwy na £1,506.28 |
-      | -260    | Nodwch swm sydd o leiaf £273.87 ond sydd ddim mwy na £1,506.28 |
-      | 333.111 | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol              |
+      | value   | error                                             |
+      | 273.86  | Nodwch swm i’w dalu bob mis                       |
+      | 1506.29 | Nodwch swm i’w dalu bob mis                       |
+      |         | Nodwch swm i’w dalu bob mis                       |
+      | !@      | Nodwch swm i’w dalu bob mis                       |
+      | ABC     | Nodwch swm i’w dalu bob mis                       |
+      | -260    | Nodwch swm i’w dalu bob mis                       |
+      | 333.111 | Rhaid i’r swm beidio â chynnwys mwy na 2 le degol |
 
     ### Direct Debit Error Page
 
