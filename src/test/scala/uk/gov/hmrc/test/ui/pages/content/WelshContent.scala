@@ -123,7 +123,7 @@ object WelshContent {
   }
 
   def successConfirmationUpfrontContent(): String = {
-    s"""Caiff eich taliad ymlaen llaw ei gymryd cyn pen 11 diwrnod gwaith. Caiff eich taliad nesaf ei gymryd ar 28ain Chwefror 2020 neu ar y diwrnod gwaith nesaf.""".stripMargin
+    s"""Caiff eich taliad ymlaen llaw ei gymryd cyn pen 6 diwrnod gwaith. Caiff eich taliad nesaf ei gymryd ar 28ain Chwefror 2020 neu ar y diwrnod gwaith nesaf.""".stripMargin
   }
 
   def callUsNotEligibleContent(): String = {
@@ -284,7 +284,7 @@ object WelshContent {
 
   def upfrontPaymentContent(): String = {
     s"""Taliad ymlaen llaw
-       |Bydd eich taliadau misol yn is os gallwch wneud taliad ymlaen llaw. Caiff y taliad hwn ei gymryd o’ch cyfrif banc cyn pen 10 diwrnod gwaith.
+       |Bydd eich taliadau misol yn is os gallwch wneud taliad ymlaen llaw. Caiff y taliad hwn ei gymryd o’ch cyfrif banc cyn pen 6 diwrnod gwaith.
        |Os oes gennych gynilion, dylech ystyried eu defnyddio i wneud taliad nawr.
        |A allwch wneud taliad ymlaen llaw?
        |Iawn
@@ -299,7 +299,7 @@ object WelshContent {
        |A allwch wneud taliad ymlaen llaw? Iawn Newid
        |p’un a allwch wneud taliad ymlaen llaw
        |Taliad ymlaen llaw
-       |I’w gymryd cyn pen 10 diwrnod gwaith £200 Newid
+       |I’w gymryd cyn pen 6 diwrnod gwaith £200 Newid
        |swm y taliad ymlaen llaw
        |Swm sy’n weddill i’w dalu £2,812.55
        |Bydd llog yn cael ei ychwanegu at y swm hwn
@@ -531,7 +531,7 @@ object WelshContent {
        |A allwch wneud taliad ymlaen llaw? Na Newid
        |p’un a allwch wneud taliad ymlaen llaw
        |Taliad ymlaen llaw
-       |I’w gymryd cyn pen 10 diwrnod gwaith
+       |I’w gymryd cyn pen 6 diwrnod gwaith
        |£0 Newid
        |swm y taliad ymlaen llaw
        |Taliadau misol

@@ -124,7 +124,7 @@ object EnglishContent {
   }
 
   def successConfirmationUpfrontContent(): String = {
-    s"""Your upfront payment will be taken within 11 working days. Your next payment will be taken on 28th February 2020 or the next working day.""".stripMargin
+    s"""Your upfront payment will be taken within 6 working days. Your next payment will be taken on 28th February 2020 or the next working day.""".stripMargin
   }
 
   def callUsNotEligibleContent(): String = {
@@ -285,7 +285,7 @@ object EnglishContent {
 
   def upfrontPaymentContent(): String = {
     s"""Upfront payment
-       |Your monthly payments will be lower if you can make an upfront payment. This payment will be taken from your bank account within 10 working days.
+       |Your monthly payments will be lower if you can make an upfront payment. This payment will be taken from your bank account within 6 working days.
        |If you have savings, consider using them to make a payment now.
        |Can you make an upfront payment?
        |Yes
@@ -300,7 +300,7 @@ object EnglishContent {
        |Can you make an upfront payment? Yes Change
        |whether you can make an upfront payment
        |Upfront payment
-       |Taken within 10 working days £200 Change
+       |Taken within 6 working days £200 Change
        |upfront payment amount
        |Remaining amount to pay £2,812.55
        |Interest will be added to this amount
@@ -532,7 +532,7 @@ object EnglishContent {
        |Can you make an upfront payment? No Change
        |whether you can make an upfront payment
        |Upfront payment
-       |Taken within 10 working days
+       |Taken within 6 working days
        |£0 Change
        |upfront payment amount
        |Monthly payments
