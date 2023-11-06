@@ -515,6 +515,25 @@ object EnglishContent {
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
+  def cannotAffordContent(): String = {
+    s"""Call us about a payment plan
+       |Call us on 0300 123 1813 as you may be able to set up a plan over the phone.
+       |Our opening times are Monday to Friday, 8am to 6pm. We are closed on weekends and bank holidays.
+       |If you need extra support
+       |Find out the different ways to deal with HMRC if you need some help.
+       |You can also use Relay UK if you cannot hear or speak on the phone: dial 18001 then 0345 300 3900.
+       |If you are outside the UK: +44 2890 538 192.
+       |Before you call, make sure you have:
+       |your 10-digit Unique Taxpayer Reference (UTR) number
+       |information on any savings or investments you have
+       |your bank details
+       |details of your income and spending
+       |We're likely to ask:
+       |what you've done to try to pay the bill
+       |if you can pay some of the bill now
+       |Is this page not working properly? (opens in new tab)""".stripMargin
+  }
+
   def directDebitErrorContent(): String = {
     s"""Call us about a payment plan
        |We’re having problems submitting your Direct Debit instruction.
@@ -562,13 +581,14 @@ object EnglishContent {
   }
 
   def howManyMonthsText(): String = {
-    s"""How much can you pay each month?
+    s"""Select a payment plan
        |Based on your left over income, you can now select a payment plan. The final monthly payment in your plan will be more as it will include interest and any remaining tax you owe.
        |How we calculate interest
        |We charge interest on all overdue amounts.
        |We charge the Bank of England base rate plus 2.5% per year.
        |If the interest rate changes during your payment plan, you may need to settle any difference at the end. We will contact you if this is the case.
        |If the plan you choose runs into the next tax year, you still need to pay future tax bills on time.
+       |How much can you pay each month?
        |£231.73 per month over 13 months
        |Includes total interest estimated at £37.21
        |or
@@ -579,20 +599,20 @@ object EnglishContent {
        |Pay more per month
        |Enter an amount between £273.87 and £1,506.28 to pay over fewer months. We will suggest a plan that is closest to the amount you enter.
        |£
-       |I cannot afford to make these payments
-       |You may still be able to set up a payment plan over the phone. Call us on 0300 123 1813 to discuss your debt.
+       |I cannot afford these payments
        |Continue
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }
 
   def howManyMonthsCustomText(): String = {
-    s"""How much can you pay each month?
+    s"""Select a payment plan
        |Based on your left over income, you can now select a payment plan. The final monthly payment in your plan will be more as it will include interest and any remaining tax you owe.
        |How we calculate interest
        |We charge interest on all overdue amounts.
        |We charge the Bank of England base rate plus 2.5% per year.
        |If the interest rate changes during your payment plan, you may need to settle any difference at the end. We will contact you if this is the case.
        |If the plan you choose runs into the next tax year, you still need to pay future tax bills on time.
+       |How much can you pay each month?
        |£301.26 per month over 10 months
        |Includes total interest estimated at £26.31
        |or
@@ -605,8 +625,7 @@ object EnglishContent {
        |Pay more per month
        |Enter an amount between £273.87 and £1,506.28 to pay over fewer months. We will suggest a plan that is closest to the amount you enter.
        |£
-       |I cannot afford to make these payments
-       |You may still be able to set up a payment plan over the phone. Call us on 0300 123 1813 to discuss your debt.
+       |I cannot afford these payments
        |Continue
        |Is this page not working properly? (opens in new tab)""".stripMargin
   }

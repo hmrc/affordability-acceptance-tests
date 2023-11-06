@@ -27,13 +27,13 @@ object HowManyMonthsPage extends BasePage {
   val url: String = s"${testConfig.selfServiceTimeToPayFrontendUrl}/calculator/instalments"
 
   def expectedPageTitle = {
-    if (langToggle == Language.welsh) "Faint y gallwch ei dalu bob mis? - Trefnu cynllun talu - GOV.UK"
-    else "How much can you pay each month? - Set up a Self Assessment payment plan - GOV.UK"
+    if (langToggle == Language.welsh) "Dewiswch gynllun talu - Trefnu cynllun talu - GOV.UK"
+    else "Select a payment plan - Set up a Self Assessment payment plan - GOV.UK"
   }
 
   def expectedPageHeader = {
-    if (langToggle == Language.welsh) "Faint y gallwch ei dalu bob mis?"
-    else "How much can you pay each month?"
+    if (langToggle == Language.welsh) "Dewiswch gynllun talu"
+    else "Select a payment plan"
   }
 
   def expectedPageTitleError: String = "Error: " + expectedPageTitle
@@ -43,7 +43,6 @@ object HowManyMonthsPage extends BasePage {
   def assertContent(): Assertion = {
     expandOtherAmount()
     expandLinkInterest()
-    expandLinkCannotAfford()
       if (langToggle == Language.welsh) pageContent should be(WelshContent.howManyMonthsText())
       else pageContent should be(EnglishContent.howManyMonthsText())
   }
@@ -51,7 +50,6 @@ object HowManyMonthsPage extends BasePage {
   def assertContentCustom(): Assertion = {
     expandOtherAmount()
     expandLinkInterest()
-    expandLinkCannotAfford()
       if (langToggle == Language.welsh) pageContent should be(WelshContent.howManyMonthsCustomText())
       else pageContent should be(EnglishContent.howManyMonthsCustomText())
   }
@@ -64,17 +62,14 @@ object HowManyMonthsPage extends BasePage {
       case "custom amount" => id("customAmountOption").webElement.click()
         id("custom-amount-input").webElement.sendKeys("£3   00")
       case "user specified" => id("custom").webElement.click()
+      case "cannot afford" => id("cannotAfford").webElement.click()
       case _ => id("customAmountOption").webElement.click()
         id("custom-amount-input").webElement.sendKeys(amount)
     }
   }
 
   def expandLinkInterest(): Unit = {
-    click on cssSelector("#paymentTodayForm > fieldset > details > summary > span")
-  }
-
-  def expandLinkCannotAfford(): Unit = {
-    click on cssSelector("#paymentTodayForm > details > summary > span")
+    click on cssSelector("#content > section > form > fieldset > details > summary > span")
   }
 
   def expandOtherAmount(): Unit = {

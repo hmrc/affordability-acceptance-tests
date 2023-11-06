@@ -514,4 +514,25 @@ Feature: Welsh Content
     And the user clicks continue
     Then the Sortcode field should display "Rydych wedi nodi cod didoli nad yw’n derbyn y math hwn o daliad. Gwiriwch eich bod wedi nodi cod didoli dilys, neu nodwch fanylion ar gyfer cyfrif gwahanol"
 
-
+### Cannot Afford Page
+  Scenario: Cannot Afford Payments page
+    Given the user is created and logs in
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks no on the upfront payment page
+    And the user clicks continue
+    And the user enters 28 on the what day of the month page
+    And the user clicks continue
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 1000, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    When the User toggles on Welsh language
+    And the user enters cannot afford on the how many months page
+    And the user clicks continue
+    Then the user is on the CannotAffordPage
+    Then the User toggles on English language
