@@ -26,6 +26,28 @@ Feature: Happy Paths - Affordability
     And the user clicks continue
     Then the user is on the CannotSetupDDPage
 
+### Cannot Afford Page
+  @a11y @zap
+  Scenario: Cannot Afford Payments page
+    Given the user is created and logs in
+    And the user clicks start
+    And the user clicks continue
+    When the user clicks no on the upfront payment page
+    And the user clicks continue
+    And the user enters 28 on the what day of the month page
+    And the user clicks continue
+    And the user clicks continue
+    And the user clicks on the add income link
+    And the user adds monthly income of 1000, benefits of 200 and other income of 300
+    And the user clicks continue
+    And the user clicks on the add spending link
+    And the user adds monthly spending of 10 to all fields
+    And the user clicks continue
+    And the user clicks continue
+    And the user enters cannot afford on the how many months page
+    And the user clicks continue
+    Then the user is on the CannotAffordPage
+
 
 ### Direct Debit Error Page
 

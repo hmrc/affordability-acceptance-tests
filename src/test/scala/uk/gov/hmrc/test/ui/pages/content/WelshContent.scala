@@ -514,6 +514,25 @@ object WelshContent {
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
+  def cannotAffordContent(): String = {
+    s"""Ffoniwch ni ynghylch cynllun talu
+       |Ffoniwch ni ar 0300 200 1900 oherwydd mae’n bosibl y gallwch drefnu cynllun dros y ffôn.
+       |Ein horiau agor yw Dydd Llun i Ddydd Gwener, 08:30 i 17:00. Rydym ar gau ar benwythnosau a gwyliau banc.
+       |Os oes angen cymorth ychwanegol arnoch chi
+       |Dysgwch am y ffyrdd gwahanol o ddelio â CThEF os oes angen help arnoch chi.
+       |Gallwch hefyd ddefnyddio Relay UK os na allwch glywed na siarad dros y ffôn: deialwch 18001 ac yna 0345 300 3900. Sylwer – dim ond galwadau ffôn Saesneg eu hiaith y mae Relay UK yn gallu ymdrin â nhw.
+       |Os ydych y tu allan i’r DU: +44 300 200 1900.
+       |Cyn i chi ffonio, sicrhewch fod gennych y canlynol:
+       |eich Cyfeirnod Unigryw y Trethdalwr (UTR) 10 digid
+       |gwybodaeth am unrhyw gynilion neu fuddsoddiadau sydd gennych
+       |eich manylion banc
+       |manylion eich incwm a’ch gwariant
+       |Rydym yn debygol o ofyn y canlynol:
+       |beth rydych wedi’i wneud i geisio talu’r bil
+       |a allwch dalu rhywfaint o’r bil nawr
+       |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
+  }
+
   def directDebitErrorContent(): String = {
     s"""Ffoniwch ni ynghylch cynllun talu
        |Rydym yn cael anawsterau wrth gyflwyno’ch cyfarwyddyd Debyd Uniongyrchol.
@@ -561,13 +580,14 @@ object WelshContent {
   }
 
   def howManyMonthsText(): String = {
-    s"""Faint y gallwch ei dalu bob mis?
+    s"""Dewiswch gynllun talu
        |Yn seiliedig ar yr incwm sydd gennych dros ben, gallwch nawr ddewis gynllun talu. Bydd y taliad misol olaf yn eich cynllun yn fwy oherwydd y bydd yn cynnwys llog ac unrhyw dreth sy’n weddill sydd arnoch.
        |Sut rydym yn cyfrifo llog
        |Rydym yn codi llog ar bob swm sy’n hwyr.
        |Rydym yn codi cyfradd sylfaenol Banc Lloegr ynghyd â 2.5% y flwyddyn.
        |Os bydd y gyfradd llog yn newid yn ystod eich cynllun talu, efallai bydd yn rhaid i chi setlo unrhyw wahaniaeth ar y diwedd. Byddwn yn cysylltu â chi os yw hyn yn wir.
        |Os bydd y cynllun yr ydych yn ei ddewis yn rhedeg i mewn i’r flwyddyn dreth nesaf, bydd dal angen i chi dalu’ch biliau treth yn y dyfodol mewn pryd.
+       |Faint y gallwch ei dalu bob mis?
        |£231.73 y mis, am 13 mis
        |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £37.21
        |neu
@@ -579,19 +599,19 @@ object WelshContent {
        |Nodwch swm sydd rhwng £273.87 a £1,506.28 i’w dalu dros lai o fisoedd. Byddwn yn awgrymu cynllun sydd agosaf at y swm y byddwch yn ei nodi.
        |£
        |Nid wyf yn gallu fforddio’r taliadau hyn
-       |Mae’n bosibl y byddwch yn dal i allu trefnu cynllun talu dros y ffôn. Ffoniwch ni ar 0300 200 1900 i drafod eich dyled.
        |Yn eich blaen
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }
 
   def howManyMonthsCustomText(): String = {
-    s"""Faint y gallwch ei dalu bob mis?
+    s"""Dewiswch gynllun talu
        |Yn seiliedig ar yr incwm sydd gennych dros ben, gallwch nawr ddewis gynllun talu. Bydd y taliad misol olaf yn eich cynllun yn fwy oherwydd y bydd yn cynnwys llog ac unrhyw dreth sy’n weddill sydd arnoch.
        |Sut rydym yn cyfrifo llog
        |Rydym yn codi llog ar bob swm sy’n hwyr.
        |Rydym yn codi cyfradd sylfaenol Banc Lloegr ynghyd â 2.5% y flwyddyn.
        |Os bydd y gyfradd llog yn newid yn ystod eich cynllun talu, efallai bydd yn rhaid i chi setlo unrhyw wahaniaeth ar y diwedd. Byddwn yn cysylltu â chi os yw hyn yn wir.
        |Os bydd y cynllun yr ydych yn ei ddewis yn rhedeg i mewn i’r flwyddyn dreth nesaf, bydd dal angen i chi dalu’ch biliau treth yn y dyfodol mewn pryd.
+       |Faint y gallwch ei dalu bob mis?
        |£301.26 y mis, am 10 mis
        |Mae hyn yn cynnwys cyfanswm y llog wedi’i amcangyfrif, sef £26.31
        |neu
@@ -605,7 +625,6 @@ object WelshContent {
        |Nodwch swm sydd rhwng £273.87 a £1,506.28 i’w dalu dros lai o fisoedd. Byddwn yn awgrymu cynllun sydd agosaf at y swm y byddwch yn ei nodi.
        |£
        |Nid wyf yn gallu fforddio’r taliadau hyn
-       |Mae’n bosibl y byddwch yn dal i allu trefnu cynllun talu dros y ffôn. Ffoniwch ni ar 0300 200 1900 i drafod eich dyled.
        |Yn eich blaen
        |A yw’r dudalen hon yn gweithio’n iawn? (yn agor tab newydd)""".stripMargin
   }

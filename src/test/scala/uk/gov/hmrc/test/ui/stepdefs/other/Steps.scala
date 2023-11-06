@@ -24,7 +24,6 @@ import uk.gov.hmrc.webdriver.SingletonDriver
 trait Steps extends ScalaDsl with EN with Matchers {
 
   Before {
-    //    ScenarioContext.set("ServiceType", serviceType)
   }
 
 
