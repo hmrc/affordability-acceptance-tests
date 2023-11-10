@@ -605,8 +605,8 @@ object EnglishContent {
   }
 
   def howManyMonthsCustomText(): String = {
-    s"""Select a payment plan
-       |Based on your left over income, you can now select a payment plan. The final monthly payment in your plan will be more as it will include interest and any remaining tax you owe.
+    s"""Another payment plan option has been added
+       |Based on what you entered, we have added another payment plan option. The final monthly payment in your plan will be more as it will include interest and any remaining tax you owe.
        |How we calculate interest
        |We charge interest on all overdue amounts.
        |We charge the Bank of England base rate plus 2.5% per year.

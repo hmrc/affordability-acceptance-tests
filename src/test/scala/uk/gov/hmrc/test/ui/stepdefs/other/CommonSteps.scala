@@ -18,7 +18,7 @@ package uk.gov.hmrc.test.ui.stepdefs.other
 
 import org.openqa.selenium.By
 import org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated
-import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, AddSpendingPage, AffordabilityCheckPaymentPlanPage, CannotAffordPage, CannotAgreePlanPage, CheckYouCanAffordPage, DirectDebitAssistancePage, DirectDebitErrorPage, HowManyMonthsPage, HowMuchYouCanAffordPage, NoIncomePage}
+import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, AddSpendingPage, AffordabilityCheckPaymentPlanPage, CannotAffordPage, CannotAgreePlanPage, CheckYouCanAffordPage, DirectDebitAssistancePage, DirectDebitErrorPage, HowManyMonthsCustomPage, HowManyMonthsPage, HowMuchYouCanAffordPage, NoIncomePage}
 import uk.gov.hmrc.test.ui.pages.journey.ssttp._
 import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.pages.testonly.TestOnlyStartPage
@@ -114,13 +114,13 @@ class CommonSteps extends Steps with DriverActions {
         DirectDebitAssistancePage.shouldBeLoaded()
         DirectDebitAssistancePage.assertContent()
       case "TypeOfAccountPage" =>
-        //        TypeOfAccountPage.shouldBeLoaded()
+        TypeOfAccountPage.shouldBeLoaded()
         TypeOfAccountPage.assertContent()
       case "SetUpDirectDebitPage" =>
         SetUpDirectDebitPage.shouldBeLoaded()
         SetUpDirectDebitPage.assertContent()
       case "TermsAndConditionsPage" =>
-        //        TermsAndConditionsPage.shouldBeLoaded()
+        TermsAndConditionsPage.shouldBeLoaded()
         TermsAndConditionsPage.assertContent()
       case "ConfirmDirectDebitDetailsPage" =>
         ConfirmDirectDebitDetailsPage.shouldBeLoaded()
@@ -153,7 +153,7 @@ class CommonSteps extends Steps with DriverActions {
         ViewPaymentPlanPage.shouldBeLoaded()
         ViewPaymentPlanPage.assertContent()
       case "UpfrontPaymentPage" =>
-        //        UpfrontPaymentPage.shouldBeLoaded()
+        UpfrontPaymentPage.shouldBeLoaded()
         UpfrontPaymentPage.assertContent()
       case "PaymentSummaryPage" =>
         UpfrontSummaryPage.shouldBeLoaded()
@@ -162,13 +162,13 @@ class CommonSteps extends Steps with DriverActions {
         HowMuchUpfrontPaymentPage.shouldBeLoaded()
         HowMuchUpfrontPaymentPage.assertContent()
       case "WhatDayOfMonthPage" =>
-        //        WhatDayOfMonthPage.shouldBeLoaded()
+        WhatDayOfMonthPage.shouldBeLoaded()
         WhatDayOfMonthPage.assertContent()
       case "CheckYouCanAffordPage" =>
         CheckYouCanAffordPage.shouldBeLoaded()
         CheckYouCanAffordPage.assertContent()
       case "AddIncomeAndSpendingPageBlank" =>
-        //                AddIncomeAndSpendingPage.shouldBeLoaded()
+        AddIncomeAndSpendingPage.shouldBeLoaded()
         AddIncomeAndSpendingPage.assertContentBlank()
       case "AddIncomeAndSpendingPageIncomeFull" =>
         AddIncomeAndSpendingPage.shouldBeLoaded()
@@ -201,16 +201,16 @@ class CommonSteps extends Steps with DriverActions {
       //        AffordabilityCheckPaymentPlanPage.shouldBeLoaded()
       //        AffordabilityCheckPaymentPlanPage.assertContentWithUpfront()
       case "CannotAgreePlanPage" =>
-        //        CannotAgreePlanPage.shouldBeLoaded()
+        CannotAgreePlanPage.shouldBeLoaded()
         CannotAgreePlanPage.assertContent()
       case "HowManyMonthsPageUpfront" =>
         HowManyMonthsPage.shouldBeLoaded()
       case "HowManyMonthsPage" =>
-        //        HowManyMonthsPage.shouldBeLoaded()
+        HowManyMonthsPage.shouldBeLoaded()
         HowManyMonthsPage.assertContent()
       case "HowManyMonthsPageCustom" =>
-        //        HowManyMonthsPage.shouldBeLoaded()
-        HowManyMonthsPage.assertContentCustom()
+        HowManyMonthsCustomPage.shouldBeLoaded()
+        HowManyMonthsCustomPage.assertContentCustom()
       case "TBC" => ""
       case _ => throw new IllegalArgumentException(s"$page page not recognised")
     }

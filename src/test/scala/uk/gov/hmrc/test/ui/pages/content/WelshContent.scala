@@ -604,8 +604,8 @@ object WelshContent {
   }
 
   def howManyMonthsCustomText(): String = {
-    s"""Dewiswch gynllun talu
-       |Yn seiliedig ar yr incwm sydd gennych dros ben, gallwch nawr ddewis gynllun talu. Bydd y taliad misol olaf yn eich cynllun yn fwy oherwydd y bydd yn cynnwys llog ac unrhyw dreth sy’n weddill sydd arnoch.
+    s"""Mae opsiwn cynllun talu arall wedi’i ychwanegu
+       |Yn seiliedig ar yr hyn a nodwyd gennych, rydym wedi ychwanegu opsiwn cynllun talu arall. Bydd y taliad misol olaf yn eich cynllun yn fwy oherwydd y bydd yn cynnwys llog ac unrhyw dreth sy’n weddill sydd arnoch.
        |Sut rydym yn cyfrifo llog
        |Rydym yn codi llog ar bob swm sy’n hwyr.
        |Rydym yn codi cyfradd sylfaenol Banc Lloegr ynghyd â 2.5% y flwyddyn.
