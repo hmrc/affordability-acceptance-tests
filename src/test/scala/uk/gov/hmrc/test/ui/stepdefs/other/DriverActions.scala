@@ -31,7 +31,6 @@ trait DriverActions extends WebBrowser {
 
   implicit def driver: WebDriver = {
     val options = new ChromeOptions
-    options.addArguments("--remote-allow-origins=*")
     val runZap = sys.props.getOrElse("zapBrowser", "false").toBoolean
     if (runZap) SingletonDriver.getInstance(Some(options))
     else SingletonDriver.getInstance(Some(options))
