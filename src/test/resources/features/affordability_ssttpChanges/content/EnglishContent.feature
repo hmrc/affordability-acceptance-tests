@@ -84,7 +84,6 @@ Feature: English Content
       | CallUsDebtTooOldPage      |
       | NeedToFilePage            |
       | CallUsAlreadyHavePlanPage |
-      | CallUsAdviserPage         |
 
   Scenario: Call Us - Adviser Page
     Given A user logs in and gets to the affordability pages
