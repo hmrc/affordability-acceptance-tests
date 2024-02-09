@@ -17,9 +17,9 @@
 package uk.gov.hmrc.test.ui.stepdefs.pages.affordability
 
 import uk.gov.hmrc.test.ui.pages.journey.affordability.{AddIncomeAndSpendingPage, AddIncomePage, AddSpendingPage, AffordabilityCheckPaymentPlanPage, CannotAgreePlanPage, DirectDebitAssistancePage, DirectDebitErrorPage}
-import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
+import uk.gov.hmrc.test.ui.stepdefs.other.DriverActions
 
-class AffordabilityPagesStepDef extends Steps with DriverActions {
+class AffordabilityPagesStepDef extends DriverActions {
 
   And("""^the user clicks on the (.*) link$""") { (link: String) =>
     link match {

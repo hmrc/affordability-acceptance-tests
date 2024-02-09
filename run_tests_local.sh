@@ -1,3 +1,4 @@
-#!/usr/bin/env bash
-
-sbt -Denvironment=local -Dbrowser=headless-chrome clean 'testOnly uk.gov.hmrc.test.ui.runner.Runner'
+BROWSER=$1
+ENVIRONMENT=$2
+ 
+sbt clean -Dbrowser="${BROWSER:=chrome}" -Denvironment="${ENVIRONMENT:=local}" "testOnly uk.gov.hmrc.test.ui.runner.Runner" testReport

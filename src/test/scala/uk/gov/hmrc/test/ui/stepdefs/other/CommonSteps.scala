@@ -24,7 +24,8 @@ import uk.gov.hmrc.test.ui.pages.support.HelperFunctions
 import uk.gov.hmrc.test.ui.pages.testonly.TestOnlyStartPage
 import uk.gov.hmrc.test.ui.testdata.{Language, ScenarioContext}
 
-class CommonSteps extends Steps with DriverActions {
+
+class CommonSteps extends DriverActions {
 
 
   Given("""^A user logs in and gets to the How much can you pay upfront page$""") { () =>

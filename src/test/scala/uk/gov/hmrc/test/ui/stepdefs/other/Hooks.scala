@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 HM Revenue & Customs
+ * Copyright 2024 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,21 +14,20 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.test.ui.utils
+package uk.gov.hmrc.test.ui.stepdefs.other
 
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.chrome.ChromeOptions
-import uk.gov.hmrc.webdriver.SingletonDriver
+import io.cucumber.scala.{EN, ScalaDsl}
+import uk.gov.hmrc.selenium.webdriver.Browser
+import uk.gov.hmrc.test.ui.mongo.MongoDriver
 
-trait Driver {
+object Hooks extends ScalaDsl with EN with Browser {
+  BeforeAll {
+    startBrowser()
+  }
 
-//  def initiateBrowser: WebDriver = SingletonDriver.getInstance()
-
-  def initiateBrowser: WebDriver = {
-    val options = new ChromeOptions
-    val runZap = sys.props.getOrElse("zapBrowser", "false").toBoolean
-    if (runZap) SingletonDriver.getInstance(Some(options))
-    else SingletonDriver.getInstance(Some(options))
+  AfterAll {
+    quitBrowser()
+    MongoDriver.dropDatabases()
   }
 
 }

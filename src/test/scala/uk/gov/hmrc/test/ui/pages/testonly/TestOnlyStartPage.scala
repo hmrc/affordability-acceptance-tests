@@ -32,7 +32,7 @@ object TestOnlyStartPage extends BasePage {
   def expectedPageTitleError: String = "Error: " + expectedPageTitle
 
   def createUserAndLogin(): Unit = {
-    go to TestOnlyStartPage.url
+    navigateTo(TestOnlyStartPage.url)
     waitForPageToLoad()
     linkText("clear play session").webElement.click()
     linkText("create user and log in").webElement.click()
@@ -42,7 +42,7 @@ object TestOnlyStartPage extends BasePage {
   }
 
   def createUserAndGoToPage(page: String): Unit ={
-    go to TestOnlyStartPage.url
+    navigateTo(TestOnlyStartPage.url)
     waitForPageToLoad()
     linkText("clear play session").webElement.click()
     linkText("create user and log in").webElement.click()
@@ -72,7 +72,7 @@ object TestOnlyStartPage extends BasePage {
   }
 
   def languageToEnglish(): Unit = {
-    go to TestOnlyStartPage.url
+    navigateTo(TestOnlyStartPage.url)
     HelperFunctions.toggleLangOn(Language.english)
   }
 
