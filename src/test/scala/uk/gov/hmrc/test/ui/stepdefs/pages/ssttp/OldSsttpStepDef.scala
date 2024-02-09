@@ -18,11 +18,11 @@ package uk.gov.hmrc.test.ui.stepdefs.pages.ssttp
 
 import uk.gov.hmrc.test.ui.pages.journey.affordability.{AffordabilityCheckPaymentPlanPage, HowManyMonthsPage}
 import uk.gov.hmrc.test.ui.pages.journey.ssttp._
-import uk.gov.hmrc.test.ui.stepdefs.other.{DriverActions, Steps}
+import uk.gov.hmrc.test.ui.stepdefs.other.DriverActions
 import uk.gov.hmrc.test.ui.testdata.{BankDetails, ScenarioContext}
 
 
-class OldSsttpStepDef extends Steps with DriverActions {
+class OldSsttpStepDef extends DriverActions {
 
   Given("""^the user clicks (yes|no) on the (.*) page$""") { (option: String, page: String) =>
     page match {

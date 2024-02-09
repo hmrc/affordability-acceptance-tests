@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 HM Revenue & Customs
+ * Copyright 2024 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,18 +17,17 @@
 package uk.gov.hmrc.test.ui.stepdefs.other
 
 import io.cucumber.scala.{EN, ScalaDsl}
-import org.scalatest.matchers.should.Matchers
+import uk.gov.hmrc.selenium.webdriver.Browser
 import uk.gov.hmrc.test.ui.mongo.MongoDriver
-import uk.gov.hmrc.webdriver.SingletonDriver
 
-trait Steps extends ScalaDsl with EN with Matchers {
-
-  Before {
+object Hooks extends ScalaDsl with EN with Browser {
+  BeforeAll {
+    startBrowser()
   }
 
-
-  After {
-    SingletonDriver.closeInstance()
+  AfterAll {
+    quitBrowser()
     MongoDriver.dropDatabases()
   }
+
 }

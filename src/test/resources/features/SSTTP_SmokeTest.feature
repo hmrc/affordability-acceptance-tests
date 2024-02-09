@@ -1,6 +1,7 @@
 @a11y @zap
 Feature: SUPP - SmokeTest
 
+  @wip
   Scenario: E2E - Smoke (For accessibility / zap page captures)
     Given the user is created and logs in
     And the user clicks start

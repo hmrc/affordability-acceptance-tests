@@ -16,19 +16,9 @@
 
 package uk.gov.hmrc.test.ui.utils
 
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.chrome.ChromeOptions
-import uk.gov.hmrc.webdriver.SingletonDriver
+import org.openqa.selenium.remote.RemoteWebDriver
+import uk.gov.hmrc.selenium.webdriver.Driver
 
-trait Driver {
-
-//  def initiateBrowser: WebDriver = SingletonDriver.getInstance()
-
-  def initiateBrowser: WebDriver = {
-    val options = new ChromeOptions
-    val runZap = sys.props.getOrElse("zapBrowser", "false").toBoolean
-    if (runZap) SingletonDriver.getInstance(Some(options))
-    else SingletonDriver.getInstance(Some(options))
-  }
-
+trait BrowserDriver {
+  implicit lazy val driver: RemoteWebDriver = Driver.instance
 }

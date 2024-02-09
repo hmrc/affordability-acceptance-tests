@@ -1,3 +1,4 @@
-#!/usr/bin/env bash
+BROWSER=$1
+ENVIRONMENT=$2
 
-sbt -Denvironment=local -Dbrowser=remote-chrome clean 'testOnly uk.gov.hmrc.test.ui.runner.Runner'
+sbt clean -Dbrowser="${BROWSER:=chrome}" -Denvironment="${ENVIRONMENT:=local}" "testOnly uk.gov.hmrc.test.ui.runner.Runner" testReport

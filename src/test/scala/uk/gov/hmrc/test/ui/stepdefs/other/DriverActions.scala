@@ -18,23 +18,22 @@ package uk.gov.hmrc.test.ui.stepdefs.other
 
 import java.time.Duration
 import java.util.concurrent.TimeUnit
-
-import org.openqa.selenium.chrome.ChromeOptions
 import org.openqa.selenium.support.ui.ExpectedConditions.{urlToBe, visibilityOfElementLocated}
 import org.openqa.selenium.support.ui.{ExpectedCondition, WebDriverWait}
 import org.openqa.selenium.{By, WebDriver, WebElement}
 import org.scalatestplus.selenium.WebBrowser
 import uk.gov.hmrc.test.ui.testdata.{Language, ScenarioContext}
-import uk.gov.hmrc.webdriver.SingletonDriver
+import com.typesafe.scalalogging.LazyLogging
+import io.cucumber.scala.{EN, ScalaDsl}
+import org.scalatest.concurrent.Eventually
+import org.scalatest.matchers.should.Matchers
+import uk.gov.hmrc.selenium.webdriver.Driver
 
-trait DriverActions extends WebBrowser {
+trait DriverActions extends ScalaDsl with EN with WebBrowser with LazyLogging with Eventually with Matchers {
 
-  implicit def driver: WebDriver = {
-    val options = new ChromeOptions
-    val runZap = sys.props.getOrElse("zapBrowser", "false").toBoolean
-    if (runZap) SingletonDriver.getInstance(Some(options))
-    else SingletonDriver.getInstance(Some(options))
-  }
+  implicit lazy val driver: WebDriver = Driver.instance
+
+  def navigateTo(url: String): Unit = Driver.instance.navigate().to(url)
 
   def back(): Unit = click on cssSelector("div.js-visible > a")
 
