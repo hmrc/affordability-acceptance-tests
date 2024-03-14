@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Error Validation on various pages created/updated by Affordability changes
 
 ### Select Day of Month Page

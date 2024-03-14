@@ -1,5 +1,6 @@
 Feature: English Content
 
+  @fullRegression
   Scenario: Page Content validation - Affordability Pages
     Given the user is created and logs in
     And the user clicks start
@@ -34,6 +35,7 @@ Feature: English Content
     Then the user clicks View your payment plan
     Then the user is on the ViewPaymentPlanPage
 
+  @fullRegression
   Scenario: Conditional Sentence when upfront payment made - Success Confirmation Page
     Given the user is created and logs in
     And the user is on the StartPage
@@ -104,6 +106,7 @@ Feature: English Content
     Given A user logs in and clicks link to the CallUsAdviserPage
     Then the user is on the CallUsAdviserPage
 
+  @fullRegression
   Scenario: Affordability Screens Content -
     Given A user logs in and gets to the affordability pages
     And the user is on the CheckYouCanAffordPage
@@ -124,6 +127,7 @@ Feature: English Content
     And the user clicks continue
     And the user is on the AffordabilityCheckPaymentPlanPageNoUpfront
 
+  @fullRegression
   Scenario: Affordability Screens Content - User Specified amount selected, warning message shown
     Given A user logs in and gets to the affordability pages
     And the user is on the CheckYouCanAffordPage
@@ -148,7 +152,7 @@ Feature: English Content
     And the user clicks continue
     Then the choosing more than 50 percent warning message shows
 
-
+  @fullRegression
   Scenario Outline: Affordability Screens Content - Conditional Sentences, Correct routing - Spending First
     Given A user logs in and gets to the affordability pages
     And the user clicks continue
