@@ -1,4 +1,4 @@
-@welsh
+@fullRegression @welsh
 Feature: Welsh Content
 
 ### Happy Path - Welsh Content
