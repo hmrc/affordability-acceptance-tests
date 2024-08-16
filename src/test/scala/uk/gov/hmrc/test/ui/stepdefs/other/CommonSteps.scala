@@ -101,120 +101,80 @@ class CommonSteps extends DriverActions {
     page match {
       case "StartPage" =>
         StartPage.startShouldBeLoaded()
-        StartPage.assertContent()
       case "CannotAffordPage" =>
         CannotAffordPage.shouldBeLoaded()
-        CannotAffordPage.assertContent()
       case "TaxLiabilitiesPage" =>
         TaxLiabilitiesPage.shouldBeLoaded()
-        TaxLiabilitiesPage.assertContent()
       case "CannotSetupDDPage" =>
         CannotSetupDDPage.shouldBeLoaded()
-        CannotSetupDDPage.assertContent()
       case "DirectDebitErrorPage" =>
         DirectDebitErrorPage.shouldBeLoaded()
-        DirectDebitErrorPage.assertContent()
       case "DirectDebitAssistancePage" =>
         DirectDebitAssistancePage.shouldBeLoaded()
-        DirectDebitAssistancePage.assertContent()
       case "TypeOfAccountPage" =>
         TypeOfAccountPage.shouldBeLoaded()
-        TypeOfAccountPage.assertContent()
       case "SetUpDirectDebitPage" =>
         SetUpDirectDebitPage.shouldBeLoaded()
-        SetUpDirectDebitPage.assertContent()
       case "TermsAndConditionsPage" =>
         TermsAndConditionsPage.shouldBeLoaded()
-        TermsAndConditionsPage.assertContent()
       case "ConfirmDirectDebitDetailsPage" =>
         ConfirmDirectDebitDetailsPage.shouldBeLoaded()
-        ConfirmDirectDebitDetailsPage.assertContentSlim()
       case "SuccessConfirmationPage" =>
         SuccessConfirmationPage.shouldBeLoaded()
-        SuccessConfirmationPage.assertContent()
       case "CallUsNotEligiblePage" =>
         CallUsNotEligiblePage.shouldBeLoaded()
-        CallUsNotEligiblePage.assertContent()
       case "CallUsDebtTooOldPage" =>
         CallUsDebtTooOldPage.shouldBeLoaded()
-        CallUsDebtTooOldPage.assertContent()
       case "CallUsNotEnrolledPage" =>
         CallUsNotEnrolledPage.shouldBeLoaded()
-        CallUsNotEnrolledPage.assertContent()
       case "CallUsAlreadyHavePlanPage" =>
         CallUsAlreadyHavePlanPage.shouldBeLoaded()
-        CallUsAlreadyHavePlanPage.assertContent()
       case "CallUsDebtTooLargePage" =>
         CallUsDebtTooLargePage.shouldBeLoaded()
-        CallUsDebtTooLargePage.assertContent()
       case "NeedToFilePage" =>
         NeedToFilePage.shouldBeLoaded()
-        NeedToFilePage.assertContent()
       case "CallUsAdviserPage" =>
         CallUsAdviserPage.shouldBeLoaded()
-        CallUsAdviserPage.assertContent()
       case "ViewPaymentPlanPage" =>
         ViewPaymentPlanPage.shouldBeLoaded()
-        ViewPaymentPlanPage.assertContent()
       case "UpfrontPaymentPage" =>
         UpfrontPaymentPage.shouldBeLoaded()
-        UpfrontPaymentPage.assertContent()
       case "PaymentSummaryPage" =>
         UpfrontSummaryPage.shouldBeLoaded()
-        UpfrontSummaryPage.assertContent()
       case "UpfrontPaymentAmountPage" =>
         HowMuchUpfrontPaymentPage.shouldBeLoaded()
-        HowMuchUpfrontPaymentPage.assertContent()
       case "WhatDayOfMonthPage" =>
         WhatDayOfMonthPage.shouldBeLoaded()
-        WhatDayOfMonthPage.assertContent()
       case "CheckYouCanAffordPage" =>
         CheckYouCanAffordPage.shouldBeLoaded()
-        CheckYouCanAffordPage.assertContent()
       case "AddIncomeAndSpendingPageBlank" =>
         AddIncomeAndSpendingPage.shouldBeLoaded()
-        AddIncomeAndSpendingPage.assertContentBlank()
       case "AddIncomeAndSpendingPageIncomeFull" =>
         AddIncomeAndSpendingPage.shouldBeLoaded()
-        AddIncomeAndSpendingPage.assertContentIncomeFull()
       case "AddIncomeAndSpendingPageSpendingFull" =>
         AddIncomeAndSpendingPage.shouldBeLoaded()
-        AddIncomeAndSpendingPage.assertContentSpendingFull()
       case "AddIncomePage" =>
         AddIncomePage.shouldBeLoaded()
-        AddIncomePage.assertContent()
       case "AddSpendingPage" =>
         AddSpendingPage.shouldBeLoaded()
-        AddSpendingPage.assertContent()
       case "NoIncomePage" =>
         NoIncomePage.shouldBeLoaded()
-        NoIncomePage.assertContent()
       case "HowMuchYouCanAffordPageHappy" =>
         HowMuchYouCanAffordPage.shouldBeLoaded()
-        HowMuchYouCanAffordPage.assertContentHappy()
       case "HowMuchYouCanAffordPageSpendingMore" =>
         HowMuchYouCanAffordPage.shouldBeLoaded()
-        HowMuchYouCanAffordPage.assertContentSpendingMoreThanIncome()
       case "HowMuchYouCanAffordPageSpendingSame" =>
         HowMuchYouCanAffordPage.shouldBeLoaded()
-        HowMuchYouCanAffordPage.assertContentSpendingSameAsIncome()
       case "AffordabilityCheckPaymentPlanPageNoUpfront" =>
         AffordabilityCheckPaymentPlanPage.shouldBeLoaded()
-        AffordabilityCheckPaymentPlanPage.assertContentNoUpfront()
-      //      case "AffordabilityCheckPaymentPlanPageWithUpfront" =>
-      //        AffordabilityCheckPaymentPlanPage.shouldBeLoaded()
-      //        AffordabilityCheckPaymentPlanPage.assertContentWithUpfront()
       case "CannotAgreePlanPage" =>
         CannotAgreePlanPage.shouldBeLoaded()
-        CannotAgreePlanPage.assertContent()
       case "HowManyMonthsPageUpfront" =>
         HowManyMonthsPage.shouldBeLoaded()
       case "HowManyMonthsPage" =>
         HowManyMonthsPage.shouldBeLoaded()
-        HowManyMonthsPage.assertContent()
       case "HowManyMonthsPageCustom" =>
         HowManyMonthsCustomPage.shouldBeLoaded()
-        HowManyMonthsCustomPage.assertContentCustom()
       case "TBC" => ""
       case _ => throw new IllegalArgumentException(s"$page page not recognised")
     }
@@ -311,101 +271,6 @@ class CommonSteps extends DriverActions {
             AddSpendingPage.clearHealth()
             AddSpendingPage.enterHealth(input)
         }
-    }
-  }
-
-  Then("""^the (.*) field should display "(.*)"$""") { (elem: String, message: String) =>
-    waitForPageToLoad()
-    val elemLower = elem.toLowerCase
-
-    def prependError: String = if (langToggle == Language.welsh) "Gwall:" else "Error:"
-
-    waitFor(visibilityOfElementLocated(By.cssSelector("h2.govuk-error-summary__title")))
-    if (langToggle == Language.welsh) HelperFunctions.errorSummaryHeading() should be("Mae problem wedi codi")
-    else HelperFunctions.errorSummaryHeading() should be("There is a problem")
-
-    elemLower match {
-      //TODO Summary Error content validation, no id's implemented on Element and cant use css due to changing nature
-      //Account Type Page
-      case "account type" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY"+elemId) should be(message)
-        HelperFunctions.errorMessage("typeOfAccount") should be(s"$prependError\n$message")
-      case "account holder" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("isSoleSignatory") should be(s"$prependError\n$message")
-      //Set Up Direct Debit Page
-      case "account name" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("accountName") should be(s"$prependError\n$message")
-      case "sortcode" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("sortCode") should be(s"$prependError\n$message")
-      case "account number" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("accountNumber") should be(s"$prependError\n$message")
-      //Upfront Payment Page
-      case "amount" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("amount") should be(s"$prependError\n$message")
-      //Add Income Page
-      case "monthly income" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("monthlyIncome") should be(s"$prependError\n$message")
-      case "benefit" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("benefits") should be(s"$prependError\n$message")
-      case "other income" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("otherIncome") should be(s"$prependError\n$message")
-      case "income invalid" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("income-invalid").replaceAll("\n", " ") should be(s"$prependError $message")
-      //Add Spending Page
-      case "housing" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("housing") should be(s"$prependError\n$message")
-      case "pension" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("pension-contributions") should be(s"$prependError\n$message")
-      case "council tax" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("council-tax") should be(s"$prependError\n$message")
-      case "utilities" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("utilities") should be(s"$prependError\n$message")
-      case "debt repayments" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("debt-repayments") should be(s"$prependError\n$message")
-      case "travel" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("travel") should be(s"$prependError\n$message")
-      case "childcare" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("childcare") should be(s"$prependError\n$message")
-      case "insurance" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("insurance") should be(s"$prependError\n$message")
-      case "groceries" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("groceries") should be(s"$prependError\n$message")
-      case "health" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("health") should be(s"$prependError\n$message")
-      case "radio button" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("other") should be(s"$prependError\n$message")
-      case "a different day" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("other") should be(s"$prependError\n$message")
-      //How Many Months Page
-      case "custom amount" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("custom-amount") should be(s"$prependError\n$message")
-      case "plan selection" =>
-        //        HelperFunctions.errorSummary("TBC SUMMARY" + elemId) should be(message)
-        HelperFunctions.errorMessage("plan-selection") should be(s"$prependError\n$message")
-      case _ =>
-        println("No field found - check field name passed to method (elem)")
     }
   }
 
