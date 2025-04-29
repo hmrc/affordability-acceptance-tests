@@ -13,7 +13,6 @@ object Dependencies {
     "uk.gov.hmrc" %% "ui-test-runner" % "0.45.0" % Test,
     "com.novocode" % "junit-interface" % "0.11" % Test,
     "io.cucumber" % "cucumber-picocontainer" % "7.22.1" % Test,
-    "uk.gov.hmrc" %% "ui-test-runner" % "0.17.0" % Test,
     //    "org.typelevel"           %% "cats"                   % "0.9.0" %Test,
     "com.typesafe.play" %% "play-json" % "2.10.6" % Test,
     "org.mongodb.scala" %% "mongo-scala-driver" % "5.4.0"
