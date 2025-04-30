@@ -54,7 +54,6 @@ trait DriverActions extends ScalaDsl with EN with WebBrowser with LazyLogging wi
     wait.until(condition)
   }
 
-  def waitForRedirect(url: String): Boolean = waitFor(urlToBe(url))
 
   def waitForPageToLoad(): WebElement = waitFor(visibilityOfElementLocated(By.tagName("body")))
 
