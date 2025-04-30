@@ -14,8 +14,8 @@ object Dependencies {
     "com.novocode" % "junit-interface" % "0.11" % Test,
     "io.cucumber" % "cucumber-picocontainer" % "7.22.1" % Test,
     //    "org.typelevel"           %% "cats"                   % "0.9.0" %Test,
-    "com.typesafe.play" %% "play-json" % "2.10.6" % Test,
-    "org.mongodb.scala" %% "mongo-scala-driver" % "5.4.0"
+    "org.playframework" %% "play-json" % "3.0.4" % Test,
+    ("org.mongodb.scala" %% "mongo-scala-driver" % "5.4.0").cross(CrossVersion.for3Use2_13)
   )
 
 }

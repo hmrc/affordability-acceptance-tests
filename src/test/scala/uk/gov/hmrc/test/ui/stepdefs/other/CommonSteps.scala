@@ -79,7 +79,7 @@ class CommonSteps extends DriverActions {
     }
   }
 
-  When("""^the User toggles on (Welsh|English) language$""") { option: String =>
+  When("""^the User toggles on (Welsh|English) language$""") { (option: String) =>
     if (option == "Welsh") {
       HelperFunctions.toggleLangOn(Language.welsh)
       ScenarioContext.set("langToggle", Language.welsh)
@@ -97,7 +97,7 @@ class CommonSteps extends DriverActions {
     TestOnlyStartPage.languageToEnglish()
   }
 
-  And("""^the user is on the (.*)$""") { page: String =>
+  And("""^the user is on the (.*)$""") { (page: String) =>
     page match {
       case "StartPage" =>
         StartPage.startShouldBeLoaded()

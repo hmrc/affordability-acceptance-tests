@@ -60,7 +60,7 @@ class OldSsttpStepDef extends DriverActions {
     }
   }
 
-  When("""^the user enters (.*) bank details$""") { state: String =>
+  When("""^the user enters (.*) bank details$""") { (state: String) =>
     ScenarioContext.set("bankDetails", state match {
       case "amended" => BankDetails.amendedAccount
       case "invalid" => BankDetails.invalidAccount
