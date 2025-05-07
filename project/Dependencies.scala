@@ -13,9 +13,8 @@ object Dependencies {
     "uk.gov.hmrc" %% "ui-test-runner" % "0.45.0" % Test,
     "com.novocode" % "junit-interface" % "0.11" % Test,
     "io.cucumber" % "cucumber-picocontainer" % "7.22.1" % Test,
-    //    "org.typelevel"           %% "cats"                   % "0.9.0" %Test,
     "org.playframework" %% "play-json" % "3.0.4" % Test,
-    ("org.mongodb.scala" %% "mongo-scala-driver" % "5.4.0").cross(CrossVersion.for3Use2_13)
+    ("org.mongodb.scala" %% "mongo-scala-driver" % "5.5.0").cross(CrossVersion.for3Use2_13)
   )
 
 }
