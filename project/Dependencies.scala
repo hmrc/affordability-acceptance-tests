@@ -10,7 +10,7 @@ object Dependencies {
     "io.cucumber" %% "cucumber-scala" % "8.27.3" % Test,
     "io.cucumber" % "cucumber-junit" % "7.22.2" % Test,
     "junit" % "junit" % "4.13.2" % Test,
-    "uk.gov.hmrc" %% "ui-test-runner" % "0.45.0" % Test,
+    "uk.gov.hmrc" %% "ui-test-runner" % "0.46.0" % Test,
     "com.novocode" % "junit-interface" % "0.11" % Test,
     "io.cucumber" % "cucumber-picocontainer" % "7.22.2" % Test,
     "org.playframework" %% "play-json" % "3.0.4" % Test,
